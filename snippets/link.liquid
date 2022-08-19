@@ -1,0 +1,22 @@
+{% comment %}
+
+    Accepts:
+    - classes: {String} Optionally include classes
+    - colour: {String} Colour of link
+    - link: {String} URL Liquid object
+    - style: {String} Style of link
+    - title: {String} Title of link
+
+    Usage:
+    {% render 'debug-this', item: article %}
+
+{% endcomment %}
+
+{% assign snippet_name = 'link' %}
+{% assign snippet_class = snippet_name %}
+
+{% if classes != blank %}
+  {% assign snippet_class = snippet_name | prepend: ' ' | prepend: classes %}
+{% endif %}
+
+<a class="{{ classes }}" href="{{ link }}" title="{{ title }}">{{ title }}</a>

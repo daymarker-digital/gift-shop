@@ -39,7 +39,7 @@
 
             {% if title != blank and link != blank %}
               <div class="{{ section_name }}__cta">
-                {% render 'link', colour: colour, link: link, style: 'default', title: title %}
+                {% render 'link', classes: 'full-width-feature__cta-link', colour: colour, link: link, style: 'default', title: title %}
               </div>
             {% endif %}
 
