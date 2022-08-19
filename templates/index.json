@@ -53,7 +53,8 @@
         "a861eb2e-5051-4c7d-bf8e-9c30c5ffc04a": {
           "type": "media",
           "settings": {
-            "type": "image"
+            "type": "image",
+            "image": "shopify:\/\/shop_images\/VP-bottom-3.jpg"
           }
         },
         "33844606-d336-4944-b0d1-b13d3ff0a129": {
