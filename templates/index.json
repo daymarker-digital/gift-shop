@@ -1,54 +1,34 @@
 {
   "sections": {
-    "image_banner": {
-      "type": "image-banner",
+    "16609467333108563a": {
+      "type": "full-width-feature",
       "blocks": {
-        "heading": {
-          "type": "heading",
+        "a861eb2e-5051-4c7d-bf8e-9c30c5ffc04a": {
+          "type": "media",
           "settings": {
-            "heading": "Image banner",
-            "heading_size": "h0"
+            "type": "image",
+            "image": "shopify:\/\/shop_images\/VP-bottom-3.jpg"
           }
         },
-        "text": {
-          "type": "text",
+        "33844606-d336-4944-b0d1-b13d3ff0a129": {
+          "type": "cta",
           "settings": {
-            "text": "Give customers details about the banner image(s) or content on the template.",
-            "text_style": "body"
-          }
-        },
-        "button": {
-          "type": "buttons",
-          "settings": {
-            "button_label_1": "Shop all",
-            "button_link_1": "shopify:\/\/collections\/all",
-            "button_style_secondary_1": true,
-            "button_label_2": "",
-            "button_link_2": "",
-            "button_style_secondary_2": false
+            "type": "blue",
+            "title": "Shop Shorts and Pants",
+            "link": "https:\/\/www.nike.com\/ca\/"
           }
         }
       },
       "block_order": [
-        "heading",
-        "text",
-        "button"
+        "a861eb2e-5051-4c7d-bf8e-9c30c5ffc04a",
+        "33844606-d336-4944-b0d1-b13d3ff0a129"
       ],
       "settings": {
-        "image_overlay_opacity": 40,
-        "image_height": "large",
-        "adapt_height_first_image": false,
-        "desktop_content_position": "bottom-center",
-        "show_text_box": false,
-        "desktop_content_alignment": "center",
-        "color_scheme": "background-1",
-        "mobile_content_alignment": "center",
-        "stack_images_on_mobile": false,
-        "show_text_below": false
+        "anchor_id": ""
       }
     }
   },
   "order": [
-    "image_banner"
+    "16609467333108563a"
   ]
 }
