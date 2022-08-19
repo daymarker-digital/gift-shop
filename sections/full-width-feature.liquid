@@ -6,13 +6,14 @@
 {% assign aos_delay_increment = 250 %}
 
 {% assign container = section.settings.container | default: 'container' %}
-{% assign cta = section.blocks | where: 'cta' | default: false %}
-{% assign media = section.blocks | where: 'media' | default: false %}
+{% assign cta = section.blocks | where: 'type', 'cta' | default: false %}
+{% assign media = section.blocks | where: 'type', 'media' | default: false %}
 
 {% if section.settings.anchor_id != blank %}
   {% assign section_id = section.settings.anchor_id %}
 {% endif %}
 
+{% render 'debug-this', item: section.blocks %}
 {% render 'debug-this', item: cta %}
 {% render 'debug-this', item: media %}
 
