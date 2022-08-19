@@ -13,20 +13,17 @@
   {% assign section_id = section.settings.anchor_id %}
 {% endif %}
 
-{% render 'debug-this', item: section.blocks %}
-{% render 'debug-this', item: cta %}
-{% render 'debug-this', item: media %}
-
 <div class="{{ section_name }}" id="{{ section_id }}">
   {% render 'bs-container', state: 'open', col: 'col-12', container: container %}
     <div class="{{ section_name }}__layout" id="{{ aos_id }}">
 
       {% if media %}
+        {% for item in media %}
 
-        {% assign image = media.settings.image | default: false %}
-        {% assign type = media.settings.type | default: 'image' %}
+          {% assign image = item.settings.image | default: false %}
+          {% assign type = item.settings.type | default: 'image' %}
 
-        <div class="{{ section_name }}__media">
+          <div class="{{ section_name }}__media">
 
           {% case type %}
             {% when "image" %}
@@ -36,20 +33,24 @@
 				  {% endcase %}
 
           {% if cta %}
+            {% for item in cta %}
 
-            {% assign colour = cta.settings.colour | default: 'blue' %}
-            {% assign title = cta.settings.title | default: '' %}
-            {% assign link = cta.settings.link | default: '' %}
+              {% assign colour = item.settings.colour | default: 'blue' %}
+              {% assign title = item.settings.title | default: '' %}
+              {% assign link = item.settings.link | default: '' %}
 
-            {% if title != blank and link != blank %}
-              <div class="{{ section_name }}__cta">
-                {% render 'link', classes: 'full-width-feature__cta-link', colour: colour, link: link, style: 'default', title: title %}
-              </div>
-            {% endif %}
+              {% if title != blank and link != blank %}
+                <div class="{{ section_name }}__cta">
+                  {% render 'link', classes: 'full-width-feature__cta-link', colour: colour, link: link, style: 'default', title: title %}
+                </div>
+              {% endif %}
 
+            {% endfor %}
           {% endif %}
 
         </div>
+
+        {% endfor %}
       {% endif %}
 
     </div>
