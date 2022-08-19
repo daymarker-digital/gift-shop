@@ -46,9 +46,36 @@
         "stack_images_on_mobile": false,
         "show_text_below": false
       }
+    },
+    "16609467333108563a": {
+      "type": "full-width-feature",
+      "blocks": {
+        "a861eb2e-5051-4c7d-bf8e-9c30c5ffc04a": {
+          "type": "media",
+          "settings": {
+            "type": "image"
+          }
+        },
+        "33844606-d336-4944-b0d1-b13d3ff0a129": {
+          "type": "cta",
+          "settings": {
+            "type": "blue",
+            "title": "Shop Shorts and Pants",
+            "link": "https:\/\/www.nike.com\/ca\/"
+          }
+        }
+      },
+      "block_order": [
+        "a861eb2e-5051-4c7d-bf8e-9c30c5ffc04a",
+        "33844606-d336-4944-b0d1-b13d3ff0a129"
+      ],
+      "settings": {
+        "anchor_id": ""
+      }
     }
   },
   "order": [
-    "image_banner"
+    "image_banner",
+    "16609467333108563a"
   ]
 }
