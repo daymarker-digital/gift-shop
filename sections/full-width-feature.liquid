@@ -13,6 +13,9 @@
   {% assign section_id = section.settings.anchor_id %}
 {% endif %}
 
+{% render 'debug-this', item: cta %}
+{% render 'debug-this', item: media %}
+
 <div class="{{ section_name }}" id="{{ section_id }}">
   {% render 'bs-container', state: 'open', col: 'col-12', container: container %}
     <div class="{{ section_name }}__layout" id="{{ aos_id }}">

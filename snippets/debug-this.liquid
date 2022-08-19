@@ -10,5 +10,12 @@
 
 {% assign item = item | default: 'item not set!' %}
 
-<script>console.log( {{ item | json }} );</script>
+<script>
+console.log(
+  {
+    item: {{ item | json }},
+    type: typeof {{ item | json }},
+  }
+);
+</script>
 
