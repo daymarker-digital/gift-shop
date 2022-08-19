@@ -15,8 +15,16 @@
 {% assign snippet_name = 'link' %}
 {% assign snippet_class = snippet_name %}
 
+{% assign target = "_self"  %}
+
 {% if classes != blank %}
   {% assign snippet_class = snippet_name | prepend: ' ' | prepend: classes %}
 {% endif %}
 
-<a class="{{ classes }}" href="{{ link }}" title="{{ title }}">{{ title }}</a>
+{% if link contains 'http' %}
+  {% assign target = "_blank"  %}
+{% endif %}
+
+{% if link != blank and title != blank %}
+  <a class="{{ classes }}" href="{{ link }}" title="{{ title }}" target="{{ target }}">{{ title }}</a>
+{% endif %}
