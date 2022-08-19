@@ -1,0 +1,124 @@
+{%- assign section_name = 'full-width-feature' -%}
+{%- assign section_id = section_name | append: '--' | append: section.id -%}
+
+{% assign aos_id = section_id | append: '--aos' %}
+{% assign aos_delay = 250 %}
+{% assign aos_delay_increment = 250 %}
+
+{% assign container = section.settings.container | default: 'container' %}
+{% assign cta = section.blocks | where: 'cta' | default: false %}
+{% assign media = section.blocks | where: 'media' | default: false %}
+
+{% if section.settings.anchor_id != blank %}
+  {% assign section_id = section.settings.anchor_id %}
+{% endif %}
+
+<div class="{{ section_name }}" id="{{ section_id }}">
+  {% render 'bs-container', state: 'open', col: 'col-12', container: container %}
+    <div class="{{ section_name }}__layout" id="{{ aos_id }}">
+
+      {% if media %}
+
+        {% assign image = media.settings.image | default: false %}
+        {% assign type = media.settings.type | default: 'image' %}
+
+        <div class="{{ section_name }}__media">
+
+          {% case type %}
+            {% when "image" %}
+              {% if image %}
+                {% render 'lazyload-image', image: image %}
+              {% endif %}
+				  {% endcase %}
+
+          {% if cta %}
+
+            {% assign colour = cta.settings.colour | default: 'blue' %}
+            {% assign title = cta.settings.title | default: '' %}
+            {% assign link = cta.settings.link | default: '' %}
+
+            {% if title != blank and link != blank %}
+              <div class="{{ section_name }}__cta">
+                {% render 'link', colour: colour, link: link, style: 'default', title: title %}
+              </div>
+            {% endif %}
+
+          {% endif %}
+
+        </div>
+      {% endif %}
+
+    </div>
+  {% render 'bs-container', state: 'closed' %}
+</div>
+
+{% schema %}
+{
+  "name": "Full Width Feature",
+  "tag": "section",
+  "class": "section section--full-width-feature",
+  "settings": [
+    {
+      "label": "Anchor ID",
+      "info": "Optionally include a unique ID so that sections within the page can be linked to. Anchor IDs must be all lowercase, unique and replaced empty spaces with hyphens. For example: my-great-section-anchor",
+      "type": "text",
+      "id": "anchor_id"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Call to Action",
+      "type": "cta",
+      "limit": 1,
+      "settings": [
+        {
+          "label": "Colour",
+          "type": "select",
+          "options": [
+            { "value": "blue", "label": "Blue" },
+            { "value": "yellow", "label": "Yellow" }
+          ],
+          "default": "blue",
+          "id": "type"
+        },
+        {
+          "label": "Title",
+          "type": "text",
+          "id": "title"
+        },
+        {
+          "label": "Link",
+          "type": "url",
+          "id": "link"
+        }
+      ]
+    },
+    {
+      "name": "Media",
+      "type": "media",
+      "limit": 1,
+      "settings": [
+        {
+          "label": "Type",
+          "type": "select",
+          "options": [
+            { "value": "image", "label": "Image" }
+          ],
+          "default": "image",
+          "id": "type"
+        },
+        {
+          "label": "Image",
+          "type": "image_picker",
+          "id": "image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Full Width Feature"
+    }
+  ]
+}
+{% endschema %}
