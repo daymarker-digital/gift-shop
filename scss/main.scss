@@ -123,7 +123,6 @@
 
 @import '../node_modules/bootstrap/scss/bootstrap';
 @import '../node_modules/@glidejs/glide/dist/css/glide.core.min';
-// @import '../node_modules/hamburgers/_sass/hamburgers/hamburgers.scss';
 @import '../node_modules/aos/dist/aos';
 
 //////////////////////////////////////////////////////////
@@ -166,3 +165,7 @@
 @import './theme/header.scss';
 @import './theme/page.scss';
 @import './theme/product.scss';
+
+body {
+  background: red;
+}
