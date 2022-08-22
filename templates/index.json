@@ -1,5 +1,23 @@
 {
   "sections": {
+    "1661195068627651d9": {
+      "type": "full-width-feature",
+      "blocks": {
+        "372565e6-bfbf-45ae-9611-c5079109e3a6": {
+          "type": "media",
+          "settings": {
+            "type": "image",
+            "image": "shopify:\/\/shop_images\/VPSA-feature-2_2x-30.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "372565e6-bfbf-45ae-9611-c5079109e3a6"
+      ],
+      "settings": {
+        "anchor_id": ""
+      }
+    },
     "16609467333108563a": {
       "type": "full-width-feature",
       "blocks": {
@@ -29,6 +47,7 @@
     }
   },
   "order": [
+    "1661195068627651d9",
     "16609467333108563a"
   ]
 }
