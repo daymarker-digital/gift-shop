@@ -70,7 +70,7 @@
         "33844606-d336-4944-b0d1-b13d3ff0a129": {
           "type": "cta",
           "settings": {
-            "type": "blue",
+            "colour": "blue",
             "title": "Shop Shorts and Pants",
             "link": "shopify:\/\/collections\/bottoms"
           }
@@ -150,7 +150,7 @@
         "cc2fdfb8-5356-4094-8ffa-b6a87668a930": {
           "type": "cta",
           "settings": {
-            "type": "yellow",
+            "colour": "yellow",
             "title": "Shop Space Tees",
             "link": "shopify:\/\/collections\/tees"
           }
