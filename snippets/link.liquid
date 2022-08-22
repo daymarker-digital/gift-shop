@@ -20,6 +20,10 @@
   {% assign snippet_class = snippet_class | append: ' ' | append: snippet_name | append: '--' | append: colour %}
 {% endif %}
 
+{% if style != blank %}
+  {% assign snippet_class = snippet_class | append: ' ' | append: snippet_name | append: '--' | append: style %}
+{% endif %}
+
 {% if classes != blank %}
   {% assign snippet_class = snippet_class | prepend: ' ' | prepend: classes %}
 {% endif %}
@@ -29,5 +33,7 @@
 {% endif %}
 
 {% if link != blank and title != blank %}
-  <a class="{{ classes }}" href="{{ link }}" title="{{ title }}" target="{{ target }}">{{ title }}</a>
+  <a class="{{ snippet_class }}" href="{{ link }}" title="{{ title }}" target="{{ target }}">
+    <span class="{{ snippet_name }}__title">{{ title }}</span>
+  </a>
 {% endif %}
