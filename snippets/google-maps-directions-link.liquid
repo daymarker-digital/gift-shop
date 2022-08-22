@@ -1,0 +1,46 @@
+{% comment %}
+  {%
+    render 'content--google-maps-link',
+    address: shop.address
+  %}
+{% endcomment %}
+
+{%- if address -%}
+
+  {%- assign directions_url = "" -%}
+  {%- assign google_search_url = "https://maps.google.com/?q=" -%}
+
+  {%- assign company = address.company -%}
+  {%- assign street_address = address.address1 | default: false -%}
+  {%- assign suite = address.address2 | default: false -%}
+  {%- assign city = address.city | default: false -%}
+  {%- assign region_code = address.province_code | default: false -%}
+  {%- assign postal = address.zip | default: false -%}
+  {%- assign country = address.country | default: false -%}
+
+  {%- if street_address -%}
+    {%- assign directions_url = street_address -%}
+    {%- if suite -%}
+      {%- assign directions_url = suite | append: "–" | append: directions_url -%}
+    {%- endif -%}
+    {%- if city -%}
+      {%- assign directions_url = directions_url | append: " " | append: city -%}
+    {%- endif -%}
+    {%- if region_code -%}
+      {%- assign directions_url = directions_url | append: " " | append: region_code -%}
+    {%- endif -%}
+    {%- if postal -%}
+      {%- assign directions_url = directions_url | append: " " | append: postal -%}
+    {%- endif -%}
+    {%- if country -%}
+      {%- assign directions_url = directions_url | append: " " | append: country -%}
+    {%- endif -%}
+    {%- assign directions_url = directions_url | prepend: " " | prepend: company -%}
+    {%- assign directions_url = directions_url | prepend: google_search_url -%}
+  {%- endif -%}
+
+  {%- if directions_url != "" -%}
+    {{- directions_url -}}
+  {%- endif -%}
+
+{%- endif -%}

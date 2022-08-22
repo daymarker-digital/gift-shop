@@ -1,30 +1,30 @@
 {% assign section_name = 'footer' %}
 {% assign section_id = section_name | append: '--' | append: section.id %}
 
-{% assign contact_email = section.settings.email | default: false %}
-{% assign contact_phone = section.settings.phone | default: false %}
-{% assign extra_menu = section.settings.extra_menu | default: false %}
-{% assign main_menu = section.settings.menu_menu | default: false %}
-{% assign policies_menu = section.settings.policies_menu | default: false %}
-{% assign social_link_facebook = settings.social_link_facebook | default: false %}
-{% assign social_link_instagram = settings.social_link_instagram | default: false %}
-{% assign social_link_twitter = settings.social_link_twitter | default: false %}
+{% assign street_address = shop.address.address1 | default: '1234 Main St' %}
+{% assign suite = shop.address.address2 | default: false %}
+{% assign city = shop.address.city | default: false %}
+{% assign region_code = shop.address.province_code | default: false %}
+{% assign postal = shop.address.zip | default: false %}
 
-<div class="{{ section_name }}" id="{{ section_id }}">
-   {% render 'bs-container' %}
+{% assign company = shop.address.company %}
+{% assign phone = shop.address.phone %}
+{% assign email = 'excuseme@weareverypolite.com' %}
 
-    <div class="{{ section_name }}__brand">
-      <a href="/" target="_self" title="Home">Brand</a>
-    </div>
+<div class="{{ section_name }}__main">
 
-    <div class="{{ section_name }}__legal">
-      {% if policies_menu %}
-        {% render 'navigation', classes: 'footer__menus-policies', menu_handle: policies_menu %}
-      {% endif %}
-      <div class="{{ section_name }}__copyright">&copy; {{ shop.name }} {{ "now" | date: "%Y" }}.</div>
-    </div>
+  <div class="{{ section_name }}__address">
+    <p><a class="{{ section_name }}__address-link link" href='{%- render 'google-maps-directions-link', address: shop.address -%}' target='_blank' rel='noopener noreferrer'>{% if suite %}{{ suite }}–{% endif %}{{ street_address }}<br>{{ city }} {{ region_code }} {{ postal }}</a></p>
+  </div>
 
-   {% render 'bs-container', state: 'closed' %}
+  <div class="{{ section_name }}__contact-info">
+    <p><a lass="{{ section_name }}__contact-info-link link" href='mailto:{{ email }}'>{{ email }}</a><br><a href='tel:{{ phone }}'>{{ phone }}</a></p>
+  </div>
+
+  <div class="{{ section_name }}__legal">
+    <p>All The Best™<br>&copy;{{ "today" | date: "%Y" }} {{ company }}</p>
+  </div>
+
 </div>
 
 {% stylesheet %}
@@ -37,6 +37,7 @@
   {
     "name": "Footer",
     "tag": "footer",
+    "class": "footer",
     "settings": [
       {
         "content": "Contact Info",
