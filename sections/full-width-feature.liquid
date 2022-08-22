@@ -39,6 +39,8 @@
               {% assign title = item.settings.title | default: '' %}
               {% assign link = item.settings.link | default: '' %}
 
+              {% render 'debug-this', item: colour %}
+
               {% if title != blank and link != blank %}
                 <div class="{{ section_name }}__cta">
                   {% render 'link', classes: 'full-width-feature__cta-link', colour: colour, link: link, style: 'button-primary', title: title %}
