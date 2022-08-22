@@ -14,11 +14,14 @@
 
 {% assign snippet_name = 'link' %}
 {% assign snippet_class = snippet_name %}
-
 {% assign target = "_self"  %}
 
+{% if colour != blank %}
+  {% assign snippet_class = snippet_class | append: ' ' | append: snippet_name | append: '--' | append: colour %}
+{% endif %}
+
 {% if classes != blank %}
-  {% assign snippet_class = snippet_name | prepend: ' ' | prepend: classes %}
+  {% assign snippet_class = snippet_class | prepend: ' ' | prepend: classes %}
 {% endif %}
 
 {% if link contains 'http' %}
