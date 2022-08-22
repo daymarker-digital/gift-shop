@@ -403,6 +403,17 @@
       "sC" : 3,
       "tS" : 1
     },
+    "\/assets\/vendors.min.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/assets\/vendors.min.min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 1
+    },
     "\/config\/settings_data.json" : {
       "ft" : 524288,
       "oA" : 0,
@@ -1673,12 +1684,12 @@
       "oAP" : "\/sections\/featured-collection.liquid",
       "oF" : 0
     },
-    "\/sections\/featured-product.liquid" : {
+    "\/sections\/featured-products.liquid" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/sections\/featured-product.liquid",
+      "oAP" : "\/sections\/featured-products.liquid",
       "oF" : 0
     },
     "\/sections\/footer.liquid" : {

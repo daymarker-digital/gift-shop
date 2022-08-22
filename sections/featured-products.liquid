@@ -1,0 +1,73 @@
+{%- assign section_name = 'featured-products' -%}
+{%- assign section_id = section_name | append: '--' | append: section.id -%}
+
+{% assign aos_id = section_id | append: '--aos' %}
+{% assign aos_delay = 250 %}
+{% assign aos_delay_increment = 250 %}
+
+{% assign container = section.settings.container | default: 'container' %}
+{% assign layout = section.settings.layout | default: 'two-column' %}
+{% assign products = section.blocks | where: 'type', 'product' | default: false %}
+
+{% if section.settings.anchor_id != blank %}
+  {% assign section_id = section.settings.anchor_id %}
+{% endif %}
+
+<div class="{{ section_name }}" id="{{ section_id }}" data-layout-{{ layout }}>
+  {% render 'bs-container', state: 'open', col: 'col-12', container: container %}
+    <div class="{{ section_name }}__layout" id="{{ aos_id }}">
+
+      {% if products %}
+        {% for item in products %}
+          {% render 'card-product', product: product %}
+        {% endfor %}
+      {% endif %}
+
+    </div>
+  {% render 'bs-container', state: 'closed' %}
+</div>
+
+{% schema %}
+{
+  "name": "Featured Products",
+  "tag": "section",
+  "class": "section section--featured-products",
+  "settings": [
+    {
+      "label": "Layout",
+      "type": "select",
+      "options": [
+        { "value": "two-column", "label": "Two Column" },
+        { "value": "three-column", "label": "Three Column" }
+      ],
+      "default": "two-column",
+      "id": "layout"
+    },
+    {
+      "label": "Anchor ID",
+      "info": "Optionally include a unique ID so that sections within the page can be linked to. Anchor IDs must be all lowercase, unique and replaced empty spaces with hyphens. For example: my-great-section-anchor",
+      "type": "text",
+      "id": "anchor_id"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Product",
+      "type": "product",
+      "limit": 12,
+      "settings": [
+        {
+          "label": "Product",
+          "type": "product",
+          "id": "product"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Featured Products"
+    }
+  ]
+}
+{% endschema %}
