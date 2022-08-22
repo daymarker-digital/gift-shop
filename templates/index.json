@@ -163,6 +163,63 @@
       "settings": {
         "anchor_id": ""
       }
+    },
+    "16611959936ca1502e": {
+      "type": "featured-products",
+      "blocks": {
+        "c56322a3-2fea-415b-b6f8-9887473b0e86": {
+          "type": "product",
+          "settings": {
+            "product": "space-club-tee-in-dark-matter"
+          }
+        },
+        "c158dd33-2b11-4704-99d9-1138a8e3f0d9": {
+          "type": "product",
+          "settings": {
+            "product": "voyager-tee-in-supernova"
+          }
+        }
+      },
+      "block_order": [
+        "c56322a3-2fea-415b-b6f8-9887473b0e86",
+        "c158dd33-2b11-4704-99d9-1138a8e3f0d9"
+      ],
+      "settings": {
+        "layout": "two-column",
+        "anchor_id": ""
+      }
+    },
+    "1661196025228eb79a": {
+      "type": "featured-products",
+      "blocks": {
+        "f428cbf2-e7d9-4225-b314-1c89627c8e52": {
+          "type": "product",
+          "settings": {
+            "product": "space-club-tee-in-supernova"
+          }
+        },
+        "4dde4805-1f8f-47a0-845c-2f7ac2bda2f5": {
+          "type": "product",
+          "settings": {
+            "product": "unofficial-astronaut-tee-in-dark-matter"
+          }
+        },
+        "8a3097ce-d248-4b6e-acf0-1f5e3b9f8034": {
+          "type": "product",
+          "settings": {
+            "product": "unofficial-astronaut-tee-in-supernova"
+          }
+        }
+      },
+      "block_order": [
+        "f428cbf2-e7d9-4225-b314-1c89627c8e52",
+        "4dde4805-1f8f-47a0-845c-2f7ac2bda2f5",
+        "8a3097ce-d248-4b6e-acf0-1f5e3b9f8034"
+      ],
+      "settings": {
+        "layout": "three-column",
+        "anchor_id": ""
+      }
     }
   },
   "order": [
@@ -170,6 +227,8 @@
     "1661195827dff74e88",
     "16609467333108563a",
     "16611958947ef1ecd7",
-    "1661195127264aa009"
+    "1661195127264aa009",
+    "16611959936ca1502e",
+    "1661196025228eb79a"
   ]
 }
