@@ -66,6 +66,16 @@
   "class": "section section--full-width-feature",
   "settings": [
     {
+      "label": "Container",
+      "type": "select",
+      "options": [
+        { "value": "container", "label": "Static" },
+        { "value": "container-fluid", "label": "Fluid" }
+      ],
+      "default": "container",
+      "id": "container"
+    },
+    {
       "label": "Anchor ID",
       "info": "Optionally include a unique ID so that sections within the page can be linked to. Anchor IDs must be all lowercase, unique and replaced empty spaces with hyphens. For example: my-great-section-anchor",
       "type": "text",
