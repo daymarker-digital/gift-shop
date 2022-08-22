@@ -33,7 +33,7 @@
           "settings": {
             "type": "blue",
             "title": "Shop Shorts and Pants",
-            "link": "https:\/\/www.nike.com\/ca\/"
+            "link": "shopify:\/\/collections\/bottoms"
           }
         }
       },
