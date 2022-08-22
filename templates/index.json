@@ -1,5 +1,23 @@
 {
   "sections": {
+    "1661195068627651d9": {
+      "type": "full-width-feature",
+      "blocks": {
+        "372565e6-bfbf-45ae-9611-c5079109e3a6": {
+          "type": "media",
+          "settings": {
+            "type": "image",
+            "image": "shopify:\/\/shop_images\/VPSA-feature-2_2x-30.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "372565e6-bfbf-45ae-9611-c5079109e3a6"
+      ],
+      "settings": {
+        "anchor_id": ""
+      }
+    },
     "16609467333108563a": {
       "type": "full-width-feature",
       "blocks": {
@@ -15,7 +33,7 @@
           "settings": {
             "type": "blue",
             "title": "Shop Shorts and Pants",
-            "link": "https:\/\/www.nike.com\/ca\/"
+            "link": "shopify:\/\/collections\/bottoms"
           }
         }
       },
@@ -26,9 +44,38 @@
       "settings": {
         "anchor_id": ""
       }
+    },
+    "1661195127264aa009": {
+      "type": "full-width-feature",
+      "blocks": {
+        "bf6d8241-0a3e-4297-8df6-db4766ce7ab1": {
+          "type": "media",
+          "settings": {
+            "type": "image",
+            "image": "shopify:\/\/shop_images\/Artboard-2-copy-2_2x-100.jpg"
+          }
+        },
+        "cc2fdfb8-5356-4094-8ffa-b6a87668a930": {
+          "type": "cta",
+          "settings": {
+            "type": "yellow",
+            "title": "Shop Space Tees",
+            "link": "shopify:\/\/collections\/tees"
+          }
+        }
+      },
+      "block_order": [
+        "bf6d8241-0a3e-4297-8df6-db4766ce7ab1",
+        "cc2fdfb8-5356-4094-8ffa-b6a87668a930"
+      ],
+      "settings": {
+        "anchor_id": ""
+      }
     }
   },
   "order": [
-    "16609467333108563a"
+    "1661195068627651d9",
+    "16609467333108563a",
+    "1661195127264aa009"
   ]
 }
