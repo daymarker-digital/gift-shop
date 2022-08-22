@@ -13,13 +13,13 @@
   {% assign section_id = section.settings.anchor_id %}
 {% endif %}
 
-<div class="{{ section_name }}" id="{{ section_id }}" data-layout-{{ layout }}>
+<div class="{{ section_name }}" id="{{ section_id }}">
   {% render 'bs-container', state: 'open', col: 'col-12', container: container %}
-    <div class="{{ section_name }}__layout" id="{{ aos_id }}">
+    <div class="{{ section_name }}__layout grid grid--{{ layout }}" id="{{ aos_id }}">
 
       {% if products %}
         {% for item in products %}
-          {% render 'card-product', product: product %}
+          {% render 'card-product', product: item.settings.product %}
         {% endfor %}
       {% endif %}
 

@@ -1,6 +1,7 @@
 {% comment %}
 
     Accepts:
+    - classes: {String} Optionally include additional classes
     - product: {Object} Product Liquid object
     - style: {String} Optionally load different card types by passing style option
 
@@ -13,7 +14,7 @@
 
   {% assign snippet_name = 'card-product' %}
   {% assign snippet_classes = snippet_name | append: ' product' %}
-  {% assign snippet_id = snippet_name | append: '--' | append: article.id -%}
+  {% assign snippet_id = snippet_name | append: '--' | append: product.id -%}
   {% assign style = style | default: 'not-set' %}
 
   {% if classes and classes != empty %}
@@ -26,7 +27,7 @@
 
   {% assign available = product.available | default: false %}
   {% assign date_published = product.published_at %}
-  {% assign featured_image = product.featured_image | default: false %}
+  {% assign images = product.images | default: false %}
   {% assign price = product.price %}
   {% assign price_compare = product.compare_at_price %}
   {% assign selected_variant = product.selected_or_first_available_variant | default: false %}
@@ -34,24 +35,31 @@
   {% assign type = product.type | default: '' %}
   {% assign url = product.url | default: '' %}
 
-  <article class="{{ snippet_classes }}" id="{{ snippet_id }}" data-published-at="{{ date_published | date: "%Y-%m-%d %H:%M:%S" }}" data-style="{{ style }}" {% unless available %}data-unavailable{% endunless %}>
+  <article
+    class="{{ snippet_classes }}"
+    id="{{ snippet_id }}"
+    data-published-at="{{ date_published | date: "%Y-%m-%d %H:%M:%S" }}"
+    data-style="{{ style }}"
+    {% unless available %}data-unavailable{% endunless %}
+  >
     <div class="{{ snippet_classes }}__layout" id="{{ aos_id }}">
 
       {% case style %}
-        {% when 'featured' %}
+        {% when 'something-custom' %}
+          {% render 'price', product: product, show_symbol: true %}
+          {% render 'button-add-to-cart', button_title: 'Add to Bag', variant_id: selected_variant.id %}
         {% else %}
 
           <div class="{{ snippet_name }}__image">
-            <a class="{{ snippet_name }}__image-link" href="{{ url }}" title="{{ title }}" target="_self">
-              {% render 'lazyload-image', image: image %}
+            <a class="{{ snippet_name }}__image-link link" href="{{ url }}" title="{{ title }}" target="_self">
+              {% render 'lazyload-image', classes: 'card-product__image-01', image: images[0] %}
+              {% render 'lazyload-image', classes: 'card-product__image-02', image: images[1] %}
             </a>
           </div>
           <div class="{{ snippet_name }}__content">
             <strong class="{{ snippet_name }}__title">
-              <a class="{{ snippet_name }}__title-link" href="{{ url }}" title="{{ title }}" target="_self">{{ title }}</a>
+              <a class="{{ snippet_name }}__title-link link" href="{{ url }}" title="{{ title }}" target="_self">{{ title }}</a>
             </strong>
-            {% render 'price', product: product, show_symbol: true %}
-            {% render 'button-add-to-cart', button_title: 'Add to Bag', variant_id: selected_variant.id %}
           </div>
 
       {% endcase %}

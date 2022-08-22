@@ -163,6 +163,7 @@
 @import './components/form.scss';
 @import './components/full-width-feature.scss';
 @import './components/glide.scss';
+@import './components/grid.scss';
 @import './components/heading.scss';
 @import './components/input.scss';
 @import './components/label.scss';
@@ -179,7 +180,10 @@
 ////  Layouts
 //////////////////////////////////////////////////////////
 
+@import './layouts/card-product.scss';
+@import './layouts/featured-products.scss';
 @import './layouts/full-width-feature.scss';
+@import './layouts/shopify-section.scss';
 
 //////////////////////////////////////////////////////////
 ////  Theme
