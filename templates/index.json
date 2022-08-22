@@ -15,6 +15,7 @@
         "372565e6-bfbf-45ae-9611-c5079109e3a6"
       ],
       "settings": {
+        "container": "container-fluid",
         "anchor_id": ""
       }
     },
@@ -53,6 +54,7 @@
         "b439fcdb-2b20-4e92-bcc6-749852735c97"
       ],
       "settings": {
+        "container": "container-fluid",
         "layout": "two-column",
         "anchor_id": ""
       }
@@ -81,6 +83,7 @@
         "33844606-d336-4944-b0d1-b13d3ff0a129"
       ],
       "settings": {
+        "container": "container-fluid",
         "anchor_id": ""
       }
     },
@@ -133,6 +136,7 @@
         "2637f584-4aa5-4d94-8ceb-0d4386faa73e"
       ],
       "settings": {
+        "container": "container-fluid",
         "layout": "three-column",
         "anchor_id": ""
       }
@@ -161,6 +165,7 @@
         "cc2fdfb8-5356-4094-8ffa-b6a87668a930"
       ],
       "settings": {
+        "container": "container-fluid",
         "anchor_id": ""
       }
     },
@@ -185,6 +190,7 @@
         "c158dd33-2b11-4704-99d9-1138a8e3f0d9"
       ],
       "settings": {
+        "container": "container-fluid",
         "layout": "two-column",
         "anchor_id": ""
       }
@@ -217,6 +223,7 @@
         "8a3097ce-d248-4b6e-acf0-1f5e3b9f8034"
       ],
       "settings": {
+        "container": "container-fluid",
         "layout": "three-column",
         "anchor_id": ""
       }
