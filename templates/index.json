@@ -84,6 +84,59 @@
         "anchor_id": ""
       }
     },
+    "16611958947ef1ecd7": {
+      "type": "featured-products",
+      "blocks": {
+        "a7d78bff-38d9-4f34-8c2b-69ca82d411b7": {
+          "type": "product",
+          "settings": {
+            "product": "vpsa-challenger-shorts-in-cosmic-glow"
+          }
+        },
+        "e2b4871c-0a87-47fb-ac60-68c9ccba154f": {
+          "type": "product",
+          "settings": {
+            "product": "vpsa-apollo-shorts-in-dark-matter"
+          }
+        },
+        "ff21cb99-9962-4b31-98e3-cc69fe71af93": {
+          "type": "product",
+          "settings": {
+            "product": "vpsa-discovery-shorts-in-supernova"
+          }
+        },
+        "e42eaf75-526c-43a8-b873-201cc6243cd9": {
+          "type": "product",
+          "settings": {
+            "product": "vpsa-challenger-sweatpants-in-dark-matter"
+          }
+        },
+        "368a2221-5d87-4eec-a3cc-2873b59d2521": {
+          "type": "product",
+          "settings": {
+            "product": "galactic-sweats-in-venus-dust"
+          }
+        },
+        "2637f584-4aa5-4d94-8ceb-0d4386faa73e": {
+          "type": "product",
+          "settings": {
+            "product": "vpsa-discovery-sweatpants-in-dark-matter"
+          }
+        }
+      },
+      "block_order": [
+        "a7d78bff-38d9-4f34-8c2b-69ca82d411b7",
+        "e2b4871c-0a87-47fb-ac60-68c9ccba154f",
+        "ff21cb99-9962-4b31-98e3-cc69fe71af93",
+        "e42eaf75-526c-43a8-b873-201cc6243cd9",
+        "368a2221-5d87-4eec-a3cc-2873b59d2521",
+        "2637f584-4aa5-4d94-8ceb-0d4386faa73e"
+      ],
+      "settings": {
+        "layout": "three-column",
+        "anchor_id": ""
+      }
+    },
     "1661195127264aa009": {
       "type": "full-width-feature",
       "blocks": {
@@ -116,6 +169,7 @@
     "1661195068627651d9",
     "1661195827dff74e88",
     "16609467333108563a",
+    "16611958947ef1ecd7",
     "1661195127264aa009"
   ]
 }
