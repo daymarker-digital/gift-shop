@@ -7,6 +7,7 @@
 
 {% assign announcements = section.blocks | where: 'type', 'announcement' | default: false %}
 {% assign announcements_enabled = section.settings.announcements_enabled | default: false %}
+{% assign announcements_homepage_only = section.settings.announcements_homepage_only | default: false %}
 {% assign announcements_glider_id = section_id | append: '--announcements-glider' %}
 {% assign is_glider = false %}
 
@@ -128,6 +129,12 @@
       	"type": "checkbox",
         "default": true,
         "id": "announcements_enabled"
+      },
+      {
+        "label": "Homepage only",
+      	"type": "checkbox",
+        "default": false,
+        "id": "announcements_homepage_only"
       }
     ],
     "blocks": [
