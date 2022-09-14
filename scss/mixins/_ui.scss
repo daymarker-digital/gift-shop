@@ -26,6 +26,27 @@
     outline: none;
   }
 
+  &[data-colour-theme="blue"] {
+    background: rgba(var(--theme-colour-blue), 1);
+    color: rgba(var(--theme-colour-white), 1);
+    &:focus,
+    &:hover {
+      background: rgba(var(--theme-colour-black), 1);
+      color: rgba(var(--theme-colour-white), 1);
+    }
+  }
+
+  &[data-colour-theme="yellow"] {
+    background: rgba(var(--theme-colour-yellow), 1);
+    color: rgba(var(--theme-colour-black), 1);
+    &:focus,
+    &:hover {
+      background: rgba(var(--theme-colour-black), 1);
+      color: rgba(var(--theme-colour-white), 1);
+    }
+  }
+
+
   @if $style == button {
     border-width: var(--theme-border-width);
     border-style: solid;
