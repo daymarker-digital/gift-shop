@@ -141,6 +141,19 @@
       "oAP" : "\/assets\/AkkuratMonoLLWeb-Regular.woff2",
       "oF" : 0
     },
+    "\/assets\/apple-touch-icon.png" : {
+      "ft" : 32768,
+      "iS" : 9587,
+      "oA" : 0,
+      "oAP" : "\/assets\/apple-touch-icon.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
     "\/assets\/cart-notification.js" : {
       "bF" : 0,
       "ft" : 64,
@@ -218,6 +231,14 @@
       "oF" : 0,
       "sC" : 3,
       "tS" : 1
+    },
+    "\/assets\/favicon.ico" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/favicon.ico",
+      "oF" : 0
     },
     "\/assets\/featured-products.css" : {
       "aP" : 1,
@@ -449,6 +470,46 @@
       "oF" : 0,
       "sC" : 3,
       "tS" : 1
+    },
+    "\/assets\/VPAGS--placeholder-product-image--01.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/VPAGS--placeholder-product-image--01.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/assets\/VPAGS--placeholder-product-image--02.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/VPAGS--placeholder-product-image--02.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/assets\/VPAGS--placeholder-product-image--03.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/VPAGS--placeholder-product-image--03.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
+    "\/assets\/VPAGS--placeholder-product-image--04.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/VPAGS--placeholder-product-image--04.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
     },
     "\/config\/settings_data.json" : {
       "ft" : 524288,
@@ -2316,7 +2377,7 @@
     "creationDate" : 682643303.24310195,
     "displayValue" : "Gift-Shop 2.0 | Shopify",
     "displayValueWasSetByUser" : 1,
-    "iconImageName" : "brackets-koamaru",
+    "iconImageName" : "\/assets\/apple-touch-icon.png",
     "iconImageWasSetByUser" : 0
   },
   "projectSettings" : {
