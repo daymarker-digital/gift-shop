@@ -87,6 +87,10 @@
   "class": "section section--full-width-feature",
   "settings": [
     {
+			"content": "Layout",
+			"type": "header"
+		},
+    {
       "label": "Container",
       "type": "select",
       "options": [
@@ -97,11 +101,39 @@
       "id": "container"
     },
     {
+			"content": "Anchor",
+			"type": "header"
+		},
+    {
       "label": "Anchor ID",
       "info": "Optionally include a unique ID so that sections within the page can be linked to. Anchor IDs must be all lowercase, unique and replaced empty spaces with hyphens. For example: my-great-section-anchor",
       "type": "text",
       "id": "anchor_id"
-    }
+    },
+    {
+			"content": "Padding",
+			"type": "header"
+		},
+		{
+			"label": "Top Padding",
+			"type": "range",
+			"min": 0,
+			"max": 120,
+			"step": 4,
+			"unit": "px",
+			"default": 36,
+      "id": "padding_top"
+		},
+		{
+			"label": "Bottom Padding",
+			"type": "range",
+			"min": 0,
+			"max": 120,
+			"step": 4,
+			"unit": "px",
+			"default": 36,
+      "id": "padding_bottom"
+		}
   ],
   "blocks": [
     {
