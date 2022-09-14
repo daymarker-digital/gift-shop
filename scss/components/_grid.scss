@@ -1,3 +1,5 @@
+@use "../mixins/general" as *;
+
 .grid {
 
   display: grid;

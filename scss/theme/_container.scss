@@ -1,3 +1,5 @@
+@use "../mixins/general" as *;
+
 .container {
 
   padding-left: var(--bs-container-fluid-padding);

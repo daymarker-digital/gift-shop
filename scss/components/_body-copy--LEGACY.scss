@@ -1,0 +1,40 @@
+@use "../mixins/body-copy" as *;
+
+.body-copy {
+
+  font-family: var(--theme-font-family--sans-serif--primary);
+
+  ol, p, ul {
+    margin-bottom: 18px;
+  }
+
+  p, li {
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+    font-style: inherit;
+    a {
+      transition: border var(--theme-transition-duration);
+      border-bottom-width: var(--theme-border-width);
+      border-bottom-color: inherit;
+      border-bottom-style: solid;
+      color: inherit;
+      display: inline-block;
+      width: auto;
+      text-decoration: none;
+      outline: none;
+      &:focus,
+      &:hover {
+        border-bottom-color: transparent;
+        text-decoration: none;
+        outline: none;
+      }
+    }
+  }
+
+  & > *:last-child {
+    margin-bottom: 0;
+  }
+
+}
