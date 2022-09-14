@@ -1,15 +1,19 @@
-{% assign section_name = 'footer' %}
-{% assign section_id = section_name | append: '--' | append: section.id %}
+{%- liquid
 
-{% assign street_address = shop.address.address1 | default: '1234 Main St' %}
-{% assign suite = shop.address.address2 | default: false %}
-{% assign city = shop.address.city | default: false %}
-{% assign region_code = shop.address.province_code | default: false %}
-{% assign postal = shop.address.zip | default: false %}
+  assign section_name = 'footer'
+  assign section_id = section_name | append: '--' | append: section.id
 
-{% assign company = shop.address.company %}
-{% assign phone = shop.address.phone %}
-{% assign email = 'excuseme@weareverypolite.com' %}
+  assign street_address = shop.address.address1 | default: '1234 Main St'
+  assign suite = shop.address.address2 | default: false
+  assign city = shop.address.city | default: false
+  assign region_code = shop.address.province_code | default: false
+  assign postal = shop.address.zip | default: false
+
+  assign company = shop.address.company
+  assign phone = shop.address.phone
+  assign email = 'excuseme@weareverypolite.com'
+
+-%}
 
 <div class="{{ section_name }}__main">
 

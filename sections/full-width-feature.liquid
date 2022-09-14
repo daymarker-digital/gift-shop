@@ -1,17 +1,21 @@
-{%- assign section_name = 'full-width-feature' -%}
-{%- assign section_id = section_name | append: '--' | append: section.id -%}
+{%- liquid
 
-{% assign aos_id = section_id | append: '--aos' %}
-{% assign aos_delay = 250 %}
-{% assign aos_delay_increment = 250 %}
+  assign section_name = 'full-width-feature'
+  assign section_id = section_name | append: '--' | append: section.id
 
-{% assign container = section.settings.container | default: 'container' %}
-{% assign cta = section.blocks | where: 'type', 'cta' | default: false %}
-{% assign media = section.blocks | where: 'type', 'media' | default: false %}
+  assign aos_id = section_id | append: '--aos'
+  assign aos_delay = 250
+  assign aos_delay_increment = 250
 
-{% if section.settings.anchor_id != blank %}
-  {% assign section_id = section.settings.anchor_id %}
-{% endif %}
+  assign container = section.settings.container | default: 'container'
+  assign cta = section.blocks | where: 'type', 'cta' | default: false
+  assign media = section.blocks | where: 'type', 'media' | default: false
+
+  if section.settings.anchor_id != blank
+    assign section_id = section.settings.anchor_id
+  endif
+
+-%}
 
 <div class="{{ section_name }}" id="{{ section_id }}">
   {% render 'bs-container', state: 'open', col: 'col-12 col-lg-10 offset-lg-1', container: container %}
