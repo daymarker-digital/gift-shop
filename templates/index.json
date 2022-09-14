@@ -59,7 +59,7 @@
         "container": "container-fluid",
         "layout": "two-column",
         "anchor_id": "",
-        "padding_top": 36,
+        "padding_top": 44,
         "padding_bottom": 0
       }
     },
@@ -89,7 +89,7 @@
       "settings": {
         "container": "container-fluid",
         "anchor_id": "",
-        "padding_top": 36,
+        "padding_top": 44,
         "padding_bottom": 0
       }
     },
@@ -145,7 +145,7 @@
         "container": "container-fluid",
         "layout": "three-column",
         "anchor_id": "",
-        "padding_top": 36,
+        "padding_top": 44,
         "padding_bottom": 0
       }
     },
@@ -175,7 +175,7 @@
       "settings": {
         "container": "container-fluid",
         "anchor_id": "",
-        "padding_top": 36,
+        "padding_top": 44,
         "padding_bottom": 0
       }
     },
@@ -203,7 +203,7 @@
         "container": "container-fluid",
         "layout": "two-column",
         "anchor_id": "",
-        "padding_top": 36,
+        "padding_top": 44,
         "padding_bottom": 0
       }
     },
@@ -238,7 +238,7 @@
         "container": "container-fluid",
         "layout": "three-column",
         "anchor_id": "",
-        "padding_top": 36,
+        "padding_top": 44,
         "padding_bottom": 0
       }
     }
