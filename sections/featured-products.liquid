@@ -10,22 +10,54 @@
   assign container = section.settings.container | default: 'container'
   assign layout = section.settings.layout | default: 'two-column'
   assign products = section.blocks | where: 'type', 'product' | default: false
+  assign products_size = products.size | default: 0
+  assign products_modulo = products_size | modulo: 2
+  assign products_placeholder_enabled = false
 
   if section.settings.anchor_id != blank
     assign section_id = section.settings.anchor_id
   endif
 
+  if 'three-column' == layout and products_modulo == 1
+    assign products_placeholder_enabled = true
+  endif
+
 -%}
 
-<div class="{{ section_name }}" id="{{ section_id }}">
+{%- style -%}
+
+  .section-{{ section.id }}-padding {
+    padding-top: calc({{ section.settings.padding_top }}px * 0.75);
+    padding-bottom: calc({{ section.settings.padding_bottom }}px  * 0.75);
+  }
+
+  @media screen and (min-width: 992px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+{%- endstyle -%}
+
+<link rel="stylesheet" href="{{ 'section-featured-products.css' | asset_url }}" media="print" onload="this.media='all'">
+<noscript>{{ 'section-featured-products.css' | asset_url | stylesheet_tag }}</noscript>
+
+<div class="{{ section_name }} section-{{ section.id }}-padding" id="{{ section_id }}">
   {% render 'bs-container', state: 'open', col: 'col-12 col-lg-10 offset-lg-1', container: container %}
     <div class="{{ section_name }}__layout grid grid--{{ layout }}" id="{{ aos_id }}">
 
-      {% if products %}
-        {% for item in products %}
-          {% render 'card-product', product: item.settings.product %}
-        {% endfor %}
-      {% endif %}
+      {%- liquid
+        if products
+          for item in products
+            render 'card-product', index: forloop.index, product: item.settings.product
+            if products_placeholder_enabled and forloop.last
+              assign placeholder_index = forloop.index | plus: 1
+              render 'card-product-placeholder', index: placeholder_index
+            endif
+          endfor
+        endif
+      -%}
 
     </div>
   {% render 'bs-container', state: 'closed' %}
@@ -37,6 +69,10 @@
   "tag": "section",
   "class": "section section--featured-products",
   "settings": [
+    {
+			"content": "Layout",
+			"type": "header"
+		},
     {
       "label": "Container",
       "type": "select",
@@ -58,11 +94,39 @@
       "id": "layout"
     },
     {
+			"content": "Anchor",
+			"type": "header"
+		},
+    {
       "label": "Anchor ID",
       "info": "Optionally include a unique ID so that sections within the page can be linked to. Anchor IDs must be all lowercase, unique and replaced empty spaces with hyphens. For example: my-great-section-anchor",
       "type": "text",
       "id": "anchor_id"
-    }
+    },
+    {
+			"content": "Padding",
+			"type": "header"
+		},
+		{
+			"label": "Top Padding",
+			"type": "range",
+			"min": 0,
+			"max": 120,
+			"step": 4,
+			"unit": "px",
+			"default": 36,
+      "id": "padding_top"
+		},
+		{
+			"label": "Bottom Padding",
+			"type": "range",
+			"min": 0,
+			"max": 120,
+			"step": 4,
+			"unit": "px",
+			"default": 36,
+      "id": "padding_bottom"
+		}
   ],
   "blocks": [
     {

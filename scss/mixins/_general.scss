@@ -1,6 +1,4 @@
-//////////////////////////////////////////////////////////
-////  Mixins
-//////////////////////////////////////////////////////////
+@use "../variables" as *;
 
 @mixin clearfix {
 	clear: both;
@@ -122,11 +120,7 @@
 
 }
 
-//////////////////////////////////////////////////////////
-////  UI/UX | Breakpoint
-//////////////////////////////////////////////////////////
-
-@mixin breakpoint( $size ) {
+@mixin breakpoint($size:'') {
 
   @if $size == sm {
 	  @media (min-width: map-get( $grid-breakpoints, sm )) { @content; }
@@ -149,7 +143,7 @@
   }
 
   @else {
-    @media (min-width: $size) { @content; }
+    @media ( min-width: $size ) { @content; }
   }
 
 }

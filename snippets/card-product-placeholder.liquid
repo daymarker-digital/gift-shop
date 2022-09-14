@@ -1,22 +1,25 @@
-{%- if product and product != blank %}
-
-  {%- liquid
+{%- liquid
 
     comment
       Accepts:
         - classes: {String} Optionally include additional classes
         - index: {Integer} Optionally include index from loop object
-        - product: {Object} Product Liquid object
-        - style: {String} Optionally load different card types by passing style option
     endcomment
 
-    assign snippet_name = 'card-product'
+    assign snippet_name = 'card-product-placeholder'
     assign snippet_classes = snippet_name | append: ' product'
-    assign snippet_id = snippet_name | append: '--' | append: product.id
-    assign style = style | default: 'not-set'
+    assign snippet_id = snippet_name
 
     if classes and classes != empty
       assign snippet_classes = snippet_classes | prepend: ' ' | prepend: classes
+    endif
+
+    if index
+      if index >= 10
+        assign snippet_id = snippet_id | append: '--' | append: index
+      else
+        assign snippet_id = snippet_id | append: '--0' | append: index
+      endif
     endif
 
     assign aos_id = snippet_id | append: '--aos'
@@ -26,23 +29,10 @@
     assign available = product.available | default: false
     assign date_published = product.published_at
     assign images = product.images | default: false
-    assign price = product.price
-    assign price_compare = product.compare_at_price
-    assign selected_variant = product.selected_or_first_available_variant | default: false
-    assign title = product.title | default: ''
-    assign type = product.type | default: ''
-    assign url = product.url | default: ''
 
-  -%}
+-%}
 
-  <article
-    class="{{ snippet_classes }}"
-    id="{{ snippet_id }}"
-    data-index="{{ index }}"
-    data-published-at="{{ date_published | date: "%Y-%m-%d %H:%M:%S" }}"
-    data-style="{{ style }}"
-    {% unless available %}data-unavailable{% endunless %}
-  >
+<article class="{{ snippet_classes }}" data-index="{{ index }}">
     <div class="{{ snippet_classes }}__layout" id="{{ aos_id }}">
 
       {% case style %}
@@ -68,6 +58,4 @@
       {% endcase %}
 
     </div>
-  </article>
-
-{%- endif -%}
+</article>

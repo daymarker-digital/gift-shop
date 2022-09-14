@@ -1,3 +1,5 @@
+@use "./mixins/general" as *;
+
 .full-width-feature {
 
   &__cta {

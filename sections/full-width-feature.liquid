@@ -17,7 +17,26 @@
 
 -%}
 
-<div class="{{ section_name }}" id="{{ section_id }}">
+{%- style -%}
+
+  .section-{{ section.id }}-padding {
+    padding-top: calc({{ section.settings.padding_top }}px * 0.75);
+    padding-bottom: calc({{ section.settings.padding_bottom }}px  * 0.75);
+  }
+
+  @media screen and (min-width: 992px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+{%- endstyle -%}
+
+<link rel="stylesheet" href="{{ 'section-full-width-feature.css' | asset_url }}" media="print" onload="this.media='all'">
+<noscript>{{ 'section-full-width-feature.css' | asset_url | stylesheet_tag }}</noscript>
+
+<div class="{{ section_name }} section-{{ section.id }}-padding" id="{{ section_id }}">
   {% render 'bs-container', state: 'open', col: 'col-12 col-lg-10 offset-lg-1', container: container %}
     <div class="{{ section_name }}__layout" id="{{ aos_id }}">
 
@@ -42,8 +61,6 @@
               {% assign colour = item.settings.colour | default: 'blue' %}
               {% assign title = item.settings.title | default: '' %}
               {% assign link = item.settings.link | default: '' %}
-
-              {% render 'debug-this', item: colour %}
 
               {% if title != blank and link != blank %}
                 <div class="{{ section_name }}__cta">
