@@ -18,7 +18,7 @@
 {% if announcements_enabled and announcements %}
 
   {% if announcements.size > 1 %}
-      assign is_glider = true %}
+    {% assign is_glider = true %}
   {% endif %}
 
   <div class="{{ section_name }}__announcements">
