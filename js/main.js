@@ -11,6 +11,7 @@
 // @codekit-prepend "./modules/_instagramFeed.js";
 // @codekit-prepend "./modules/_mobileMenu.js";
 // @codekit-prepend "./modules/_modals";
+// @codekit-prepend "./modules/_randomPlaceholderProductImage.js";
 // @codekit-prepend "./modules/_scrolling.js";
 // @codekit-prepend "./modules/_sizing.js";
 // @codekit-prepend "./modules/_tools.js";
@@ -20,6 +21,7 @@
 //////////////////////////////////////////////////////////////////////////////////////////
 
 let modules = [
+  new RandomPlaceholderProductImage(),
   new Scrolling(),
   new Credits()
 ];

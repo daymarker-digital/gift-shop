@@ -51,10 +51,46 @@
     <link type="text/css" href="{{ 'main.css' | asset_url }}" rel="stylesheet">
 
     <script>
+
       document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
       if ( Shopify.designMode ) {
         document.documentElement.classList.add('shopify-design-mode');
       }
+
+      window.moneyFormat = {{ shop.money_format | json }};
+
+      var Theme = Theme || {};
+
+      Theme.cart = {{ cart | json }};
+      Theme.currency = {{ shop.currency | json }};
+      Theme.orders = [];
+      Theme.product = {};
+      Theme.collection = {};
+      Theme.customer = {};
+      Theme.assets = {
+        images: {
+          image_pattern: {{ "VPAGS--product-image-pattern.svg" | asset_url | json }},
+          product_placeholders: [
+            {{ "VPAGS--placeholder-product-image--01.svg" | asset_url | json }},
+            {{ "VPAGS--placeholder-product-image--02.svg" | asset_url | json }},
+            {{ "VPAGS--placeholder-product-image--03.svg" | asset_url | json }},
+            {{ "VPAGS--placeholder-product-image--04.svg" | asset_url | json }}
+          ]
+        }
+      };
+
+      {% if template contains 'product' %}
+	      Theme.product = {{ product | json }};
+      {% endif %}
+
+      {% if template contains 'collection' %}
+	      Theme.collection = {{ collection | json }};
+      {% endif %}
+
+      {% if customer %}
+        Theme.customer = {{ customer | json }};
+      {% endif %}
+
     </script>
 
   </head>

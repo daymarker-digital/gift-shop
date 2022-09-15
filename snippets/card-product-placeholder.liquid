@@ -3,6 +3,7 @@
     comment
       Accepts:
         - classes: {String} Optionally include additional classes
+        - id: {String} Optionally include a unique ID
         - index: {Integer} Optionally include index from loop object
     endcomment
 
@@ -33,29 +34,7 @@
 -%}
 
 <article class="{{ snippet_classes }}" data-index="{{ index }}">
-    <div class="{{ snippet_classes }}__layout" id="{{ aos_id }}">
-
-      {% case style %}
-
-        {% when 'something-custom' %}
-          {% render 'price', product: product, show_symbol: true %}
-          {% render 'button-add-to-cart', button_title: 'Add to Bag', variant_id: selected_variant.id %}
-
-        {% else %}
-
-          <div class="{{ snippet_name }}__image">
-            <a class="{{ snippet_name }}__image-link link" href="{{ url }}" title="{{ title }}" target="_self">
-              {% render 'lazyload-image', classes: 'card-product__image-01', image: images[0] %}
-              {% render 'lazyload-image', classes: 'card-product__image-02', image: images[1] %}
-            </a>
-          </div>
-          <div class="{{ snippet_name }}__content">
-            <strong class="{{ snippet_name }}__title">
-              <a class="{{ snippet_name }}__title-link link" href="{{ url }}" title="{{ title }}" target="_self">{{ title }}</a>
-            </strong>
-          </div>
-
-      {% endcase %}
-
+    <div class="{{ snippet_name }}__media">
+        <img class="{{ snippet_name }}__image lazyload-item lazyload js--product-image-placeholder" src="" alt="" width="" height="" />
     </div>
 </article>

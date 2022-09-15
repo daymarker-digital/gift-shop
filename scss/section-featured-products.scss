@@ -25,7 +25,13 @@
 
   @include breakpoint(md) {} // min width md
 
-  @include breakpoint(lg) {} // min width lg
+  @include breakpoint(lg) {
+
+    .card-product-placeholder {
+      display: none;
+    }
+
+  } // min width lg
 
   @include breakpoint(xl) {} // min width xl
 

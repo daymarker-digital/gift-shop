@@ -50,10 +50,13 @@
       {%- liquid
         if products
           for item in products
-            render 'card-product', index: forloop.index, product: item.settings.product
+            assign item_id = 'temp-id-product'
+            assign item_index = forloop.index
+            render 'card-product', id: item_id, index: item_index, product: item.settings.product
             if products_placeholder_enabled and forloop.last
-              assign placeholder_index = forloop.index | plus: 1
-              render 'card-product-placeholder', index: placeholder_index
+              assign item_id = 'temp-id-placeholder'
+              assign item_index = forloop.index | plus: 1
+              render 'card-product-placeholder', id: item_id, index: item_index
             endif
           endfor
         endif

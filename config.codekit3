@@ -240,30 +240,6 @@
       "oAP" : "\/assets\/favicon.ico",
       "oF" : 0
     },
-    "\/assets\/featured-products.css" : {
-      "aP" : 1,
-      "bl" : 0,
-      "ci" : 0,
-      "co" : 0,
-      "ft" : 16,
-      "ma" : 0,
-      "oA" : 2,
-      "oAP" : "\/assets\/featured-products.css",
-      "oF" : 0,
-      "pg" : 0
-    },
-    "\/assets\/full-width-feature.css" : {
-      "aP" : 1,
-      "bl" : 0,
-      "ci" : 0,
-      "co" : 0,
-      "ft" : 16,
-      "ma" : 0,
-      "oA" : 2,
-      "oAP" : "\/assets\/full-width-feature.css",
-      "oF" : 0,
-      "pg" : 0
-    },
     "\/assets\/global.js" : {
       "bF" : 0,
       "ft" : 64,
@@ -611,6 +587,17 @@
       "mi" : 1,
       "oA" : 1,
       "oAP" : "\/assets\/_modals.min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 1
+    },
+    "\/js\/modules\/_randomPlaceholderProductImage.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/assets\/_randomPlaceholderProductImage.min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 1
@@ -1532,7 +1519,7 @@
       "ma" : 0,
       "oA" : 0,
       "oAP" : "\/assets\/section-full-width-feature.css",
-      "oF" : 0,
+      "oF" : 2,
       "oS" : 3,
       "pg" : 0,
       "sct" : 0
