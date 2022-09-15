@@ -15,7 +15,7 @@
         "372565e6-bfbf-45ae-9611-c5079109e3a6"
       ],
       "settings": {
-        "container": "container-fluid",
+        "container": "container",
         "anchor_id": "",
         "padding_top": 24,
         "padding_bottom": 0
@@ -56,7 +56,7 @@
         "b439fcdb-2b20-4e92-bcc6-749852735c97"
       ],
       "settings": {
-        "container": "container-fluid",
+        "container": "container",
         "layout": "two-column",
         "anchor_id": "",
         "padding_top": 44,
@@ -87,7 +87,7 @@
         "33844606-d336-4944-b0d1-b13d3ff0a129"
       ],
       "settings": {
-        "container": "container-fluid",
+        "container": "container",
         "anchor_id": "",
         "padding_top": 44,
         "padding_bottom": 0
