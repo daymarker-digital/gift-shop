@@ -2,6 +2,7 @@
 
   assign section_name = 'featured-products'
   assign section_id = section_name | append: '--' | append: section.id
+  assign section_classes = section_name | append: ' section-' | append: section.id | append: '-padding'
 
   assign aos_id = section_id | append: '--aos'
   assign aos_delay = 250
@@ -43,25 +44,32 @@
 <link rel="stylesheet" href="{{ 'section-featured-products.css' | asset_url }}" media="print" onload="this.media='all'">
 <noscript>{{ 'section-featured-products.css' | asset_url | stylesheet_tag }}</noscript>
 
-<div class="{{ section_name }} section-{{ section.id }}-padding" id="{{ section_id }}">
+<div class="{{ section_classes }}" id="{{ section_id }}">
   {% render 'bs-container', state: 'open', col: 'col-12 col-lg-10 offset-lg-1', container: container %}
 
-    <div class="{{ section_name }}__layout grid grid--{{ layout }}" id="{{ aos_id }}">
+    <div class="{{ section_name }}__layout grid grid--{{ layout }}" id="{{ aos_id }}" role="list">
 
-      {%- liquid
-        if products
-          for item in products
-            assign item_id = 'temp-id-product'
-            assign item_index = forloop.index
-            render 'card-product', id: item_id, index: item_index, product: item.settings.product
-            if products_placeholder_enabled and forloop.last
-              assign item_id = 'temp-id-placeholder'
-              assign item_index = forloop.index | plus: 1
-              render 'card-product-placeholder', id: item_id, index: item_index
-            endif
-          endfor
-        endif
-      -%}
+      {% if products %}
+        {% for item in products %}
+
+            {% assign item_id = 'temp-id-product' %}
+            {% assign item_index = forloop.index %}
+            <div class="{{ section_name }}__item grid__item" data-index="{{ forloop.index }}">
+              {% render 'card-product', id: item_id, index: item_index, product: item.settings.product %}
+            </div>
+
+          {% if products_placeholder_enabled and forloop.last %}
+
+            {% assign item_id = 'temp-id-placeholder' %}
+            {% assign item_index = forloop.index | plus: 1 %}
+            <div class="{{ section_name }}__item grid__item" data-index="{{ forloop.index }}">
+              {% render 'card-product-placeholder', id: item_id, index: item_index %}
+            </div>
+
+          {% endif %}
+
+        {% endfor %}
+      {% endif %}
 
     </div>
   {% render 'bs-container', state: 'closed' %}
@@ -98,16 +106,6 @@
       "id": "layout"
     },
     {
-			"content": "Anchor",
-			"type": "header"
-		},
-    {
-      "label": "Anchor ID",
-      "info": "Optionally include a unique ID so that sections within the page can be linked to. Anchor IDs must be all lowercase, unique and replaced empty spaces with hyphens. For example: my-great-section-anchor",
-      "type": "text",
-      "id": "anchor_id"
-    },
-    {
 			"content": "Padding",
 			"type": "header"
 		},
@@ -130,7 +128,17 @@
 			"unit": "px",
 			"default": 36,
       "id": "padding_bottom"
-		}
+		},
+    {
+			"content": "Anchor",
+			"type": "header"
+		},
+    {
+      "label": "Anchor ID",
+      "info": "Optionally include a unique ID so that sections within the page can be linked to. Anchor IDs must be all lowercase, unique and replaced empty spaces with hyphens. For example: my-great-section-anchor",
+      "type": "text",
+      "id": "anchor_id"
+    }
   ],
   "blocks": [
     {

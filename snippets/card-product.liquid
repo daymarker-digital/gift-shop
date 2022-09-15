@@ -6,7 +6,6 @@
       Accepts:
         - classes: {String} Optionally include additional classes
         - id: {String} Optionally include a unique ID
-        - index: {Integer} Optionally include index from loop object
         - product: {Object} Product Liquid object
         - style: {String} Optionally load different card types by passing style option
     endcomment
@@ -39,7 +38,6 @@
   <article
     class="{{ snippet_classes }}"
     id="{{ snippet_id }}"
-    data-index="{{ index }}"
     data-published-at="{{ date_published | date: "%Y-%m-%d %H:%M:%S" }}"
     data-style="{{ style }}"
     {% unless available %}data-unavailable{% endunless %}

@@ -1,5 +1,3 @@
-@use "utils/mixins/general" as *;
-
 .full-width-feature {
 
   &__cta {
@@ -20,15 +18,5 @@
       height: auto;
     }
   }
-
-  @include breakpoint(sm) {} // min width sm
-
-  @include breakpoint(md) {} // min width md
-
-  @include breakpoint(lg) {} // min width lg
-
-  @include breakpoint(xl) {} // min width xl
-
-  @include breakpoint(xxl) {} // min width xxl
 
 }

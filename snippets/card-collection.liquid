@@ -1,3 +1,5 @@
+{%- if collection and collection != blank %}
+
 {% comment %}
 
     Accepts:
@@ -8,8 +10,6 @@
     {% render 'card-collection', collection: collection, style: 'anything-but-default' %}
 
 {% endcomment %}
-
-{%- if collection and collection != blank -%}
 
   {% assign snippet_name = 'card-collection' %}
   {% assign snippet_classes = snippet_name | append: ' collection' %}

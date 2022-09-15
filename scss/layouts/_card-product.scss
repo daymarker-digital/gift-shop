@@ -10,7 +10,7 @@
   }
 
   &__content {
-    padding: 10px 0 0 0;
+    padding: 10px 0;
   }
 
   &__image {
@@ -64,7 +64,7 @@
   @include breakpoint(sm) {
 
     &__content {
-      padding: 12px 0 0 0;
+      padding: 12px 0;
     }
 
     &__title {
@@ -76,7 +76,7 @@
   @include breakpoint(md) {
 
     &__content {
-      padding: 14px 0 0 0;
+      padding: 14px 0;
     }
 
     &__title {

@@ -1,43 +1,91 @@
-{{ 'component-card.css' | asset_url | stylesheet_tag }}
-{{ 'section-collection-list.css' | asset_url | stylesheet_tag }}
+{%- liquid
 
-<div class="page-width">
-  <h1 class="title title--primary">{{ section.settings.title | escape }}</h1>
-  {%- liquid
-    case section.settings.sort
-      when 'products_high' or 'products_low'
-        assign collections = collections | sort: 'all_products_count'
-      when 'date' or 'date_reversed'
-        assign collections = collections | sort: 'published_at'
-    endcase
+  assign section_name = 'list-collections'
+  assign section_id = section_name | append: '--' | append: section.id
+  assign section_classes = section_name
 
-    if section.settings.sort == 'products_high' or section.settings.sort == 'date_reversed' or section.settings.sort == 'alphabetical_reversed'
-      assign collections = collections | reverse
-    endif
-  -%}
-  <ul class="collection-list grid grid--1-col grid--3-col-tablet" role="list">
-    {%- for collection in collections -%}
-      <li class="collection-list__item grid__item">
-        {% render 'card-collection', card_collection: collection, media_aspect_ratio: section.settings.image_ratio, columns: 3 %}
-      </li>
-    {%- endfor -%}
-  </ul>
+  assign aos_id = section_id | append: '--aos'
+  assign aos_delay = 250
+  assign aos_delay_increment = 250
+
+  assign container = section.settings.container | default: 'container'
+  assign layout = section.settings.layout | default: 'two-column'
+  assign title = section.settings.title | default: 'Collections'
+
+  if section.settings.anchor_id != blank
+    assign section_id = section.settings.anchor_id
+  endif
+
+  case section.settings.sort
+    when 'products_high' or 'products_low'
+      assign collections = collections | sort: 'all_products_count'
+    when 'date' or 'date_reversed'
+      assign collections = collections | sort: 'published_at'
+  endcase
+
+  if section.settings.sort == 'products_high' or section.settings.sort == 'date_reversed' or section.settings.sort == 'alphabetical_reversed'
+    assign collections = collections | reverse
+  endif
+
+-%}
+
+<div class="{{ section_classes }}" id="{{ section_id }}">
+  {% render 'bs-container', state: 'open', col: 'col-12 col-lg-10 offset-lg-1', container: container %}
+    <h1 class="{{ section_name }}__heading heading--1">{{ title | escape }}</h1>
+    <div class="{{ section_name }}__layout grid grid--{{ layout }}" id="{{ aos_id }}" role="list">
+      {%- for item in collections -%}
+        {% assign item_id = 'temp-id-product' %}
+        <div class="{{ section_name }}__item grid__item" data-index="{{ forloop.index }}">
+          {% render 'card-collection', collection: item, id: item_id %}
+        </div>
+      {%- endfor -%}
+    </div>
+  {% render 'bs-container', state: 'closed' %}
 </div>
 
 {% schema %}
 {
-  "name": "t:sections.main-list-collections.name",
-  "class": "section",
+  "name": "List Collections",
+  "tag": "section",
+  "class": "section section--list-collections",
   "settings": [
     {
+			"content": "Content",
+			"type": "header"
+		},
+    {
+      "label": "Title",
       "type": "text",
-      "id": "title",
-      "label": "t:sections.main-list-collections.settings.title.label",
-      "default": "Collections"
+      "default": "Collections",
+      "id": "title"
     },
     {
+			"content": "Layout",
+			"type": "header"
+		},
+    {
+      "label": "Container",
       "type": "select",
-      "id": "sort",
+      "options": [
+        { "value": "container", "label": "Static" },
+        { "value": "container-fluid", "label": "Fluid" }
+      ],
+      "default": "container",
+      "id": "container"
+    },
+    {
+      "label": "Layout",
+      "type": "select",
+      "options": [
+        { "value": "two-column", "label": "Two Column" },
+        { "value": "three-column", "label": "Three Column" }
+      ],
+      "default": "two-column",
+      "id": "layout"
+    },
+    {
+      "label": "Sort",
+      "type": "select",
       "options": [
         {
           "value": "alphabetical",
@@ -65,28 +113,17 @@
         }
       ],
       "default": "alphabetical",
-      "label": "t:sections.main-list-collections.settings.sort.label"
+      "id": "sort"
     },
     {
-      "type": "select",
-      "id": "image_ratio",
-      "options": [
-        {
-          "value": "adapt",
-          "label": "t:sections.main-list-collections.settings.image_ratio.options__1.label"
-        },
-        {
-          "value": "portrait",
-          "label": "t:sections.main-list-collections.settings.image_ratio.options__2.label"
-        },
-        {
-          "value": "square",
-          "label": "t:sections.main-list-collections.settings.image_ratio.options__3.label"
-        }
-      ],
-      "default": "adapt",
-      "label": "t:sections.main-list-collections.settings.image_ratio.label",
-      "info": "t:sections.main-list-collections.settings.image_ratio.info"
+			"content": "Anchor",
+			"type": "header"
+		},
+    {
+      "label": "Anchor ID",
+      "info": "Optionally include a unique ID so that sections within the page can be linked to. Anchor IDs must be all lowercase, unique and replaced empty spaces with hyphens. For example: my-great-section-anchor",
+      "type": "text",
+      "id": "anchor_id"
     }
   ]
 }
