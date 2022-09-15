@@ -1,7 +1,0 @@
-@use "../mixins/body-copy" as *;
-
-.body-copy {
-
-  @include body-copy(primary);
-
-}

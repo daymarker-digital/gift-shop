@@ -1,0 +1,20 @@
+@use '../utils/mixins/body-copy' as *;
+@use '../utils/mixins/heading' as *;
+
+.body-copy {
+  &--1 {
+    @include body-copy(1);
+  }
+}
+
+.heading {
+  &--1 {
+    @include heading(1);
+  }
+  &--2 {
+    @include heading(2);
+  }
+  &--3 {
+    @include heading(3);
+  }
+}

@@ -1,20 +1,34 @@
-[data-colour-theme="blue"] {
-  background: rgba(var(--theme-colour-blue), 1);
-  color: rgba(var(--theme-colour-white), 1);
-  &:focus,
-  &:hover {
-    background: rgba(var(--theme-colour-black), 1);
-    color: rgba(var(--theme-colour-white), 1);
+@use '../mixins/colour-theme' as *;
+
+[data-colour-theme='blue'] {
+  @include colour-theme('blue');
+  &.link,
+  &.button {
+    &:focus,
+    &:hover {
+      @include colour-theme('blue-hover');
+    }
   }
 }
 
-[data-colour-theme="yellow"] {
-  background: rgba(var(--theme-colour-yellow), 1);
-  color: rgba(var(--theme-colour-black), 1);
-  &:focus,
-  &:hover {
-    background: rgba(var(--theme-colour-black), 1);
-    color: rgba(var(--theme-colour-white), 1);
+[data-colour-theme='red'] {
+  @include colour-theme('red');
+  &.link,
+  &.button {
+    &:focus,
+    &:hover {
+      @include colour-theme('red-hover');
+    }
   }
 }
 
+[data-colour-theme='yellow'] {
+  @include colour-theme('yellow');
+  &.link,
+  &.button {
+    &:focus,
+    &:hover {
+      @include colour-theme('yellow-hover');
+    }
+  }
+}

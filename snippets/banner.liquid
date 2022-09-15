@@ -1,0 +1,7 @@
+{% assign colour_theme = colour_theme | default: 'red' %}
+
+{% if title and title != blank %}
+  <div class="banner" data-colour-theme="{{ colour_theme }}">
+    <span class="banner__title">{{ title }}</span>
+  </div>
+{% endif %}

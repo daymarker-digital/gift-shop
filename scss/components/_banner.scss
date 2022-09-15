@@ -1,0 +1,14 @@
+@use '../mixins/body-copy' as *;
+@use "../mixins/general" as *;
+
+.banner {
+
+  @include body-copy(banner);
+  text-transform: uppercase;
+  padding: 10px 0;
+
+  @include breakpoint(lg) {
+    padding: 14px 0;
+  }
+
+}

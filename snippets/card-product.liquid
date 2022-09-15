@@ -58,6 +58,9 @@
             <a class="{{ snippet_name }}__image-link link" href="{{ url }}" title="{{ title }}" target="_self">
               {% render 'lazyload-image', classes: 'card-product__image-01', image: images[0] %}
               {% render 'lazyload-image', classes: 'card-product__image-02', image: images[1] %}
+              {% unless available %}
+                {% render 'banner', colour: 'red', title: 'Sold Out! (Sorry)' %}
+              {% endunless %}
             </a>
           </div>
           <div class="{{ snippet_name }}__content">
