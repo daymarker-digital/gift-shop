@@ -1,4 +1,4 @@
-@use '../mixins/colour-theme' as *;
+@use "../utils/mixins/colour-theme" as *;
 
 [data-colour-theme='blue'] {
   @include colour-theme('blue');

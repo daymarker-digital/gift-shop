@@ -1,3 +1,9 @@
 .header {
-  background: black;
+
+  background: blue;
+
+  .scroll-position--scrolled & {}
+
+  .mobile-menu--active & {}
+
 }
