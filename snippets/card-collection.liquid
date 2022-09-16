@@ -25,7 +25,7 @@
 
     assign date_published = card_collection.published_at
     assign desciption = card_collection.description | default: ''
-    assign image = card_collection.image | default: false
+    assign image = card_collection.featured_image | default: false
     assign title = card_collection.title | default: ''
     assign url = card_collection.url | default: ''
 
@@ -44,14 +44,17 @@
         {% when 'featured' %}
         {% else %}
           <div class="{{ snippet_name }}__image">
-            <a class="{{ snippet_name }}__image-link" href="{{ url }}" title="{{ title }}" target="_self">
-              {% render 'lazyload-image', image: image %}
+            <a class="{{ snippet_name }}__image-link link" href="{{ url }}" title="{{ title }}" target="_self">
+              {% if image %}
+                {% render 'lazyload-image', image: image %}
+              {% else %}
+                <img class="{{ snippet_name }}__image lazyload-item lazyload js--product-image-placeholder" src="" alt="Fallback Image" width="" height="" />
+              {% endif %}
             </a>
           </div>
           <div class="{{ snippet_name }}__content">
-            <time class="{{ snippet_name }}__date" datetime="{{ date_published | date: "%Y-%m-%d" }}">{{ date_published | date: "%B %e, %Y" }}</time>
             <strong class="{{ snippet_name }}__title">
-              <a class="{{ snippet_name }}__title-link" href="{{ url }}" title="{{ title }}" target="_self">{{ title }}</a>
+              <a class="{{ snippet_name }}__title-link link" href="{{ url }}" title="{{ title }}" target="_self">{{ title }}</a>
             </strong>
           </div>
       {% endcase %}
