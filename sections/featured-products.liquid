@@ -52,20 +52,17 @@
       {% if products %}
         {% for item in products %}
 
-            {% assign item_id = 'temp-id-product' %}
-            {% assign item_index = forloop.index %}
+            {% assign item_id = 'card-product' | append: '--' | append: item.settings.product.id | append: '--' | append: forloop.index %}
             <div class="{{ section_name }}__item grid__item" data-index="{{ forloop.index }}">
-              {% render 'card-product', id: item_id, index: item_index, product: item.settings.product %}
+              {% render 'card-product', card_product: item.settings.product, id: item_id %}
             </div>
 
           {% if products_placeholder_enabled and forloop.last %}
-
-            {% assign item_id = 'temp-id-placeholder' %}
             {% assign item_index = forloop.index | plus: 1 %}
-            <div class="{{ section_name }}__item grid__item" data-index="{{ forloop.index }}">
-              {% render 'card-product-placeholder', id: item_id, index: item_index %}
+            {% assign item_id = 'card-product-placeholder' | append: '--' | append: section.id | append: '--' | append: item_index %}
+            <div class="{{ section_name }}__item grid__item" data-index="{{ item_index }}">
+              {% render 'card-product-placeholder', id: item_id %}
             </div>
-
           {% endif %}
 
         {% endfor %}

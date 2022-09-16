@@ -1,18 +1,18 @@
-{%- if product and product != blank %}
+{%- if card_product and card_product != blank %}
 
   {%- liquid
 
     comment
       Accepts:
+        - card_product: {Object} Product Liquid object
         - classes: {String} Optionally include additional classes
         - id: {String} Optionally include a unique ID
-        - product: {Object} Product Liquid object
         - style: {String} Optionally load different card types by passing style option
     endcomment
 
     assign snippet_name = 'card-product'
     assign snippet_classes = snippet_name | append: ' product'
-    assign snippet_id = snippet_name | append: '--' | append: product.id
+    assign snippet_id = id | default: 'card-product--' | append: card_product.id
     assign style = style | default: 'not-set'
 
     if classes and classes != empty
@@ -23,15 +23,15 @@
     assign aos_delay = 250
     assign aos_delay_increment = 250
 
-    assign available = product.available | default: false
-    assign date_published = product.published_at
-    assign images = product.images | default: false
-    assign price = product.price
-    assign price_compare = product.compare_at_price
-    assign selected_variant = product.selected_or_first_available_variant | default: false
-    assign title = product.title | default: ''
-    assign type = product.type | default: ''
-    assign url = product.url | default: ''
+    assign available = card_product.available | default: false
+    assign date_published = card_product.published_at
+    assign images = card_product.images | default: false
+    assign price = card_product.price
+    assign price_compare = card_product.compare_at_price
+    assign selected_variant = card_product.selected_or_first_available_variant | default: false
+    assign title = card_product.title | default: ''
+    assign type = card_product.type | default: ''
+    assign url = card_product.url | default: ''
 
   -%}
 
@@ -42,16 +42,11 @@
     data-style="{{ style }}"
     {% unless available %}data-unavailable{% endunless %}
   >
-    <div class="{{ snippet_classes }}__layout" id="{{ aos_id }}">
+    <div class="{{ snippet_name }}__layout" id="{{ aos_id }}">
 
       {% case style %}
-
-        {% when 'something-custom' %}
-          {% render 'price', product: product, show_symbol: true %}
-          {% render 'button-add-to-cart', button_title: 'Add to Bag', variant_id: selected_variant.id %}
-
+        {% when 'featured' %}
         {% else %}
-
           <div class="{{ snippet_name }}__image">
             <a class="{{ snippet_name }}__image-link link" href="{{ url }}" title="{{ title }}" target="_self">
               {% render 'lazyload-image', classes: 'card-product__image-01', image: images[0] %}
@@ -66,7 +61,6 @@
               <a class="{{ snippet_name }}__title-link link" href="{{ url }}" title="{{ title }}" target="_self">{{ title }}</a>
             </strong>
           </div>
-
       {% endcase %}
 
     </div>

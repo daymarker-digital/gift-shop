@@ -34,9 +34,9 @@
     <h1 class="{{ section_name }}__heading heading--1">{{ title | escape }}</h1>
     <div class="{{ section_name }}__layout grid grid--{{ layout }}" id="{{ aos_id }}" role="list">
       {%- for item in collections -%}
-        {% assign item_id = 'temp-id-product' %}
+        {% assign item_id = 'card-collection' | append: '--' | append: item.id | append: '--' | append: forloop.index %}
         <div class="{{ section_name }}__item grid__item" data-index="{{ forloop.index }}">
-          {% render 'card-collection', collection: item, id: item_id %}
+          {% render 'card-collection', card_collection: item, id: item_id %}
         </div>
       {%- endfor -%}
     </div>
@@ -88,28 +88,28 @@
       "type": "select",
       "options": [
         {
-          "value": "alphabetical",
-          "label": "t:sections.main-list-collections.settings.sort.options__1.label"
+          "label": "Alphabetically, A-Z",
+          "value": "alphabetical"
         },
         {
-          "value": "alphabetical_reversed",
-          "label": "t:sections.main-list-collections.settings.sort.options__2.label"
+          "label": "Alphabetically, Z-A",
+          "value": "alphabetical_reversed"
         },
         {
-          "value": "date_reversed",
-          "label": "t:sections.main-list-collections.settings.sort.options__3.label"
+          "label": "Date, new to old",
+          "value": "date_reversed"
         },
         {
-          "value": "date",
-          "label": "t:sections.main-list-collections.settings.sort.options__4.label"
+          "label": "Date, old to new",
+          "value": "date"
         },
         {
-          "value": "products_high",
-          "label": "t:sections.main-list-collections.settings.sort.options__5.label"
+          "label": "Product count, high to low",
+          "value": "products_high"
         },
         {
-          "value": "products_low",
-          "label": "t:sections.main-list-collections.settings.sort.options__6.label"
+          "label": "Product count, low to high",
+          "value": "products_low"
         }
       ],
       "default": "alphabetical",
