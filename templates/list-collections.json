@@ -4,8 +4,10 @@
       "type": "main-list-collections",
       "settings": {
         "title": "Collections",
+        "container": "container-fluid",
+        "layout": "two-column",
         "sort": "alphabetical",
-        "image_ratio": "square"
+        "anchor_id": ""
       }
     }
   },
