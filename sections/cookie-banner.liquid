@@ -1,0 +1,48 @@
+{%- liquid
+
+  assign section_name = 'cookie-banner'
+  assign section_id = section_name | append: '--' | append: section.id
+
+  assign background_colour = section.settings.background | default: ''
+
+-%}
+
+{% if background_colour != blank %}
+  {%- style -%}
+
+    #shopify-section-{{ section.id }} {
+      background: rgba(var(--theme-colour-{{ background_colour }}), 1);
+      {% case background_colour %}
+        {% when 'orange' %}
+          color: rgba(var(--theme-colour-black), 1);
+        {% when 'white' %}
+          color: rgba(var(--theme-colour-black), 1);
+        {% else %}
+          color: rgba(var(--theme-colour-white), 1);
+      {% endcase %}
+    }
+
+  {%- endstyle -%}
+{% endif %}
+
+<div class="{{ section_name }}__main">
+  <div class="{{ section_name }}__content">
+
+  </div>
+</div>
+
+{% stylesheet %}
+{% endstylesheet %}
+
+{% javascript %}
+{% endjavascript %}
+
+{% schema %}
+  {
+    "name": "Cookie Banner",
+    "tag": "div",
+    "class": "cookie-banner",
+    "settings": [],
+	  "blocks": []
+  }
+{% endschema %}

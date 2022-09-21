@@ -2,6 +2,8 @@
 <html class="no-js" lang="{{ request.locale.iso_code }}">
   <head>
 
+    {% render 'google-analytics' %}
+
     <title>
       {{ page_title }}
       {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
@@ -47,8 +49,10 @@
   		<meta name="robots" content="noindex, nofollow">
     {% endif %}
 
-    <script src="{{ 'vendors.min.js' | asset_url }}" async></script>
-    <link type="text/css" href="{{ 'main.css' | asset_url }}" rel="stylesheet">
+    <script src="{{ 'vendors.min.js' | asset_url }}" defer="defer"></script>
+
+    <link rel="stylesheet" href="{{ 'main.css' | asset_url }}" media="print" onload="this.media='all'">
+    <noscript>{{ 'main.css' | asset_url | stylesheet_tag }}</noscript>
 
     <script>
 
@@ -59,54 +63,71 @@
 
       window.moneyFormat = {{ shop.money_format | json }};
 
-      var Theme = Theme || {};
-
-      Theme.cart = {{ cart | json }};
-      Theme.currency = {{ shop.currency | json }};
-      Theme.orders = [];
-      Theme.product = {};
-      Theme.collection = {};
-      Theme.customer = {};
-      Theme.assets = {
-        images: {
-          image_pattern: {{ "VPAGS--product-image-pattern.svg" | asset_url | json }},
-          product_placeholders: [
-            {{ "VPAGS--placeholder-product-image--01.svg" | asset_url | json }},
-            {{ "VPAGS--placeholder-product-image--02.svg" | asset_url | json }},
-            {{ "VPAGS--placeholder-product-image--03.svg" | asset_url | json }},
-            {{ "VPAGS--placeholder-product-image--04.svg" | asset_url | json }}
-          ]
-        }
-      };
-
-      {% if template contains 'product' %}
-	      Theme.product = {{ product | json }};
-      {% endif %}
-
-      {% if template contains 'collection' %}
-	      Theme.collection = {{ collection | json }};
-      {% endif %}
-
-      {% if customer %}
-        Theme.customer = {{ customer | json }};
-      {% endif %}
-
     </script>
 
   </head>
 
   <body class="{% render 'theme--classes' %}">
 
-    {% section 'announcements' %}
     {% section 'header' %}
 
     <main class="{% render 'theme--classes' %} content-for-layout focus-none" role="main" tabindex="-1">
-      {{ content_for_layout }}
+
+      {% case request.path %}
+        {% when '/policies/privacy-policy' %}
+          {% section 'policy-privacy' %}
+        {% when '/policies/refund-policy' %}
+          {% section 'policy-refund' %}
+        {% when '/policies/shipping-policy' %}
+          {% section 'policy-shipping' %}
+        {% when '/policies/subscription-policy' %}
+          {% section 'policy-subscription' %}
+        {% when '/policies/terms-of-service' %}
+          {% section 'policy-terms' %}
+        {% else %}
+          {{ content_for_layout }}
+      {% endcase %}
+
     </main>
 
     {% section 'footer' %}
+    {% section 'popup' %}
+    {% section 'cookie-banner' %}
+    {% section 'cart-notification' %}
 
-    <script src="{{ 'main.min.js' | asset_url }}" defer></script>
+    <script>
+
+      var Theme = Theme || {};
+      Theme.cart = {{ cart | json }};
+      Theme.collection = {{ collection | json }} || {};
+      Theme.currency = {{ shop.currency | json }};
+      Theme.customer = {{ customer | json }} || {};
+      Theme.moneyFormat = {{ shop.money_format | json }};
+      Theme.orders = [];
+      Theme.patterns = {
+        image: {{ "VPAGS--product-image-pattern.svg" | asset_url | json }}
+      };
+      Theme.placeholder = {
+        product_images: [
+          {{ "VPAGS--placeholder-product-image--01.svg" | asset_url | json }},
+          {{ "VPAGS--placeholder-product-image--02.svg" | asset_url | json }},
+          {{ "VPAGS--placeholder-product-image--03.svg" | asset_url | json }},
+          {{ "VPAGS--placeholder-product-image--04.svg" | asset_url | json }}
+        ]
+      };
+      Theme.product = {{ product | json }} || {};
+      Theme.routes = {
+        root_url: '{{ routes.root_url }}',
+        cart_url: '{{ routes.cart_url }}',
+        cart_add_url: '{{ routes.cart_add_url }}',
+        cart_change_url: '{{ routes.cart_change_url }}',
+        cart_update_url: '{{ routes.cart_update_url }}',
+        predictive_search_url: '{{ routes.predictive_search_url }}'
+      };
+
+    </script>
+
+    <script src="{{ 'main.min.js' | asset_url }}" defer="defer"></script>
 
   </body>
 </html>

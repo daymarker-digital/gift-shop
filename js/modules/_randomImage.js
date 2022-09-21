@@ -1,16 +1,14 @@
 //////////////////////////////////////////////////////////
-////  Random Placeholder Images
+////  Random Images
 //////////////////////////////////////////////////////////
 
-const RandomPlaceholderProductImage = (() => {
+const RandomImage = (() => {
 
   let debug = false;
-  let info = { name : 'RandomPlaceholderImages', version : '1.0' };
+  let info = { name : 'RandomImage', version : '1.0' };
 
   let elements = document.querySelectorAll('.js--product-image-placeholder') || [];
-  let images = Theme.assets.images.product_placeholders || [];
-  let breakpoints = new Breakpoints();
-  let tools = new Tools();
+  let images = Theme.placeholder.product_images || [];
 
   //////////////////////////////////////////////////////////
   ////  Print Random Image

@@ -1,9 +1,3 @@
-// @codekit-prepend quiet "../node_modules/aos/dist/aos.js";
-// @codekit-prepend quiet "../node_modules/axios/dist/axios.min.js";
-// @codekit-prepend quiet "../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js";
-// @codekit-prepend quiet "../node_modules/@glidejs/glide/dist/glide.min.js";
-// @codekit-prepend quiet "../node_modules/validator/validator.min.js";
-
 // @codekit-prepend "./modules/_credits.js";
 // @codekit-prepend "./modules/_breakpoints.js";
 // @codekit-prepend "./modules/_forms.js";
@@ -11,7 +5,7 @@
 // @codekit-prepend "./modules/_instagramFeed.js";
 // @codekit-prepend "./modules/_mobileMenu.js";
 // @codekit-prepend "./modules/_modals";
-// @codekit-prepend "./modules/_randomPlaceholderProductImage.js";
+// @codekit-prepend "./modules/_randomImage.js";
 // @codekit-prepend "./modules/_scrolling.js";
 // @codekit-prepend "./modules/_sizing.js";
 // @codekit-prepend "./modules/_tools.js";
@@ -21,7 +15,7 @@
 //////////////////////////////////////////////////////////////////////////////////////////
 
 let modules = [
-  new RandomPlaceholderProductImage(),
+  new RandomImage(),
   new Scrolling(),
   new Credits()
 ];

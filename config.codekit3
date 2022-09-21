@@ -615,13 +615,13 @@
       "sC" : 3,
       "tS" : 1
     },
-    "\/js\/modules\/_randomPlaceholderProductImage.js" : {
+    "\/js\/modules\/_randomImage.js" : {
       "bF" : 0,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 1,
-      "oAP" : "\/assets\/_randomPlaceholderProductImage.min.js",
+      "oAP" : "\/assets\/_randomImage.min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 1
@@ -1143,22 +1143,7 @@
       "rFN" : 0,
       "uCM" : 0
     },
-    "\/scss\/_main--legacy.scss" : {
-      "aP" : 1,
-      "bl" : 0,
-      "co" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/assets\/_main--legacy.css",
-      "oF" : 1,
-      "oS" : 3,
-      "pg" : 0,
-      "sct" : 0
-    },
-    "\/scss\/base\/_aos.scss" : {
+    "\/scss\/components\/_aos.scss" : {
       "aP" : 1,
       "bl" : 0,
       "co" : 0,
@@ -1168,66 +1153,6 @@
       "ma" : 0,
       "oA" : 1,
       "oAP" : "\/assets\/_aos.css",
-      "oF" : 0,
-      "oS" : 3,
-      "pg" : 0,
-      "sct" : 0
-    },
-    "\/scss\/base\/_fonts.scss" : {
-      "aP" : 1,
-      "bl" : 0,
-      "co" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/assets\/_fonts.css",
-      "oF" : 0,
-      "oS" : 3,
-      "pg" : 0,
-      "sct" : 0
-    },
-    "\/scss\/base\/_index.scss" : {
-      "aP" : 1,
-      "bl" : 0,
-      "co" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/assets\/_index.css",
-      "oF" : 0,
-      "oS" : 3,
-      "pg" : 0,
-      "sct" : 0
-    },
-    "\/scss\/base\/_lazyload.scss" : {
-      "aP" : 1,
-      "bl" : 0,
-      "co" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/assets\/_lazyload.css",
-      "oF" : 0,
-      "oS" : 3,
-      "pg" : 0,
-      "sct" : 0
-    },
-    "\/scss\/base\/_typopgraphy.scss" : {
-      "aP" : 1,
-      "bl" : 0,
-      "co" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/assets\/_typopgraphy.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -1353,6 +1278,21 @@
       "pg" : 0,
       "sct" : 0
     },
+    "\/scss\/components\/_lazyload.scss" : {
+      "aP" : 1,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/assets\/_lazyload.css",
+      "oF" : 0,
+      "oS" : 3,
+      "pg" : 0,
+      "sct" : 0
+    },
     "\/scss\/components\/_link.scss" : {
       "aP" : 1,
       "bl" : 0,
@@ -1423,6 +1363,21 @@
       "ma" : 0,
       "oA" : 1,
       "oAP" : "\/assets\/_index.css",
+      "oF" : 0,
+      "oS" : 3,
+      "pg" : 0,
+      "sct" : 0
+    },
+    "\/scss\/legacy\/_main--legacy.scss" : {
+      "aP" : 1,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/assets\/_main--legacy.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -1533,6 +1488,21 @@
       "pg" : 0,
       "sct" : 0
     },
+    "\/scss\/theme\/_fonts.scss" : {
+      "aP" : 1,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/assets\/_fonts.css",
+      "oF" : 0,
+      "oS" : 3,
+      "pg" : 0,
+      "sct" : 0
+    },
     "\/scss\/theme\/_footer.scss" : {
       "aP" : 1,
       "bl" : 0,
@@ -1588,6 +1558,21 @@
       "ma" : 0,
       "oA" : 1,
       "oAP" : "\/assets\/_mobile-menu.css",
+      "oF" : 0,
+      "oS" : 3,
+      "pg" : 0,
+      "sct" : 0
+    },
+    "\/scss\/theme\/_typopgraphy.scss" : {
+      "aP" : 1,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/assets\/_typopgraphy.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -1773,20 +1758,20 @@
       "pg" : 0,
       "sct" : 0
     },
-    "\/sections\/announcements.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/sections\/announcements.liquid",
-      "oF" : 0
-    },
     "\/sections\/apps.liquid" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/sections\/apps.liquid",
+      "oF" : 0
+    },
+    "\/sections\/cart-notification.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/sections\/cart-notification.liquid",
       "oF" : 0
     },
     "\/sections\/collection-list.liquid" : {
@@ -1803,6 +1788,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/sections\/contact-form.liquid",
+      "oF" : 0
+    },
+    "\/sections\/cookie-banner.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/sections\/cookie-banner.liquid",
       "oF" : 0
     },
     "\/sections\/custom-liquid.liquid" : {
@@ -2013,6 +2006,54 @@
       "oAP" : "\/sections\/pickup-availability.liquid",
       "oF" : 0
     },
+    "\/sections\/policy-privacy.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/sections\/policy-privacy.liquid",
+      "oF" : 0
+    },
+    "\/sections\/policy-refund.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/sections\/policy-refund.liquid",
+      "oF" : 0
+    },
+    "\/sections\/policy-shipping.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/sections\/policy-shipping.liquid",
+      "oF" : 0
+    },
+    "\/sections\/policy-subscription.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/sections\/policy-subscription.liquid",
+      "oF" : 0
+    },
+    "\/sections\/policy-terms-of-service.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/sections\/policy-terms-of-service.liquid",
+      "oF" : 0
+    },
+    "\/sections\/popup.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/sections\/popup.liquid",
+      "oF" : 0
+    },
     "\/sections\/predictive-search.liquid" : {
       "cB" : 0,
       "ft" : 8192,
@@ -2115,6 +2156,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/snippets\/facets.liquid",
+      "oF" : 0
+    },
+    "\/snippets\/google-analytics.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/snippets\/google-analytics.liquid",
       "oF" : 0
     },
     "\/snippets\/google-maps-directions-link.liquid" : {
