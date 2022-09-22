@@ -1,5 +1,20 @@
 {
   "sections": {
+    "16638658704a46d741": {
+      "type": "featured-image",
+      "settings": {
+        "content_placement_horizontal": "center",
+        "content_placement_vertical": "bottom",
+        "content_stack_mobile": false,
+        "image": "shopify:\/\/shop_images\/Maater-Shopify-Home.png",
+        "image_height_desktop": "adapt",
+        "image_height_mobile": "adapt",
+        "container": "full-width",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "anchor_id": ""
+      }
+    },
     "1661195827dff74e88": {
       "type": "featured-products",
       "blocks": {
@@ -35,6 +50,7 @@
         "b439fcdb-2b20-4e92-bcc6-749852735c97"
       ],
       "settings": {
+        "background": "black",
         "container": "container",
         "layout": "two-column",
         "padding_top": 44,
@@ -91,6 +107,7 @@
         "2637f584-4aa5-4d94-8ceb-0d4386faa73e"
       ],
       "settings": {
+        "background": "black",
         "container": "container-fluid",
         "layout": "three-column",
         "padding_top": 44,
@@ -119,6 +136,7 @@
         "c158dd33-2b11-4704-99d9-1138a8e3f0d9"
       ],
       "settings": {
+        "background": "black",
         "container": "container-fluid",
         "layout": "two-column",
         "padding_top": 44,
@@ -154,6 +172,7 @@
         "8a3097ce-d248-4b6e-acf0-1f5e3b9f8034"
       ],
       "settings": {
+        "background": "black",
         "container": "container-fluid",
         "layout": "three-column",
         "padding_top": 44,
@@ -163,6 +182,7 @@
     }
   },
   "order": [
+    "16638658704a46d741",
     "1661195827dff74e88",
     "16611958947ef1ecd7",
     "16611959936ca1502e",
