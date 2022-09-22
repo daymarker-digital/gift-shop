@@ -538,6 +538,17 @@
       "sC" : 3,
       "tS" : 1
     },
+    "\/js\/modules\/_announcements.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/assets\/_announcements.min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 1
+    },
     "\/js\/modules\/_breakpoints.js" : {
       "bF" : 0,
       "ft" : 64,
@@ -545,6 +556,17 @@
       "mi" : 1,
       "oA" : 1,
       "oAP" : "\/assets\/_breakpoints.min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 1
+    },
+    "\/js\/modules\/_cookies.js" : {
+      "bF" : 0,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/assets\/_cookies.min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 1
@@ -2298,6 +2320,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/snippets\/svg-gift-shop-logo.liquid",
+      "oF" : 0
+    },
+    "\/snippets\/svg-icon.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/snippets\/svg-icon.liquid",
       "oF" : 0
     },
     "\/snippets\/svg-very-polite-logo.liquid" : {

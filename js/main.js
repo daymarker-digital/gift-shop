@@ -1,4 +1,6 @@
+// @codekit-prepend "./modules/_announcements.js";
 // @codekit-prepend "./modules/_credits.js";
+// @codekit-prepend "./modules/_cookies.js";
 // @codekit-prepend "./modules/_breakpoints.js";
 // @codekit-prepend "./modules/_forms.js";
 // @codekit-prepend "./modules/_gliders.js";
@@ -15,6 +17,7 @@
 //////////////////////////////////////////////////////////////////////////////////////////
 
 let modules = [
+  new Announcements(),
   new RandomImage(),
   new Scrolling(),
   new Credits()

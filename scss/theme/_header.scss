@@ -3,18 +3,30 @@
 .header {
 
   &__announcements {
+    display: none;
     background: rgba(var(--theme-colour-black), 1);
     color: rgba(var(--theme-colour-white), 1);
     .header__container {
       padding: 10px 30px;
     }
     &-button-close {
+      color: rgba(var(--theme-colour-white), 1);
       position: absolute;
+      border: none;
       right: 30px;
+      height: 12px;
+      width: 12px;
+      &:focus,
+      &:hover {
+        opacity: 0.5;
+      }
     }
     &-item {
       text-align: center;
       width: 100%;
+    }
+    &.show {
+      display: block;
     }
   }
 

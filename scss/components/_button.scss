@@ -1,6 +1,9 @@
 @use "../utils/mixins/button" as *;
+@use "../utils/mixins/ui" as *;
 
 .button {
+
+  @include ui(button);
 
   &--1,
   &--primary {
