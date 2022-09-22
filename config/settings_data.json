@@ -7,17 +7,19 @@
           "b9f4c506-1615-40c5-b9df-3115417641b5": {
             "type": "announcement",
             "settings": {
-              "title": "<p>Announcement one<\/p>"
+              "title": "<p>Free Shipping Over $75<\/p>"
             }
           },
           "f6ead540-681e-4e49-8dcb-e422287dd6de": {
             "type": "announcement",
+            "disabled": true,
             "settings": {
               "title": "<p>Announcement two<\/p>"
             }
           },
           "d8b59d80-db6f-493f-8e0a-db4dc5b4bb2a": {
             "type": "announcement",
+            "disabled": true,
             "settings": {
               "title": "<p>Announcement three<\/p>"
             }
@@ -29,7 +31,8 @@
           "d8b59d80-db6f-493f-8e0a-db4dc5b4bb2a"
         ],
         "settings": {
-          "announcements_enabled": true
+          "announcements_enabled": true,
+          "announcements_homepage_only": false
         }
       },
       "footer": {
@@ -39,6 +42,17 @@
           "email": "",
           "menu_menu": "",
           "policies_menu": ""
+        }
+      },
+      "popup": {
+        "type": "popup",
+        "settings": {
+        }
+      },
+      "cookie-banner": {
+        "type": "cookie-banner",
+        "settings": {
+          "background": "black"
         }
       }
     },
