@@ -2,6 +2,12 @@
 @use '../utils/mixins/heading' as *;
 
 .body-copy {
+  &--announcement {
+    @include body-copy(announcement);
+  }
+  &--banner {
+    @include body-copy(banner);
+  }
   &--1 {
     @include body-copy(1);
   }

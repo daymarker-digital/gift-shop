@@ -1,6 +1,7 @@
 {%- liquid
 
   assign section_name = 'cookie-banner'
+  assign section_classes = section_name
   assign section_id = section_name | append: '--' | append: section.id
 
   assign background_colour = section.settings.background | default: ''

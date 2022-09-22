@@ -5,6 +5,7 @@
   font-family: "Akkurat Mono LL", serif;
   color: inherit;
   font-style: normal;
+  font-weight: 400;
 
   p, li {
     font-size: inherit;
@@ -36,12 +37,32 @@
     margin-bottom: 0;
   }
 
+
+  // ---------------------------------------- Primary
+  @if $style == announcement {
+
+    line-height: 1;
+    font-size: 14px;
+
+    @include breakpoint(md) {
+      font-size: 15px;
+    }
+
+    @include breakpoint(lg) {
+      font-size: 14px;
+    }
+
+    @include breakpoint(xxl) {
+      font-size: 15px;
+    }
+
+  }
+
   // ---------------------------------------- Primary
   @if $style == banner {
 
     line-height: 1;
     font-size: 10px;
-    font-weight: 400;
 
     @include breakpoint(sm) {
       font-size: 12px;

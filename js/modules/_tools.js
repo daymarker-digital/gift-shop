@@ -28,21 +28,15 @@ const Tools = (() => {
   //////////////////////////////////////////////////////////
 
   const setHeaderHeightTotalCSSVariable = () => {
-    let headerHeight = getElementHeightByTag('header') || false;
-    if ( headerHeight ) setCSSVariable( 'theme-header-height--total', headerHeight + 'px' );
+    setCSSVariable( 'theme-header-total-height', getElementHeightByTag('header') + 'px' );
   };
-
 
   //////////////////////////////////////////////////////////
   ////  Get Element Height by Tag
   //////////////////////////////////////////////////////////
 
   const getElementHeightByTag = ( $tag = '' ) => {
-    let element = document.getElementsByTagName( $tag )[0] || false;
-    if ( element ) {
-      return element.offsetHeight;
-    }
-    return 0;
+    return document.getElementsByTagName( $tag )[0].offsetHeight || 0;
   };
 
   //////////////////////////////////////////////////////////

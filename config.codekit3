@@ -2292,6 +2292,22 @@
       "oAP" : "\/snippets\/sort-option-name.liquid",
       "oF" : 0
     },
+    "\/snippets\/svg-gift-shop-logo.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/snippets\/svg-gift-shop-logo.liquid",
+      "oF" : 0
+    },
+    "\/snippets\/svg-very-polite-logo.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/snippets\/svg-very-polite-logo.liquid",
+      "oF" : 0
+    },
     "\/snippets\/svg.liquid" : {
       "cB" : 0,
       "ft" : 8192,
