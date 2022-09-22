@@ -16,7 +16,7 @@
         ],
         "settings": {
           "announcements_enabled": true,
-          "announcements_homepage_only": false
+          "announcements_homepage_only": true
         }
       },
       "footer": {
