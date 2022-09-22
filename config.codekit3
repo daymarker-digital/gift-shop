@@ -372,6 +372,18 @@
       "sC" : 3,
       "tS" : 1
     },
+    "\/assets\/section-featured-image.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 2,
+      "oAP" : "\/assets\/section-featured-image.css",
+      "oF" : 0,
+      "pg" : 0
+    },
     "\/assets\/section-featured-products.css" : {
       "aP" : 1,
       "bl" : 0,
@@ -381,18 +393,6 @@
       "ma" : 0,
       "oA" : 2,
       "oAP" : "\/assets\/section-featured-products.css",
-      "oF" : 0,
-      "pg" : 0
-    },
-    "\/assets\/section-full-width-feature.css" : {
-      "aP" : 1,
-      "bl" : 0,
-      "ci" : 0,
-      "co" : 0,
-      "ft" : 16,
-      "ma" : 0,
-      "oA" : 2,
-      "oAP" : "\/assets\/section-full-width-feature.css",
       "oF" : 0,
       "pg" : 0
     },
@@ -1308,6 +1308,21 @@
       "pg" : 0,
       "sct" : 0
     },
+    "\/scss\/components\/_media.scss" : {
+      "aP" : 1,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/assets\/_media.css",
+      "oF" : 0,
+      "oS" : 3,
+      "pg" : 0,
+      "sct" : 0
+    },
     "\/scss\/components\/_navigation.scss" : {
       "aP" : 1,
       "bl" : 0,
@@ -1428,6 +1443,21 @@
       "pg" : 0,
       "sct" : 0
     },
+    "\/scss\/section-featured-image.scss" : {
+      "aP" : 1,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/section-featured-image.css",
+      "oF" : 2,
+      "oS" : 3,
+      "pg" : 0,
+      "sct" : 0
+    },
     "\/scss\/section-featured-products.scss" : {
       "aP" : 1,
       "bl" : 0,
@@ -1438,21 +1468,6 @@
       "ma" : 0,
       "oA" : 0,
       "oAP" : "\/assets\/section-featured-products.css",
-      "oF" : 2,
-      "oS" : 3,
-      "pg" : 0,
-      "sct" : 0
-    },
-    "\/scss\/section-full-width-feature.scss" : {
-      "aP" : 1,
-      "bl" : 0,
-      "co" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 0,
-      "oAP" : "\/assets\/section-full-width-feature.css",
       "oF" : 2,
       "oS" : 3,
       "pg" : 0,

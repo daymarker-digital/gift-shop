@@ -2,6 +2,7 @@
 
   assign section_name = 'featured-image'
   assign section_classes = section_name | append: ' section-' | append: section.id | append: '-padding'
+  assign section_id = section_name | append: '--' | append: section.id
 
   assign aos_id = section_id | append: '--aos'
   assign aos_delay = 250
@@ -59,7 +60,7 @@
     <div class="{{ section_name }}__layout" id="{{ aos_id }}">
 
       {% if image %}
-        <div class="{{ section_name }}__media media meida--{{ image_height_mobile }} meida--{{ image_height_desktop }}">
+        <div class="{{ section_name }}__media media media--mobile-{{ image_height_mobile }} media--desktop-{{ image_height_desktop }}">
           {%
             render 'lazyload-image',
             classes: 'featured-image__image',

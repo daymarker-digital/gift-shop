@@ -1,0 +1,29 @@
+@use "../utils/mixins/general" as *;
+
+.media {
+
+  width: 100%;
+
+  &--mobile-adapt {}
+
+  &--mobile-adapt {}
+
+  &--mobile-adapt {}
+
+  &--mobile-adapt {}
+
+  &--mobile-adapt {}
+
+  @include breakpoint(lg) {
+
+    &--desktop-adapt {}
+
+    &--desktop-adapt {}
+
+    &--desktop-adapt {}
+
+    &--desktop-adapt {}
+
+  }
+
+}

@@ -1,0 +1,13 @@
+@use "utils/mixins/general" as *;
+
+.featured-image {
+
+  &__media {
+    img, svg {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+
+}
