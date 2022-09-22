@@ -64,7 +64,7 @@
         "b439fcdb-2b20-4e92-bcc6-749852735c97"
       ],
       "settings": {
-        "background": "black",
+        "background": "white",
         "container": "container-fluid",
         "layout": "two-column",
         "padding_top": 44,
@@ -121,7 +121,7 @@
         "2637f584-4aa5-4d94-8ceb-0d4386faa73e"
       ],
       "settings": {
-        "background": "black",
+        "background": "white",
         "container": "container-fluid",
         "layout": "three-column",
         "padding_top": 44,
@@ -215,7 +215,7 @@
         "8a3097ce-d248-4b6e-acf0-1f5e3b9f8034"
       ],
       "settings": {
-        "background": "black",
+        "background": "white",
         "container": "container-fluid",
         "layout": "three-column",
         "padding_top": 44,
