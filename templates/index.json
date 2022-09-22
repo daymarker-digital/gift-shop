@@ -23,7 +23,7 @@
         "image": "shopify:\/\/shop_images\/Maater-Shopify-Home.png",
         "image_height_desktop": "adapt",
         "image_height_mobile": "450px",
-        "container": "full-width",
+        "container": "container-fluid",
         "padding_top": 0,
         "padding_bottom": 0,
         "anchor_id": ""
@@ -147,12 +147,12 @@
       ],
       "settings": {
         "content_placement_horizontal": "center",
-        "content_placement_vertical": "center",
+        "content_placement_vertical": "bottom",
         "content_stack_mobile": false,
         "image": "shopify:\/\/shop_images\/VP-top-3.jpg",
         "image_height_desktop": "adapt",
-        "image_height_mobile": "adapt",
-        "container": "full-width",
+        "image_height_mobile": "450px",
+        "container": "container-fluid",
         "padding_top": 0,
         "padding_bottom": 0,
         "anchor_id": ""
