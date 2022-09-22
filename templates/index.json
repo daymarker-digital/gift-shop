@@ -131,6 +131,20 @@
     },
     "166386587599b4f4fd": {
       "type": "featured-image",
+      "blocks": {
+        "c1b58684-1d95-452e-9ceb-b3496ede2459": {
+          "type": "button",
+          "settings": {
+            "title": "Shop Space Tees",
+            "link": "shopify:\/\/collections\/tees",
+            "style": "primary",
+            "alignment": "left"
+          }
+        }
+      },
+      "block_order": [
+        "c1b58684-1d95-452e-9ceb-b3496ede2459"
+      ],
       "settings": {
         "content_placement_horizontal": "center",
         "content_placement_vertical": "center",
