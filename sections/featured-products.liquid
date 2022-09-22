@@ -27,6 +27,20 @@
 
 {%- style -%}
 
+  {% if background_colour != blank %}
+    #shopify-section-{{ section.id }} {
+      background: rgba(var(--theme-colour-{{ background_colour }}), 1);
+      {% case background_colour %}
+        {% when 'orange' %}
+          color: rgba(var(--theme-colour-black), 1);
+        {% when 'white' %}
+          color: rgba(var(--theme-colour-black), 1);
+        {% else %}
+          color: rgba(var(--theme-colour-white), 1);
+      {% endcase %}
+    }
+  {% endif %}
+
   .section-{{ section.id }}-padding {
     padding-top: calc({{ section.settings.padding_top }}px * 0.75);
     padding-bottom: calc({{ section.settings.padding_bottom }}px  * 0.75);
@@ -46,7 +60,6 @@
 
 <div class="{{ section_classes }}" id="{{ section_id }}">
   {% render 'bs-container', state: 'open', col: 'col-12 col-lg-10 offset-lg-1', container: container %}
-
     <div class="{{ section_name }}__layout grid grid--{{ layout }}" id="{{ aos_id }}" role="list">
 
       {% if products %}
@@ -69,7 +82,7 @@
       {% endif %}
 
     </div>
-  {% render 'bs-container', state: 'closed' %}
+  {% render 'bs-container', state: 'closed', container: container %}
 </div>
 
 {% schema %}
@@ -83,11 +96,22 @@
 			"type": "header"
 		},
     {
+		  "label": "Background",
+		  "type": "select",
+		  "options": [
+        { "label": "Black", "value": "black" },
+			  { "label": "White", "value": "white" }
+		  ],
+		  "default": "black",
+		  "id": "background"
+		},
+    {
       "label": "Container",
       "type": "select",
       "options": [
-        { "value": "container", "label": "Static" },
-        { "value": "container-fluid", "label": "Fluid" }
+        { "label": "Static", "value": "container" },
+        { "label": "Fluid", "value": "container-fluid" },
+        { "label": "Full Width", "value": "full-width" }
       ],
       "default": "container",
       "id": "container"

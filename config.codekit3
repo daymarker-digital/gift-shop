@@ -1766,22 +1766,6 @@
       "oAP" : "\/sections\/apps.liquid",
       "oF" : 0
     },
-    "\/sections\/cart-notification.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/sections\/cart-notification.liquid",
-      "oF" : 0
-    },
-    "\/sections\/collection-list.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/sections\/collection-list.liquid",
-      "oF" : 0
-    },
     "\/sections\/contact-form.liquid" : {
       "cB" : 0,
       "ft" : 8192,
@@ -1830,6 +1814,14 @@
       "oAP" : "\/sections\/featured-collection.liquid",
       "oF" : 0
     },
+    "\/sections\/featured-image.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/sections\/featured-image.liquid",
+      "oF" : 0
+    },
     "\/sections\/featured-products.liquid" : {
       "cB" : 0,
       "ft" : 8192,
@@ -1838,20 +1830,20 @@
       "oAP" : "\/sections\/featured-products.liquid",
       "oF" : 0
     },
+    "\/sections\/featured-text.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/sections\/featured-text.liquid",
+      "oF" : 0
+    },
     "\/sections\/footer.liquid" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/sections\/footer.liquid",
-      "oF" : 0
-    },
-    "\/sections\/full-width-feature.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/sections\/full-width-feature.liquid",
       "oF" : 0
     },
     "\/sections\/header.liquid" : {
@@ -1990,6 +1982,14 @@
       "oAP" : "\/sections\/newsletter.liquid",
       "oF" : 0
     },
+    "\/sections\/notification-cart.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/sections\/notification-cart.liquid",
+      "oF" : 0
+    },
     "\/sections\/page.liquid" : {
       "cB" : 0,
       "ft" : 8192,
@@ -2068,14 +2068,6 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/sections\/product-recommendations.liquid",
-      "oF" : 0
-    },
-    "\/sections\/text-feature.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/sections\/text-feature.liquid",
       "oF" : 0
     },
     "\/snippets\/aos-attributes.liquid" : {

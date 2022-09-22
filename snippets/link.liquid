@@ -2,34 +2,40 @@
 
     Accepts:
     - classes: {String} Optionally include classes
-    - colour: {String} Colour of link
-    - link: {String} URL Liquid object
+    - link: {String} URL
     - style: {String} Style of link
     - title: {String} Title of link
 
     Usage:
-    {% render 'debug-this', item: article %}
+    {% render 'link', link: '/collections/all', title: 'Shop All' %}
 
 {% endcomment %}
 
-{% assign snippet_name = 'link' %}
-{% assign snippet_class = snippet_name %}
-{% assign target = "_self"  %}
+{%- if link and link != blank and title and title != blank -%}
 
-{% if style != blank %}
-  {% assign snippet_class = snippet_class | append: ' ' | append: snippet_name | append: '--' | append: style %}
-{% endif %}
+  {%- liquid
 
-{% if classes != blank %}
-  {% assign snippet_class = snippet_class | prepend: ' ' | prepend: classes %}
-{% endif %}
+    assign snippet_name = 'link'
+    assign snippet_class = snippet_name
+    assign target = "_self"
+    assign style = style | default: 'primary'
 
-{% if link contains 'http' %}
-  {% assign target = "_blank"  %}
-{% endif %}
+    if style != blank
+      assign snippet_class = snippet_class | append: ' ' | append: snippet_name | append: '--' | append: style
+    endif
 
-{% if link != blank and title != blank %}
-  <a class="{{ snippet_class }}" data-colour-theme="{{ colour }}" href="{{ link }}" title="{{ title }}" target="{{ target }}">
+    if classes != blank
+      assign snippet_class = snippet_class | prepend: ' ' | prepend: classes
+    endif
+
+    if link contains 'http'
+      assign target = "_blank"
+    endif
+
+  -%}
+
+  <a class="{{ snippet_class }}" href="{{ link }}" title="{{ title }}" target="{{ target }}">
     <span class="{{ snippet_name }}__title">{{ title }}</span>
   </a>
-{% endif %}
+
+{%- endif -%}

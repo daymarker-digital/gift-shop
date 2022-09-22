@@ -25,9 +25,11 @@
   {%- endstyle -%}
 {% endif %}
 
-<div class="{{ section_name }}__main">
-  <div class="{{ section_name }}__content">
+<div class="{{ section_classes }}" id="{{ section_id }}">
+  <div class="{{ section_name }}__main">
+    <div class="{{ section_name }}__content">
 
+    </div>
   </div>
 </div>
 
@@ -42,7 +44,22 @@
     "name": "Cookie Banner",
     "tag": "div",
     "class": "cookie-banner",
-    "settings": [],
+    "settings": [
+      {
+        "content": "Layout",
+        "type": "header"
+      },
+      {
+			  "label": "Background",
+			  "type": "select",
+			  "options": [
+          { "label": "Black", "value": "black" },
+				  { "label": "White", "value": "white" }
+			  ],
+			  "default": "black",
+			  "id": "background"
+		  }
+    ],
 	  "blocks": []
   }
 {% endschema %}

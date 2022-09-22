@@ -47,7 +47,33 @@
     "name": "Shipping Policy",
     "tag": "div",
     "class": "policy policy-shipping",
-    "settings": [],
+    "settings": [
+      {
+        "content": "Layout",
+        "type": "header"
+      },
+      {
+		    "label": "Background",
+		    "type": "select",
+		    "options": [
+          { "label": "Black", "value": "black" },
+			    { "label": "White", "value": "white" }
+		    ],
+		    "default": "black",
+		    "id": "background"
+		  },
+      {
+        "label": "Container",
+        "type": "select",
+        "options": [
+          { "label": "Static", "value": "container" },
+          { "label": "Fluid", "value": "container-fluid" },
+          { "label": "Full Width", "value": "full-width" }
+        ],
+        "default": "container",
+        "id": "container"
+      }
+    ],
 	  "blocks": []
   }
 {% endschema %}
