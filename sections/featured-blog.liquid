@@ -8,6 +8,7 @@
   assign aos_delay = 250
   assign aos_delay_increment = 250
 
+  assign background_colour = section.settings.background | default: 'white'
   assign blog = section.settings.blog | default: false
   assign blog_articles_count = section.settings.blog.articles_count | default: 0
   assign blog_articles_exceeded = false
@@ -111,7 +112,7 @@
         { "label": "Black", "value": "black" },
 			  { "label": "White", "value": "white" }
 		  ],
-		  "default": "black",
+		  "default": "white",
 		  "id": "background"
 		},
     {

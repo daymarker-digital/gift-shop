@@ -8,6 +8,7 @@
   assign aos_delay = 250
   assign aos_delay_increment = 250
 
+  assign background_colour = section.settings.background | default: 'white'
   assign container = section.settings.container | default: 'container'
   assign content_placement_horizontal = section.settings.content_placement_horizontal | default: ''
   assign content_placement_vertical = section.settings.content_placement_vertical | default: ''
@@ -195,6 +196,16 @@
     {
 			"content": "Layout",
 			"type": "header"
+		},
+    {
+		  "label": "Background",
+		  "type": "select",
+		  "options": [
+        { "label": "Black", "value": "black" },
+			  { "label": "White", "value": "white" }
+		  ],
+		  "default": "white",
+		  "id": "background"
 		},
     {
       "label": "Container",

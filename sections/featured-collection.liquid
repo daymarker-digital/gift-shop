@@ -1,13 +1,14 @@
 {%- liquid
 
   assign section_name = 'featured-collection'
-  assign section_id = section_name | append: '--' | append: section.id
   assign section_classes = section_name | append: ' section-' | append: section.id | append: '-padding'
+  assign section_id = section_name | append: '--' | append: section.id
 
   assign aos_id = section_id | append: '--aos'
   assign aos_delay = 250
   assign aos_delay_increment = 250
 
+  assign background_colour = section.settings.background | default: 'white'
   assign container = section.settings.container | default: 'container'
   assign collection = section.settings.collection | default: false
   assign collection_products_count = section.settings.collection.products_count | default: 0
@@ -133,7 +134,7 @@
         { "label": "Black", "value": "black" },
 			  { "label": "White", "value": "white" }
 		  ],
-		  "default": "black",
+		  "default": "white",
 		  "id": "background"
 		},
     {
