@@ -65,7 +65,7 @@
       ],
       "settings": {
         "background": "black",
-        "container": "container",
+        "container": "full-width",
         "layout": "two-column",
         "padding_top": 44,
         "padding_bottom": 0,
@@ -137,8 +137,8 @@
           "settings": {
             "title": "Shop Space Tees",
             "link": "shopify:\/\/collections\/tees",
-            "style": "primary",
-            "alignment": "left"
+            "style": "secondary",
+            "alignment": "center"
           }
         }
       },
