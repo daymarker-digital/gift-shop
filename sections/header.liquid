@@ -13,6 +13,12 @@
   assign announcements_glider_id = section_id | append: '--announcements-glider'
   assign is_glider = false
 
+  if announcements_enabled
+    if announcements_homepage_only and 'index' != template.name
+      assign announcements_enabled = false
+    endif
+  endif
+
 -%}
 
 {% if announcements_enabled and announcements %}
@@ -24,31 +30,33 @@
   <div class="{{ section_name }}__announcements">
     <div class="{{ section_name }}__container">
 
-        {% if is_glider %}
-          <div class="glide js--glider" id="{{ glider_id }}" data-glide-style="{{ section_name }}-announcements">
-            <div class="glide__track" data-glide-el="track">
-              <ul class="glide__slides">
-                {% endif %}
+      {% if is_glider %}
+        <div class="glide js--glider" id="{{ glider_id }}" data-glide-style="{{ section_name }}-announcements">
+          <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+              {% endif %}
 
-                  {% for item in announcements %}
+                {% for item in announcements %}
 
-                    {% assign message = item.settings.title | default: '' %}
+                  {% assign message = item.settings.title | default: '' %}
 
-                    {% if message != blank %}
-                      {% if is_glider %}<li class="glide__slide">{% endif %}
-                        <div class="{{ section_name }}__announcements-item body-copy--announcement">{{ message }}</div>
-                      {% if is_glider %}</li>{% endif %}
-                    {% endif %}
+                  {% if message != blank %}
+                    {% if is_glider %}<li class="glide__slide">{% endif %}
+                      <div class="{{ section_name }}__announcements-item body-copy--announcement">{{ message }}</div>
+                    {% if is_glider %}</li>{% endif %}
+                  {% endif %}
 
-                  {% endfor %}
+                {% endfor %}
 
-                {% if is_glider %}
-              </ul>
-            </div>
+              {% if is_glider %}
+            </ul>
           </div>
-        {% endif %}
+        </div>
+      {% endif %}
 
-        <button class="{{ section_name }}__announcements-button-close" type="button" title="Hide Announcements"></button>
+      <button class="{{ section_name }}__announcements-button-close button" type="button" title="Hide Announcements">
+        {% render 'svg' %}
+      </button>
 
     </div>
   </div>
