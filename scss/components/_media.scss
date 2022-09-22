@@ -1,28 +1,47 @@
 @use "../utils/mixins/general" as *;
 
+$options: (
+  'adapt',
+  '750px',
+  '650px',
+  '550px',
+  '450px',
+  '350px',
+);
+
 .media {
 
   width: 100%;
 
-  &--mobile-adapt {}
-
-  &--mobile-adapt {}
-
-  &--mobile-adapt {}
-
-  &--mobile-adapt {}
-
-  &--mobile-adapt {}
+  &--mobile {
+    @each $option in $options {
+      &-#{$option} {
+        @if not ($option == 'adapt') {
+          height: #{$option};
+          img {
+            height: 100%;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+  }
 
   @include breakpoint(lg) {
 
-    &--desktop-adapt {}
-
-    &--desktop-adapt {}
-
-    &--desktop-adapt {}
-
-    &--desktop-adapt {}
+    &--desktop {
+      @each $option in $options {
+        &-#{$option} {
+          @if not ($option == 'adapt') {
+            height: #{$option};
+            img {
+              height: 100%;
+              object-fit: cover;
+            }
+          }
+        }
+      }
+    }
 
   }
 
