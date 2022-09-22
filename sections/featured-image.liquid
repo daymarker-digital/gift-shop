@@ -69,7 +69,7 @@
         </div>
       {% endif %}
 
-      <div class="{{ section_name }}__content {% if content_stack_mobile %}content--stack-mobile{% endif %} content--{{ content_placement_horizontal }}-x content--{{ content_placement_vertical }}-y">
+      <div class="{{ section_name }}__content content {% if content_stack_mobile %}content--stack-mobile{% endif %} content--x-{{ content_placement_horizontal }} content--y-{{ content_placement_vertical }}">
         {%- for block in section.blocks -%}
           {%- case block.type -%}
             {%- when 'heading' -%}
@@ -95,13 +95,14 @@
               {% assign alignment = block.settings.alignment | default: 'left' %}
               {% assign link = block.settings.link | default: '' %}
               {% assign style = block.settings.style | default: 'primary' %}
+              {% assign style = style | prepend: 'button-' %}
               {% assign title = block.settings.title | default: '' %}
 
               {% if link != blank and title != blank %}
-                <div class="{{ section_name }}__cta" data-alignment="{{ alignment }}">
+                <div class="{{ section_name }}__button">
                   {%
                     render 'link',
-                    classes: 'featured-image__cta-link',
+                    classes: 'featured-image__button-link',
                     link: link,
                     style: style,
                     title: title

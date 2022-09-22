@@ -1,14 +1,23 @@
 @use "../utils/mixins/button" as *;
 @use "../utils/mixins/link" as *;
+@use "../utils/mixins/ui" as *;
 
 .link {
 
-  @include link(primary);
+  @include link();
 
-  &--button-primary {
-    @include button(primary);
-    .link__title {
-      margin-bottom: -3px;
+  &--button {
+    &-primary,
+    &-secondary {
+      .link__title {
+        margin-bottom: -3px;
+      }
+    }
+    &-primary {
+      @include button(primary);
+    }
+    &-secondary {
+      @include button(secondary);
     }
   }
 

@@ -16,7 +16,13 @@ $options: (
   &--mobile {
     @each $option in $options {
       &-#{$option} {
-        @if not ($option == 'adapt') {
+        @if $option == 'adapt' {
+          height: auto;
+          img {
+            height: auto;
+            object-fit: initial;
+          }
+        } @else {
           height: #{$option};
           img {
             height: 100%;
@@ -32,7 +38,13 @@ $options: (
     &--desktop {
       @each $option in $options {
         &-#{$option} {
-          @if not ($option == 'adapt') {
+          @if $option == 'adapt' {
+            height: auto;
+            img {
+              height: auto;
+              object-fit: initial;
+            }
+          } else {
             height: #{$option};
             img {
               height: 100%;

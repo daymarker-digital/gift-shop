@@ -1,0 +1,64 @@
+@use "../utils/mixins/general" as *;
+
+.content {
+
+  display: flex;
+  padding: calc( 1.75 * var(--bs-gutter-width) );
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+
+  &--stack-mobile {
+    position: relative;
+    height: auto;
+    top: unset;
+    left: unset;
+  }
+
+  &--x {
+    &-left {
+      justify-content: flex-start;
+    }
+    &-center {
+      justify-content: center;
+    }
+    &-left {
+      justify-content: flex-end;
+    }
+  }
+
+  &--y {
+    &-top {
+      align-items: flex-start;
+    }
+    &-center {
+      align-items: center;
+    }
+    &-bottom {
+      align-items: flex-end;
+    }
+  }
+
+  @include breakpoint(lg) {
+
+    padding: calc( 2.5 * var(--bs-gutter-width) );
+
+    &--stack-mobile {
+      position: absolute;
+      height: 100%;
+      top: 0;
+      left: 0;
+    }
+
+  }
+
+  @include breakpoint(xxl) {
+
+    padding: calc( 3.0 * var(--bs-gutter-width) );
+
+  }
+
+}
