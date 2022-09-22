@@ -1,24 +1,6 @@
 {
   "current": {
     "sections": {
-      "announcements": {
-        "type": "announcements",
-        "blocks": {
-          "announcements-0": {
-            "type": "announcement",
-            "settings": {
-              "text": "Welcome to our store",
-              "color_scheme": "accent-1",
-              "link": ""
-            }
-          }
-        },
-        "block_order": [
-          "announcements-0"
-        ],
-        "settings": {
-        }
-      },
       "header": {
         "type": "header",
         "blocks": {

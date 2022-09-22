@@ -1,26 +1,5 @@
 {
   "sections": {
-    "1661195068627651d9": {
-      "type": "full-width-feature",
-      "blocks": {
-        "372565e6-bfbf-45ae-9611-c5079109e3a6": {
-          "type": "media",
-          "settings": {
-            "type": "image",
-            "image": "shopify:\/\/shop_images\/VPSA-feature-2_2x-30.jpg"
-          }
-        }
-      },
-      "block_order": [
-        "372565e6-bfbf-45ae-9611-c5079109e3a6"
-      ],
-      "settings": {
-        "container": "container",
-        "anchor_id": "",
-        "padding_top": 24,
-        "padding_bottom": 0
-      }
-    },
     "1661195827dff74e88": {
       "type": "featured-products",
       "blocks": {
@@ -58,39 +37,9 @@
       "settings": {
         "container": "container",
         "layout": "two-column",
-        "anchor_id": "",
         "padding_top": 44,
-        "padding_bottom": 0
-      }
-    },
-    "16609467333108563a": {
-      "type": "full-width-feature",
-      "blocks": {
-        "a861eb2e-5051-4c7d-bf8e-9c30c5ffc04a": {
-          "type": "media",
-          "settings": {
-            "type": "image",
-            "image": "shopify:\/\/shop_images\/Artboard-2-copy-4_2x-100.jpg"
-          }
-        },
-        "33844606-d336-4944-b0d1-b13d3ff0a129": {
-          "type": "cta",
-          "settings": {
-            "colour": "blue",
-            "title": "Shop Shorts and Pants",
-            "link": "shopify:\/\/collections\/bottoms"
-          }
-        }
-      },
-      "block_order": [
-        "a861eb2e-5051-4c7d-bf8e-9c30c5ffc04a",
-        "33844606-d336-4944-b0d1-b13d3ff0a129"
-      ],
-      "settings": {
-        "container": "container",
-        "anchor_id": "",
-        "padding_top": 44,
-        "padding_bottom": 0
+        "padding_bottom": 0,
+        "anchor_id": ""
       }
     },
     "16611958947ef1ecd7": {
@@ -144,39 +93,9 @@
       "settings": {
         "container": "container-fluid",
         "layout": "three-column",
-        "anchor_id": "",
         "padding_top": 44,
-        "padding_bottom": 0
-      }
-    },
-    "1661195127264aa009": {
-      "type": "full-width-feature",
-      "blocks": {
-        "bf6d8241-0a3e-4297-8df6-db4766ce7ab1": {
-          "type": "media",
-          "settings": {
-            "type": "image",
-            "image": "shopify:\/\/shop_images\/Artboard-2-copy-2_2x-100.jpg"
-          }
-        },
-        "cc2fdfb8-5356-4094-8ffa-b6a87668a930": {
-          "type": "cta",
-          "settings": {
-            "colour": "yellow",
-            "title": "Shop Space Tees",
-            "link": "shopify:\/\/collections\/tees"
-          }
-        }
-      },
-      "block_order": [
-        "bf6d8241-0a3e-4297-8df6-db4766ce7ab1",
-        "cc2fdfb8-5356-4094-8ffa-b6a87668a930"
-      ],
-      "settings": {
-        "container": "container-fluid",
-        "anchor_id": "",
-        "padding_top": 44,
-        "padding_bottom": 0
+        "padding_bottom": 0,
+        "anchor_id": ""
       }
     },
     "16611959936ca1502e": {
@@ -202,9 +121,9 @@
       "settings": {
         "container": "container-fluid",
         "layout": "two-column",
-        "anchor_id": "",
         "padding_top": 44,
-        "padding_bottom": 0
+        "padding_bottom": 0,
+        "anchor_id": ""
       }
     },
     "1661196025228eb79a": {
@@ -237,18 +156,15 @@
       "settings": {
         "container": "container-fluid",
         "layout": "three-column",
-        "anchor_id": "",
         "padding_top": 44,
-        "padding_bottom": 0
+        "padding_bottom": 0,
+        "anchor_id": ""
       }
     }
   },
   "order": [
-    "1661195068627651d9",
     "1661195827dff74e88",
-    "16609467333108563a",
     "16611958947ef1ecd7",
-    "1661195127264aa009",
     "16611959936ca1502e",
     "1661196025228eb79a"
   ]
