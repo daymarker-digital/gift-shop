@@ -181,7 +181,7 @@
         "c158dd33-2b11-4704-99d9-1138a8e3f0d9"
       ],
       "settings": {
-        "background": "black",
+        "background": "white",
         "container": "container-fluid",
         "layout": "two-column",
         "padding_top": 44,
