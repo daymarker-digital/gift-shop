@@ -32,7 +32,35 @@
 
 -%}
 
-{% render 'json-ld', type: 'product' %}
+{%- style -%}
+
+  {% if background_colour != blank %}
+    #shopify-section-{{ section.id }} {
+      background: rgba(var(--theme-colour-{{ background_colour }}), 1);
+      {% case background_colour %}
+        {% when 'orange' %}
+          color: rgba(var(--theme-colour-black), 1);
+        {% when 'white' %}
+          color: rgba(var(--theme-colour-black), 1);
+        {% else %}
+          color: rgba(var(--theme-colour-white), 1);
+      {% endcase %}
+    }
+  {% endif %}
+
+  .section-{{ section.id }}-padding {
+    padding-top: calc({{ section.settings.padding_top }}px * 0.75);
+    padding-bottom: calc({{ section.settings.padding_bottom }}px  * 0.75);
+  }
+
+  @media screen and (min-width: 992px) {
+    .section-{{ section.id }}-padding {
+      padding-top: {{ section.settings.padding_top }}px;
+      padding-bottom: {{ section.settings.padding_bottom }}px;
+    }
+  }
+
+{%- endstyle -%}
 
 <div class="{{ section_classes }}" id="{{ section_id }}">
   <form action='/cart/add' method='post' enctype='multipart/form-data'>
@@ -218,6 +246,7 @@
 {% endcapture %}
 
 {% render 'bs-modal', modal_content: modal_images, modal_id: product_modal_id %}
+{% render 'json-ld', type: 'product' %}
 
 {% schema %}
 {
@@ -262,6 +291,30 @@
 			],
 			"default": "container",
 			"id": "container"
+		},
+    {
+			"content": "Padding",
+			"type": "header"
+		},
+		{
+			"label": "Top Padding",
+			"type": "range",
+			"min": 0,
+			"max": 120,
+			"step": 4,
+			"unit": "px",
+			"default": 36,
+      "id": "padding_top"
+		},
+		{
+			"label": "Bottom Padding",
+			"type": "range",
+			"min": 0,
+			"max": 120,
+			"step": 4,
+			"unit": "px",
+			"default": 36,
+      "id": "padding_bottom"
 		}
 	],
 	"blocks": [
