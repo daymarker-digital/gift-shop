@@ -1,0 +1,46 @@
+@use "../utils/mixins/general" as *;
+
+.sticky-column {
+
+  &__column {
+    width: 100%;
+    display: block;
+  }
+
+  &__container {
+    margin: auto;
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+  }
+
+  @include breakpoint(lg) {
+
+    &__column {
+      &--stuck {
+        height: auto;
+        min-height: 100%;
+        position: relative;
+        overflow-y: visible;
+        .sticky-column__main {
+          position: sticky;
+          height: 100vh;
+          top: 0;
+          padding: 0;
+        }
+      }
+      &[data-column-width="two-thirds"] {
+        width: 66.6666%;
+      }
+      &[data-column-width="one-third"] {
+        width: 33.3333%;
+      }
+    }
+
+    &__container {
+      flex-flow: row nowrap;
+    }
+
+  }
+
+}

@@ -449,6 +449,18 @@
       "oAP" : "\/assets\/SorrySans-BoldExtended.woff2",
       "oF" : 0
     },
+    "\/assets\/sticky-column.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 2,
+      "oAP" : "\/assets\/sticky-column.css",
+      "oF" : 0,
+      "pg" : 0
+    },
     "\/assets\/theme-editor.js" : {
       "bF" : 0,
       "ft" : 64,
@@ -1420,6 +1432,21 @@
       "pg" : 0,
       "sct" : 0
     },
+    "\/scss\/layouts\/sticky-column.scss" : {
+      "aP" : 1,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/assets\/sticky-column.css",
+      "oF" : 0,
+      "oS" : 3,
+      "pg" : 0,
+      "sct" : 0
+    },
     "\/scss\/legacy\/_main--legacy.scss" : {
       "aP" : 1,
       "bl" : 0,
@@ -1610,6 +1637,21 @@
       "ma" : 0,
       "oA" : 1,
       "oAP" : "\/assets\/_mobile-menu.css",
+      "oF" : 0,
+      "oS" : 3,
+      "pg" : 0,
+      "sct" : 0
+    },
+    "\/scss\/theme\/_product.scss" : {
+      "aP" : 1,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/assets\/_product.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -2136,6 +2178,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/snippets\/bs-container.liquid",
+      "oF" : 0
+    },
+    "\/snippets\/bs-modal.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/snippets\/bs-modal.liquid",
       "oF" : 0
     },
     "\/snippets\/button-add-to-cart.liquid" : {
