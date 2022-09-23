@@ -1,7 +1,11 @@
 {
   "sections": {
     "main": {
-      "type": "main-product"
+      "type": "main-product",
+      "settings": {
+        "background": "black",
+        "container": "container-fluid"
+      }
     }
   },
   "order": [
