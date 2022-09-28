@@ -1,0 +1,112 @@
+@use "../utils/mixins/general" as *;
+
+.radio {
+
+  &__input {
+    display: none;
+    &:checked {
+      & + .radio__item {
+        background: rgba(var(--theme-colour-black), 1);
+        color:  rgba(var(--theme-colour-white), 1);
+      }
+    }
+    &[disabled] {
+      & + .radio__item {
+        cursor: not-allowed;
+        &:after {
+          content: '';
+          width: 2px;
+          background: rgba(var(--theme-colour-black), 1);
+          position: absolute;
+          transform-origin: center center;
+          height: calc( var(--theme-radio-size) + 30px );
+          transform: rotate(45deg);
+        }
+      }
+    }
+    &:not([disabled]) {
+      & + .radio__item {
+        cursor: pointer;
+        &:hover {
+          background: rgba(var(--theme-colour-yellow), 1);
+          color: rgba(var(--theme-colour-black), 1);
+        }
+      }
+    }
+  }
+
+  &__item {
+    font-family: "Akkurat Mono LL", serif;
+    height: var(--theme-radio-size);
+    width: var(--theme-radio-size);
+    border: 2px solid #111;
+    color: #111;
+    transition: all .28s;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  &__title {
+    font-size: 15px;
+    display: block;
+    margin-bottom: -4px;
+  }
+
+  @include breakpoint(sm) {}
+
+  @include breakpoint(md) {}
+
+  @include breakpoint(lg) {
+
+    &__input {
+      &[disabled] {
+        & + .radio__item {
+          &:after {
+            height: calc( var(--theme-radio-size--lg) + 30px );
+          }
+        }
+      }
+    }
+
+    &__item {
+      height: var(--theme-radio-size--lg);
+      width: var(--theme-radio-size--lg);
+    }
+
+    &__title {
+      font-size: 17px;
+    }
+
+  }
+
+  @include breakpoint(xl) {}
+
+  @include breakpoint(xxl) {
+
+    $radio-height: 62px;
+
+    &__input {
+      &[disabled] {
+        & + .radio__item {
+          &:after {
+            height: calc( var(--theme-radio-size--xxl) + 30px );
+          }
+        }
+      }
+    }
+
+    &__item {
+      height: var(--theme-radio-size--xxl);
+      width: var(--theme-radio-size--xxl);
+    }
+
+    &__title {
+      font-size: 19px;
+    }
+
+  }
+
+}

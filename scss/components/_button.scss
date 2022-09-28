@@ -20,4 +20,8 @@
     @include button(tertiary);
   }
 
+  &--outlined {
+    @include button(outlined);
+  }
+
 }

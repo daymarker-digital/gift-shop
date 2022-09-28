@@ -28,12 +28,12 @@
   <div class="{{ snippet_classes }} {% if show_symbol %}with-currency-symbol{% endif %}">
     <span class="{{ snippet_name }}__amount">
       {% if show_symbol %}<span class="{{ snippet_name }}__currency-symbol">{{- symbol -}}</span>{% endif %}
-      {{- price | money_without_currency -}}
+      <span class="{{ snippet_name }}__cost">{{- price | divided_by: 100 -}}</span>
     </span>
     {%- if price_compare -%}
       <span class="{{ snippet_name }}__amount compare-at-price">
         {% if show_symbol %}<span class="{{ snippet_name }}__currency-symbol">{{- symbol -}}</span>{% endif %}
-        {{- price_compare | money_without_currency -}}
+        <span class="{{ snippet_name }}__cost">{{- price_compare | divided_by: 100 -}}</span>
       </span>
     {%- endif -%}
   </div>

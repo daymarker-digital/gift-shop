@@ -6,7 +6,47 @@
     cursor: pointer;
   }
 
+  .glide {
+    &__button-open-modal {
+      position: absolute;
+      top: 30px;
+      right: 24px;
+      height: 24px;
+      width: auto;
+      z-index: 100;
+      svg {
+        transform: rotate(45deg);
+        height: 100%;
+        width: 100%;
+        display: block;
+      }
+    }
+  }
+
+  &__badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    width: auto;
+    height: 42px;
+    z-index: 10;
+    padding: 0;
+    svg {
+      display: block;
+      width: auto;
+      height: 100%;
+    }
+  }
+
+  &__button {
+    &-add-to-cart {
+      height: var(--theme-radio-size);
+      font-size: 15px;
+    }
+  }
+
   &__images {
+    position: relative;
     img {
       display: block;
       width: 100%;
@@ -14,15 +54,63 @@
     }
   }
 
-  &__grid {
+  &__info {
+    & + .main-product__info {
+      margin-top: 20px;
+    }
+  }
+
+  &__options {
+    display: flex;
+    gap: 12px;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+  }
+
+  &__price {
+    font-size: 17px;
+    margin-top: 10px;
+  }
+
+  @include breakpoint(sm) {
+
+    &__price {
+      font-size: 27px;
+      margin-top: 12px;
+    }
 
   }
 
-  @include breakpoint(sm) {}
+  @include breakpoint(md) {
 
-  @include breakpoint(md) {}
+    &__badge {
+      top: 18px;
+      left: 18px;
+      height: 70px;
+    }
+
+    &__price {
+      font-size: 34px;
+      margin-top: 14px;
+    }
+
+  }
 
   @include breakpoint(lg) {
+
+    &__badge {
+      top: 15px;
+      left: 15px;
+      height: 70px;
+    }
+
+    &__button {
+      &-add-to-cart {
+        height: var(--theme-radio-size--lg);
+        font-size: 17px;
+      }
+    }
 
     &__grid {
       display: grid;
@@ -36,10 +124,42 @@
       }
     }
 
+    &__price {
+      font-size: 18px;
+      margin-top: 22px;
+    }
+
   }
 
-  @include breakpoint(xl) {}
+  @include breakpoint(xl) {
 
-  @include breakpoint(xxl) {}
+    &__price {
+      font-size: 21px;
+      margin-top: 24px;
+    }
+
+  }
+
+  @include breakpoint(xxl) {
+
+    &__badge {
+      top: 18px;
+      left: 18px;
+      height: 80px;
+    }
+
+    &__button {
+      &-add-to-cart {
+        height: var(--theme-radio-size--xxl);
+        font-size: 19px;
+      }
+    }
+
+    &__price {
+      font-size: 24px;
+      margin-top: 26px;
+    }
+
+  }
 
 }

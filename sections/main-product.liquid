@@ -75,15 +75,9 @@
 
                 <div class='{{ section_name }}__info intro d-lg-none'>
                   <h1 class='{{ section_name }}__title heading--1'>{{ product.title }}</h1>
-                  {% render 'price', classes: 'main-product__price' compare_at: product.compare_at_price, price: product.price %}
+                  {% render 'price', classes: 'main-product__price' compare_at: product.compare_at_price, price: product.price, show_symbol: true %}
                 </div>
 
-                {% for tag in product.tags %}
-                  {% if 'Natures' == tag %}
-                    {% render 'badge', classes: 'd-none d-lg-block', type: tag %}
-                    {% break %}
-                  {% endif %}
-                {% endfor %}
 
                 {% if product_images %}
 
@@ -91,7 +85,9 @@
 
                     {% for tag in product.tags %}
                       {% if 'Natures' == tag %}
-                        {% render 'badge', classes: 'd-lg-none', type: tag %}
+                        <div class='{{ section_name }}__badge'>
+                          {% render 'svg-icon', type: '20%' %}
+                        </div>
                         {% break %}
                       {% endif %}
                     {% endfor %}
@@ -101,7 +97,7 @@
                     {% endif %}
 
                       {% if product_gallery %}
-                        <button class='glide__button-open-modal' data-product-image-index='1' data-bs-target='#{{ product_modal_id }}' data-bs-toggle='modal'>
+                        <button class='glide__button-open-modal button' data-product-image-index='1' data-bs-target='#{{ product_modal_id }}' data-bs-toggle='modal' type="button">
                           {% render 'svg-icon', type: 'close' %}
                         </button>
                       {% endif %}
@@ -148,6 +144,16 @@
                   </div>
 
                   <div class='{{ section_name }}__images d-none d-lg-block'>
+
+                    {% for tag in product.tags %}
+                      {% if 'Natures' == tag %}
+                        <div class='{{ section_name }}__badge'>
+                          {% render 'svg-icon', type: '20%' %}
+                        </div>
+                        {% break %}
+                      {% endif %}
+                    {% endfor %}
+
                     <div class='{{ section_name }}__grid'>
                       {% for image in product.images %}
 
@@ -179,7 +185,7 @@
 
                 <div class='{{ section_name }}__info intro d-none d-lg-block'>
                   <strong class='{{ section_name }}__title heading--1'>{{ product.title }}</strong>
-                  {% render 'price', classes: 'main-product__price' compare_at: product.compare_at_price, price: product.price %}
+                  {% render 'price', classes: 'main-product__price' compare_at: product.compare_at_price, price: product.price, show_symbol: true %}
                 </div>
 
                 <div class='{{ section_name }}__info description'>
@@ -189,22 +195,19 @@
                 <div class='{{ section_name }}__info options'>
 
                   {% if product.has_only_default_variant %}
-                    <input class='product__variant d-none' type='radio' name='id' value='{{ product.first_available_variant.id }}' checked readonly>
+                    <input class='{{ section_name }}__option input d-none' type='radio' name='id' value='{{ product.first_available_variant.id }}' checked readonly>
                   {% else %}
-                    <div class='product__variants'>
-                      <ul class='product__variant-list'>
-                        {% for variant in product.variants %}
-                          <li class='product__variant-item radio {% unless variant.available %}unavailable{% endunless %}'>
-                            <label {% unless variant.available %}disabled{% endunless %}>
-                              <input class='radio__input' type='radio' name='id' value='{{ variant.id }}' {% unless variant.available %}disabled{% endunless %}>
-                              <div class='radio__item'>
-                                <div class='radio__title'>{{ variant.title }}</div>
-                                {% unless variant.available %}<span class='radio__strike-through'></span>{% endunless %}
-                              </div>
-                            </label>
-                          </li>
-                        {% endfor %}
-                      </ul>
+                    <div class='{{ section_name }}__options' role="list">
+                      {% for variant in product.variants %}
+                        <div class='{{ section_name }}__option radio {% unless variant.available %}unavailable{% endunless %}' role="listitem">
+                          <label {% unless variant.available %}disabled{% endunless %}>
+                            <input class='radio__input' type='radio' name='id' value='{{ variant.id }}' {% unless variant.available %}disabled{% endunless %}>
+                            <div class='radio__item'>
+                              <span class='radio__title'>{{ variant.title }}</span>
+                            </div>
+                          </label>
+                        </div>
+                      {% endfor %}
                     </div>
                   {% endif %}
 
@@ -215,7 +218,7 @@
                 <div class='{{ section_name }}__info actions'>
 
                   <button
-                    class='{{ section_name }}__button-add-to-cart js-add-to-cart'
+                    class='{{ section_name }}__button-add-to-cart button--outlined js-add-to-cart'
                     type='submit'
                     name='add'
                     {% unless product_shop_button_enabled %}disabled{% endunless %}

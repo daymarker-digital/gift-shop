@@ -1,0 +1,14 @@
+.price {
+
+  &__amount {
+    display: inline-flex;
+    align-items: baseline;
+    justify-content: flex-start;
+    &.compare-at-price {
+      opacity: 0.33;
+      text-decoration: line-through;
+      margin-left: 14px;
+    }
+  }
+
+}
