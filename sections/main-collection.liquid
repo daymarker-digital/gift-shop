@@ -1,6 +1,6 @@
 {%- liquid
 
-  assign section_name = 'featured-products'
+  assign section_name = 'collections'
   assign section_classes = section_name | append: ' section-' | append: section.id | append: '-padding'
   assign section_id = section_name | append: '--' | append: section.id
 
@@ -8,20 +8,13 @@
   assign aos_delay = 250
   assign aos_delay_increment = 250
 
-  assign background_colour = section.settings.background | default: 'white'
   assign container = section.settings.container | default: 'container'
   assign layout = section.settings.layout | default: 'two-column'
-  assign products = section.blocks | where: 'type', 'product' | default: false
-  assign products_size = products.size | default: 0
-  assign products_modulo = products_size | modulo: 2
-  assign products_placeholder_enabled = false
+  assign products = collection.products | default: false
+  assign products_per_page = section.settings.products_per_page | default: 12
 
   if section.settings.anchor_id != blank
     assign section_id = section.settings.anchor_id
-  endif
-
-  if 'three-column' == layout and products_modulo == 1
-    assign products_placeholder_enabled = true
   endif
 
 -%}
@@ -56,42 +49,44 @@
 
 {%- endstyle -%}
 
-<link rel="stylesheet" href="{{ 'section-featured-products.css' | asset_url }}" media="print" onload="this.media='all'">
-<noscript>{{ 'section-featured-products.css' | asset_url | stylesheet_tag }}</noscript>
-
 <div class="{{ section_classes }}" id="{{ section_id }}">
   {% render 'bs-container', state: 'open', col: 'col-12 col-lg-10 offset-lg-1', container: container %}
-    <div class="{{ section_name }}__layout grid grid--{{ layout }}" id="{{ aos_id }}" role="list">
 
-      {% if products and products.size > 0 %}
-        {% for item in products %}
+    {% paginate products by products_per_page %}
 
-            {% assign item_id = 'card-product' | append: '--' | append: item.settings.product.id | append: '--' | append: forloop.index %}
-            <div class="{{ section_name }}__item grid__item" data-index="{{ forloop.index }}">
-              {% render 'card-product', card_product: item.settings.product, id: item_id %}
-            </div>
-
-          {% if products_placeholder_enabled and forloop.last %}
-            {% assign item_index = forloop.index | plus: 1 %}
-            {% assign item_id = 'card-product-placeholder' | append: '--' | append: section.id | append: '--' | append: item_index %}
-            <div class="{{ section_name }}__item grid__item" data-index="{{ item_index }}">
-              {% render 'card-product-placeholder', id: item_id %}
-            </div>
-          {% endif %}
-
+      <div class="{{ section_name }}__layout grid grid--{{ layout }}" id="{{ aos_id }}" role="list">
+        {% for product in products %}
+          <div class="{{ section_name }}__item grid__item" data-index="{{ forloop.index }}" role="listitem">
+            {% render 'card-product', card_product: product %}
+          </div>
         {% endfor %}
-      {% endif %}
+      </div>
 
-    </div>
-  {% render 'bs-container', state: 'closed', container: container %}
+      {%- if paginate.pages > 1 -%}
+        {% render 'pagination', paginate: paginate, %}
+      {%- endif -%}
+
+    {% endpaginate %}
+
+  {% render 'bs-container', state: 'closed' %}
 </div>
 
 {% schema %}
 {
-  "name": "Featured Products",
+  "name": "Collection",
   "tag": "section",
-  "class": "section section--featured-products",
+  "class": "section section--collection",
+  "templates": [ "collection" ],
   "settings": [
+    {
+			"label": "Products per Page",
+			"type": "range",
+			"min": 1,
+			"max": 50,
+			"step": 1,
+			"default": 12,
+      "id": "products_per_page"
+		},
     {
 			"content": "Layout",
 			"type": "header"
@@ -160,25 +155,6 @@
       "info": "Optionally include a unique ID so that sections within the page can be linked to. Anchor IDs must be all lowercase, unique and replaced empty spaces with hyphens. For example: my-great-section-anchor",
       "type": "text",
       "id": "anchor_id"
-    }
-  ],
-  "blocks": [
-    {
-      "name": "Product",
-      "type": "product",
-      "limit": 12,
-      "settings": [
-        {
-          "label": "Product",
-          "type": "product",
-          "id": "product"
-        }
-      ]
-    }
-  ],
-  "presets": [
-    {
-      "name": "Featured Products"
     }
   ]
 }
