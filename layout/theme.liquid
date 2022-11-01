@@ -49,10 +49,10 @@
   		<meta name="robots" content="noindex, nofollow">
     {% endif %}
 
-    <script src="{{ 'vendors.min.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'vendors.min.js' | asset_url }}" defer></script>
 
-    <link rel="stylesheet" href="{{ 'main.css' | asset_url }}" media="print" onload="this.media='all'">
-    <noscript>{{ 'main.css' | asset_url | stylesheet_tag }}</noscript>
+    <link rel="stylesheet" href="{{ 'style.css' | asset_url }}" media="print" onload="this.media='all'">
+    <noscript>{{ 'style.css' | asset_url | stylesheet_tag }}</noscript>
 
     <script>
 
@@ -93,10 +93,9 @@
     {% section 'footer' %}
     {% section 'popup' %}
     {% section 'cookie-banner' %}
-    {% section 'cart-notification' %}
+    {% section 'notification-cart' %}
 
     <script>
-
       var Theme = Theme || {};
       Theme.cart = {{ cart | json }};
       Theme.collection = {{ collection | json }} || {};
@@ -124,10 +123,18 @@
         cart_update_url: '{{ routes.cart_update_url }}',
         predictive_search_url: '{{ routes.predictive_search_url }}'
       };
-
+      Theme.tools = {
+        imgURLFilter: function(src, size) {
+          return src
+            .replace(/_(pico|icon|thumb|small|compact|medium|large|grande|original|1024x1024|2048x2048|master)+\./g, '.')
+            .replace(/\.jpg|\.png|\.gif|\.jpeg/g, function(match) {
+              return '_'+size+match;
+            });
+        }
+      };
     </script>
 
-    <script src="{{ 'main.min.js' | asset_url }}" defer="defer"></script>
+    <script src="{{ 'main.min.js' | asset_url }}" defer></script>
 
   </body>
 </html>

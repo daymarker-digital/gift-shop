@@ -1,9 +1,5 @@
-@use 'utils' as *;
-@use 'vendors' as *;
-@use 'components' as *;
-@use 'layouts' as *;
-@use 'pages' as *;
-@use 'theme' as *;
+@use "../utils/variables" as *;
+@use "../utils/functions/general" as *;
 
 :root {
 

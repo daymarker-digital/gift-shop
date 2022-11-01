@@ -1,33 +1,33 @@
-// @codekit-prepend "./modules/_announcements.js";
-// @codekit-prepend "./modules/_credits.js";
-// @codekit-prepend "./modules/_cookies.js";
-// @codekit-prepend "./modules/_breakpoints.js";
-// @codekit-prepend "./modules/_forms.js";
-// @codekit-prepend "./modules/_gliders.js";
-// @codekit-prepend "./modules/_instagramFeed.js";
-// @codekit-prepend "./modules/_mobileMenu.js";
-// @codekit-prepend "./modules/_modals";
-// @codekit-prepend "./modules/_randomImage.js";
-// @codekit-prepend "./modules/_scrolling.js";
-// @codekit-prepend "./modules/_sizing.js";
-// @codekit-prepend "./modules/_tools.js";
+// importing default function, no object deconstruction required - can name as whatever!
+// import DEF from './modules/revealing'; // importing default function, no object deconstruction required - can name as whatever!
+// import { init as GHI, bar, brenden as bMoney } from './modules/alpha'; // importing named function(s), object deconstruction required - can alias function names
 
-//////////////////////////////////////////////////////////////////////////////////////////
-////  Execute Theme
-//////////////////////////////////////////////////////////////////////////////////////////
+import AOS from 'aos';
 
-let modules = [
-  new Announcements(),
-  new RandomImage(),
-  new Scrolling(),
-  new Credits()
-];
+import Announcements from './modules/announcements';
+import Cart from './modules/cart';
+import Credits from './modules/credits';
+import Gliders from './modules/gliders';
+import Product from './modules/product';
+import RandomImage from './modules/randomImage';
+import Scrolling from './modules/scrolling';
 
-modules.forEach( module => module.init() );
-
+Cart.init();
+Credits.init();
+Announcements.init();
+Product.init();
+RandomImage.init();
+Scrolling.init();
 AOS.init({
   offset: 150,                // offset (in px) from the original trigger point
   delay: 0,                   // values from 0 to 3000, with step 50ms
-  duration: 550,              // values from 0 to 3000, with step 50ms
+  duration: 500,              // values from 0 to 3000, with step 50ms
   easing: 'ease-in-out',      // default easing for AOS animations
 });
+
+window.addEventListener('load', function () {
+  Gliders.init();
+  AOS.refresh();
+});
+
+console.log( 'Fin' );

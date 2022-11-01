@@ -141,6 +141,28 @@
       "oAP" : "\/assets\/AkkuratMonoLLWeb-Regular.woff2",
       "oF" : 0
     },
+    "\/assets\/alpha.min.js" : {
+      "bF" : 4,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/assets\/alpha.min.min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 1
+    },
+    "\/assets\/announcements.min.js" : {
+      "bF" : 4,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/assets\/announcements.min.min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 1
+    },
     "\/assets\/apple-touch-icon.png" : {
       "ft" : 32768,
       "iS" : 9587,
@@ -154,8 +176,19 @@
       "q" : 100,
       "rq" : 75
     },
+    "\/assets\/breakpoints.min.js" : {
+      "bF" : 4,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/assets\/breakpoints.min.min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 1
+    },
     "\/assets\/cart-notification.js" : {
-      "bF" : 0,
+      "bF" : 4,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
@@ -166,12 +199,23 @@
       "tS" : 1
     },
     "\/assets\/cart.js" : {
-      "bF" : 0,
+      "bF" : 4,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
       "oAP" : "\/assets\/cart.min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 1
+    },
+    "\/assets\/cart.min.js" : {
+      "bF" : 4,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/assets\/cart.min.min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 1
@@ -189,7 +233,7 @@
       "pg" : 0
     },
     "\/assets\/customer.js" : {
-      "bF" : 0,
+      "bF" : 4,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
@@ -200,7 +244,7 @@
       "tS" : 1
     },
     "\/assets\/details-disclosure.js" : {
-      "bF" : 0,
+      "bF" : 4,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
@@ -211,7 +255,7 @@
       "tS" : 1
     },
     "\/assets\/details-modal.js" : {
-      "bF" : 0,
+      "bF" : 4,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
@@ -222,7 +266,7 @@
       "tS" : 1
     },
     "\/assets\/facets.js" : {
-      "bF" : 0,
+      "bF" : 4,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
@@ -253,12 +297,23 @@
       "pg" : 0
     },
     "\/assets\/global.js" : {
-      "bF" : 0,
+      "bF" : 4,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
       "oAP" : "\/assets\/global.min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 1
+    },
+    "\/assets\/main-LEGACY.min.js" : {
+      "bF" : 4,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/assets\/main-LEGACY.min.min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 1
@@ -276,12 +331,23 @@
       "pg" : 0
     },
     "\/assets\/main.min.js" : {
-      "bF" : 0,
+      "bF" : 4,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
       "oAP" : "\/assets\/main.min.min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 1
+    },
+    "\/assets\/main.min.LEGACY.js" : {
+      "bF" : 4,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/assets\/main.min.LEGACY.min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 1
@@ -329,7 +395,7 @@
       "oF" : 0
     },
     "\/assets\/pickup-availability.js" : {
-      "bF" : 0,
+      "bF" : 4,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
@@ -340,7 +406,7 @@
       "tS" : 1
     },
     "\/assets\/predictive-search.js" : {
-      "bF" : 0,
+      "bF" : 4,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
@@ -351,7 +417,7 @@
       "tS" : 1
     },
     "\/assets\/product-form.js" : {
-      "bF" : 0,
+      "bF" : 4,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
@@ -362,12 +428,56 @@
       "tS" : 1
     },
     "\/assets\/product-model.js" : {
-      "bF" : 0,
+      "bF" : 4,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 0,
       "oAP" : "\/assets\/product-model.min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 1
+    },
+    "\/assets\/product.min.js" : {
+      "bF" : 4,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/assets\/product.min.min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 1
+    },
+    "\/assets\/randomImage.min.js" : {
+      "bF" : 4,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/assets\/randomImage.min.min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 1
+    },
+    "\/assets\/render.min.js" : {
+      "bF" : 4,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/assets\/render.min.min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 1
+    },
+    "\/assets\/revealing.min.js" : {
+      "bF" : 4,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/assets\/revealing.min.min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 1
@@ -397,7 +507,7 @@
       "pg" : 0
     },
     "\/assets\/share.js" : {
-      "bF" : 0,
+      "bF" : 4,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
@@ -461,8 +571,20 @@
       "oF" : 0,
       "pg" : 0
     },
+    "\/assets\/style.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 2,
+      "oAP" : "\/assets\/style.css",
+      "oF" : 0,
+      "pg" : 0
+    },
     "\/assets\/theme-editor.js" : {
-      "bF" : 0,
+      "bF" : 4,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
@@ -473,7 +595,7 @@
       "tS" : 1
     },
     "\/assets\/vendors.min.js" : {
-      "bF" : 0,
+      "bF" : 4,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
@@ -539,8 +661,19 @@
       "oO" : 1,
       "oS" : 1
     },
+    "\/js\/main-LEGACY.js" : {
+      "bF" : 4,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/assets\/main-LEGACY.min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 1
+    },
     "\/js\/main.js" : {
-      "bF" : 0,
+      "bF" : 4,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
@@ -550,8 +683,8 @@
       "sC" : 3,
       "tS" : 1
     },
-    "\/js\/modules\/_announcements.js" : {
-      "bF" : 0,
+    "\/js\/modules-legacy\/_announcements.js" : {
+      "bF" : 4,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
@@ -561,8 +694,8 @@
       "sC" : 3,
       "tS" : 1
     },
-    "\/js\/modules\/_breakpoints.js" : {
-      "bF" : 0,
+    "\/js\/modules-legacy\/_breakpoints.js" : {
+      "bF" : 4,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
@@ -572,8 +705,8 @@
       "sC" : 3,
       "tS" : 1
     },
-    "\/js\/modules\/_cookies.js" : {
-      "bF" : 0,
+    "\/js\/modules-legacy\/_cookies.js" : {
+      "bF" : 4,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
@@ -583,8 +716,8 @@
       "sC" : 3,
       "tS" : 1
     },
-    "\/js\/modules\/_credits.js" : {
-      "bF" : 0,
+    "\/js\/modules-legacy\/_credits.js" : {
+      "bF" : 4,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
@@ -594,8 +727,8 @@
       "sC" : 3,
       "tS" : 1
     },
-    "\/js\/modules\/_forms.js" : {
-      "bF" : 0,
+    "\/js\/modules-legacy\/_forms.js" : {
+      "bF" : 4,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
@@ -605,8 +738,8 @@
       "sC" : 3,
       "tS" : 1
     },
-    "\/js\/modules\/_gliders.js" : {
-      "bF" : 0,
+    "\/js\/modules-legacy\/_gliders.js" : {
+      "bF" : 4,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
@@ -616,8 +749,96 @@
       "sC" : 3,
       "tS" : 1
     },
+    "\/js\/modules-legacy\/_instagramFeed.js" : {
+      "bF" : 4,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/assets\/_instagramFeed.min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 1
+    },
+    "\/js\/modules-legacy\/_mobileMenu.js" : {
+      "bF" : 4,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/assets\/_mobileMenu.min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 1
+    },
+    "\/js\/modules-legacy\/_modals.js" : {
+      "bF" : 4,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/assets\/_modals.min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 1
+    },
+    "\/js\/modules-legacy\/_randomImage.js" : {
+      "bF" : 4,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/assets\/_randomImage.min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 1
+    },
+    "\/js\/modules-legacy\/_scrolling.js" : {
+      "bF" : 4,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/assets\/_scrolling.min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 1
+    },
+    "\/js\/modules-legacy\/_sizing.js" : {
+      "bF" : 4,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/assets\/_sizing.min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 1
+    },
+    "\/js\/modules-legacy\/_tools.js" : {
+      "bF" : 4,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/assets\/_tools.min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 1
+    },
+    "\/js\/modules\/_forms.js" : {
+      "bF" : 4,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/assets\/_forms.min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 1
+    },
     "\/js\/modules\/_instagramFeed.js" : {
-      "bF" : 0,
+      "bF" : 4,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
@@ -628,7 +849,7 @@
       "tS" : 1
     },
     "\/js\/modules\/_mobileMenu.js" : {
-      "bF" : 0,
+      "bF" : 4,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
@@ -639,7 +860,7 @@
       "tS" : 1
     },
     "\/js\/modules\/_modals.js" : {
-      "bF" : 0,
+      "bF" : 4,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
@@ -649,30 +870,8 @@
       "sC" : 3,
       "tS" : 1
     },
-    "\/js\/modules\/_randomImage.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 1,
-      "oAP" : "\/assets\/_randomImage.min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 1
-    },
-    "\/js\/modules\/_scrolling.js" : {
-      "bF" : 0,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 1,
-      "oAP" : "\/assets\/_scrolling.min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 1
-    },
     "\/js\/modules\/_sizing.js" : {
-      "bF" : 0,
+      "bF" : 4,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
@@ -682,19 +881,162 @@
       "sC" : 3,
       "tS" : 1
     },
-    "\/js\/modules\/_tools.js" : {
-      "bF" : 0,
+    "\/js\/modules\/alpha.js" : {
+      "bF" : 4,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/assets\/alpha.min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 1
+    },
+    "\/js\/modules\/announcements.js" : {
+      "bF" : 4,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
       "oA" : 1,
-      "oAP" : "\/assets\/_tools.min.js",
+      "oAP" : "\/assets\/announcements.min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 1
+    },
+    "\/js\/modules\/breakpoints.js" : {
+      "bF" : 4,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/assets\/breakpoints.min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 1
+    },
+    "\/js\/modules\/cart.js" : {
+      "bF" : 4,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/assets\/cart.min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 1
+    },
+    "\/js\/modules\/cookies.js" : {
+      "bF" : 4,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/assets\/cookies.min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 1
+    },
+    "\/js\/modules\/credits.js" : {
+      "bF" : 4,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/assets\/credits.min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 1
+    },
+    "\/js\/modules\/gliders.js" : {
+      "bF" : 4,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/assets\/gliders.min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 1
+    },
+    "\/js\/modules\/product.js" : {
+      "bF" : 4,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/assets\/product.min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 1
+    },
+    "\/js\/modules\/randomImage.js" : {
+      "bF" : 4,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/assets\/randomImage.min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 1
+    },
+    "\/js\/modules\/render.js" : {
+      "bF" : 4,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/assets\/render.min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 1
+    },
+    "\/js\/modules\/revealing.js" : {
+      "bF" : 4,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/assets\/revealing.min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 1
+    },
+    "\/js\/modules\/scrolling.js" : {
+      "bF" : 4,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/assets\/scrolling.min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 1
+    },
+    "\/js\/modules\/tools.js" : {
+      "bF" : 4,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/assets\/tools.min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 1
+    },
+    "\/js\/vendors-LEGACY.js" : {
+      "bF" : 4,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/assets\/vendors-LEGACY.min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 1
     },
     "\/js\/vendors.js" : {
-      "bF" : 0,
+      "bF" : 4,
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
@@ -1158,6 +1500,14 @@
       "oO" : 1,
       "oS" : 1
     },
+    "\/README.html" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/README.html",
+      "oF" : 0
+    },
     "\/README.md" : {
       "cB" : 0,
       "cS" : 0,
@@ -1492,7 +1842,7 @@
       "pg" : 0,
       "sct" : 0
     },
-    "\/scss\/main.scss" : {
+    "\/scss\/sections\/featured-image.scss" : {
       "aP" : 1,
       "bl" : 0,
       "co" : 0,
@@ -1501,13 +1851,43 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 0,
-      "oAP" : "\/assets\/main.css",
+      "oAP" : "\/assets\/section-featured-image.css",
+      "oF" : 3,
+      "oS" : 3,
+      "pg" : 0,
+      "sct" : 0
+    },
+    "\/scss\/sections\/featured-products.scss" : {
+      "aP" : 1,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/section-featured-products.css",
+      "oF" : 3,
+      "oS" : 3,
+      "pg" : 0,
+      "sct" : 0
+    },
+    "\/scss\/style.scss" : {
+      "aP" : 1,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/style.css",
       "oF" : 2,
       "oS" : 3,
       "pg" : 0,
       "sct" : 0
     },
-    "\/scss\/pages\/_404.scss" : {
+    "\/scss\/theme\/_404.scss" : {
       "aP" : 1,
       "bl" : 0,
       "co" : 0,
@@ -1518,51 +1898,6 @@
       "oA" : 1,
       "oAP" : "\/assets\/_404.css",
       "oF" : 0,
-      "oS" : 3,
-      "pg" : 0,
-      "sct" : 0
-    },
-    "\/scss\/pages\/_index.scss" : {
-      "aP" : 1,
-      "bl" : 0,
-      "co" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/assets\/_index.css",
-      "oF" : 0,
-      "oS" : 3,
-      "pg" : 0,
-      "sct" : 0
-    },
-    "\/scss\/section-featured-image.scss" : {
-      "aP" : 1,
-      "bl" : 0,
-      "co" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 0,
-      "oAP" : "\/assets\/section-featured-image.css",
-      "oF" : 2,
-      "oS" : 3,
-      "pg" : 0,
-      "sct" : 0
-    },
-    "\/scss\/section-featured-products.scss" : {
-      "aP" : 1,
-      "bl" : 0,
-      "co" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 0,
-      "oAP" : "\/assets\/section-featured-products.css",
-      "oF" : 2,
       "oS" : 3,
       "pg" : 0,
       "sct" : 0
@@ -1592,6 +1927,21 @@
       "ma" : 0,
       "oA" : 1,
       "oAP" : "\/assets\/_container.css",
+      "oF" : 0,
+      "oS" : 3,
+      "pg" : 0,
+      "sct" : 0
+    },
+    "\/scss\/theme\/_css-variables.scss" : {
+      "aP" : 1,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/assets\/_css-variables.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -1687,7 +2037,7 @@
       "pg" : 0,
       "sct" : 0
     },
-    "\/scss\/theme\/_typopgraphy.scss" : {
+    "\/scss\/theme\/_typography.scss" : {
       "aP" : 1,
       "bl" : 0,
       "co" : 0,
@@ -1696,7 +2046,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_typopgraphy.css",
+      "oAP" : "\/assets\/_typography.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -2026,12 +2376,12 @@
       "oAP" : "\/sections\/main-cart-items.liquid",
       "oF" : 0
     },
-    "\/sections\/main-collection-banner.liquid" : {
+    "\/sections\/main-collection-hero.liquid" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/sections\/main-collection-banner.liquid",
+      "oAP" : "\/sections\/main-collection-hero.liquid",
       "oF" : 0
     },
     "\/sections\/main-collection-product-grid.liquid" : {
@@ -3976,7 +4326,7 @@
       "autoOutputPathReplace1" : "",
       "autoOutputPathReplace2" : "",
       "autoOutputPathStyle" : 1,
-      "bundleFormat" : 0,
+      "bundleFormat" : 4,
       "minifierStyle" : 1,
       "sourceMapStyle" : 0,
       "syntaxCheckerStyle" : 3,

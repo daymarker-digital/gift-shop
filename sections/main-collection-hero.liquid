@@ -1,26 +1,23 @@
 {%- liquid
 
-  assign section_name = 'featured-blog'
-  assign section_classes = section_name | append: ' section-' | append: section.id | append: '-padding'
+  assign section_name = 'collections-hero'
   assign section_id = section_name | append: '--' | append: section.id
+  assign section_classes = section_name
 
   assign aos_id = section_id | append: '--aos'
   assign aos_delay = 250
   assign aos_delay_increment = 250
 
-  assign background_colour = section.settings.background | default: 'white'
-  assign blog = section.settings.blog | default: false
-  assign blog_articles_count = section.settings.blog.articles_count | default: 0
-  assign blog_articles_exceeded = false
-  assign blog_limit = section.settings.limit | default: 3
   assign container = section.settings.container | default: 'container'
+  assign description = collection.description | default: ''
+  assign featured_image = collection.featured_image | default: false
+  assign image_height_desktop = section.settings.image_height_desktop | default: 'adapt'
+  assign image_height_mobile = section.settings.image_height_mobile | default: 'adapt'
+  assign layout = section.settings.layout | default: 'two-column'
+  assign title = collection.title | default: ''
 
   if section.settings.anchor_id != blank
     assign section_id = section.settings.anchor_id
-  endif
-
-  if blog_limit > blog_articles_count
-    assign blog_articles_exceeded = true
   endif
 
 -%}
@@ -55,51 +52,59 @@
 
 {%- endstyle -%}
 
-<link rel="stylesheet" href="{{ 'section-featured-blog.css' | asset_url }}" media="print" onload="this.media='all'">
-<noscript>{{ 'section-featured-blog.css' | asset_url | stylesheet_tag }}</noscript>
-
 <div class="{{ section_classes }}" id="{{ section_id }}">
   {% render 'bs-container', state: 'open', col: 'col-12 col-lg-10 offset-lg-1', container: container %}
-    <div class="{{ section_name }}__layout grid grid--{{ layout }}" id="{{ aos_id }}" role="list">
-
-      {% if blog_articles_count > 0 %}
-        {% for item in blog.articles limit: blog_limit %}
-
-          {% assign item_id = 'card-article' | append: '--' | append: item.id | append: '--' | append: forloop.index %}
-          <div class="{{ section_name }}__item grid__item" data-index="{{ forloop.index }}">
-            {% render 'card-article', card_article: item, id: item_id %}
-          </div>
-
-        {% endfor %}
+    <div class="{{ section_name }}__main">
+      {% if featured_image %}
+        <div class="{{ section_name }}__media media media--mobile-{{ image_height_mobile }} media--desktop-{{ image_height_desktop }}">
+          {% render 'lazyload-image', image: featured_image %}
+        </div>
       {% endif %}
-
+      <div class="{{ section_name }}__content">
+        <h1>{{ title }}</h1>
+      </div>
     </div>
-  {% render 'bs-container', state: 'closed', container: container %}
+  {% render 'bs-container', state: 'closed' %}
 </div>
 
 {% schema %}
 {
-  "name": "Featured Blog",
+  "name": "Collection Hero",
   "tag": "section",
-  "class": "section section--featured-blog",
+  "class": "section section--collection-hero",
+  "templates": [ "collection" ],
   "settings": [
     {
-			"content": "Content",
+			"content": "Media",
 			"type": "header"
 		},
-    {
-      "label": "Blog",
-      "type": "blog",
-      "id": "blog"
+     {
+      "label": "Image Height (Desktop)",
+      "type": "select",
+      "options": [
+        { "label": "Adapt to image", "value": "adapt" },
+        { "label": "950px", "value": "950px" },
+        { "label": "850px", "value": "850px" },
+        { "label": "750px", "value": "750px" },
+        { "label": "650px", "value": "650px" },
+        { "label": "550px", "value": "550px" },
+        { "label": "450px", "value": "450px" }
+      ],
+      "default": "adapt",
+      "id": "image_height_desktop"
     },
     {
-      "label": "Limit",
-      "type": "range",
-      "min": 2,
-      "max": 9,
-      "step": 1,
-      "default": 3,
-      "id": "limit"
+      "label": "Image Height (Mobile)",
+      "type": "select",
+      "options": [
+        { "label": "Adapt to image", "value": "adapt" },
+        { "label": "650px", "value": "650px" },
+        { "label": "550px", "value": "550px" },
+        { "label": "450px", "value": "450px" },
+        { "label": "350px", "value": "350px" }
+      ],
+      "default": "adapt",
+      "id": "image_height_mobile"
     },
     {
 			"content": "Layout",
@@ -159,12 +164,6 @@
       "info": "Optionally include a unique ID so that sections within the page can be linked to. Anchor IDs must be all lowercase, unique and replaced empty spaces with hyphens. For example: my-great-section-anchor",
       "type": "text",
       "id": "anchor_id"
-    }
-  ],
-  "blocks": [],
-  "presets": [
-    {
-      "name": "Featured Blog"
     }
   ]
 }

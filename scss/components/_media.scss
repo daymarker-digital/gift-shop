@@ -2,6 +2,8 @@
 
 $options: (
   'adapt',
+  '950px',
+  '850px',
   '750px',
   '650px',
   '550px',
@@ -21,6 +23,7 @@ $options: (
           img {
             height: auto;
             object-fit: initial;
+            font-style: italic
           }
         } @else {
           height: #{$option};
@@ -44,7 +47,7 @@ $options: (
               height: auto;
               object-fit: initial;
             }
-          } else {
+          } @else {
             height: #{$option};
             img {
               height: 100%;

@@ -1,6 +1,7 @@
 {%- liquid
 
   assign section_name = 'popup'
+  assign section_classes = section_name | append: ' section-' | append: section.id | append: '-padding'
   assign section_id = section_name | append: '--' | append: section.id
 
   assign background_colour = section.settings.background | default: ''
@@ -13,8 +14,6 @@
     #shopify-section-{{ section.id }} {
       background: rgba(var(--theme-colour-{{ background_colour }}), 1);
       {% case background_colour %}
-        {% when 'orange' %}
-          color: rgba(var(--theme-colour-black), 1);
         {% when 'white' %}
           color: rgba(var(--theme-colour-black), 1);
         {% else %}
@@ -25,24 +24,33 @@
   {%- endstyle -%}
 {% endif %}
 
-<div class="{{ section_name }}__main">
-  <div class="{{ section_name }}__content">
+<div class="{{ section_classes }}" id="{{ section_id }}">
+  <div class="{{ section_name }}__main">
 
   </div>
 </div>
 
-{% stylesheet %}
-{% endstylesheet %}
-
-{% javascript %}
-{% endjavascript %}
-
 {% schema %}
   {
     "name": "Popup",
-    "tag": "div",
-    "class": "popup",
-    "settings": [],
+    "tag": "section",
+    "class": "section section--popup",
+    "settings": [
+      {
+        "content": "Settings",
+        "type": "header"
+      },
+      {
+		    "label": "Background",
+		    "type": "select",
+		    "options": [
+          { "label": "Black", "value": "black" },
+			    { "label": "White", "value": "white" }
+		    ],
+		    "default": "white",
+		    "id": "background"
+		  }
+    ],
 	  "blocks": []
   }
 {% endschema %}

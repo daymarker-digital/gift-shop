@@ -9,6 +9,7 @@
   assign aos_delay_increment = 250
 
   assign background_colour = section.settings.background | default: ''
+  assign container = section.settings.container | default: 'container'
   assign custom_liquid = section.settings.custom_liquid | default: false
 
   if section.settings.anchor_id != blank
@@ -23,8 +24,6 @@
     #shopify-section-{{ section.id }} {
       background: rgba(var(--theme-colour-{{ background_colour }}), 1);
       {% case background_colour %}
-        {% when 'orange' %}
-          color: rgba(var(--theme-colour-black), 1);
         {% when 'white' %}
           color: rgba(var(--theme-colour-black), 1);
         {% else %}
@@ -48,48 +47,51 @@
 {%- endstyle -%}
 
 <div class="{{ section_classes }}" id="{{ section_id }}">
-  <div class="{{ section_name }}__main">
-    <div class="{{ section_name }}__content">
-      {{ custom_liquid }}
-    </div>
-  </div>
+  {% render 'bs-container', state: 'open', col: 'col-12', container: container %}
+    <div class="{{ section_name }}__main">{{ custom_liquid }}</div>
+  {% render 'bs-container', state: 'closed', container: container %}
 </div>
-
-{% stylesheet %}
-{% endstylesheet %}
-
-{% javascript %}
-{% endjavascript %}
 
 {% schema %}
   {
     "name": "Custom Liquid",
     "tag": "section",
-    "class": "custom-liquid",
+    "class": "section section--custom-liquid",
     "settings": [
       {
-        "content": "Layout",
+        "content": "Content",
         "type": "header"
       },
-      {
-			  "label": "Background",
-			  "type": "select",
-			  "options": [
-          { "label": "Black", "value": "black" },
-				  { "label": "White", "value": "white" }
-			  ],
-			  "default": "black",
-			  "id": "background"
-		  },
       {
         "label": "Custom Liquid",
         "type": "liquid",
         "id": "custom_liquid"
       },
       {
-			  "content": "Padding",
-			  "type": "header"
+        "content": "Settings",
+        "type": "header"
+      },
+      {
+		    "label": "Background",
+		    "type": "select",
+		    "options": [
+          { "label": "Black", "value": "black" },
+			    { "label": "White", "value": "white" }
+		    ],
+		    "default": "white",
+		    "id": "background"
 		  },
+      {
+        "label": "Container",
+        "type": "select",
+        "options": [
+          { "label": "Static", "value": "container" },
+          { "label": "Fluid", "value": "container-fluid" },
+          { "label": "Full Width", "value": "full-width" }
+        ],
+        "default": "container",
+        "id": "container"
+      },
 		  {
 			  "label": "Top Padding",
 			  "type": "range",
