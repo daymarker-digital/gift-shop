@@ -10,7 +10,6 @@
 
   assign container = section.settings.container | default: 'container'
   assign layout = section.settings.layout | default: 'two-column'
-  assign products = collection.products | default: false
   assign products_per_page = section.settings.products_per_page | default: 12
 
   if section.settings.anchor_id != blank
@@ -52,10 +51,10 @@
 <div class="{{ section_classes }}" id="{{ section_id }}">
   {% render 'bs-container', state: 'open', col: 'col-12 col-lg-10 offset-lg-1', container: container %}
 
-    {% paginate products by products_per_page %}
+    {% paginate collection.products by products_per_page %}
 
       <div class="{{ section_name }}__layout grid grid--{{ layout }}" id="{{ aos_id }}" role="list">
-        {% for product in products %}
+        {% for product in collection.products %}
           <div class="{{ section_name }}__item grid__item" data-index="{{ forloop.index }}" role="listitem">
             {% render 'card-product', card_product: product %}
           </div>
