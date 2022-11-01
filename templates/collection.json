@@ -1,7 +1,16 @@
 {
   "sections": {
     "hero": {
-      "type": "main-collection-hero"
+      "type": "main-collection-hero",
+      "settings": {
+        "image_height_desktop": "850px",
+        "image_height_mobile": "adapt",
+        "background": "white",
+        "container": "container-fluid",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "anchor_id": ""
+      }
     }
   },
   "order": [
