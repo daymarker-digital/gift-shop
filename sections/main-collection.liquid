@@ -52,7 +52,7 @@
 <div class="{{ section_classes }}" id="{{ section_id }}">
   {% render 'bs-container', state: 'open', col: 'col-12 col-lg-10 offset-lg-1', container: container %}
 
-    {% paginate products by products_per_page %}
+    {% paginate collection.products by 3 %}
 
       <div class="{{ section_name }}__layout grid grid--{{ layout }}" id="{{ aos_id }}" role="list">
         {% for product in products %}
