@@ -11,6 +11,7 @@
   assign container = section.settings.container | default: 'container'
   assign description = collection.description | default: ''
   assign featured_image = collection.featured_image | default: false
+  assign featured_image_show = collection.show_featured_image | default: false
   assign image_height_desktop = section.settings.image_height_desktop | default: 'adapt'
   assign image_height_mobile = section.settings.image_height_mobile | default: 'adapt'
   assign layout = section.settings.layout | default: 'two-column'
@@ -55,7 +56,7 @@
 <div class="{{ section_classes }}" id="{{ section_id }}">
   {% render 'bs-container', state: 'open', col: 'col-12 col-lg-10 offset-lg-1', container: container %}
     <div class="{{ section_name }}__main">
-      {% if featured_image %}
+      {% if featured_image and featured_image_show %}
         <div class="{{ section_name }}__media media media--mobile-{{ image_height_mobile }} media--desktop-{{ image_height_desktop }}">
           {% render 'lazyload-image', image: featured_image %}
         </div>
