@@ -7,8 +7,8 @@
     "hero": {
       "type": "main-collection-hero",
       "settings": {
-        "image_height_desktop": "850px",
-        "image_height_mobile": "adapt",
+        "image_height_desktop": "450px",
+        "image_height_mobile": "350px",
         "background": "white",
         "container": "container-fluid",
         "padding_top": 0,
