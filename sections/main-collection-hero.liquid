@@ -11,7 +11,7 @@
   assign container = section.settings.container | default: 'container'
   assign description = collection.description | default: ''
   assign featured_image = collection.featured_image | default: false
-  assign featured_image_show = collection.show_featured_image | default: false
+  assign featured_image_show = section.settings.show_featured_image | default: false
   assign image_height_desktop = section.settings.image_height_desktop | default: 'adapt'
   assign image_height_mobile = section.settings.image_height_mobile | default: 'adapt'
   assign layout = section.settings.layout | default: 'two-column'
