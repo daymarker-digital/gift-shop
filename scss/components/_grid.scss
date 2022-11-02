@@ -7,7 +7,7 @@
   gap: 12px;
   grid-template-columns: 1fr 1fr;
 
-  @for $i from 1 through 50 {
+  @for $i from 1 through 100 {
     &--gap-#{$i} {
       gap: $i * 1px;
     }

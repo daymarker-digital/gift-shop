@@ -41,11 +41,10 @@
 <div class="{{ section_classes }}" id="{{ section_id }}">
   {% render 'bs-container', state: 'open', col: 'col-12 col-lg-10 offset-lg-1', container: container %}
     <h1 class="{{ section_name }}__heading heading--1">{{ title | escape }}</h1>
-    <div class="{{ section_name }}__layout grid grid--{{ grid_layout }}" id="{{ aos_id }}" role="list">
+    <div class="{{ section_name }}__layout grid grid--{{ grid_layout }} grid--gap-{{ grid_gutter }}" id="{{ aos_id }}" role="list">
       {%- for item in collections -%}
-        {% assign item_id = 'card-collection' | append: '--' | append: item.id | append: '--' | append: forloop.index %}
         <div class="{{ section_name }}__item grid__item" data-index="{{ forloop.index }}" role="listitem">
-          {% render 'card-collection', card_collection: item, id: item_id %}
+          {% render 'card-collection', card_collection: item %}
         </div>
       {%- endfor -%}
     </div>

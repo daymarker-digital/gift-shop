@@ -10,10 +10,10 @@
 
   assign background_colour = section.settings.background | default: 'white'
   assign container = section.settings.container | default: 'container'
-  assign collection = section.settings.collection | default: false
-  assign collection_products_count = section.settings.collection.products_count | default: 0
-  assign collection_products_exceeded = false
-  assign collection_limit = section.settings.limit | default: 3
+  assign featured_collection = section.settings.collection | default: false
+  assign featured_collection_products_count = section.settings.collection.products_count | default: 0
+  assign featured_collection_products_exceeded = false
+  assign featured_collection_limit = section.settings.limit | default: 3
   assign grid_gutter = section.settings.grid_gutter | default: 20
   assign grid_layout = section.settings.grid_layout | default: 'two-column'
   assign view_all = section.settings.view_all | default: false
@@ -22,8 +22,8 @@
     assign section_id = section.settings.anchor_id
   endif
 
-  if collection_limit > collection_products_count
-    assign collection_products_exceeded = true
+  if featured_collection_limit > featured_collection_products_count
+    assign featured_collection_products_exceeded = true
   endif
 
 -%}
@@ -42,19 +42,14 @@
 <div class="{{ section_classes }}" id="{{ section_id }}">
   {% render 'bs-container', state: 'open', col: 'col-12 col-lg-10 offset-lg-1', container: container %}
 
-    <div class="{{ section_name }}__layout grid grid--{{ grid_layout }}" id="{{ aos_id }}" data-grid-gutter="{{ grid_gutter }}" role="list">
-
-      {% if collection_products_count > 0 %}
-        {% for item in featured_collection.products limit: collection_limit %}
-
-            {% assign item_id = 'card-product' | append: '--' | append: item.id | append: '--' | append: forloop.index %}
-            <div class="{{ section_name }}__item grid__item" data-index="{{ forloop.index }}" role="listitem">
-              {% render 'card-product', card_product: item, id: item_id %}
-            </div>
-
+    <div class="{{ section_name }}__layout grid grid--{{ grid_layout }} grid--gap-{{ grid_gutter }}" id="{{ aos_id }}" role="list">
+      {% if featured_collection_products_count > 0 %}
+        {% for item in featured_collection.products limit: featured_collection_limit %}
+          <div class="{{ section_name }}__item grid__item" data-index="{{ forloop.index }}" role="listitem">
+            {% render 'card-product', card_product: item %}
+          </div>
         {% endfor %}
       {% endif %}
-
     </div>
 
     {% if view_all and collection_link != blank %}

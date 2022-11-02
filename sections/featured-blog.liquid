@@ -40,16 +40,13 @@
 
 <div class="{{ section_classes }}" id="{{ section_id }}">
   {% render 'bs-container', state: 'open', col: 'col-12 col-lg-10 offset-lg-1', container: container %}
-    <div class="{{ section_name }}__layout grid grid--{{ grid_layout }}" id="{{ aos_id }}" role="list">
+    <div class="{{ section_name }}__layout grid grid--{{ grid_layout }} grid--gap-{{ grid_gutter }}" id="{{ aos_id }}" role="list">
 
       {% if blog_articles_count > 0 %}
         {% for item in blog.articles limit: blog_limit %}
-
-          {% assign item_id = 'card-article' | append: '--' | append: item.id | append: '--' | append: forloop.index %}
           <div class="{{ section_name }}__item grid__item" data-index="{{ forloop.index }}" role="listitem">
-            {% render 'card-article', card_article: item, id: item_id %}
+            {% render 'card-article', card_article: item %}
           </div>
-
         {% endfor %}
       {% endif %}
 

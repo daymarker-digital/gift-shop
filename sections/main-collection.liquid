@@ -32,7 +32,7 @@
 
     {% paginate collection.products by products_per_page %}
 
-      <div class="{{ section_name }}__layout grid grid--{{ grid_layout }}" id="{{ aos_id }}" role="list">
+      <div class="{{ section_name }}__layout grid grid--{{ grid_layout }} grid--gap-{{ grid_gutter }}" id="{{ aos_id }}" role="list">
         {% for product in collection.products %}
           <div class="{{ section_name }}__item grid__item" data-index="{{ forloop.index }}" role="listitem">
             {% render 'card-product', card_product: product %}
