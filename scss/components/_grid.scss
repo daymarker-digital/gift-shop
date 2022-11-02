@@ -7,6 +7,12 @@
   gap: 12px;
   grid-template-columns: 1fr 1fr;
 
+  @for $i from 1 through 50 {
+    &--gap-#{$i} {
+      gap: $i * 1px;
+    }
+  }
+
   @include breakpoint(lg) {
 
     &--three-column {

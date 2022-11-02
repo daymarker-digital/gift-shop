@@ -14,7 +14,8 @@
   assign featured_image_show = section.settings.show_featured_image | default: false
   assign image_height_desktop = section.settings.image_height_desktop | default: 'adapt'
   assign image_height_mobile = section.settings.image_height_mobile | default: 'adapt'
-  assign layout = section.settings.layout | default: 'two-column'
+  assign grid_gutter = section.settings.grid_gutter | default: 20
+  assign grid_layout = section.settings.grid_layout | default: 'two-column'
   assign title = collection.title | default: ''
 
   if section.settings.anchor_id != blank
@@ -23,35 +24,13 @@
 
 -%}
 
-{%- style -%}
-
-  {% if background_colour != blank %}
-    #shopify-section-{{ section.id }} {
-      background: rgba(var(--theme-colour-{{ background_colour }}), 1);
-      {% case background_colour %}
-        {% when 'orange' %}
-          color: rgba(var(--theme-colour-black), 1);
-        {% when 'white' %}
-          color: rgba(var(--theme-colour-black), 1);
-        {% else %}
-          color: rgba(var(--theme-colour-white), 1);
-      {% endcase %}
-    }
-  {% endif %}
-
-  .section-{{ section.id }}-padding {
-    padding-top: calc({{ section.settings.padding_top }}px * 0.75);
-    padding-bottom: calc({{ section.settings.padding_bottom }}px  * 0.75);
-  }
-
-  @media screen and (min-width: 992px) {
-    .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
-    }
-  }
-
-{%- endstyle -%}
+{%
+  render 'section-styles',
+  background: section.settings.background,
+  id: section.id,
+  padding_bottom: section.settings.padding_bottom
+  padding_top: section.settings.padding_top,
+%}
 
 <div class="{{ section_classes }}" id="{{ section_id }}">
   {% render 'bs-container', state: 'open', col: 'col-12 col-lg-10 offset-lg-1', container: container %}
