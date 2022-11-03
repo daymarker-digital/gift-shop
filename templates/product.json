@@ -1,16 +1,1 @@
-{
-  "sections": {
-    "main": {
-      "type": "main-product",
-      "settings": {
-        "background": "white",
-        "container": "container-fluid",
-        "padding_top": 0,
-        "padding_bottom": 0
-      }
-    }
-  },
-  "order": [
-    "main"
-  ]
-}
+{"name":"Product","order":["main"],"sections":{"main":{"settings":{},"type":"main-product"}}}

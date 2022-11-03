@@ -1,6 +1,9 @@
 {
-  "name": "Contact Page Template",
-	"order": [ "main", "contact" ],
+  "name": "Contact Page",
+	"order": [
+    "main",
+    "contact"
+  ],
 	"sections": {
 		"main": {
       "type": "main-page",
