@@ -1,1 +1,10 @@
-{"order":["main"],"sections":{"main":{"settings":{"anchor_id":"","width":"full"},"type":"text-feature"}}}
+{
+  "name": "Default Page Template",
+	"order": [ "main" ],
+	"sections": {
+		"main": {
+      "type": "main-page",
+			"settings": {}
+		}
+	}
+}
