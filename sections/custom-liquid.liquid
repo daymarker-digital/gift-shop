@@ -8,9 +8,8 @@
   assign aos_delay = 250
   assign aos_delay_increment = 250
 
-  assign background_colour = section.settings.background | default: ''
   assign container = section.settings.container | default: 'container'
-  assign custom_liquid = section.settings.custom_liquid | default: false
+  assign custom_liquid = section.settings.custom_liquid | default: ''
 
   if section.settings.anchor_id != blank
     assign section_id = section.settings.anchor_id
@@ -18,39 +17,13 @@
 
 -%}
 
-{%- style -%}
-
-  {% if background_colour != blank %}
-    #shopify-section-{{ section.id }} {
-      background: rgba(var(--theme-colour-{{ background_colour }}), 1);
-      {% case background_colour %}
-        {% when 'white' %}
-          color: rgba(var(--theme-colour-black), 1);
-        {% else %}
-          color: rgba(var(--theme-colour-white), 1);
-      {% endcase %}
-    }
-  {% endif %}
-
-  .section-{{ section.id }}-padding {
-    padding-top: calc({{ section.settings.padding_top }}px * 0.75);
-    padding-bottom: calc({{ section.settings.padding_bottom }}px  * 0.75);
-  }
-
-  @media screen and (min-width: 992px) {
-    .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
-    }
-  }
-
-{%- endstyle -%}
-
-<div class="{{ section_classes }}" id="{{ section_id }}">
-  {% render 'bs-container', state: 'open', col: 'col-12', container: container %}
-    <div class="{{ section_name }}__main">{{ custom_liquid }}</div>
-  {% render 'bs-container', state: 'closed', container: container %}
-</div>
+{% if custom_liquid and custom_liquid != blank %}
+  <div class="{{ section_classes }}" id="{{ section_id }}">
+    {% render 'bs-container', state: 'open', col: 'col-12', container: container %}
+      <div class="{{ section_name }}__main">{{ custom_liquid }}</div>
+    {% render 'bs-container', state: 'closed', container: container %}
+  </div>
+{% endif %}
 
 {% schema %}
   {
@@ -68,9 +41,9 @@
         "id": "custom_liquid"
       },
       {
-        "content": "Settings",
-        "type": "header"
-      },
+			  "content": "Layout",
+			  "type": "header"
+		  },
       {
 		    "label": "Background",
 		    "type": "select",
@@ -92,6 +65,10 @@
         "default": "container",
         "id": "container"
       },
+      {
+			  "content": "Padding",
+			  "type": "header"
+		  },
 		  {
 			  "label": "Top Padding",
 			  "type": "range",

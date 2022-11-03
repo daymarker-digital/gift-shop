@@ -1,19 +1,19 @@
-{% comment %}
-
-    Accepts:
-    - classes: {String} Optionally include classes
-    - link: {String} URL
-    - style: {String} Style of link
-    - title: {String} Title of link
-
-    Usage:
-    {% render 'link', link: '/collections/all', title: 'Shop All' %}
-
-{% endcomment %}
-
 {%- if link and link != blank and title and title != blank -%}
 
   {%- liquid
+
+    comment
+
+      Accepts:
+        - classes: {String} Optionally include classes
+        - link: {String} URL
+        - style: {String} Style of link
+        - title: {String} Title of link
+
+      Usage:
+      render 'link', link: '/collections/all', title: 'Shop All'
+
+    endcomment
 
     assign snippet_name = 'link'
     assign snippet_class = snippet_name

@@ -1,17 +1,26 @@
-{%- comment -%}
-  {%
-    render 'section-styles',
-    background: section.settings.background,
-    id: id,
-    padding_bottom: section.settings.padding_bottom
-    padding_top: section.settings.padding_top,
-  -%}
-{%- endcomment -%}
-
 {%- if id and id != blank -%}
 
-  {%- assign padding_bottom = padding_bottom | default: 0 -%}
-  {%- assign padding_top = padding_top | default: 0 -%}
+  {%- liquid
+
+    comment
+      Accepts:
+        - background: {String} Optionally include a named colour value that corresponds to CSS variable name
+        - id: {String} Section ID
+        - padding_bottom: {Integer} Optionally include an integer value for bottom padding
+        - padding_top: {Integer} Optionally include an integer value for top padding
+      Usage:
+        render 'section-styles',
+        background: 'yellow',
+        id: section.id,
+        padding_bottom: section.settings.padding_bottom
+        padding_top: section.settings.padding_top,
+    endcomment
+
+    assign background = background | default: ''
+    assign padding_bottom = padding_bottom | default: 0
+    assign padding_top = padding_top | default: 0
+
+  -%}
 
   {%- style -%}
 

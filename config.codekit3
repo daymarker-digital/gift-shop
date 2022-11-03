@@ -826,61 +826,6 @@
       "sC" : 3,
       "tS" : 1
     },
-    "\/js\/modules\/_forms.js" : {
-      "bF" : 4,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 1,
-      "oAP" : "\/assets\/_forms.min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 1
-    },
-    "\/js\/modules\/_instagramFeed.js" : {
-      "bF" : 4,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 1,
-      "oAP" : "\/assets\/_instagramFeed.min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 1
-    },
-    "\/js\/modules\/_mobileMenu.js" : {
-      "bF" : 4,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 1,
-      "oAP" : "\/assets\/_mobileMenu.min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 1
-    },
-    "\/js\/modules\/_modals.js" : {
-      "bF" : 4,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 1,
-      "oAP" : "\/assets\/_modals.min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 1
-    },
-    "\/js\/modules\/_sizing.js" : {
-      "bF" : 4,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 1,
-      "oAP" : "\/assets\/_sizing.min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 1
-    },
     "\/js\/modules\/alpha.js" : {
       "bF" : 4,
       "ft" : 64,
@@ -1557,6 +1502,21 @@
       "pg" : 0,
       "sct" : 0
     },
+    "\/scss\/components\/_body-copy.scss" : {
+      "aP" : 1,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/assets\/_body-copy.css",
+      "oF" : 0,
+      "oS" : 3,
+      "pg" : 0,
+      "sct" : 0
+    },
     "\/scss\/components\/_button--LEGACY.scss" : {
       "aP" : 1,
       "bl" : 0,
@@ -1662,6 +1622,21 @@
       "pg" : 0,
       "sct" : 0
     },
+    "\/scss\/components\/_heading.scss" : {
+      "aP" : 1,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/assets\/_heading.css",
+      "oF" : 0,
+      "oS" : 3,
+      "pg" : 0,
+      "sct" : 0
+    },
     "\/scss\/components\/_index.scss" : {
       "aP" : 1,
       "bl" : 0,
@@ -1732,6 +1707,21 @@
       "ma" : 0,
       "oA" : 1,
       "oAP" : "\/assets\/_navigation.css",
+      "oF" : 0,
+      "oS" : 3,
+      "pg" : 0,
+      "sct" : 0
+    },
+    "\/scss\/components\/_pagination.scss" : {
+      "aP" : 1,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/assets\/_pagination.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -1842,7 +1832,7 @@
       "pg" : 0,
       "sct" : 0
     },
-    "\/scss\/sections\/featured-image.scss" : {
+    "\/scss\/legacy\/sections\/featured-image.scss" : {
       "aP" : 1,
       "bl" : 0,
       "co" : 0,
@@ -1857,7 +1847,7 @@
       "pg" : 0,
       "sct" : 0
     },
-    "\/scss\/sections\/featured-products.scss" : {
+    "\/scss\/legacy\/sections\/featured-products.scss" : {
       "aP" : 1,
       "bl" : 0,
       "co" : 0,
@@ -1912,6 +1902,21 @@
       "ma" : 0,
       "oA" : 1,
       "oAP" : "\/assets\/_body.css",
+      "oF" : 0,
+      "oS" : 3,
+      "pg" : 0,
+      "sct" : 0
+    },
+    "\/scss\/theme\/_collection.scss" : {
+      "aP" : 1,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/assets\/_collection.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -2032,21 +2037,6 @@
       "ma" : 0,
       "oA" : 1,
       "oAP" : "\/assets\/_product.css",
-      "oF" : 0,
-      "oS" : 3,
-      "pg" : 0,
-      "sct" : 0
-    },
-    "\/scss\/theme\/_typography.scss" : {
-      "aP" : 1,
-      "bl" : 0,
-      "co" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/assets\/_typography.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -2382,14 +2372,6 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/sections\/main-collection-hero.liquid",
-      "oF" : 0
-    },
-    "\/sections\/main-collection-product-grid--LEGACY.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/sections\/main-collection-product-grid--LEGACY.liquid",
       "oF" : 0
     },
     "\/sections\/main-collection.liquid" : {

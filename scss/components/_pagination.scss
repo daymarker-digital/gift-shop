@@ -1,0 +1,45 @@
+@use "../utils/mixins/general" as *;
+
+.pagination {
+
+  font-family: "Not Sorry Serif",serif;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.15rem;
+  gap: 25px;
+  margin-top: 24px;
+
+  .active {
+    color: rgba(var(--theme-colour-yellow), 1);
+    border-bottom: 2px solid rgba(var(--theme-colour-yellow), 1);
+  }
+
+  .disabled {
+    opacity: 0;
+  }
+
+  .link {
+    color: rgba(var(--theme-colour-black), 1);
+    border-bottom: none;
+    &:focus,
+    &:hover {
+      color: rgba(var(--theme-colour-yellow), 1);
+      border-bottom: none;
+    }
+  }
+
+  @include breakpoint(sm) {
+    font-size: 20px;
+  }
+
+  @include breakpoint(md) {
+    font-size: 22px;
+  }
+
+  @include breakpoint(lg) {
+    font-size: 24px;
+  }
+
+}
