@@ -69,7 +69,7 @@ const addToCart = () => {
 };
 
 const init = () => {
-  // emptyCart();
+  emptyCart();
   addToCart();
   getCart();
 };

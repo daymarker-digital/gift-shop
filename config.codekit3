@@ -605,6 +605,16 @@
       "sC" : 3,
       "tS" : 1
     },
+    "\/assets\/VPAGS--icon--notification-triangle.svg" : {
+      "ft" : 2097152,
+      "miP" : 0,
+      "oA" : 0,
+      "oAP" : "\/assets\/VPAGS--icon--notification-triangle.svg",
+      "oF" : 0,
+      "opt" : 0,
+      "plM" : 52780316221407,
+      "prP" : 0
+    },
     "\/assets\/VPAGS--placeholder-product-image--01.svg" : {
       "ft" : 2097152,
       "miP" : 0,
@@ -954,6 +964,17 @@
       "mi" : 1,
       "oA" : 1,
       "oAP" : "\/assets\/scrolling.min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 1
+    },
+    "\/js\/modules\/templates.js" : {
+      "bF" : 4,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/assets\/templates.min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 1
@@ -1782,6 +1803,21 @@
       "ma" : 0,
       "oA" : 1,
       "oAP" : "\/assets\/_card-product.css",
+      "oF" : 0,
+      "oS" : 3,
+      "pg" : 0,
+      "sct" : 0
+    },
+    "\/scss\/layouts\/_cart-notification.scss" : {
+      "aP" : 1,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/assets\/_cart-notification.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -4250,7 +4286,7 @@
     },
     "esLintSourceType" : 0,
     "externalServerAddress" : "http:\/\/localhost:8888",
-    "gitIgnoreBuildFolder" : 1,
+    "gitIgnoreBuildFolder" : 0,
     "hideConfigFile" : 0,
     "jsCheckerReservedNamesString" : "",
     "languageDefaultsCOFFEE" : {

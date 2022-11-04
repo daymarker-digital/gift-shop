@@ -96,6 +96,19 @@
       Theme.customer = {{ customer | json }} || {};
       Theme.moneyFormat = {{ shop.money_format | json }};
       Theme.orders = [];
+      Theme.icons = {
+        triangle: {{ "VPAGS--icon--notification-triangle.svg" | asset_url | json }}
+      };
+      Theme.images = {
+        placeholder: {
+          product_images: [
+            {{ "VPAGS--placeholder-product-image--01.svg" | asset_url | json }},
+            {{ "VPAGS--placeholder-product-image--02.svg" | asset_url | json }},
+            {{ "VPAGS--placeholder-product-image--03.svg" | asset_url | json }},
+            {{ "VPAGS--placeholder-product-image--04.svg" | asset_url | json }}
+          ]
+        }
+      };
       Theme.patterns = {
         image: {{ "VPAGS--product-image-pattern.svg" | asset_url | json }}
       };
@@ -126,7 +139,6 @@
         }
       };
     </script>
-
     <script src="{{ 'main.min.js' | asset_url }}" defer></script>
 
   </body>
