@@ -24,7 +24,7 @@
       <nav class="navigation navigation--main">
         <div class="navigation__list">
           {% for link in linklists[main_menu].links %}
-            {% render 'content--navigation-item', title: link.title, url: link.url, active: link.active %}
+            {% render 'navigation-item', navigation_title: link.title, navigation_url: link.url, navigation_active: link.active %}
           {% endfor %}
         </div>
       </nav>
@@ -71,7 +71,7 @@
             <nav class="{{ section_name }}__menus-extra navigation--footer">
               <div class="navigation__list">
                 {% for link in linklists[footer_menu].links %}
-                  {% render 'content--navigation-item', title: link.title, url: link.url, active: link.active %}
+                  {% render 'navigation-item', navigation_title: link.title, navigation_url: link.url, navigation_active: link.active %}
                 {% endfor %}
               </div>
             </nav>
