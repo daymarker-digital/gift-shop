@@ -40,45 +40,17 @@
           "background": "black"
         }
       },
-      "mobile-menu": {
-        "type": "mobile-menu",
-        "blocks": {
-          "a94148bd-f583-4118-a70f-fe23a5a036f2": {
-            "type": "social",
-            "settings": {
-              "type": "instagram",
-              "url": "https:\/\/www.instagram.com\/verypoliteagency\/"
-            }
-          },
-          "b90cbd9e-5674-4aba-b03c-6254f16549d4": {
-            "type": "social",
-            "settings": {
-              "type": "spotify",
-              "url": "https:\/\/open.spotify.com\/user\/rz68loexgu05u20qt8ej246bi?si=e214d0c098b94163"
-            }
-          },
-          "1bba94bf-5d5d-43fd-bf5b-98cb25d30e35": {
-            "type": "social",
-            "settings": {
-              "type": "email",
-              "url": "mailto:excuseme@weareverypolite.com"
-            }
-          }
-        },
-        "block_order": [
-          "a94148bd-f583-4118-a70f-fe23a5a036f2",
-          "b90cbd9e-5674-4aba-b03c-6254f16549d4",
-          "1bba94bf-5d5d-43fd-bf5b-98cb25d30e35"
-        ],
-        "settings": {
-          "main_menu": "push-menu-main",
-          "footer_menu": "push-menu-footer"
-        }
-      },
       "notification-cart": {
         "type": "notification-cart",
         "settings": {
           "background": "black"
+        }
+      },
+      "push-menu": {
+        "type": "push-menu",
+        "settings": {
+          "main_menu": "push-menu-main",
+          "footer_menu": "push-menu-main"
         }
       }
     },
