@@ -5,7 +5,7 @@ let elements = document.querySelectorAll( '.burger, .push-menu' ) || [];
 const toggleMobileMenu = () => {
   ( document.querySelectorAll( '.burger' ) || [] ).forEach( element => {
     element.addEventListener( 'click', () => {
-      tools.toggleClass( 'is-active', elements );
+      Tools.toggleClass( 'is-active', elements );
     });
   });
 };
@@ -13,7 +13,7 @@ const toggleMobileMenu = () => {
 const closeMobileMenu = () => {
   ( document.querySelectorAll( 'header, main' ) || [] ).forEach( element => {
     element.addEventListener('click', () => {
-      tools.removeClass( 'is-active', elements );
+      Tools.removeClass( 'is-active', elements );
     });
   });
 };

@@ -31,7 +31,7 @@ AOS.init({
   easing: 'ease-in-out',      // default easing for AOS animations
 });
 
-window.addEventListener('load', function () {
+window.addEventListener( 'load', function (e) {
   Tools.setHeaderHeightTotalCSSVariable();
   Gliders.init();
   AOS.refresh();

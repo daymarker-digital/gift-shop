@@ -5,10 +5,9 @@
   --burger-width: 30px;
   --burger-height: 14px;
   --burger-stroke-width: 3px;
-  --burger-45: calc( var(--burger-height) - var(--burger-stroke-width) * 0.5 );
-  --aos-travel: 6px;
+  --burger-stroke-offset: calc( var(--burger-height) - var(--burger-stroke-width) * 0.5 );
 
-  height: var(--theme-header-height);
+  height: var(--theme-header-height-total);
   position: fixed;
   z-index: 200;
   right: 20px;
@@ -78,32 +77,12 @@
     .burger__icon-stroke {
       background: rgba(var(--theme-colour-white), 1);
       &.top {
-        //@include transform3D-and-rotate( 0, $menu-stroke-offset--45, 0, -45deg);
+        transform: translate3d( 0,calc( 1 * var(--burger-stroke-offset) ), 0 ) rotate( -45deg );
       }
       &.bottom {
-        //@include transform3D-and-rotate( 0, -$menu-stroke-offset--45, 0, 45deg);
+        transform: translate3d( 0, calc( -1 * var(--burger-stroke-offset) ), 0 ) rotate( 45deg );
       }
     }
-  }
-
-  @include breakpoint(sm) {
-    height: var(--theme-header-height--sm);
-  }
-
-  @include breakpoint(md) {
-    height: var(--theme-header-height--md);
-  }
-
-  @include breakpoint(lg) {
-    height: var(--theme-header-height--lg);
-  }
-
-  @include breakpoint(xl) {
-    height: var(--theme-header-height--xl);
-  }
-
-  @include breakpoint(xxl) {
-    height: var(--theme-header-height--xxl);
   }
 
 }
