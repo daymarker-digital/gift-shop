@@ -2474,6 +2474,14 @@
       "oAP" : "\/sections\/main-search.liquid",
       "oF" : 0
     },
+    "\/sections\/mobile-menu.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/sections\/mobile-menu.liquid",
+      "oF" : 0
+    },
     "\/sections\/newsletter.liquid" : {
       "cB" : 0,
       "ft" : 8192,

@@ -1,0 +1,57 @@
+{%- liquid
+
+  assign section_name = 'mobile-menu'
+  assign section_id = section_name | append: '--' | append: section.id
+
+  assign aos_id = section_id | append: '--aos'
+  assign aos_delay = 250
+  assign aos_delay_increment = 250
+
+-%}
+
+<div class="{{ section_name }}__main">
+
+
+
+
+</div>
+
+{% schema %}
+  {
+    "name": "Header",
+    "tag": "header",
+    "class": "header header--sticky",
+    "settings": [
+      {
+        "content": "Announcements",
+        "type": "header"
+      },
+      {
+        "label": "Show announcements",
+      	"type": "checkbox",
+        "default": true,
+        "id": "announcements_enabled"
+      },
+      {
+        "label": "Homepage only",
+      	"type": "checkbox",
+        "default": false,
+        "id": "announcements_homepage_only"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "Announcement",
+        "type": "announcement",
+        "limit": 5,
+        "settings": [
+          {
+            "label": "Message",
+            "type": "richtext",
+            "id": "title"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}

@@ -11,6 +11,7 @@ import Gliders from './modules/gliders';
 import Product from './modules/product';
 import RandomImage from './modules/randomImage';
 import Scrolling from './modules/scrolling';
+import Tools from './modules/tools';
 
 Cart.init();
 Credits.init();
@@ -27,6 +28,7 @@ AOS.init({
 });
 
 window.addEventListener('load', function () {
+  Tools.setHeaderHeightTotalCSSVariable();
   Gliders.init();
   AOS.refresh();
 });
