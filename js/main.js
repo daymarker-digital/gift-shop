@@ -8,14 +8,18 @@ import Announcements from './modules/announcements';
 import Cart from './modules/cart';
 import Credits from './modules/credits';
 import Gliders from './modules/gliders';
+import PushMenu from './modules/pushMenu';
 import Product from './modules/product';
 import RandomImage from './modules/randomImage';
 import Scrolling from './modules/scrolling';
 import Tools from './modules/tools';
 
+let throttled = false;
+
 Cart.init();
 Credits.init();
 Announcements.init();
+PushMenu.init();
 Product.init();
 RandomImage.init();
 Scrolling.init();
@@ -32,3 +36,14 @@ window.addEventListener('load', function () {
   Gliders.init();
   AOS.refresh();
 });
+
+window.addEventListener( 'resize', function(e) {
+  if ( !throttled ) {
+    window.requestAnimationFrame(function() {
+      Tools.setHeaderHeightTotalCSSVariable();
+      throttled = false;
+    });
+    throttled = true;
+  }
+});
+

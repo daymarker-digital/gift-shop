@@ -23,8 +23,8 @@
         position: relative;
         overflow-y: visible;
         .sticky-column__content {
-          margin-top: calc( -1 * var(--theme-header-total-height) );
-          padding-top: calc( var(--theme-header-total-height) );
+          margin-top: calc( -1 * var(--theme-header-height-total) );
+          padding-top: calc( var(--theme-header-height-total) );
           padding-left: 30px;
         }
         .sticky-column__main {

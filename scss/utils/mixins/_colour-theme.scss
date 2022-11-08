@@ -40,3 +40,40 @@
   }
 
 }
+
+@mixin highlight-colour-for( $colour-name: 'white' ) {
+
+  background: rgba( var(--theme-colour-yellow), 1);
+  color: rgba( var(--theme-colour-black), 1);
+
+  @if $colour-name == 'arlo-green' {
+		background: rgba( var(--theme-colour-yellow), 1);
+    color: rgba( var(--theme-colour-black), 1);
+	}
+
+  @if $colour-name == 'beige' {
+		background: #1A1A1A;
+    color: rgba( var(--theme-colour-beige), 1);
+	}
+
+  @if $colour-name == 'black' {
+		background: rgba( var(--theme-colour-yellow), 1);
+    color: rgba( var(--theme-colour-black), 1);
+	}
+
+  @if $colour-name == 'red' {
+    background:rgba( var(--theme-colour-red), 1);
+    color: rgba( var(--theme-colour-black), 1);
+  }
+
+	@if $colour-name == 'grey' {
+		background: rgba( var(--theme-colour-yellow), 1);
+    color: rgba( var(--theme-colour-black), 1);
+	}
+
+  @if $colour-name == 'yellow' {
+		background: rgba( var(--theme-colour-black), 1);
+    color: rgba( var(--theme-colour-yellow), 1);
+	}
+
+}

@@ -1,0 +1,21 @@
+{%- liquid
+
+  comment
+    Accepts:
+    - Nothing!
+    Usage:
+      render 'burger'
+  endcomment
+
+  assign snippet_name = 'burger'
+
+-%}
+
+<div class="{{ snippet_name }}">
+  <button class="{{ snippet_name }}__icon" type="button" aria-label="{{ snippet_name }}">
+    <div class="{{ snippet_name }}__icon-box">
+      <span class="{{ snippet_name }}__icon-stroke top"></span>
+      <span class="{{ snippet_name }}__icon-stroke bottom"></span>
+    </div>
+  </button>
+</div>

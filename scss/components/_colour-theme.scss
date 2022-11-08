@@ -1,4 +1,6 @@
-@use "../utils/mixins/colour-theme" as *;
+@use '../utils/variables' as *;
+@use '../utils/functions/colour-theme' as *;
+@use '../utils/mixins/colour-theme' as *;
 
 [data-colour-theme='blue'] {
   @include colour-theme('blue');
@@ -31,4 +33,57 @@
       @include colour-theme('yellow-hover');
     }
   }
+}
+
+@each $colour-name, $colour-value in $theme-colours {
+
+  [data-colour-theme='#{$colour-name}'] {
+
+    $background: rgba(var(--theme-colour-#{$colour-name}), 1);
+    $color: colour-theme-offset($colour-name);
+
+    @if $colour-name == 'red' {
+      $background: rgba(var(--theme-colour-black), 1);
+      $color: rgba(var(--theme-colour-red), 1);
+    }
+
+    background: $background;
+    color: $color;
+
+    .burger {
+      &__icon-stroke {
+        background: $color;
+      }
+    }
+
+    .header {
+      svg {
+        fill: $color;
+      }
+    }
+
+    .rte {
+      a {
+        color: inherit;
+        border-bottom-color: inherit;
+        border-bottom-style: solid;
+        border-bottom-width: 1px;
+        display: inline;
+        &:hover, &:active {
+          color: $color;
+          border-bottom-color: transparent;
+        }
+      }
+    }
+
+    ::-moz-selection {
+      @include highlight-colour-for( $colour-name );
+	  }
+
+	  ::selection {
+  	  @include highlight-colour-for( $colour-name );
+    }
+
+  }
+
 }

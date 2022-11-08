@@ -43,7 +43,7 @@ const setCSSVariable = ( $id = '', $value = '' ) => {
 };
 
 const setHeaderHeightTotalCSSVariable = () => {
-  setCSSVariable( 'theme-header-total-height', getElementHeightByTag('header') + 'px' );
+  setCSSVariable('theme-header-height-total', getElementHeightByTag('header') + 'px'  );
 };
 
 const setLocalStorage = ( $key, $value ) => {

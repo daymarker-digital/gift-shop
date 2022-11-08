@@ -1,0 +1,109 @@
+@use "../utils/mixins/general" as *;
+
+.burger {
+
+  --burger-width: 30px;
+  --burger-height: 14px;
+  --burger-stroke-width: 3px;
+  --burger-45: calc( var(--burger-height) - var(--burger-stroke-width) * 0.5 );
+  --aos-travel: 6px;
+
+  height: var(--theme-header-height);
+  position: fixed;
+  z-index: 200;
+  right: 20px;
+  width: auto;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  align-content: center;
+
+  &__icon {
+
+    background: transparent;
+    display: inline-block;
+    overflow: visible;
+    margin: 0;
+    padding: 0;
+    transition-timing-function: linear;
+    transition-duration: .15s;
+    transition-property: opacity, filter;
+    outline: none;
+    border: none;
+
+    &:hover, &:focus {
+      outline: none;
+      border: none;
+    }
+
+  }
+
+  &__icon-box {
+    width: var(--burger-width);
+    height: var(--burger-height);
+    display: block;
+    position: relative;
+  }
+
+  &__icon-stroke {
+    transition: transform var(--theme-transition-duration),
+      translate var(--theme-transition-duration),
+      rotate var(--theme-transition-duration),
+      background var(--theme-transition-duration),
+      color var(--theme-transition-duration),
+      opacity var(--theme-transition-duration);
+    background: rgba(var(--theme-colour-black), 1);
+    width: var(--burger-width);
+    height: var(--burger-stroke-width);
+    display: block;
+    position: absolute;
+
+    &.top {
+      top: 0;
+    }
+
+    &.middle {
+      display: none;
+      top: 50%;
+      margin-top: -2px;
+    }
+
+    &.bottom {
+      bottom: 0;
+    }
+
+  }
+
+  &.is-active {
+    .burger__icon-stroke {
+      background: rgba(var(--theme-colour-white), 1);
+      &.top {
+        //@include transform3D-and-rotate( 0, $menu-stroke-offset--45, 0, -45deg);
+      }
+      &.bottom {
+        //@include transform3D-and-rotate( 0, -$menu-stroke-offset--45, 0, 45deg);
+      }
+    }
+  }
+
+  @include breakpoint(sm) {
+    height: var(--theme-header-height--sm);
+  }
+
+  @include breakpoint(md) {
+    height: var(--theme-header-height--md);
+  }
+
+  @include breakpoint(lg) {
+    height: var(--theme-header-height--lg);
+  }
+
+  @include breakpoint(xl) {
+    height: var(--theme-header-height--xl);
+  }
+
+  @include breakpoint(xxl) {
+    height: var(--theme-header-height--xxl);
+  }
+
+}

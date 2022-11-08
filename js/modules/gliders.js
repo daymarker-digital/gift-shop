@@ -19,7 +19,7 @@ const options = ( custom = {} ) => {
 
 };
 
-function init() {
+const init = () => {
 
   console.log('Glider initialized');
 

@@ -1,0 +1,19 @@
+@function colour-theme-offset( $colour-name: 'white' ) {
+
+  $offset-colour: rgba(var(--theme-colour-black), 1);
+
+  @if $colour-name == 'arlo-green' {
+    $offset-colour: rgba(var(--theme-colour-white), 1);
+  }
+
+  @if $colour-name == 'black' {
+    $offset-colour: rgba(var(--theme-colour-white), 1);
+  }
+
+  @if $colour-name == 'blue' {
+    $offset-colour: rgba(var(--theme-colour-white), 1);
+  }
+
+  @return $offset-colour;
+
+}
