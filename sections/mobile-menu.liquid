@@ -7,48 +7,125 @@
   assign aos_delay = 250
   assign aos_delay_increment = 250
 
+  assign footer_menu = section.settings.footer_menu | default: false
+  assign main_menu = section.settings.main_menu | default: false
+  assign social = section.blocks | where: 'type', 'social' | default: false
+
+  assign social_link_instagram = settings.social_link_instagram | default: false
+  assign social_link_spotify = settings.social_link_spotify | default: false
+  assign social_link_email = settings.social_link_email | default: false
+
 -%}
 
-<div class="{{ section_name }}__main">
+<div class="{{ section_name }}__container">
 
+  <div class="{{ section_name }}__main">
+    {% if linklists[main_menu].links %}
+      <nav class="navigation navigation--main">
+        <div class="navigation__list">
+          {% for link in linklists[main_menu].links %}
+            {% render 'content--navigation-item', title: link.title, url: link.url, active: link.active %}
+          {% endfor %}
+        </div>
+      </nav>
+    {% endif %}
+  </div>
 
+  <div class="{{ section_name }}__footer">
 
+      <div class="{{ section_name }}__cart-summary">
+        <a href='/cart'>Cart (<span class="{{ section_name }}__cart-items-total js--cart-items-total">{{ cart.item_count }}</span>)</a>
+      </div>
+
+      <div class="{{ section_name }}__footer-links">
+
+          {% if social and social.size > 0 %}
+            <div class="{{ section_name }}__social">
+
+              {% for item in social %}
+
+                {% assign type = item.settings.type | default: 'facebook' %}
+                {% assign url = item.settings.url | default: '' %}
+                {% assign svg_icon = 'icon.' | append: type %}
+
+                {% if url != blank %}
+
+                  {% if 'email' == type %}
+                    {% assign url = url | prepend: 'mailto:' %}
+                  {% endif %}
+
+                  <div class="{{ section_name }}__social-item {{ type }}">
+                    <a href="{{ url }}" target="_blank" title="{{ shop.name }} {{ type | capitalize }}">
+                      {% render 'svg', type: svg_icon %}
+                    </a>
+                  </div>
+
+                {% endif %}
+
+              {% endfor %}
+
+            </div>
+          {% endif %}
+
+          {% if linklists[footer_menu].links %}
+            <nav class="{{ section_name }}__menus-extra navigation--footer">
+              <div class="navigation__list">
+                {% for link in linklists[footer_menu].links %}
+                  {% render 'content--navigation-item', title: link.title, url: link.url, active: link.active %}
+                {% endfor %}
+              </div>
+            </nav>
+          {% endif %}
+
+      </div>
+
+  </div>
 
 </div>
 
 {% schema %}
   {
-    "name": "Header",
-    "tag": "header",
-    "class": "header header--sticky",
+    "name": "Mobile Menu",
+    "tag": "section",
+    "class": "section section--mobile-menu",
     "settings": [
       {
-        "content": "Announcements",
-        "type": "header"
+			  "content": "Menus",
+			  "type": "header"
+		  },
+      {
+        "label": "Main",
+        "type": "link_list",
+        "id": "main_menu"
       },
       {
-        "label": "Show announcements",
-      	"type": "checkbox",
-        "default": true,
-        "id": "announcements_enabled"
-      },
-      {
-        "label": "Homepage only",
-      	"type": "checkbox",
-        "default": false,
-        "id": "announcements_homepage_only"
+        "label": "Footer",
+        "type": "link_list",
+        "id": "footer_menu"
       }
     ],
     "blocks": [
       {
-        "name": "Announcement",
-        "type": "announcement",
-        "limit": 5,
+        "name": "Social Media",
+        "type": "social",
         "settings": [
           {
-            "label": "Message",
-            "type": "richtext",
-            "id": "title"
+            "label": "Type",
+            "type": "select",
+            "options": [
+              { "label": "Email", "value": "email" },
+              { "label": "Facebook", "value": "facebook" },
+			        { "label": "Instagram", "value": "instagram" },
+              { "label": "LinkedIn", "value": "linkedin" },
+              { "label": "Spotify", "value": "spotify" }
+            ],
+            "default": "facebook",
+            "id": "type"
+          },
+          {
+            "label": "Link",
+            "type": "url",
+            "id": "url"
           }
         ]
       }
