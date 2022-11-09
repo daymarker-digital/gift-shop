@@ -5,7 +5,7 @@
   --burger-width: 30px;
   --burger-height: 14px;
   --burger-stroke-width: 3px;
-  --burger-stroke-offset: calc( var(--burger-height) - var(--burger-stroke-width) * 0.5 );
+  --burger-stroke-offset: calc( ( var(--burger-height) - var(--burger-stroke-width) ) * 0.5 );
 
   height: var(--theme-header-height-total);
   position: fixed;
@@ -77,7 +77,7 @@
     .burger__icon-stroke {
       background: rgba(var(--theme-colour-white), 1);
       &.top {
-        transform: translate3d( 0,calc( 1 * var(--burger-stroke-offset) ), 0 ) rotate( -45deg );
+        transform: translate3d( 0, calc( 1 * var(--burger-stroke-offset) ), 0 ) rotate( -45deg );
       }
       &.bottom {
         transform: translate3d( 0, calc( -1 * var(--burger-stroke-offset) ), 0 ) rotate( 45deg );

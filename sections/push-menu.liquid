@@ -20,7 +20,7 @@
 <div class="{{ section_name }}__container" data-colour-theme="black">
 
   <div class="{{ section_name }}__main">
-    {% if linklists[main_menu].links %}
+    {% if linklists[main_menu].links.size > 0 %}
       <nav class="{{ section_name }}__main-navigation navigation" role="list">
         {% for link in linklists[main_menu].links %}
           {% render 'navigation-item', navigation_title: link.title, navigation_url: link.url, navigation_active: link.active %}
@@ -63,7 +63,7 @@
         </div>
       {% endif %}
 
-      {% if linklists[footer_menu].links %}
+      {% if linklists[footer_menu].links.size > 0 %}
         <nav class="{{ section_name }}__footer-navigation navigation" role="list">
           {% for link in linklists[footer_menu].links %}
             {% render 'navigation-item', navigation_title: link.title, navigation_url: link.url, navigation_active: link.active %}
