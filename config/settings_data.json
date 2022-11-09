@@ -50,7 +50,7 @@
         "type": "push-menu",
         "settings": {
           "main_menu": "push-menu-main",
-          "footer_menu": "push-menu-main"
+          "footer_menu": "push-menu-footer"
         }
       }
     },
