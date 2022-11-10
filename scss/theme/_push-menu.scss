@@ -82,11 +82,9 @@
       justify-content: flex-start;
       align-items: center;
       gap: 20px;
-      &-item {
+      &-link {
         height: 18px;
         width: auto;
-      }
-      &-link {
         color: rgba(var(--theme-colour-yellow), 1);
         &:focus,
         &:hover {
