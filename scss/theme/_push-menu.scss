@@ -27,10 +27,6 @@
   }
 
   .navigation {
-    width: 100%;
-    flex-flow: row wrap;
-    justify-content: flex-start;
-    align-items: baseline;
     &__link {
       color: rgba(var(--theme-colour-yellow), 1);
       &.active,
@@ -94,15 +90,12 @@
     padding-bottom: 0;
     &-navigation {
       .navigation {
-        &__item {
-          width: 100%;
-          & + .navigation__item {
-            margin-top: 10px;
-          }
-        }
         &__link {
           font-family: var(--theme-font-family--sans-serif--sorry-sans);
           font-size: var(--push-menu-main-link-size);
+
+          font-family: var(--theme-font-family--sans-serif--sorry-sans);
+          font-size: var(--push-menu-main-link-size );
           &.active,
           &:hover {
             color: rgba(var(--theme-colour-white), 1);
