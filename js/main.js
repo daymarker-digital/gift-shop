@@ -46,4 +46,3 @@ window.addEventListener( 'resize', function(e) {
     throttled = true;
   }
 });
-

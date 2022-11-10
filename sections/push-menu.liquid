@@ -36,7 +36,7 @@
     <div class="{{ section_name }}__footer-links">
 
       {% if social and social.size > 0 %}
-        <div class="{{ section_name }}__footer-social d-none">
+        <div class="{{ section_name }}__footer-social">
 
           {% for item in social %}
 
@@ -51,7 +51,7 @@
               {% endif %}
 
               <div class="{{ section_name }}__footer-social-item {{ type }}">
-                <a href="{{ url }}" target="_blank" title="{{ shop.name }} {{ type | capitalize }}">
+                <a class="{{ section_name }}__footer-social-link link" href="{{ url }}" target="_blank" title="{{ shop.name }} {{ type | capitalize }}">
                   {% render 'svg', type: svg_icon %}
                 </a>
               </div>
