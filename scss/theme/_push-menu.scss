@@ -60,9 +60,16 @@
         }
       }
     }
+    &-links {
+      width: 100%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-flow: row wrap;
+    }
     &-navigation {
       gap: 15px;
-      grid-template-columns: repeat(2, 140px);
+      grid-template-columns: repeat(2, 125px);
       display: inline-grid;
       width: 100%;
       .navigation {
@@ -82,10 +89,20 @@
       justify-content: flex-start;
       align-items: center;
       gap: 20px;
-      &-link {
+      margin-bottom: 18px;
+      &-item {
         height: 18px;
-        width: auto;
+        width: 18px;
+      }
+      &-link {
+        height: 100%;
+        width: 100%;
         color: rgba(var(--theme-colour-yellow), 1);
+        svg, img {
+          display: block;
+          width: 100%;
+          height: auto;
+        }
         &:focus,
         &:hover {
           color: rgba(var(--theme-colour-white), 1);
@@ -139,35 +156,31 @@
 
     &__footer {
       &-links {
-        display: flex;
         justify-content: space-between;
         align-items: flex-end;
+        flex-flow: row nowrap;
       }
       &-navigation {
+        order: 1;
         .navigation {
           &__link {
             font-size: calc(var(--theme-body-copy--sm) * 0.8);
           }
         }
       }
+      &-social {
+        margin-bottom: 0;
+        order: 2;
+        justify-content: flex-end;
+        &-item {
+          width: 20px;
+          height: 20px;
+        }
+      }
     }
 
     &__menus-extra {
       order: 1;
-    }
-
-    &__social {
-      order: 2;
-      width: auto;
-      &-item {
-        height: 20px;
-        & + .push-menu__social-item {
-          margin-left: 22px;
-        }
-      }
-      & + .push-menu__menus-extra  {
-        margin-top: 0;
-      }
     }
 
   }
@@ -183,7 +196,7 @@
         }
       }
       &-navigation {
-        grid-template-columns: repeat(2, 150px);
+        grid-template-columns: repeat(2, 135px);
         .navigation {
           &__link {
             font-size: calc(var(--theme-body-copy--md) * 0.8);

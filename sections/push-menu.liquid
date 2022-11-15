@@ -50,7 +50,7 @@
                 {% assign url = url | prepend: 'mailto:' %}
               {% endif %}
 
-              <div class="{{ section_name }}__footer-social-item {{ type }} svg-icon--{{ svg_icon }}">
+              <div class="{{ section_name }}__footer-social-item {{ type }} {{ svg_icon }}">
                 <a class="{{ section_name }}__footer-social-link link" href="{{ url }}" target="_blank" title="{{ shop.name }} {{ type | capitalize }}">
                   {% render 'svg', type: svg_icon %}
                 </a>
