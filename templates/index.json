@@ -143,15 +143,6 @@
     "166386587599b4f4fd": {
       "type": "featured-image",
       "blocks": {
-        "c1b58684-1d95-452e-9ceb-b3496ede2459": {
-          "type": "button",
-          "settings": {
-            "title": "Shop Space Tees",
-            "link": "shopify:\/\/collections\/tees",
-            "style": "secondary",
-            "alignment": "center"
-          }
-        },
         "10355e76-c59e-4d61-aac8-5fa3b497d00f": {
           "type": "heading",
           "settings": {
@@ -165,12 +156,21 @@
           "settings": {
             "message": "<p>Nunc eu lectus porta, varius enim nec, varius augue. Vivamus tortor ex, aliquam pellentesque elementum in, dictum sed purus. Cras quis diam tristique, mollis mi quis, consequat tellus.<\/p>"
           }
+        },
+        "c1b58684-1d95-452e-9ceb-b3496ede2459": {
+          "type": "button",
+          "settings": {
+            "title": "Shop Space Tees",
+            "link": "shopify:\/\/collections\/tees",
+            "style": "secondary",
+            "alignment": "center"
+          }
         }
       },
       "block_order": [
-        "c1b58684-1d95-452e-9ceb-b3496ede2459",
         "10355e76-c59e-4d61-aac8-5fa3b497d00f",
-        "4d670097-fa47-449a-a090-eb0150fbd90b"
+        "4d670097-fa47-449a-a090-eb0150fbd90b",
+        "c1b58684-1d95-452e-9ceb-b3496ede2459"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/VP-top-3.jpg",
