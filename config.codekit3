@@ -284,6 +284,18 @@
       "oAP" : "\/assets\/favicon.ico",
       "oF" : 0
     },
+    "\/assets\/featured-image.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 2,
+      "oAP" : "\/assets\/featured-image.css",
+      "oF" : 0,
+      "pg" : 0
+    },
     "\/assets\/featured-products.css" : {
       "aP" : 1,
       "bl" : 0,
