@@ -159,11 +159,18 @@
             "size": "1",
             "style": "primary"
           }
+        },
+        "4d670097-fa47-449a-a090-eb0150fbd90b": {
+          "type": "message",
+          "settings": {
+            "message": "<p>Nunc eu lectus porta, varius enim nec, varius augue. Vivamus tortor ex, aliquam pellentesque elementum in, dictum sed purus. Cras quis diam tristique, mollis mi quis, consequat tellus.<\/p>"
+          }
         }
       },
       "block_order": [
         "c1b58684-1d95-452e-9ceb-b3496ede2459",
-        "10355e76-c59e-4d61-aac8-5fa3b497d00f"
+        "10355e76-c59e-4d61-aac8-5fa3b497d00f",
+        "4d670097-fa47-449a-a090-eb0150fbd90b"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/VP-top-3.jpg",
