@@ -10,8 +10,9 @@
 
   &__content {
     display: flex;
+    align-items: flex-start;
     justify-content: center;
-    flex-flow: row wrap;
+    flex-flow: column wrap;
     position: absolute;
     top: 0;
     left: 0;
@@ -23,8 +24,21 @@
     }
   }
 
+  &__heading {
+    & + .featured-image__button,
+    & + .featured-image__message {
+      margin-top: 25px;
+    }
+  }
+
   &__layout {
     position: relative;
+  }
+
+  &__message {
+     & + .featured-image__button {
+       margin-top: 20px;
+     }
   }
 
   @include breakpoint(sm) {} // min width sm
@@ -35,6 +49,9 @@
 
     &__content {
       padding: 22px;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
       &.content--stack-mobile {
         position: absolute;
       }
