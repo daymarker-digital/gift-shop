@@ -41,10 +41,6 @@
      }
   }
 
-  @include breakpoint(sm) {} // min width sm
-
-  @include breakpoint(md) {} // min width md
-
   @include breakpoint(lg) {
 
     &__content {
@@ -58,8 +54,6 @@
     }
 
   } // min width lg
-
-  @include breakpoint(xl) {} // min width xl
 
   @include breakpoint(xxl) {
 
