@@ -1,4 +1,4 @@
-const images = Theme.placeholder.product_images || [];
+const images = Theme.images.placeholder.product_images || [];
 
 const renderRandomImage = () => {
   if ( images.length ) {
