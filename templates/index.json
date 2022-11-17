@@ -151,10 +151,19 @@
             "style": "secondary",
             "alignment": "center"
           }
+        },
+        "10355e76-c59e-4d61-aac8-5fa3b497d00f": {
+          "type": "heading",
+          "settings": {
+            "heading": "Sample Featured Image Heading",
+            "size": "1",
+            "style": "primary"
+          }
         }
       },
       "block_order": [
-        "c1b58684-1d95-452e-9ceb-b3496ede2459"
+        "c1b58684-1d95-452e-9ceb-b3496ede2459",
+        "10355e76-c59e-4d61-aac8-5fa3b497d00f"
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/VP-top-3.jpg",
