@@ -30,7 +30,7 @@
         "image_height_mobile": "450px",
         "content_placement_horizontal": "center",
         "content_placement_vertical": "bottom",
-        "content_stack_mobile": true,
+        "content_stack_mobile": false,
         "background": "white",
         "container": "container-fluid",
         "padding_top": 0,
