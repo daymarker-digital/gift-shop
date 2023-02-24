@@ -1,6 +1,8 @@
 import Tools from 'tools';
 import Cookies from 'cookies';
 
+const config = { debug: true, name: 'announcements.js', version: '1.0' };
+
 const cookieName = 'vp_shopify_announcements';
 
 const hideAnnouncements = () => {
@@ -27,10 +29,12 @@ const onClickHideAnnouncements = () => {
 };
 
 const init = () => {
-  if ( !Cookies.get( cookieName ) ) {
-    showAnnouncements();
-  }
-  onClickHideAnnouncements();
+  if ( config.debug ) console.log(`[ ${config.name} v.${config.version} initialized ]`);
+    if ( !Cookies.get( cookieName ) ) {
+      showAnnouncements();
+    }
+    onClickHideAnnouncements();
+  if ( config.debug ) console.log(`[ ${config.name} v.${config.version} complete ]`);
 };
 
 export default { init };

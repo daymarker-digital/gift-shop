@@ -10,8 +10,6 @@
 
   &__content {
     display: flex;
-    align-items: flex-start;
-    justify-content: center;
     flex-flow: column wrap;
     position: absolute;
     top: 0;
@@ -45,15 +43,12 @@
 
     &__content {
       padding: 22px;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
       &.content--stack-mobile {
         position: absolute;
       }
     }
 
-  } // min width lg
+  }
 
   @include breakpoint(xxl) {
 
@@ -61,6 +56,6 @@
       padding: 30px;
     }
 
-  } // min width xxl
+  }
 
 }

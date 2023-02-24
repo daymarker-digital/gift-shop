@@ -7,7 +7,7 @@
       "uuidString" : "FE8C1B7F-EA9B-47F9-9B46-E9C2C8BF996D"
     }
   ],
-  "creatorBuild" : "34434",
+  "creatorBuild" : "34448",
   "files" : {
     "\/.editorconfig" : {
       "cB" : 0,
@@ -308,6 +308,17 @@
       "oF" : 0,
       "pg" : 0
     },
+    "\/assets\/forms.min.js" : {
+      "bF" : 4,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/assets\/forms.min.min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 1
+    },
     "\/assets\/global.js" : {
       "bF" : 4,
       "ft" : 64,
@@ -315,6 +326,17 @@
       "mi" : 1,
       "oA" : 0,
       "oAP" : "\/assets\/global.min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 1
+    },
+    "\/assets\/instagramFeed.min.js" : {
+      "bF" : 4,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/assets\/instagramFeed.min.min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 1
@@ -617,17 +639,6 @@
       "sC" : 3,
       "tS" : 1
     },
-    "\/assets\/vendors.min.js" : {
-      "bF" : 4,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/assets\/vendors.min.min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 1
-    },
     "\/assets\/VPAGS--icon--notification-triangle.svg" : {
       "ft" : 2097152,
       "miP" : 0,
@@ -694,17 +705,6 @@
       "oO" : 1,
       "oS" : 1
     },
-    "\/js\/main-LEGACY.js" : {
-      "bF" : 4,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/assets\/main-LEGACY.min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 1
-    },
     "\/js\/main.js" : {
       "bF" : 4,
       "ft" : 64,
@@ -713,160 +713,6 @@
       "oA" : 0,
       "oAP" : "\/assets\/main.min.js",
       "oF" : 2,
-      "sC" : 3,
-      "tS" : 1
-    },
-    "\/js\/modules-legacy\/_announcements.js" : {
-      "bF" : 4,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 1,
-      "oAP" : "\/assets\/_announcements.min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 1
-    },
-    "\/js\/modules-legacy\/_breakpoints.js" : {
-      "bF" : 4,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 1,
-      "oAP" : "\/assets\/_breakpoints.min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 1
-    },
-    "\/js\/modules-legacy\/_cookies.js" : {
-      "bF" : 4,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 1,
-      "oAP" : "\/assets\/_cookies.min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 1
-    },
-    "\/js\/modules-legacy\/_credits.js" : {
-      "bF" : 4,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 1,
-      "oAP" : "\/assets\/_credits.min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 1
-    },
-    "\/js\/modules-legacy\/_forms.js" : {
-      "bF" : 4,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 1,
-      "oAP" : "\/assets\/_forms.min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 1
-    },
-    "\/js\/modules-legacy\/_gliders.js" : {
-      "bF" : 4,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 1,
-      "oAP" : "\/assets\/_gliders.min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 1
-    },
-    "\/js\/modules-legacy\/_instagramFeed.js" : {
-      "bF" : 4,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 1,
-      "oAP" : "\/assets\/_instagramFeed.min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 1
-    },
-    "\/js\/modules-legacy\/_mobileMenu.js" : {
-      "bF" : 4,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 1,
-      "oAP" : "\/assets\/_mobileMenu.min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 1
-    },
-    "\/js\/modules-legacy\/_modals.js" : {
-      "bF" : 4,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 1,
-      "oAP" : "\/assets\/_modals.min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 1
-    },
-    "\/js\/modules-legacy\/_randomImage.js" : {
-      "bF" : 4,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 1,
-      "oAP" : "\/assets\/_randomImage.min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 1
-    },
-    "\/js\/modules-legacy\/_scrolling.js" : {
-      "bF" : 4,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 1,
-      "oAP" : "\/assets\/_scrolling.min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 1
-    },
-    "\/js\/modules-legacy\/_sizing.js" : {
-      "bF" : 4,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 1,
-      "oAP" : "\/assets\/_sizing.min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 1
-    },
-    "\/js\/modules-legacy\/_tools.js" : {
-      "bF" : 4,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 1,
-      "oAP" : "\/assets\/_tools.min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 1
-    },
-    "\/js\/modules\/alpha.js" : {
-      "bF" : 4,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/assets\/alpha.min.js",
-      "oF" : 0,
       "sC" : 3,
       "tS" : 1
     },
@@ -925,6 +771,17 @@
       "sC" : 3,
       "tS" : 1
     },
+    "\/js\/modules\/forms.js" : {
+      "bF" : 4,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/assets\/forms.min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 1
+    },
     "\/js\/modules\/gliders.js" : {
       "bF" : 4,
       "ft" : 64,
@@ -932,6 +789,39 @@
       "mi" : 1,
       "oA" : 1,
       "oAP" : "\/assets\/gliders.min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 1
+    },
+    "\/js\/modules\/instagramFeed.js" : {
+      "bF" : 4,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/assets\/instagramFeed.min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 1
+    },
+    "\/js\/modules\/mainMenu.js" : {
+      "bF" : 4,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/assets\/mainMenu.min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 1
+    },
+    "\/js\/modules\/money.js" : {
+      "bF" : 4,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 1,
+      "oAP" : "\/assets\/money.min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 1
@@ -952,7 +842,7 @@
       "ft" : 64,
       "ma" : 0,
       "mi" : 1,
-      "oA" : 1,
+      "oA" : 0,
       "oAP" : "\/assets\/pushMenu.min.js",
       "oF" : 0,
       "sC" : 3,
@@ -976,17 +866,6 @@
       "mi" : 1,
       "oA" : 1,
       "oAP" : "\/assets\/render.min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 1
-    },
-    "\/js\/modules\/revealing.js" : {
-      "bF" : 4,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/assets\/revealing.min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 1
@@ -1021,28 +900,6 @@
       "oA" : 1,
       "oAP" : "\/assets\/tools.min.js",
       "oF" : 0,
-      "sC" : 3,
-      "tS" : 1
-    },
-    "\/js\/vendors-LEGACY.js" : {
-      "bF" : 4,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/assets\/vendors-LEGACY.min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 1
-    },
-    "\/js\/vendors.js" : {
-      "bF" : 4,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/assets\/vendors.min.js",
-      "oF" : 2,
       "sC" : 3,
       "tS" : 1
     },
@@ -2665,6 +2522,14 @@
       "oAP" : "\/snippets\/banner.liquid",
       "oF" : 0
     },
+    "\/snippets\/bs-accordion.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/snippets\/bs-accordion.liquid",
+      "oF" : 0
+    },
     "\/snippets\/bs-container.liquid" : {
       "cB" : 0,
       "ft" : 8192,
@@ -2737,20 +2602,28 @@
       "oAP" : "\/snippets\/debug-this.liquid",
       "oF" : 0
     },
+    "\/snippets\/element-attrs.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/snippets\/element-attrs.liquid",
+      "oF" : 0
+    },
+    "\/snippets\/element-styles.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/snippets\/element-styles.liquid",
+      "oF" : 0
+    },
     "\/snippets\/facets.liquid" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/snippets\/facets.liquid",
-      "oF" : 0
-    },
-    "\/snippets\/google-analytics.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/snippets\/google-analytics.liquid",
       "oF" : 0
     },
     "\/snippets\/google-maps-directions-link.liquid" : {
@@ -2783,6 +2656,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/snippets\/label.liquid",
+      "oF" : 0
+    },
+    "\/snippets\/lazyload-embed.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/snippets\/lazyload-embed.liquid",
       "oF" : 0
     },
     "\/snippets\/lazyload-image.liquid" : {
@@ -2833,28 +2714,20 @@
       "oAP" : "\/snippets\/pagination.liquid",
       "oF" : 0
     },
+    "\/snippets\/policy-content.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/snippets\/policy-content.liquid",
+      "oF" : 0
+    },
     "\/snippets\/price.liquid" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/snippets\/price.liquid",
-      "oF" : 0
-    },
-    "\/snippets\/product-media.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/snippets\/product-media.liquid",
-      "oF" : 0
-    },
-    "\/snippets\/product-thumbnail.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/snippets\/product-thumbnail.liquid",
       "oF" : 0
     },
     "\/snippets\/section-styles.liquid" : {
@@ -2945,12 +2818,44 @@
       "oAP" : "\/snippets\/theme--css-variables.liquid",
       "oF" : 0
     },
+    "\/snippets\/theme--external-javascript.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/snippets\/theme--external-javascript.liquid",
+      "oF" : 0
+    },
+    "\/snippets\/theme--google-analytics.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/snippets\/theme--google-analytics.liquid",
+      "oF" : 0
+    },
+    "\/snippets\/theme--google-tag-manager.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/snippets\/theme--google-tag-manager.liquid",
+      "oF" : 0
+    },
     "\/snippets\/theme--meta-tags.liquid" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/snippets\/theme--meta-tags.liquid",
+      "oF" : 0
+    },
+    "\/snippets\/theme--preconnect-resources.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/snippets\/theme--preconnect-resources.liquid",
       "oF" : 0
     },
     "\/snippets\/theme--preload-fonts.liquid" : {
@@ -3649,6 +3554,10 @@
         "active" : 0,
         "optionString" : "'always', {exceptAfterSingleLine: false}"
       },
+      "logical-assignment-operators" : {
+        "active" : 0,
+        "optionString" : "'always',  {'enforceForIfStatements': false}"
+      },
       "max-classes-per-file" : {
         "active" : 0,
         "optionString" : "{'ignoreExpressions': false, 'max': 1}"
@@ -3809,6 +3718,9 @@
       "no-empty-pattern" : {
         "active" : 1
       },
+      "no-empty-static-block" : {
+        "active" : 0
+      },
       "no-eq-null" : {
         "active" : 0
       },
@@ -3947,6 +3859,9 @@
         "active" : 0
       },
       "no-new-func" : {
+        "active" : 0
+      },
+      "no-new-native-nonconstructor" : {
         "active" : 0
       },
       "no-new-object" : {
@@ -4763,7 +4678,7 @@
       },
       "comments" : {
         "active" : 0,
-        "flagValue" : -1
+        "flagValue" : 1
       },
       "comparisons" : {
         "active" : 1,

@@ -56,5 +56,3 @@ Production: 121669714008
 - [ ] Customer/Order Detail
 - [ ] Customer/Register
 - [ ] Customer/Reset Password
-
-

@@ -1,14 +1,12 @@
-// importing default function, no object deconstruction required - can name as whatever!
-// import DEF from './modules/revealing'; // importing default function, no object deconstruction required - can name as whatever!
-// import { init as GHI, bar, brenden as bMoney } from './modules/alpha'; // importing named function(s), object deconstruction required - can alias function names
-
-import AOS from 'aos';
+// "./modules/_instagramFeed.js";
+// "./modules/_mobileMenu.js";
+// "./modules/_modals";
 
 import Announcements from './modules/announcements';
 import Cart from './modules/cart';
 import Credits from './modules/credits';
 import Gliders from './modules/gliders';
-import PushMenu from './modules/pushMenu';
+import MainMenu from './modules/mainMenu';
 import Product from './modules/product';
 import RandomImage from './modules/randomImage';
 import Scrolling from './modules/scrolling';
@@ -19,7 +17,7 @@ let throttled = false;
 Cart.init();
 Credits.init();
 Announcements.init();
-PushMenu.init();
+MainMenu.init();
 Product.init();
 RandomImage.init();
 Scrolling.init();
