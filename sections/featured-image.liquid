@@ -9,9 +9,13 @@
   assign aos_delay_increment = 250
 
   assign container = section.settings.container | default: 'container'
+
   assign content_placement_horizontal = section.settings.content_placement_horizontal | default: ''
   assign content_placement_vertical = section.settings.content_placement_vertical | default: ''
   assign content_stack_mobile = section.settings.content_stack_mobile | default: false
+  assign content_width_desktop = section.settings.content_width_mobile | default: 100
+  assign content_width_mobile = section.settings.content_width_mobile | default: 100
+
   assign image = section.settings.image | default: false
   assign image_height_desktop = section.settings.image_height_desktop | default: 'adapt'
   assign image_height_mobile = section.settings.image_height_mobile | default: 'adapt'
@@ -22,13 +26,27 @@
 
 -%}
 
-{%
-  render 'section-styles',
-  background: section.settings.background,
-  id: section.id,
-  padding_bottom: section.settings.padding_bottom
-  padding_top: section.settings.padding_top,
-%}
+{%- style -%}
+
+  {%
+    render 'element-styles',
+      background: section.settings.background,
+      id: section_id,
+      padding_bottom: section.settings.padding_bottom
+      padding_top: section.settings.padding_top,
+  %}
+
+  #{{ element_id }} .content > * {
+    width: {{ content_width_mobile }}%;
+  }
+
+  @media screen and (min-width: 992px) {
+    #{{ element_id }} .content > * {
+      width: {{ content_width_mobile }}%;
+    }
+  }
+
+{%- endstyle -%}
 
 <link rel="stylesheet" href="{{ 'section-featured-image.css' | asset_url }}" media="print" onload="this.media='all'">
 <noscript>{{ 'section-featured-image.css' | asset_url | stylesheet_tag }}</noscript>
@@ -225,7 +243,6 @@
 			"min": 0,
 			"max": 200,
 			"step": 4,
-			"unit": "px",
 			"default": 36,
       "id": "padding_top"
 		},
@@ -235,7 +252,6 @@
 			"min": 0,
 			"max": 200,
 			"step": 4,
-			"unit": "px",
 			"default": 36,
       "id": "padding_bottom"
 		},
