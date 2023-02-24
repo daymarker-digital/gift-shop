@@ -163,7 +163,7 @@
             "title": "Shop Space Tees",
             "link": "shopify:\/\/collections\/tees",
             "style": "secondary",
-            "alignment": "center"
+            "alignment": "right"
           }
         }
       },
@@ -177,7 +177,7 @@
         "image_height_desktop": "adapt",
         "image_height_mobile": "adapt",
         "content_placement_horizontal": "center",
-        "content_placement_vertical": "bottom",
+        "content_placement_vertical": "center",
         "content_stack_mobile": true,
         "background": "white",
         "container": "container-fluid",
