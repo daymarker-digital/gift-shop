@@ -2,6 +2,10 @@
 
 .featured-image {
 
+  .content {
+
+  }
+
   &__button,
   &__heading,
   &__message {
@@ -9,14 +13,11 @@
   }
 
   &__content {
-    display: flex;
-    flex-flow: column wrap;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    padding: 20px;
     &.content--stack-mobile {
       position: relative;
     }
@@ -42,18 +43,9 @@
   @include breakpoint(lg) {
 
     &__content {
-      padding: 22px;
       &.content--stack-mobile {
         position: absolute;
       }
-    }
-
-  }
-
-  @include breakpoint(xxl) {
-
-    &__content {
-      padding: 30px;
     }
 
   }
