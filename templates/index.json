@@ -16,6 +16,7 @@
           "settings": {
             "title": "Shop Maater",
             "link": "https:\/\/maatercosmetics.com\/",
+            "colour": "black",
             "style": "primary",
             "alignment": "center"
           }
@@ -164,7 +165,8 @@
           "settings": {
             "title": "Shop Space Tees",
             "link": "shopify:\/\/collections\/tees",
-            "style": "secondary",
+            "colour": "blue",
+            "style": "primary",
             "alignment": "right"
           }
         }
