@@ -1,27 +1,54 @@
-@use "../utils/mixins/button" as *;
-@use "../utils/mixins/ui" as *;
+%ui-transition {
+  transition:
+    background var(--theme-transition-duration),
+    border var(--theme-transition-duration),
+    color var(--theme-transition-duration),
+    opacity var(--theme-transition-duration),
+    transform var(--theme-transition-duration);
+}
 
-.button {
-
-  @include ui(button);
-
-  &--1,
-  &--primary {
-    @include button(primary);
+%ui-disabled {
+  &[disabled] {
+    cursor: no-drop;
+    opacity: 0.33;
+    &:focus,
+    &:hover {
+      background: initial;
+      color: initial;
+    }
   }
+}
 
-  &--2,
-  &--secondary {
-    @include button(secondary);
+%ui-base {
+  opacity: 1;
+  background: transparent;
+  line-height: 1;
+  text-decoration: none;
+  outline: none;
+  color: inherit;
+  border: none;
+  padding: 0;
+  margin: 0;
+  svg {
+    fill: currentColor;
   }
+}
 
-  &--3,
-  &--tertiary {
-    @include button(tertiary);
+%ui-input {
+  outline: none;
+  padding: 0;
+  margin: 0;
+  min-width: 100%;
+  border: none;
+  border-radius: 0;
+  &[type="search"] {
+    -webkit-appearance: none;
   }
+}
 
-  &--outlined {
-    @include button(outlined);
-  }
-
+@mixin placeholder {
+  &::-webkit-input-placeholder { @content }
+  &:-moz-placeholder           { @content }
+  &::-moz-placeholder          { @content }
+  &:-ms-input-placeholder      { @content }
 }

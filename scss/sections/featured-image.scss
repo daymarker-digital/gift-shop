@@ -2,7 +2,7 @@
 
 .featured-image {
 
-  &__button,
+  &__cta,
   &__heading,
   &__message {
     width: 100%;
@@ -20,7 +20,7 @@
   }
 
   &__heading {
-    & + .featured-image__button,
+    & + .featured-image__cta,
     & + .featured-image__message {
       margin-top: 25px;
     }
@@ -31,7 +31,7 @@
   }
 
   &__message {
-     & + .featured-image__button {
+     & + .featured-image__cta {
        margin-top: 20px;
      }
   }
