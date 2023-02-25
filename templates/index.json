@@ -179,7 +179,7 @@
         "image_height_desktop": "adapt",
         "image_height_mobile": "adapt",
         "content_width_desktop": 50,
-        "content_width_mobile": 90,
+        "content_width_mobile": 100,
         "content_placement_horizontal": "center",
         "content_placement_vertical": "center",
         "content_stack_mobile": true,
