@@ -1,25 +1,25 @@
 {%- if link and link != blank and title and title != blank -%}
 
+  {% comment %}
+
+    Accepts:
+      - classes: {String} Optionally include classes
+      - link: {String} URL
+      - title: {String} Title of link
+
+    Usage:
+    render 'link', classes: 'anything you-desire here', link: '/collections/all' title: 'Shop All'
+
+  {% endcomment %}
+
   {%- liquid
 
-    comment
-
-      Accepts:
-        - classes: {String} Optionally include classes
-        - link: {String} URL
-        - title: {String} Title of link
-
-      Usage:
-      render 'link', link: '/collections/all', style: 'not-primary', title: 'Shop All'
-
-    endcomment
-
-    assign snippet_name = 'link'
+    assign snippet_name = "link"
     assign snippet_classes = snippet_name
     assign target = "_self"
 
     if classes and classes != blank
-      assign snippet_classes = snippet_classes | prepend: ' ' | prepend: classes
+      assign snippet_classes = classes
     endif
 
     if link contains 'http'

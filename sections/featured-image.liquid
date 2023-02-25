@@ -88,20 +88,28 @@
 
             {%- when 'button' -%}
 
-              {% assign alignment = block.settings.alignment | default: 'left' %}
-              {% assign link = block.settings.link | default: '' %}
-              {% assign style = block.settings.style | default: 'primary' %}
-              {% assign style = style | prepend: 'button-' %}
-              {% assign title = block.settings.title | default: '' %}
+              {%- liquid
+
+                assign link = block.settings.link | default: ''
+                assign style = block.settings.style | default: 'primary'
+                assign colour = block.settings.colour | default: 'black'
+                assign title = block.settings.title | default: ''
+                assign target = '_self'
+
+                if link contains 'http'
+                  assign target = '_blank'
+                endif
+
+              -%}
 
               {% if link != blank and title != blank %}
-                <div class="{{ section_name }}__button">
+                {%- capture button_classes -%}featured-image__button button button--{{ style }} button--{{ colour }}{%- endcapture %}
+                <div class="{{ section_name }}__cta">
                   {%
                     render 'link',
-                    classes: 'featured-image__button-link',
-                    link: link,
-                    style: style,
-                    title: title
+                      classes: button_classes,
+                      link: link,
+                      title: title
                   %}
                 </div>
               {% endif %}
@@ -326,6 +334,17 @@
           "label": "Link",
           "type": "url",
           "id": "link"
+        },
+        {
+          "label": "Colour",
+          "type": "select",
+          "options": [
+            { "label": "Black", "value": "black" },
+            { "label": "Blue", "value": "blue" },
+            { "label": "Yellow", "value": "yellow" }
+          ],
+          "default": "black",
+          "id": "colour"
         },
         {
           "label": "Style",
