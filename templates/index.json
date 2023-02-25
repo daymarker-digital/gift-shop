@@ -178,7 +178,7 @@
         "image": "shopify:\/\/shop_images\/VP-top-3.jpg",
         "image_height_desktop": "adapt",
         "image_height_mobile": "adapt",
-        "content_width_desktop": 80,
+        "content_width_desktop": 50,
         "content_width_mobile": 90,
         "content_placement_horizontal": "center",
         "content_placement_vertical": "center",
