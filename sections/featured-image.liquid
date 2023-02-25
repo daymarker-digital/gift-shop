@@ -13,7 +13,7 @@
   assign content_placement_horizontal = section.settings.content_placement_horizontal | default: ''
   assign content_placement_vertical = section.settings.content_placement_vertical | default: ''
   assign content_stack_mobile = section.settings.content_stack_mobile | default: false
-  assign content_width_desktop = section.settings.content_width_mobile | default: 100
+  assign content_width_desktop = section.settings.content_width_desktop | default: 100
   assign content_width_mobile = section.settings.content_width_mobile | default: 100
 
   assign image = section.settings.image | default: false
@@ -36,13 +36,13 @@
       padding_top: section.settings.padding_top,
   %}
 
-  #{{ element_id }} .content > * {
+  #{{ section_id }} .content > * {
     width: {{ content_width_mobile }}%;
   }
 
   @media screen and (min-width: 992px) {
-    #{{ element_id }} .content > * {
-      width: {{ content_width_mobile }}%;
+    #{{ section_id }} .content > * {
+      width: {{ content_width_desktop }}%;
     }
   }
 
