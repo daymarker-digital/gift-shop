@@ -1,7 +1,12 @@
-{% assign colour_theme = colour_theme | default: 'red' %}
+{%- if title and title != blank %}
 
-{% if title and title != blank %}
-  <div class="banner" data-colour-theme="{{ colour_theme }}">
-    <span class="banner__title">{{ title }}</span>
+  {%- liquid
+    assign snippet_name = 'banner'
+    assign colour = colour | default: 'black'
+  -%}
+
+  <div class="{{ snippet_name }} {{ snippet_name }}--{{ colour }}">
+    <span class="{{ snippet_name }}__title">{{ title }}</span>
   </div>
-{% endif %}
+
+{%- endif -%}

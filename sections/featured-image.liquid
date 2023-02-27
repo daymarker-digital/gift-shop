@@ -103,7 +103,7 @@
               -%}
 
               {% if link != blank and title != blank %}
-                {%- capture button_classes -%}featured-image__button button button--{{ style }} button--{{ colour }}{%- endcapture %}
+                {%- capture button_classes -%}featured-image__button button button--{{ style }} button--{{ style }}-{{ colour }}{%- endcapture %}
                 <div class="{{ section_name }}__cta">
                   {%
                     render 'link',

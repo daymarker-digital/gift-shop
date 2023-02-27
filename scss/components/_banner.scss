@@ -1,7 +1,43 @@
+@use 'sass:color';
+@use 'sass:map';
+
+@use '../utils/variables' as *;
 @use "../utils/mixins/body-copy" as *;
-@use "../utils/mixins/general" as *;
+@use "../utils/mixins/breakpoint" as *;
 
 .banner {
+
+  @each $name, $value in $theme-colours {
+    &--#{$name} {
+
+      $background: $value;
+      $colour: map.get( $theme-colours, 'white' );
+
+      @if $name == 'black' {
+        $colour: map.get( $theme-colours, 'white' );
+      }
+
+      @if $name == 'blue' {
+        $colour: map.get( $theme-colours, 'white' );
+      }
+
+      @if $name == 'red' {
+        $colour: map.get( $theme-colours, 'white' );
+      }
+
+      @if $name == 'white' {
+        $colour: map.get( $theme-colours, 'black' );
+      }
+
+      @if $name == 'yellow' {
+        $colour: map.get( $theme-colours, 'black' );
+      }
+
+      background: $background;
+      color: $colour;
+
+    }
+  }
 
   @include body-copy(banner);
   text-transform: uppercase;

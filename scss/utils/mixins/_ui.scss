@@ -20,6 +20,10 @@
 }
 
 %ui-base {
+  display: inline-flex;
+  width: auto;
+  justify-content: center;
+  align-items: center;
   opacity: 1;
   background: transparent;
   line-height: 1;

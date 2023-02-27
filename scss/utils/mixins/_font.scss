@@ -1,24 +1,17 @@
-@mixin clarendon-wide( $weight: 700 ) {
-  font-family: clarendon-wide, serif;
+@mixin akkurate-mono( $weight: normal ) {
+  font-family: 'Akkurat Mono', monospace;
   font-style: normal;
   font-weight: $weight;
 }
 
-@mixin new-sprint( $weight: 300 ) {
-  font-family: new-spirit, serif;
+@mixin not-sorry-serif( $weight: bold ) {
+  font-family: 'Not Sorry Serif', serif;
   font-style: normal;
   font-weight: $weight;
 }
 
-@mixin novecento-sans-condensed( $weight: 700 ) {
-  font-family: novecento-sans-condensed, sans-serif;
+@mixin sorry-sans( $weight: bold ) {
+  font-family: 'Sorry Sans', sans-serif;
   font-style: normal;
   font-weight: $weight;
-}
-
-@mixin sarina( $weight: 400 ) {
-  font-family: sarina, sans-serif;
-  font-style: normal;
-  font-weight: $weight;
-  line-height: 1.27;
 }

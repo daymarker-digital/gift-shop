@@ -1,6 +1,10 @@
-@use "../utils/mixins/general" as *;
+@use "../utils/mixins/breakpoint" as *;
 
 .featured-image {
+
+  .button {
+    min-width: 170px;
+  }
 
   &__cta,
   &__heading,
@@ -36,12 +40,48 @@
      }
   }
 
+  @include breakpoint(sm) {
+
+    .button {
+      min-width: 190px;
+    }
+
+  }
+
+  @include breakpoint(md) {
+
+    .button {
+      min-width: 220px;
+    }
+
+  }
+
   @include breakpoint(lg) {
+
+    .button {
+      min-width: 300px;
+    }
 
     &__content {
       &.content--stack-mobile {
         position: absolute;
       }
+    }
+
+  }
+
+  @include breakpoint(xl) {
+
+    .button {
+      min-width: 370px;
+    }
+
+  }
+
+  @include breakpoint(xxl) {
+
+    .button {
+      min-width: 440px;
     }
 
   }

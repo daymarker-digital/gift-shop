@@ -13,12 +13,6 @@
         margin-bottom: -3px;
       }
     }
-    &-primary {
-      @include button(primary);
-    }
-    &-secondary {
-      @include button(secondary);
-    }
   }
 
 }

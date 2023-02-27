@@ -59,12 +59,12 @@
   --theme-button-font-size--xxl: #{ map-get( $theme-button-font-sizes, xxl ) };
 
   // ---------------------------------------- Button | Height
-  --theme-button-min-height: #{ map-get( $theme-button-min-heights, base ) };
-  --theme-button-min-height--sm: #{ map-get( $theme-button-min-heights, sm ) };
-  --theme-button-min-height--md: #{ map-get( $theme-button-min-heights, md ) };
-  --theme-button-min-height--lg: #{ map-get( $theme-button-min-heights, lg ) };
-  --theme-button-min-height--xl: #{ map-get( $theme-button-min-heights, xl ) };
-  --theme-button-min-height--xxl: #{ map-get( $theme-button-min-heights, xxl ) };
+  --theme-button-height: #{ map-get( $theme-button-heights, base ) };
+  --theme-button-height--sm: #{ map-get( $theme-button-heights, sm ) };
+  --theme-button-height--md: #{ map-get( $theme-button-heights, md ) };
+  --theme-button-height--lg: #{ map-get( $theme-button-heights, lg ) };
+  --theme-button-height--xl: #{ map-get( $theme-button-heights, xl ) };
+  --theme-button-height--xxl: #{ map-get( $theme-button-heights, xxl ) };
 
   // ---------------------------------------- Button | Height
   --theme-button-min-width: #{ map-get( $theme-button-min-widths, base ) };
