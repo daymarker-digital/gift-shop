@@ -1,0 +1,22 @@
+{% if modal_id and modal_id != blank %}
+
+  {%- liquid
+
+    assign template_name = 'main-product'
+    assign snippet_name = 'product-image-gallery-modal-trigger'
+
+    assign classes = classes | default: 'main-product__image-gallery-modal-trigger'
+
+  -%}
+
+  <button
+    class='{{ classes }} button'
+    data-product-image-gallery-index='0'
+    data-bs-target='#{{ modal_id }}'
+    data-bs-toggle='modal'
+    type='button'
+  >
+    {%- render 'svg', type: 'icon.close' -%}
+  </button>
+
+{% endif %}

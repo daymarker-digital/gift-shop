@@ -1,0 +1,32 @@
+{%- if product and product != blank -%}
+
+  {%- comment -%}
+
+      Accepts:
+      - classes: {String} Any combination classes, be it multiple classes or a single class
+      - product: {Object} Product Liquid object
+      - tag: {String} Conditionally use different element tags where neccessary or needed
+
+      Usage:
+      {%- render 'product-title', classes: 'my-great-class another-class', product: product, tag: 'strong' -%}
+
+  {%- endcomment -%}
+
+  {%- liquid
+
+    assign template_name = 'main-product'
+    assign snippet_name = 'product-badge'
+
+    assign classes = classes | default: 'main-product__badge'
+
+  -%}
+
+  {%- for tag in product.tags -%}
+    {%- if 'Natures' == tag -%}
+      <div class="{{ classes }} {{ snippet_name }}">
+        {%- render 'svg', type: 'icon.20%' -%}
+      </div>
+    {%- endif -%}
+  {%- endfor -%}
+
+{%- endif --%}

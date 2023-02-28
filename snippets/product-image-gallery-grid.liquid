@@ -1,0 +1,52 @@
+{%- if product and product != blank -%}
+
+  {%- comment -%}
+
+      Accepts:
+      - classes: {String} Optionally include custom classes, be it multiple classes or a single class
+      - modal_id: {String} Optionally include a reference to the product image gallery modal
+      - product: {Object} Product Liquid object
+
+      Usage:
+      {%-
+        render 'product-image-gallery-grid',
+          classes: 'my-class another-class',
+          modal_id: 'some-unique-element-id',
+          product: product
+      -%}
+
+  {%- endcomment -%}
+
+  {%- liquid
+
+    assign template_name = 'main-product'
+    assign snippet_name = 'product-image-gallery-grid'
+
+    assign classes = classes | default: 'main-product__image-gallery-grid'
+    assign modal_id = modal_id | default: ''
+
+    assign has_images = false
+    assign product_images = product.images | default: false
+
+    if product_images.size > 0
+      assign has_images = true
+    endif
+
+  -%}
+
+{%- endif -%}
+
+{%- if has_images -%}
+  <div class='{{ classes }} {{ snippet_name }}'>
+    {%- for image in product.images -%}
+      <div
+        class='{{ snippet_name }}__item'
+        data-bs-target='#{{ modal_id }}'
+        data-bs-toggle='modal'
+        data-product-image-gallery-index='{{ forloop.index0 }}'
+      >
+        {%- render 'lazyload-image', alt_text: product.title, image: image -%}
+      </div>
+    {%- endfor -%}
+  </div>
+{%- endif -%}

@@ -1,0 +1,27 @@
+{%- if product and product != blank -%}
+
+  {%- comment -%}
+
+      Accepts:
+      - classes: {String} Any combination classes, be it multiple classes or a single class
+      - product: {Object} Product Liquid object
+      - tag: {String} Conditionally use different element tags where neccessary or needed
+
+      Usage:
+      {%- render 'product-title', classes: 'my-great-class another-class', product: product, tag: 'strong' -%}
+
+  {%- endcomment -%}
+
+  {%- liquid
+
+    assign template_name = 'main-product'
+    assign snippet_name = 'product-title'
+
+    assign classes = classes | default: 'main-product__title'
+    assign tag = tag | default: 'h1'
+
+  -%}
+
+   <{{ tag }} class='{{ classes }}'>{{ product.title }}</{{ tag }}>
+
+{%- endif -%}

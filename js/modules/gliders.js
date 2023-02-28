@@ -39,7 +39,7 @@ const createGliderFromElement = ( element = {} ) => {
 
   glide.on( events, event => {
     switch ( style ) {
-      case 'main-product': {
+      case 'product-image-gallery-carousel': {
         updateProductGalleryModalTrigger( glide.index );
         break;
       }
@@ -106,8 +106,9 @@ const updateGlideTrackHeight = ( element = false ) => {
 };
 
 const updateProductGalleryModalTrigger = ( index = 0 ) => {
-  let button = document.getElementById('button-open-product-images-modal') || false;
-  if ( button ) button.dataset.productImageIndex = index;
+  ( document.querySelectorAll( '.main-product__image-gallery-modal-trigger' ) || [] ).forEach( button => {
+     button.dataset.productImageGalleryIndex = index;
+  });
 };
 
 const init = () => {

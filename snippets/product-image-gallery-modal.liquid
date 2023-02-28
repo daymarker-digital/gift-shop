@@ -1,0 +1,16 @@
+<div class="{{ section_name }}__modal modal fade" id="{{ product_modal_id }}" tabindex="-1" aria-labelledby="{{ product_modal_id }}" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <button class="{{ section_name }}__modal-button-close modal-button-close button" data-bs-dismiss="modal" type="button">
+      {% render 'svg', type: 'icon.close' %}
+      </button>
+      <div class="{{ section_name }}__modal-gallery">
+      {% for image in product.images %}
+      <div id='{{ section_name }}__modal-gallery-item-{{ forloop.index0 }}'>
+      {% render 'lazyload-image', alt_text: product.title, image: image %}
+      </div>
+      {% endfor %}
+      </div>
+    </div>
+  </div>
+</div>

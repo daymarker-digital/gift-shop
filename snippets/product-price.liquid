@@ -1,0 +1,46 @@
+{%- if product and product != blank -%}
+
+  {%- comment -%}
+
+      Accepts:
+      - classes: {String} Any combination classes, be it multiple classes or a single class
+      - product: {Object} Product Liquid object
+      - show_symbol: {Boolean} Conditionally show the currency symbol
+
+      Usage:
+      {%- render 'product-price', classes: 'my-great-class another-class', product: product, show_symbol: false -%}
+
+  {%- endcomment -%}
+
+  {%- liquid
+
+    assign template_name = 'main-product'
+    assign snippet_name = 'product-price'
+
+    assign classes = classes | default: 'main-product__price'
+    assign currency_symbol = shop.currency.symbol | default: '$'
+    assign show_symbol = show_symbol | default: false
+
+    assign product_price = product.price
+    assign product_price_compare = product.compare_at_price
+
+    if show_symbol
+      assign classes = classes | append: ' ' | append: 'with-currency-symbol'
+    endif
+
+  -%}
+
+  <div class="{{ classes }} {{ snippet_name }}">
+    <span class="{{ snippet_name }}__amount">
+      {%- if show_symbol -%}<span class="{{ snippet_name }}__currency-symbol">{{- currency_symbol -}}</span>{%- endif -%}
+      <span class="{{ snippet_name }}__cost">{{- product_price | divided_by: 100 -}}</span>
+    </span>
+    {%- if product_price_compare -%}
+      <span class="{{ snippet_name }}__amount compare-at-price">
+        {%- if show_symbol -%}<span class="{{ snippet_name }}__currency-symbol">{{- currency_symbol -}}</span>{%- endif -%}
+        <span class="{{ snippet_name }}__cost">{{- product_price_compare | divided_by: 100 -}}</span>
+      </span>
+    {%- endif -%}
+  </div>
+
+{%- endif -%}

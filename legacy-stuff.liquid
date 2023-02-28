@@ -1,0 +1,33 @@
+  <button
+                    class='{{ section_name }}__button-add-to-cart button button--secondary js-add-to-cart'
+                    type='submit'
+                    name='add'
+                    {% unless product_shop_button_enabled %}disabled{% endunless %}
+                  >
+                    <span class='button__title'>{% if product.available %}Add to Bag{% else %}Sold Out!{% endif %}</span>
+                  </button>
+
+                  <div class='{{ section_name }}__info intro d-none d-lg-block'>
+
+                  <strong class='{{ section_name }}__title heading--1'>{{ product.title }}</strong>
+                  {%
+                    render 'price',
+                      classes: 'main-product__price'
+                      compare_at: product.compare_at_price,
+                      price: product.price,
+                      show_symbol: true
+                  %}
+                </div>
+
+                {%- if product_modal_id != blank -%}
+                        <button
+                          class='button'
+                          data-product-image-index='0'
+                          data-bs-target='#{{ modal_id }}'
+                          data-bs-toggle='modal'
+                          id='button-open-product-images-modal'
+                          type='button'
+                        >
+                          {%- render 'svg', type: 'icon.close' -%}
+                        </button>
+                      {%- endif -%}

@@ -98,7 +98,7 @@ const addToCart = ( id = 0, quantity = 1 ) => {
       });
     })
     .catch( error => {
-      console.log('success add to cart', error )
+      console.log('success add to cart', error );
     });
   }
 };

@@ -11,19 +11,13 @@
   assign background_colour = section.settings.background | default: 'white'
   assign container = section.settings.container | default: 'container'
 
-  assign product_images = false
-  assign product_gallery = false
+  assign product_images = product.images | default: false
   assign product_modal_id = section_id | append: '--modal'
   assign product_shop_button_enabled = false
+  assign product_tags = product.tags | default: false
+
   if product.has_only_default_variant and product.available
     assign product_shop_button_enabled = true
-  endif
-
-  if product.images.size > 0
-    assign product_images = true
-    if product.images.size > 1
-      assign product_gallery = true
-    endif
   endif
 
   if section.settings.anchor_id != blank
@@ -63,207 +57,70 @@
 {%- endstyle -%}
 
 <div class="{{ section_classes }}" id="{{ section_id }}">
-  <form action='/cart/add' method='post' enctype='multipart/form-data'>
-    {% render 'bs-container', state: 'open', container: container %}
+  {% render 'bs-container', state: 'open', container: container %}
 
-      <div class='sticky-column'>
-        <div class='sticky-column__container'>
+    <div class='sticky-column'>
+      <div class='sticky-column__container'>
 
-          <div class='sticky-column__column sticky-column__column--scroll' data-column-width='two-thirds'>
-            <div class='sticky-column__main'>
-              <div class='sticky-column__content'>
+        <div class='sticky-column__column sticky-column__column--scroll' data-column-width='two-thirds'>
+          <div class='sticky-column__main'>
+            <div class='sticky-column__content'>
 
-                <div class='{{ section_name }}__info intro d-lg-none'>
-                  <h1 class='{{ section_name }}__title heading--1'>{{ product.title }}</h1>
-                  {% render 'price', classes: 'main-product__price' compare_at: product.compare_at_price, price: product.price, show_symbol: true %}
+              {% capture product_title_classes %}{{ section_name }}__title heading--1 d-lg-none{% endcapture %}
+              {% render 'product-title', classes: product_title_classes, product: product, tag: 'h1'  %}
+
+              {% capture product_price_classes %}{{ section_name }}__price d-lg-none{% endcapture %}
+              {% render 'product-price', classes: product_price_classes, product: product, show_symbol: true %}
+
+              {% if product.images.size > 0 %}
+
+                <div class='{{ section_name }}__images d-lg-none'>
+                  {% render 'product-badge', product: product  %}
+                  {% render 'product-image-gallery-modal-trigger', modal_id: product_modal_id %}
+                  {% render 'product-image-gallery-carousel', carousel_bullets: true, modal_id: product_modal_id, product: product %}
                 </div>
 
+                <div class='{{ section_name }}__images d-none d-lg-block'>
+                  {% render 'product-badge', product: product  %}
+                  {% render 'product-image-gallery-grid', modal_id: product_modal_id, product: product %}
+                </div>
 
-                {% if product_images %}
+              {% endif %}
 
-                  <div class='{{ section_name }}__images d-lg-none'>
-
-                    {% for tag in product.tags %}
-                      {% if 'Natures' == tag %}
-                        <div class='{{ section_name }}__badge'>
-                          {% render 'svg-icon', type: '20%' %}
-                        </div>
-                        {% break %}
-                      {% endif %}
-                    {% endfor %}
-
-                    {% if product_gallery %}
-                      <div
-                        class='glide js--glide'
-                        id='product__media-gallery'
-                        data-glide-style='{{ section_name }}'
-                      >
-                    {% endif %}
-
-                      {% if product_gallery %}
-                        <button
-                          class='glide__button-open-modal button'
-                          data-product-image-index='1'
-                          data-bs-target='#{{ product_modal_id }}'
-                          data-bs-toggle='modal'
-                          id='button-open-product-images-modal'
-                          type='button'
-                        >
-                          {% render 'svg-icon', type: 'close' %}
-                        </button>
-                      {% endif %}
-
-                      {% if product_gallery %}
-                        <div class='glide__track' data-glide-el='track'>
-                        <ul class='glide__slides'>
-                      {% endif %}
-
-                        {% for image in product.images %}
-
-                          {%- liquid
-                            assign show_badge = false
-                            if forloop.first
-                              assign show_badge = true
-                            endif
-                          -%}
-
-                          {% if product_gallery %}<li class='glide__slide' data-index='{{ forloop.index }}'>{% endif %}
-                            <div class='{{ section_name }}__images-item'>
-                              {% render 'lazyload-image', alt_text: product.title, image: image %}
-                            </div>
-                          {% if product_gallery %}</li>{% endif %}
-
-                        {% endfor %}
-
-                      {% if product_gallery %}
-                        </ul>
-                        </div>
-                      {% endif %}
-
-                      {% if product_gallery %}
-                        <div class="glide__bullets" data-glide-el="controls[nav]">
-                          {% for image in product.images %}
-                            <button class="glide__bullet" data-glide-dir="={{ forloop.index0 }}" type="button"></button>
-                          {% endfor %}
-                        </div>
-                      {% endif %}
-
-                    {% if product_gallery %}
-                      </div>
-                    {% endif %}
-
-                  </div>
-
-                  <div class='{{ section_name }}__images d-none d-lg-block'>
-
-                    {% for tag in product.tags %}
-                      {% if 'Natures' == tag %}
-                        <div class='{{ section_name }}__badge'>
-                          {% render 'svg-icon', type: '20%' %}
-                        </div>
-                        {% break %}
-                      {% endif %}
-                    {% endfor %}
-
-                    <div class='{{ section_name }}__grid'>
-                      {% for image in product.images %}
-
-                        {% assign image_id = section_name | append: '__images-item-modail-id-' | append: image.id %}
-
-                        <div
-                          class='{{ section_name }}__grid-item'
-                          data-bs-target='#{{ product_modal_id }}'
-                          data-bs-toggle='modal'
-                          data-product-image-id='{{ image_id }}'
-                          data-product-image-index='{{ forloop.index }}'
-                        >
-                          {% render 'lazyload-image', alt_text: product.title, image: image %}
-                        </div>
-
-                      {% endfor %}
-                    </div>
-                  </div>
-
-                {% endif %}
-
-              </div>
             </div>
           </div>
+        </div>
 
-          <div class='sticky-column__column sticky-column__column--stuck' data-column-width='one-third'>
-            <div class='sticky-column__main'>
-              <div class='sticky-column__content'>
+        <div class='sticky-column__column sticky-column__column--stuck' data-column-width='one-third'>
+          <div class='sticky-column__main'>
+            <div class='sticky-column__content'>
 
-                <div class='{{ section_name }}__info intro d-none d-lg-block'>
-                  <strong class='{{ section_name }}__title heading--1'>{{ product.title }}</strong>
-                  {% render 'price', classes: 'main-product__price' compare_at: product.compare_at_price, price: product.price, show_symbol: true %}
-                </div>
+              {% capture product_title_classes %}{{ section_name }}__title heading--1 d-none d-lg-block{% endcapture %}
+              {% render 'product-title', classes: product_title_classes, product: product, tag: 'strong'  %}
 
-                <div class='{{ section_name }}__info description'>
-                  <div class='{{ section_name }}__description body-copy--1'>{{ product.description }}</div>
-                </div>
+              {% capture product_price_classes %}{{ section_name }}__price d-none d-lg-block{% endcapture %}
+              {% render 'product-price', classes: product_price_classes, product: product, show_symbol: true %}
 
-                <div class='{{ section_name }}__info options'>
+              {% render 'product-description', product: product %}
 
-                  {% if product.has_only_default_variant %}
-                    <input class='{{ section_name }}__option input d-none' type='radio' name='id' value='{{ product.first_available_variant.id }}' checked readonly>
-                  {% else %}
-                    <div class='{{ section_name }}__options' role="list">
-                      {% for variant in product.variants %}
-                        <div class='{{ section_name }}__option radio {% unless variant.available %}unavailable{% endunless %}' role="listitem">
-                          <label {% unless variant.available %}disabled{% endunless %}>
-                            <input class='radio__input' type='radio' name='id' value='{{ variant.id }}' {% unless variant.available %}disabled{% endunless %}>
-                            <div class='radio__item'>
-                              <span class='radio__title'>{{ variant.title }}</span>
-                            </div>
-                          </label>
-                        </div>
-                      {% endfor %}
-                    </div>
-                  {% endif %}
+              <form action='/cart/add' method='post' enctype='multipart/form-data'>
+                {% render 'product-options', product: product %}
+                {% render 'product-actions', product: product %}
+              </form>
 
-                  <input class='d-none' type='number' id='Quantity' name='quantity' value='1' min='1' readonly>
-
-                </div>
-
-                <div class='{{ section_name }}__info actions'>
-
-                  <button
-                    class='{{ section_name }}__button-add-to-cart button button--secondary js-add-to-cart'
-                    type='submit'
-                    name='add'
-                    {% unless product_shop_button_enabled %}disabled{% endunless %}
-                  >
-                    <span class='button__title'>{% if product.available %}Add to Bag{% else %}Sold Out!{% endif %}</span>
-                  </button>
-
-                </div>
-
-              </div>
             </div>
           </div>
-
         </div>
-      </div>
 
-    {% render 'bs-container', state: 'closed', container %}
-  </form>
-  {% if product_gallery %}
-    <div class="{{ section_name }}__modal modal fade" id="{{ product_modal_id }}" tabindex="-1" aria-labelledby="{{ product_modal_id }}" aria-hidden="true">
-      <div class="modal-dialog">
-        <div class="modal-content">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <div class="{{ section_name }}__modal-gallery">
-            {% for image in product.images %}
-              <div id='{{ section_name }}__modal-gallery-item-{{ forloop.index0 }}'>
-                {% render 'lazyload-image', alt_text: product.title, image: image %}
-              </div>
-            {% endfor %}
-          </div>
-        </div>
       </div>
     </div>
+
+  {% render 'bs-container', state: 'closed', container %}
+
+  {% if product.images.size > 0 %}
+    {% render 'product-image-gallery-modal', modal_id: product_modal_id, product: product %}
   {% endif %}
+
 </div>
 
 {% render 'json-ld', type: 'product' %}

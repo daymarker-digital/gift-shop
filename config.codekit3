@@ -815,17 +815,6 @@
       "sC" : 3,
       "tS" : 1
     },
-    "\/js\/modules\/modals.js" : {
-      "bF" : 4,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/assets\/modals.min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 1
-    },
     "\/js\/modules\/money.js" : {
       "bF" : 4,
       "ft" : 64,
@@ -928,6 +917,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/layout\/theme.liquid",
+      "oF" : 0
+    },
+    "\/legacy-stuff.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/legacy-stuff.liquid",
       "oF" : 0
     },
     "\/locales\/bg-BG.json" : {
@@ -2814,6 +2811,70 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/snippets\/price.liquid",
+      "oF" : 0
+    },
+    "\/snippets\/product-badge.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/snippets\/product-badge.liquid",
+      "oF" : 0
+    },
+    "\/snippets\/product-image-gallery-carousel.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/snippets\/product-image-gallery-carousel.liquid",
+      "oF" : 0
+    },
+    "\/snippets\/product-image-gallery-grid.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/snippets\/product-image-gallery-grid.liquid",
+      "oF" : 0
+    },
+    "\/snippets\/product-image-gallery-modal-trigger.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/snippets\/product-image-gallery-modal-trigger.liquid",
+      "oF" : 0
+    },
+    "\/snippets\/product-image-gallery-modal.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/snippets\/product-image-gallery-modal.liquid",
+      "oF" : 0
+    },
+    "\/snippets\/product-options.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/snippets\/product-options.liquid",
+      "oF" : 0
+    },
+    "\/snippets\/product-price.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/snippets\/product-price.liquid",
+      "oF" : 0
+    },
+    "\/snippets\/product-title.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/snippets\/product-title.liquid",
       "oF" : 0
     },
     "\/snippets\/section-styles.liquid" : {

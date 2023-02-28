@@ -1,0 +1,77 @@
+{%- if product and product != blank -%}
+
+  {%- comment -%}
+
+      Accepts:
+      - carousel_bullets: {Boolean} Optionally show carousel bullets
+      - classes: {String} Optionally include custom classes, be it multiple classes or a single class
+      - product: {Object} Product Liquid object
+
+      Usage:
+      {%-
+        render 'product-image-gallery-carousel',
+          carousel_bullets: true,
+          classes: 'my-class another-class',
+          modal_id: 'some-unique-element-id',
+          product: product
+      -%}
+
+  {%- endcomment -%}
+
+  {%- liquid
+
+    assign template_name = 'main-product'
+    assign snippet_name = 'product-image-gallery-carousel'
+
+    assign carousel_bullets = carousel_bullets | default: false
+    assign classes = classes | default: 'main-product__image-gallery-carousel'
+    assign modal_id = modal_id | default: ''
+
+    assign is_gallery = false
+    assign has_images = false
+    assign product_images = product.images | default: false
+
+    if product_images.size > 0
+      assign has_images = true
+      if product_images.size > 1
+        assign is_gallery = true
+      endif
+    endif
+
+  -%}
+
+{%- endif -%}
+
+{%- if has_images -%}
+
+  {%- if is_gallery -%}
+    <div class='{{ classes }} {{ snippet_name }} glide js--glide' id='{{ template_name }}__image-gallery-carousel' data-glide-style='{{ snippet_name }}'>
+  {%- endif -%}
+
+    {%- if is_gallery -%}<div class='glide__track' data-glide-el='track'>{%- endif -%}
+      {%- if is_gallery -%}<ul class='glide__slides'>{%- endif -%}
+
+        {%- for image in product.images -%}
+          {%- if is_gallery -%}<li class='glide__slide' data-index='{{ forloop.index0 }}'>{%- endif -%}
+            <div class='{{ section_name }}__item' data-index='{{ forloop.index0 }}'>
+              {%- render 'lazyload-image', alt_text: product.title, image: image -%}
+            </div>
+          {%- if is_gallery -%}</li>{%- endif -%}
+        {%- endfor -%}
+
+      {%- if is_gallery -%}</ul>{%- endif -%}
+    {%- if is_gallery -%}</div>{%- endif -%}
+
+    {%- if is_gallery and carousel_bullets -%}
+      <div class="glide__bullets" data-glide-el="controls[nav]">
+        {%- for image in product.images -%}
+          <button class="glide__bullet" data-glide-dir="={{ forloop.index0 }}" type="button"></button>
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+
+  {%- if is_gallery -%}
+    </div>
+  {%- endif -%}
+
+{%- endif -%}
