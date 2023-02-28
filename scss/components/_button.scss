@@ -5,6 +5,7 @@
 
   @extend %ui-base;
   @extend %ui-transition;
+  @extend %ui-disabled;
 
   &--primary,
   &--secondary {

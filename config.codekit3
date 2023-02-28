@@ -815,6 +815,17 @@
       "sC" : 3,
       "tS" : 1
     },
+    "\/js\/modules\/modals.js" : {
+      "bF" : 4,
+      "ft" : 64,
+      "ma" : 0,
+      "mi" : 1,
+      "oA" : 0,
+      "oAP" : "\/assets\/modals.min.js",
+      "oF" : 0,
+      "sC" : 3,
+      "tS" : 1
+    },
     "\/js\/modules\/money.js" : {
       "bF" : 4,
       "ft" : 64,

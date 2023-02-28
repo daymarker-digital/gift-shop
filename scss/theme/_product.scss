@@ -1,4 +1,5 @@
 @use "../utils/mixins/breakpoint" as *;
+@use "../utils/mixins/ui" as *;
 
 .main-product {
 
@@ -7,6 +8,28 @@
   }
 
   .glide {
+
+    &__bullet {
+      @extend %ui-base;
+      @extend %ui-transition;
+      background: rgba(var(--theme-colour-black), 1);
+      opacity: 0.33;
+      width: 30px;
+      height: 2px;
+      &--active {
+        opacity: 1;
+      }
+    }
+
+    &__bullets {
+      display: flex;
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      gap: 15px;
+      margin-top: 26px;
+    }
+
     &__button-open-modal {
       position: absolute;
       top: 30px;
@@ -20,6 +43,16 @@
         width: 100%;
         display: block;
       }
+    }
+
+  }
+
+  .modal {
+    &-content {
+      padding: 20px;
+    }
+    &-dialog {
+      margin: 0;
     }
   }
 
@@ -42,6 +75,8 @@
     &-add-to-cart {
       height: var(--theme-radio-size);
       font-size: 15px;
+      width: 100%;
+      max-width: 350px;
     }
   }
 

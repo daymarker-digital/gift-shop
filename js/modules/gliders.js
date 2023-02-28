@@ -39,6 +39,10 @@ const createGliderFromElement = ( element = {} ) => {
 
   glide.on( events, event => {
     switch ( style ) {
+      case 'main-product': {
+        updateProductGalleryModalTrigger( glide.index );
+        break;
+      }
       default: {
         setTimeout( () => updateGlideTrackHeight( element ), 100 );
         break;
@@ -99,6 +103,11 @@ const updateGlideTrackHeight = ( element = false ) => {
       AOS.refresh();
     }
   }
+};
+
+const updateProductGalleryModalTrigger = ( index = 0 ) => {
+  let button = document.getElementById('button-open-product-images-modal') || false;
+  if ( button ) button.dataset.productImageIndex = index;
 };
 
 const init = () => {

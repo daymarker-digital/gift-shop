@@ -13,6 +13,13 @@
   // ---------------------------------------- Primary
   @if $style == 'primary' or  $style == 1 {
 
+    .button,
+    .link {
+      &__title {
+        padding-top: 3px;
+      }
+    }
+
     @include akkurate-mono();
     @include breakpoint(xs) { height: 30px; font-size: 10px; }
     @include breakpoint(sm) { height: 32px; font-size: 12px; }
@@ -58,11 +65,6 @@
         $colour-hover: map.get( $theme-colours, 'white' );
       }
 
-      .button__title,
-      .link__title {
-        padding-top: 3px;
-      }
-
       &-#{$name} {
         background: $background;
         color: $colour;
@@ -90,6 +92,13 @@
     }
 
     @include border-solid( var(--theme-border-width), 'inherit' );
+    background: transparent;
+    color: map.get( $theme-colours, 'black' );
+
+    &:hover {
+      background: map.get( $theme-colours, 'black' );
+      color: map.get( $theme-colours, 'white' );
+    }
 
   }
 

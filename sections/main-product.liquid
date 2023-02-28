@@ -93,11 +93,22 @@
                     {% endfor %}
 
                     {% if product_gallery %}
-                      <div class='glide js--glider' id='product__media-gallery'>
+                      <div
+                        class='glide js--glide'
+                        id='product__media-gallery'
+                        data-glide-style='{{ section_name }}'
+                      >
                     {% endif %}
 
                       {% if product_gallery %}
-                        <button class='glide__button-open-modal button' data-product-image-index='1' data-bs-target='#{{ product_modal_id }}' data-bs-toggle='modal' type="button">
+                        <button
+                          class='glide__button-open-modal button'
+                          data-product-image-index='1'
+                          data-bs-target='#{{ product_modal_id }}'
+                          data-bs-toggle='modal'
+                          id='button-open-product-images-modal'
+                          type='button'
+                        >
                           {% render 'svg-icon', type: 'close' %}
                         </button>
                       {% endif %}
@@ -130,11 +141,11 @@
                       {% endif %}
 
                       {% if product_gallery %}
-                        <ul class='glide__thumbnail-list'>
+                        <div class="glide__bullets" data-glide-el="controls[nav]">
                           {% for image in product.images %}
-                            <li class='glide__thumbnail' data-index='{{ forloop.index0 }}' data-glide-id='product__media-gallery'></li>
+                            <button class="glide__bullet" data-glide-dir="={{ forloop.index0 }}" type="button"></button>
                           {% endfor %}
-                        </ul>
+                        </div>
                       {% endif %}
 
                     {% if product_gallery %}
@@ -218,7 +229,7 @@
                 <div class='{{ section_name }}__info actions'>
 
                   <button
-                    class='{{ section_name }}__button-add-to-cart button--outlined js-add-to-cart'
+                    class='{{ section_name }}__button-add-to-cart button button--secondary js-add-to-cart'
                     type='submit'
                     name='add'
                     {% unless product_shop_button_enabled %}disabled{% endunless %}
@@ -237,18 +248,24 @@
 
     {% render 'bs-container', state: 'closed', container %}
   </form>
+  {% if product_gallery %}
+    <div class="{{ section_name }}__modal modal fade" id="{{ product_modal_id }}" tabindex="-1" aria-labelledby="{{ product_modal_id }}" aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <div class="{{ section_name }}__modal-gallery">
+            {% for image in product.images %}
+              <div id='{{ section_name }}__modal-gallery-item-{{ forloop.index0 }}'>
+                {% render 'lazyload-image', alt_text: product.title, image: image %}
+              </div>
+            {% endfor %}
+          </div>
+        </div>
+      </div>
+    </div>
+  {% endif %}
 </div>
 
-{% capture modal_images %}
-  {% for image in product.images %}
-    {% assign image_id = section_name | append: '__images-item-modail-id-' | append: image.id %}
-    <div id='{{ image_id }}' data-product-image-id='{{ media_id }}' data-product-image-index='{{ forloop.index }}'>
-      {% render 'lazyload-image', alt_text: product.title, image: image %}
-    </div>
-  {% endfor %}
-{% endcapture %}
-
-{% render 'bs-modal', modal_content: modal_images, modal_id: product_modal_id %}
 {% render 'json-ld', type: 'product' %}
 
 {% schema %}
