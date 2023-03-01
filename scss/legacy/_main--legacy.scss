@@ -62,24 +62,24 @@
   //////////////////////////////////////////////////////////
 
   // ---------------------------------------- Body Copy
-  --theme-body-copy: #{ map-get( $theme-body-copy-sizes, 'base' ) };
-  --theme-body-copy--sm: #{ map-get( $theme-body-copy-sizes, 'sm' ) };
-  --theme-body-copy--md: #{ map-get( $theme-body-copy-sizes, 'md' ) };
-  --theme-body-copy--lg: #{ map-get( $theme-body-copy-sizes, 'lg' ) };
-  --theme-body-copy--xl: #{ map-get( $theme-body-copy-sizes, 'xl' ) };
-  --theme-body-copy--xxl: #{ map-get( $theme-body-copy-sizes, 'xxl' ) };
+  --theme-font-size-body-copy: #{ map-get( $theme-body-copy-sizes, 'base' ) };
+  --theme-font-size-body-copy--sm: #{ map-get( $theme-body-copy-sizes, 'sm' ) };
+  --theme-font-size-body-copy--md: #{ map-get( $theme-body-copy-sizes, 'md' ) };
+  --theme-font-size-body-copy--lg: #{ map-get( $theme-body-copy-sizes, 'lg' ) };
+  --theme-font-size-body-copy--xl: #{ map-get( $theme-body-copy-sizes, 'xl' ) };
+  --theme-font-size-body-copy--xxl: #{ map-get( $theme-body-copy-sizes, 'xxl' ) };
 
   // ---------------------------------------- Border
   --theme-border-radius: #{ map-get( $theme-border, 'radius' ) };
   --theme-border-width: #{ map-get( $theme-border, 'width' ) };
 
   // ---------------------------------------- Button | Font Size
-  --theme-button-font-size: #{ map-get( $theme-button-font-sizes, base ) };
-  --theme-button-font-size--sm: #{ map-get( $theme-button-font-sizes, sm ) };
-  --theme-button-font-size--md: #{ map-get( $theme-button-font-sizes, md ) };
-  --theme-button-font-size--lg: #{ map-get( $theme-button-font-sizes, lg ) };
-  --theme-button-font-size--xl: #{ map-get( $theme-button-font-sizes, xl ) };
-  --theme-button-font-size--xxl: #{ map-get( $theme-button-font-sizes, xxl ) };
+  --theme-font-size-button: #{ map-get( $theme-button-font-sizes, base ) };
+  --theme-font-size-button--sm: #{ map-get( $theme-button-font-sizes, sm ) };
+  --theme-font-size-button--md: #{ map-get( $theme-button-font-sizes, md ) };
+  --theme-font-size-button--lg: #{ map-get( $theme-button-font-sizes, lg ) };
+  --theme-font-size-button--xl: #{ map-get( $theme-button-font-sizes, xl ) };
+  --theme-font-size-button--xxl: #{ map-get( $theme-button-font-sizes, xxl ) };
 
   // ---------------------------------------- Button | Height
   --theme-button-min-height: #{ map-get( $theme-button-min-heights, base ) };

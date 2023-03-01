@@ -1677,6 +1677,36 @@
       "pg" : 0,
       "sct" : 0
     },
+    "\/scss\/components\/_product-actions.scss" : {
+      "aP" : 1,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/assets\/_product-actions.css",
+      "oF" : 0,
+      "oS" : 3,
+      "pg" : 0,
+      "sct" : 0
+    },
+    "\/scss\/components\/_product-options.scss" : {
+      "aP" : 1,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/assets\/_product-options.css",
+      "oF" : 0,
+      "oS" : 3,
+      "pg" : 0,
+      "sct" : 0
+    },
     "\/scss\/components\/_radio.scss" : {
       "aP" : 1,
       "bl" : 0,
@@ -2247,6 +2277,21 @@
       "pg" : 0,
       "sct" : 0
     },
+    "\/scss\/utils\/mixins\/_tools.scss" : {
+      "aP" : 1,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/assets\/_tools.css",
+      "oF" : 0,
+      "oS" : 3,
+      "pg" : 0,
+      "sct" : 0
+    },
     "\/scss\/utils\/mixins\/_ui.scss" : {
       "aP" : 1,
       "bl" : 0,
@@ -2257,6 +2302,21 @@
       "ma" : 0,
       "oA" : 1,
       "oAP" : "\/assets\/_ui.css",
+      "oF" : 0,
+      "oS" : 3,
+      "pg" : 0,
+      "sct" : 0
+    },
+    "\/scss\/vendors\/_bootstrap-override-variables.scss" : {
+      "aP" : 1,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/assets\/_bootstrap-override-variables.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -2813,12 +2873,28 @@
       "oAP" : "\/snippets\/price.liquid",
       "oF" : 0
     },
+    "\/snippets\/product-actions.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/snippets\/product-actions.liquid",
+      "oF" : 0
+    },
     "\/snippets\/product-badge.liquid" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/snippets\/product-badge.liquid",
+      "oF" : 0
+    },
+    "\/snippets\/product-description.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/snippets\/product-description.liquid",
       "oF" : 0
     },
     "\/snippets\/product-image-gallery-carousel.liquid" : {
@@ -2867,6 +2943,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/snippets\/product-price.liquid",
+      "oF" : 0
+    },
+    "\/snippets\/product-quantity.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/snippets\/product-quantity.liquid",
       "oF" : 0
     },
     "\/snippets\/product-title.liquid" : {

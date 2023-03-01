@@ -76,7 +76,7 @@
       .navigation {
         &__link {
           font-family: var(--theme-font-family--monospace--akkurat-mono);
-          font-size: calc(var(--theme-body-copy) * 0.8);
+          font-size: calc(var(--theme-font-size-body-copy) * 0.8);
           font-weight: 400;
           line-height: 1.1;
           text-transform: uppercase;
@@ -165,7 +165,7 @@
         order: 1;
         .navigation {
           &__link {
-            font-size: calc(var(--theme-body-copy--sm) * 0.8);
+            font-size: calc(var(--theme-font-size-body-copy--sm) * 0.8);
           }
         }
       }
@@ -200,7 +200,7 @@
         grid-template-columns: repeat(2, 135px);
         .navigation {
           &__link {
-            font-size: calc(var(--theme-body-copy--md) * 0.8);
+            font-size: calc(var(--theme-font-size-body-copy--md) * 0.8);
           }
         }
       }
@@ -237,7 +237,7 @@
         grid-template-columns: repeat(2, 160px);
         .navigation {
           &__link {
-            font-size: calc(var(--theme-body-copy--lg) * 0.8);
+            font-size: calc(var(--theme-font-size-body-copy--lg) * 0.8);
           }
         }
       }
@@ -273,7 +273,7 @@
         grid-template-columns: repeat(2, 170px);
         .navigation {
           &__link {
-            font-size: calc(var(--theme-body-copy--xl) * 0.8);
+            font-size: calc(var(--theme-font-size-body-copy--xl) * 0.8);
           }
         }
       }
@@ -305,7 +305,7 @@
         grid-template-columns: repeat(2, 180px);
         .navigation {
           &__link {
-            font-size: calc(var(--theme-body-copy--xxl) * 0.8);
+            font-size: calc(var(--theme-font-size-body-copy--xxl) * 0.8);
           }
         }
       }

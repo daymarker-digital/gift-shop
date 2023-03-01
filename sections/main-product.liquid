@@ -67,7 +67,7 @@
             <div class='sticky-column__content'>
 
               {% capture product_title_classes %}{{ section_name }}__title heading--1 d-lg-none{% endcapture %}
-              {% render 'product-title', classes: product_title_classes, product: product, tag: 'h1'  %}
+              {% render 'product-title', classes: product_title_classes, element_tag: 'h1', product: product %}
 
               {% capture product_price_classes %}{{ section_name }}__price d-lg-none{% endcapture %}
               {% render 'product-price', classes: product_price_classes, product: product, show_symbol: true %}
@@ -96,15 +96,17 @@
             <div class='sticky-column__content'>
 
               {% capture product_title_classes %}{{ section_name }}__title heading--1 d-none d-lg-block{% endcapture %}
-              {% render 'product-title', classes: product_title_classes, product: product, tag: 'strong'  %}
+              {% render 'product-title', classes: product_title_classes, element_tag: 'strong', product: product %}
 
               {% capture product_price_classes %}{{ section_name }}__price d-none d-lg-block{% endcapture %}
               {% render 'product-price', classes: product_price_classes, product: product, show_symbol: true %}
 
               {% render 'product-description', product: product %}
 
-              <form action='/cart/add' method='post' enctype='multipart/form-data'>
+              <form class="{{ section_name }}__form-add-to-cart" action='/cart/add' method='post' enctype='multipart/form-data'>
                 {% render 'product-options', product: product %}
+                {% capture product_quantity_classes %}{{ section_name }}__quantity d-none{% endcapture %}
+                {% render 'product-quantity', classes: product_quantity_classes, product: product %}
                 {% render 'product-actions', product: product %}
               </form>
 

@@ -1,0 +1,22 @@
+{%- if product and product != blank -%}
+
+  {%- liquid
+
+    assign template_name = 'main-product'
+    assign snippet_name = 'product-quantity'
+
+    assign classes = classes | default: 'main-product__quantity'
+
+  -%}
+
+  <div class='{{ classes }} {{ snippet_name }}'>
+    <input
+      min='1'
+      name='quantity'
+      type='number'
+      value='1'
+      readonly
+    />
+  </div>
+
+{%- endif -%}

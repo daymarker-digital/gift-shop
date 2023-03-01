@@ -81,6 +81,8 @@
   // ---------------------------------------- Secondary
   @if $style == 'secondary' or  $style == 2  {
 
+    @include border-solid( var(--theme-border-width), 'inherit' );
+
     @each $name, $value in $theme-button-heights {
       @if $name == 'base' {
         height: $value;
@@ -91,13 +93,28 @@
       }
     }
 
-    @include border-solid( var(--theme-border-width), 'inherit' );
-    background: transparent;
-    color: map.get( $theme-colours, 'black' );
+    @each $name, $value in $theme-colours {
 
-    &:hover {
-      background: map.get( $theme-colours, 'black' );
-      color: map.get( $theme-colours, 'white' );
+      $background: transparent;
+      $background-hover: $value;
+
+      $border-color: $value;
+      $border-color-hover: $value;
+
+      $colour: $value;
+      $colour-hover: map.get( $theme-colours, 'white' );
+
+      &-#{$name} {
+        background: $background;
+        border-color: $border-color;
+        color: $colour;
+        &:hover {
+          background: $background-hover;
+          border-color: $border-color-hover;
+          color: $colour-hover;
+        }
+      }
+
     }
 
   }

@@ -53,7 +53,7 @@
 
         {%- for image in product.images -%}
           {%- if is_gallery -%}<li class='glide__slide' data-index='{{ forloop.index0 }}'>{%- endif -%}
-            <div class='{{ section_name }}__item' data-index='{{ forloop.index0 }}'>
+            <div class='{{ snippet_name }}__item' data-index='{{ forloop.index0 }}'>
               {%- render 'lazyload-image', alt_text: product.title, image: image -%}
             </div>
           {%- if is_gallery -%}</li>{%- endif -%}

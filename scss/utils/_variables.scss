@@ -1,4 +1,6 @@
-$theme-info: (
+@forward "../vendors/bootstrap-override-variables";
+
+$theme: (
   'theme-name': 'Gift-Shop 2.0',
   'theme-uri': 'https://weareverypolite.com',
   'description': 'Gift-Shop 2.0 Theme',
@@ -11,33 +13,24 @@ $theme-info: (
   'text-domain': 'very-polite-agency-shopify-2',
 );
 
-// ---------------------------------------- Typography | Body Copy
-$theme-body-copy-sizes: (
-  'base': 14px,
-  'sm': 14px,
-  'md': 16px,
-  'lg': 14px,
-  'xl': 14px,
-  'xxl': 16px
+// ---------------------------------------- AOS Settings
+$theme-aos-settings: (
+  'travel': 12px,
 );
 
-// ---------------------------------------- Border Radius
-$theme-border: (
+// ---------------------------------------- Border Settings
+$theme-border-settings: (
   'radius': 4px,
   'width': 2px,
 );
 
-// ---------------------------------------- Button | Font Size
-$theme-button-font-sizes: (
-  'base': 13px,
-  'sm': 14px,
-  'md': 15px,
-  'lg': 13px,
-  'xl': 14px,
-  'xxl': 15px
+// ---------------------------------------- AOS Settings
+$theme-bootstrap-settings: (
+  'gutter': 20px,
+  'fluid-padding': 20px
 );
 
-// ---------------------------------------- Button | Height
+// ---------------------------------------- Button Heights
 $theme-button-heights: (
   'base': 40px,
   'sm': 42px,
@@ -47,8 +40,8 @@ $theme-button-heights: (
   'xxl': 44px
 );
 
-// ---------------------------------------- Button | Height
-$theme-button-min-widths: (
+// ---------------------------------------- Button Widths
+$theme-button-widths: (
   'base': 136px,
   'sm': 136px,
   'md': 136px,
@@ -66,14 +59,43 @@ $theme-colours: (
   'yellow': #ffc700,
 );
 
+$theme-colours-rgb: (
+  'black': #111111,
+  'blue': #0038f5,
+  'red': #dc4117,
+  'white': #ffffff,
+  'yellow': #ffc700,
+);
+
+// ---------------------------------------- Font Families
+$theme-font-families: (
+  'sans-serif': sans-serif,
+  'sans-serif-sorry-sans': '"Sorry Sans", sans-serif',
+  'serif': serif,
+  'serif-not-sorry-serif': '"Not Sorry Serif", serif',
+  'cursive': cursive,
+  'mono': monospace,
+  'mono-akkurat-mono': '"Akkurat Mono LL", monospace'
+);
+
 // ---------------------------------------- Font Sizes | Body Copy
 $theme-font-sizes-body-copy: (
-  'base': 15px,
-  'sm': 16px,
-  'md': 17px,
-  'lg': 16px,
-  'xl': 17px,
-  'xxl': 18px
+  'base': 14px,
+  'sm': 14px,
+  'md': 16px,
+  'lg': 14px,
+  'xl': 14px,
+  'xxl': 16px
+);
+
+// ---------------------------------------- Font Sizes | Body Copy
+$theme-font-sizes-button: (
+  'base': 13px,
+  'sm': 14px,
+  'md': 15px,
+  'lg': 13px,
+  'xl': 14px,
+  'xxl': 15px
 );
 
 // ---------------------------------------- Font Sizes | Heading
@@ -86,34 +108,39 @@ $theme-font-sizes-heading: (
   'xxl': 52px
 );
 
-// ---------------------------------------- Header Height
+// ---------------------------------------- Header Heights
 $theme-header-heights: (
   'base': 100px,
   'sm': 110px,
   'md': 120px,
   'lg': 90px,
   'xl': 100px,
-  'xxl': 110px
+  'xxl': 110px,
+  'total': auto
 );
 
-// ---------------------------------------- Bootstrap | Gutter
-$grid-gutter-width: 20px;
-
-// ---------------------------------------- Bootstrap | Breakpoints
-$grid-breakpoints: (
-  xs: 0,
-  sm: 576px,
-  md: 768px,
-  lg: 992px,
-  xl: 1200px,
-  xxl: 1400px
+// ---------------------------------------- Input Heights
+$theme-input-heights: (
+  'base': 44px,
+  'sm': 46px,
+  'md': 48px,
+  'lg': 50px,
+  'xl': 52px,
+  'xxl': 54px
 );
 
-// ---------------------------------------- Bootstrap | Container Sizes
-$container-max-widths: (
-  sm: 540px,
-  md: 740px,
-  lg: 960px,
-  xl: 1160px,
-  xxl: 1360px
+// ---------------------------------------- Push Menu Width
+$theme-push-menu-widths: (
+  'base': 100%,
+  'sm': 100%,
+  'md': 100%,
+  'lg': 50%,
+  'xl': 50%,
+  'xxl': 40%
+);
+
+// ---------------------------------------- Transition Settings
+$theme-transition-settings: (
+  'duration': 280ms,
+  'opacity': 0.3333
 );

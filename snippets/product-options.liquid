@@ -1,9 +1,22 @@
 {%- if product and product != blank -%}
 
+  {%- comment -%}
+
+      Accepts:
+      - classes: {String} Any combination classes, be it multiple classes or a single class
+      - product: {Object} Product Liquid object
+
+      Usage:
+      {%- render 'product-options', classes: 'my-great-class another-class', product: product -%}
+
+  {%- endcomment -%}
+
   {%- liquid
 
-    assign template_name = 'product'
+    assign template_name = 'main-product'
     assign snippet_name = 'product-options'
+
+    assign classes = classes | default: 'main-product__options'
 
     assign product_available = product.available | default: false
     assign product_has_no_options = product.has_only_default_variant | default: false
@@ -11,55 +24,39 @@
 
   -%}
 
-  <div class="{{ template_name }}__options {{ snippet_name }}{% if product_has_no_options %} d-none{% endif %}">
+  <div class='{{ classes }} {{ snippet_name }}'>
 
     {% unless product_has_no_options %}
-      <strong class="{{ template_name }}__options-heading">Select a Size:</strong>
+      <strong class='{{ snippet_name }}__heading'>Select a Size:</strong>
     {% endunless %}
 
-    {% for variant in product.variants %}
-
-      <label class="{{ template_name }}__options-item">
-        <input
-          type="radio"
-          name="id"
-          class="{{ template_name }}__options-input"
-          value="{{ variant.id }}"
-          data-available="{{ variant.available }}"
-          data-compare-at-price="{{ variant.compare_at_price }}"
-          data-inventory-management="{{ variant.inventory_management }}"
-          data-price="{{ variant.price }}"
-          {% unless variant.available %}disabled{% endunless %}
-          {% if variant.available and product_first_variant_available %}
-            checked
-            {% assign product_first_variant_available = false %}
-          {% endif %}
-        />
-        <span>{{ variant.title }}</span>
-      </label>
-
-    {% endfor %}
+    <div class='{{ snippet_name }}__list'>
+      {% for variant in product.variants %}
+        <div class='{{ snippet_name }}__item radio {% unless variant.available %}unavailable{% endunless %}' role='listitem'>
+          <label class='radio__label' {% unless variant.available %}disabled{% endunless %}>
+            <input
+              class='radio__input'
+              name='id'
+              type='radio'
+              value='{{ variant.id }}'
+              data-available='{{ variant.available }}'
+              data-compare-at-price='{{ variant.compare_at_price }}'
+              data-inventory-management='{{ variant.inventory_management }}'
+              data-price='{{ variant.price }}'
+              {% unless variant.available %}disabled{% endunless %}
+              {% if variant.available and product_first_variant_available %}
+                checked
+                {% assign product_first_variant_available = false %}
+              {% endif %}
+            />
+            <div class='radio__item'>
+              <span class='radio__title'>{{ variant.title }}</span>
+            </div>
+          </label>
+        </div>
+      {% endfor %}
+    </div>
 
   </div>
 
 {%- endif -%}
-
-
- {% comment %} {% if product.has_only_default_variant %}
-                    <input class='{{ section_name }}__option input d-none' type='radio' name='id' value='{{ product.first_available_variant.id }}' checked readonly>
-                  {% else %}
-                    <div class='{{ section_name }}__options' role="list">
-                      {% for variant in product.variants %}
-                        <div class='{{ section_name }}__option radio {% unless variant.available %}unavailable{% endunless %}' role="listitem">
-                          <label {% unless variant.available %}disabled{% endunless %}>
-                            <input class='radio__input' type='radio' name='id' value='{{ variant.id }}' {% unless variant.available %}disabled{% endunless %}>
-                            <div class='radio__item'>
-                              <span class='radio__title'>{{ variant.title }}</span>
-                            </div>
-                          </label>
-                        </div>
-                      {% endfor %}
-                    </div>
-                  {% endif %}
-
-                  <input class='d-none' type='number' id='Quantity' name='quantity' value='1' min='1' readonly> {% endcomment %}

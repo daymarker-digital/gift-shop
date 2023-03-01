@@ -3,12 +3,12 @@
   {%- comment -%}
 
       Accepts:
-      - classes: {String} Any combination classes, be it multiple classes or a single class
+      - classes: {String} Optionally include custom classes, be it multiple classes or a single class
+      - element_tag: {String} Optionally use a different element tag
       - product: {Object} Product Liquid object
-      - tag: {String} Conditionally use different element tags where neccessary or needed
 
       Usage:
-      {%- render 'product-title', classes: 'my-great-class another-class', product: product, tag: 'strong' -%}
+      {%- render 'product-title', classes: 'my-great-class another-class', element_tag: 'strong', product: product -%}
 
   {%- endcomment -%}
 
@@ -18,10 +18,10 @@
     assign snippet_name = 'product-title'
 
     assign classes = classes | default: 'main-product__title'
-    assign tag = tag | default: 'h1'
+    assign element_tag = element_tag | default: 'h1'
 
   -%}
 
-   <{{ tag }} class='{{ classes }}'>{{ product.title }}</{{ tag }}>
+   <{{ element_tag }} class='{{ classes }} {{ snippet_name }}'>{{ product.title }}</{{ element_tag }}>
 
 {%- endif -%}

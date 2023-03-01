@@ -1,0 +1,38 @@
+@use "../utils/mixins/breakpoint" as *;
+
+.product-options {
+
+  &__list {
+    display: flex;
+    gap: 10px;
+    flex-flow: row nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+  }
+
+  @include breakpoint(lg) {
+
+    &__list {
+      gap: 12px;
+    }
+
+  }
+
+  @include breakpoint(lg) {
+
+    &__list {
+      gap: 16px;
+    }
+
+  }
+
+  @include breakpoint(xxl) {
+
+    &__list {
+      gap: 18px;
+    }
+
+  }
+
+}
