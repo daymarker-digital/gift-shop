@@ -11,7 +11,10 @@
       {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
     </title>
 
-    {% render 'theme--preconnect-resources', resources: 'https://cdn.shopify.com, https://v.shopify.com, https://cdn.jsdelivr.net, https://www.google-analytics.com' %}
+    {%
+      render 'theme--preconnect-resources',
+      resources: 'https://cdn.shopify.com, https://v.shopify.com, https://cdn.jsdelivr.net, https://www.google-analytics.com'
+    %}
 
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -29,7 +32,10 @@
     {{ content_for_header }}
 
     <!-- Preload Fonts  -->
-    {% render 'theme--preload-fonts', fonts: 'AkkuratMonoLLSub-RegularSubset, AkkuratMonoLLTT-Bold, AkkuratMonoLLWeb-Regular, NotSorrySerif-Bold, SorrySans-BoldExtended' %}
+    {%
+      render 'theme--preload-fonts',
+      fonts: 'AkkuratMonoLLSub-RegularSubset, AkkuratMonoLLTT-Bold, AkkuratMonoLLWeb-Regular, NotSorrySerif-Bold, SorrySans-BoldExtended'
+    %}
 
     <!-- SEO -->
     {% assign enable_seo = true %}
@@ -134,7 +140,8 @@
         }
       };
     </script>
-    <script src="{{ 'main.min.js' | asset_url }}" defer></script>
+
+    <script defer src="{{ 'main.min.js' | asset_url }}"></script>
 
   </body>
 </html>

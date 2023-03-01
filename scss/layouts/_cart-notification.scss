@@ -2,8 +2,8 @@
 
 .cart-notification {
 
-  border: 2px solid rgba(var(--theme-colour-black), 1);
-  background: rgba(var(--theme-colour-white), 1);
+  border: 2px solid var(--theme-colour--black);
+  background: var(--theme-colour--white);
   top: 0;
   position: fixed;
   right: 15px;

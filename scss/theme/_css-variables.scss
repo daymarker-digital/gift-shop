@@ -1,26 +1,26 @@
+@use "sass:map";
 @use "../utils/variables" as *;
 @use "../utils/mixins/tools" as *;
 
 :root {
 
-  @include scss-map-to-css-var( '--bs-container-breakpoint', $grid-breakpoints );
-  @include scss-map-to-css-var( '--bs-container-width', $container-max-widths );
-
   @include scss-map-to-css-var( '--theme-aos', $theme-aos-settings );
   @include scss-map-to-css-var( '--theme-border', $theme-border-settings );
-  @include scss-map-to-css-var( '--theme-bs', $theme-bootstrap-settings );
   @include scss-map-to-css-var( '--theme-button-height', $theme-button-heights );
   @include scss-map-to-css-var( '--theme-button-min-width', $theme-button-widths );
   @include scss-map-to-css-var( '--theme-colour', $theme-colours );
-  @include scss-map-to-css-var( '--theme-container', $container-max-widths );
+  @include scss-map-to-css-var( '--theme-container', map.get( $theme-layout-settings, 'containers' ) );
   @include scss-map-to-css-var( '--theme-font-family', $theme-font-families );
   @include scss-map-to-css-var( '--theme-font-size-body-copy', $theme-font-sizes-body-copy );
   @include scss-map-to-css-var( '--theme-font-size-button', $theme-font-sizes-button );
   @include scss-map-to-css-var( '--theme-font-size-heading', $theme-font-sizes-heading );
   @include scss-map-to-css-var( '--theme-header-height', $theme-header-heights );
-  @include scss-map-to-css-var( '--theme-input-size', $theme-input-heights );
-  @include scss-map-to-css-var( '--theme-radio-size', $theme-input-heights );
+  @include scss-map-to-css-var( '--theme-input-height', $theme-input-heights );
+  @include scss-map-to-css-var( '--theme-radio-height', $theme-input-heights );
   @include scss-map-to-css-var( '--theme-push-menu-width', $theme-push-menu-widths );
   @include scss-map-to-css-var( '--theme-transition', $theme-transition-settings );
+
+  --theme-layout--gutter: map.get( $theme-layout-settings, 'gutter' );
+  --theme-layout--container-padding: map.get( $theme-layout-settings, 'container-padding' );
 
 }

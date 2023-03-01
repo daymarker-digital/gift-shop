@@ -33,11 +33,11 @@
       background: rgba(var(--theme-colour-{{ background_colour }}), 1);
       {% case background_colour %}
         {% when 'orange' %}
-          color: rgba(var(--theme-colour-black), 1);
+          color: var(--theme-colour--black);
         {% when 'white' %}
-          color: rgba(var(--theme-colour-black), 1);
+          color: var(--theme-colour--black);
         {% else %}
-          color: rgba(var(--theme-colour-white), 1);
+          color: var(--theme-colour--white);
       {% endcase %}
     }
   {% endif %}

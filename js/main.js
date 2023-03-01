@@ -1,7 +1,3 @@
-// "./modules/_instagramFeed.js";
-// "./modules/_mobileMenu.js";
-// "./modules/_modals";
-
 import Announcements from './modules/announcements';
 import Cart from './modules/cart';
 import Credits from './modules/credits';

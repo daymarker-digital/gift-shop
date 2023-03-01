@@ -1,16 +1,64 @@
-<div class="{{ section_name }}__modal modal fade" id="{{ product_modal_id }}" tabindex="-1" aria-labelledby="{{ product_modal_id }}" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <button class="{{ section_name }}__modal-button-close modal-button-close button" data-bs-dismiss="modal" type="button">
-      {% render 'svg', type: 'icon.close' %}
-      </button>
-      <div class="{{ section_name }}__modal-gallery">
-      {% for image in product.images %}
-      <div id='{{ section_name }}__modal-gallery-item-{{ forloop.index0 }}'>
-      {% render 'lazyload-image', alt_text: product.title, image: image %}
-      </div>
-      {% endfor %}
+{%- if modal_id and modal_id != blank and product and product != blank -%}
+
+  {%- comment -%}
+
+      Accepts:
+      - classes: {String} Optionally include custom classes, be it multiple classes or a single class
+      - modal_id: {String} Include a unique ID for the modal
+      - product: {Object} Product Liquid object
+
+      Usage:
+      {%
+        render 'product-image-gallery-modal',
+        modal_id: product_modal_id,
+        product: product
+      %}
+
+  {%- endcomment -%}
+
+  {%- liquid
+
+    assign template_name = 'main-product'
+    assign snippet_name = 'product-image-gallery-modal'
+
+    assign classes = classes | default: 'main-product__image-gallery-modal'
+
+    assign has_images = false
+    assign product_images = product.images | default: false
+
+    if product_images.size > 0
+      assign has_images = true
+    endif
+
+  -%}
+
+  {%- if has_images -%}
+
+    <div
+      aria-hidden="true"
+      aria-labelledby="{{ modal_id }}"
+      class="{{ classes }} {{ snippet_name }} modal fade"
+      id="{{ modal_id }}"
+      tabindex="-1"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+
+          <button class="{{ snippet_name }}__button-close button" data-bs-dismiss="modal" type="button">
+            {% render 'svg', type: 'icon.close' %}
+          </button>
+
+          <div class="{{ snippet_name }}__main">
+            {% for image in product.images %}
+              <div id='{{ snippet_name }}__item'>
+                {% render 'lazyload-image', alt_text: product.title, image: image %}
+              </div>
+            {% endfor %}
+          </div>
+
+        </div>
       </div>
     </div>
-  </div>
-</div>
+
+  {%- endif -%}
+{%- endif -%}

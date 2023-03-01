@@ -12,7 +12,7 @@
     &__bullet {
       @extend %ui-base;
       @extend %ui-transition;
-      background: rgba(var(--theme-colour-black), 1);
+      background: var(--theme-colour--black);
       opacity: 0.33;
       width: 30px;
       height: 2px;

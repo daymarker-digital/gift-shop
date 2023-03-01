@@ -29,9 +29,9 @@
         background: rgba(var(--theme-colour-{{ background }}), 1);
         {%- case background -%}
           {%- when 'white' -%}
-            color: rgba(var(--theme-colour-black), 1);
+            color: var(--theme-colour--black);
           {%- else -%}
-            color: rgba(var(--theme-colour-white), 1);
+            color: var(--theme-colour--white);
         {%- endcase -%}
       }
     {%- endif -%}

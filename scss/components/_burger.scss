@@ -45,13 +45,13 @@
   }
 
   &__icon-stroke {
-    transition: transform var(--theme-transition-duration),
-      translate var(--theme-transition-duration),
-      rotate var(--theme-transition-duration),
-      background var(--theme-transition-duration),
-      color var(--theme-transition-duration),
-      opacity var(--theme-transition-duration);
-    background: rgba(var(--theme-colour-black), 1);
+    transition: transform var(--theme-transition--duration),
+      translate var(--theme-transition--duration),
+      rotate var(--theme-transition--duration),
+      background var(--theme-transition--duration),
+      color var(--theme-transition--duration),
+      opacity var(--theme-transition--duration);
+    background: var(--theme-colour--black);
     width: var(--burger-width);
     height: var(--burger-stroke-width);
     display: block;
@@ -75,7 +75,7 @@
 
   &.is-active {
     .burger__icon-stroke {
-      background: rgba(var(--theme-colour-white), 1);
+      background: var(--theme-colour--white);
       &.top {
         transform: translate3d( 0, calc( 1 * var(--burger-stroke-offset) ), 0 ) rotate( -45deg );
       }

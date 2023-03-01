@@ -43,7 +43,7 @@
     $color: colour-theme-offset($colour-name);
 
     @if $colour-name == 'red' {
-      $background: rgba(var(--theme-colour-black), 1);
+      $background: var(--theme-colour--black);
       $color: rgba(var(--theme-colour-red), 1);
     }
 

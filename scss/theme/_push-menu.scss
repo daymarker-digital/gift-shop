@@ -11,7 +11,7 @@
 
   transform: translate3d(var(--push-menu-width), 0, 0);
   width: var(--theme-push-menu-width);
-  background: rgba(var(--theme-colour-black), 1);
+  background: var(--theme-colour--black);
   transition: transform 280ms, width 280ms;
   position: fixed;
   top: 0;
@@ -29,10 +29,10 @@
 
   .navigation {
     &__link {
-      color: rgba(var(--theme-colour-yellow), 1);
+      color: var(--theme-colour--yellow);
       &.active,
       &:hover {
-        color: rgba(var(--theme-colour-white), 1);
+        color: var(--theme-colour--white);
       }
     }
   }
@@ -54,10 +54,10 @@
       margin-bottom: 20px;
       &-link {
         font-family: var(--theme-font-family--sans-serif--sorry-sans);
-        color: rgba(var(--theme-colour-white), 1);
+        color: var(--theme-colour--white);
         font-size: calc(var(--push-menu-main-link-size ) * 0.8);
         &:hover {
-          color: rgba(var(--theme-colour-yellow), 1);
+          color: var(--theme-colour--yellow);
         }
       }
     }
@@ -98,7 +98,7 @@
       &-link {
         height: 100%;
         width: 100%;
-        color: rgba(var(--theme-colour-yellow), 1);
+        color: var(--theme-colour--yellow);
         svg, img {
           display: block;
           width: 100%;
@@ -106,7 +106,7 @@
         }
         &:focus,
         &:hover {
-          color: rgba(var(--theme-colour-white), 1);
+          color: var(--theme-colour--white);
         }
       }
     }
@@ -133,7 +133,7 @@
           font-size: var(--push-menu-main-link-size);
           &.active,
           &:hover {
-            color: rgba(var(--theme-colour-white), 1);
+            color: var(--theme-colour--white);
           }
         }
       }
@@ -141,7 +141,7 @@
   }
 
   &__message {
-    color: rgba(var(--theme-colour-white), 1);
+    color: var(--theme-colour--white);
     margin-top: 30px;
     width: 90%;
     max-width: 400px;

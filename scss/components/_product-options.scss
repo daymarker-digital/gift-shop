@@ -22,7 +22,7 @@
   @include breakpoint(lg) {
 
     &__list {
-      gap: 16px;
+      gap: 14px;
     }
 
   }
@@ -30,7 +30,7 @@
   @include breakpoint(xxl) {
 
     &__list {
-      gap: 18px;
+      gap: 16px;
     }
 
   }

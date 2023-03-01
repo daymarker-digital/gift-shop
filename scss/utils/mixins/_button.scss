@@ -1,6 +1,6 @@
-@use '../variables' as *;
 @use 'sass:color';
 @use 'sass:map';
+@use '../variables' as *;
 @use "border" as *;
 @use "breakpoint" as *;
 @use "font" as *;
@@ -20,7 +20,7 @@
       }
     }
 
-    @include akkurate-mono();
+    @include font-akkurate-mono();
     @include breakpoint(xs) { height: 30px; font-size: 10px; }
     @include breakpoint(sm) { height: 32px; font-size: 12px; }
     @include breakpoint(md) { height: 34px; font-size: 14px; }

@@ -1,31 +1,31 @@
-@use "../utils/mixins/breakpoint" as *;
+@use '../utils/mixins/breakpoint' as *;
 
 .container {
 
-  padding-left: var(--bs-container-fluid-padding);
-  padding-right: var(--bs-container-fluid-padding);
+  padding-left: var(--theme-layout--container-padding);
+  padding-right: var(--theme-layout--container-padding);
   margin-left: auto;
   margin-right: auto;
   width: 100%;
 
   &-fluid {
-    padding-left: var(--bs-container-fluid-padding);
-    padding-right: var(--bs-container-fluid-padding);
+    padding-left: var(--theme-layout--container-padding);
+    padding-right: var(--theme-layout--container-padding);
   }
 
   &-full-width {
-    padding-left: calc( 0.5 * var(--bs-gutter-x) );
-    padding-right: calc( 0.5 * var(--bs-gutter-x) );
+    padding-left: calc( 0.5 * var(--theme-layout--gutter) );
+    padding-right: calc( 0.5 * var(--theme-layout--gutter) );
   }
 
   @include breakpoint(sm) {
 
-    padding-left: calc( 0.5 * var(--bs-gutter-x) );
-    padding-right: calc( 0.5 * var(--bs-gutter-x) );
+    padding-left: calc( 0.5 * var(--theme-layout--gutter) );
+    padding-right: calc( 0.5 * var(--theme-layout--gutter) );
 
     &-fluid {
-      padding-left: var(--bs-container-fluid-padding);
-      padding-right: var(--bs-container-fluid-padding);
+      padding-left: var(--theme-layout--container-padding);
+      padding-right: var(--theme-layout--container-padding);
     }
 
   }

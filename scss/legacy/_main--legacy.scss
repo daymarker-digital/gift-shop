@@ -41,7 +41,7 @@
   --bs-gutter-x: #{ $grid-gutter-width };
 
   // ---------------------------------------- Container Fluid Padding
-  --bs-container-fluid-padding: 28px;
+  --theme-layout--container-padding: 28px;
 
   // ---------------------------------------- Container Breakpoints
   --bs-container-breakpoint--sm: #{ map-get( $grid-breakpoints, sm ) };

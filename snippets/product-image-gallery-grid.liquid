@@ -34,19 +34,19 @@
 
   -%}
 
-{%- endif -%}
+  {%- if has_images -%}
+    <div class='{{ classes }} {{ snippet_name }}'>
+      {%- for image in product.images -%}
+        <div
+          class='{{ snippet_name }}__item'
+          data-bs-target='#{{ modal_id }}'
+          data-bs-toggle='modal'
+          data-product-image-gallery-index='{{ forloop.index0 }}'
+        >
+          {%- render 'lazyload-image', alt_text: product.title, image: image -%}
+        </div>
+      {%- endfor -%}
+    </div>
+  {%- endif -%}
 
-{%- if has_images -%}
-  <div class='{{ classes }} {{ snippet_name }}'>
-    {%- for image in product.images -%}
-      <div
-        class='{{ snippet_name }}__item'
-        data-bs-target='#{{ modal_id }}'
-        data-bs-toggle='modal'
-        data-product-image-gallery-index='{{ forloop.index0 }}'
-      >
-        {%- render 'lazyload-image', alt_text: product.title, image: image -%}
-      </div>
-    {%- endfor -%}
-  </div>
 {%- endif -%}

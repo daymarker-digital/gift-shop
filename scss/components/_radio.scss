@@ -1,4 +1,6 @@
+@use "../utils/mixins/border" as *;
 @use "../utils/mixins/breakpoint" as *;
+@use "../utils/mixins/font" as *;
 
 .radio {
 
@@ -6,8 +8,8 @@
     display: none;
     &:checked {
       & + .radio__item {
-        background: rgba(var(--theme-colour-black), 1);
-        color: rgba(var(--theme-colour-white), 1);
+        background: var(--theme-colour--black);
+        color: var(--theme-colour--white);
       }
     }
     &[disabled] {
@@ -16,10 +18,10 @@
         &:after {
           content: '';
           width: 2px;
-          background: rgba(var(--theme-colour-black), 1);
+          background: var(--theme-colour--black);
           position: absolute;
           transform-origin: center center;
-          height: calc( var(--theme-radio-size) + 30px );
+          height: calc( var(--theme-radio-height) + 30px );
           transform: rotate(45deg);
         }
       }
@@ -28,18 +30,18 @@
       & + .radio__item {
         cursor: pointer;
         &:hover {
-          background: rgba(var(--theme-colour-yellow), 1);
-          color: rgba(var(--theme-colour-black), 1);
+          background: var(--theme-colour--yellow);
+          color: var(--theme-colour--black);
         }
       }
     }
   }
 
   &__item {
-    font-family: "Akkurat Mono LL", serif;
-    height: var(--theme-radio-size);
-    width: var(--theme-radio-size);
-    border: 2px solid #111;
+    @include border-solid( var(--theme-border-width), 'black' );
+    @include font-akkurate-mono();
+    height: var(--theme-radio-height);
+    width: var(--theme-radio-height);
     color: #111;
     transition: all .28s;
     display: inline-flex;
@@ -61,15 +63,15 @@
       &[disabled] {
         & + .radio__item {
           &:after {
-            height: calc( var(--theme-radio-size--lg) + 30px );
+            height: calc( var(--theme-radio-height--lg) + 30px );
           }
         }
       }
     }
 
     &__item {
-      height: var(--theme-radio-size--lg);
-      width: var(--theme-radio-size--lg);
+      height: var(--theme-radio-height--lg);
+      width: var(--theme-radio-height--lg);
     }
 
     &__title {
@@ -80,21 +82,19 @@
 
   @include breakpoint(xxl) {
 
-    $radio-height: 62px;
-
     &__input {
       &[disabled] {
         & + .radio__item {
           &:after {
-            height: calc( var(--theme-radio-size--xxl) + 30px );
+            height: calc( var(--theme-radio-height--xxl) + 30px );
           }
         }
       }
     }
 
     &__item {
-      height: var(--theme-radio-size--xxl);
-      width: var(--theme-radio-size--xxl);
+      height: var(--theme-radio-height--xxl);
+      width: var(--theme-radio-height--xxl);
     }
 
     &__title {

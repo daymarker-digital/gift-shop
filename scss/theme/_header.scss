@@ -4,13 +4,13 @@
 
   &__announcements {
     display: none;
-    background: rgba(var(--theme-colour-black), 1);
-    color: rgba(var(--theme-colour-white), 1);
+    background: var(--theme-colour--black);
+    color: var(--theme-colour--white);
     .header__container {
       padding: 10px 30px;
     }
     &-button-close {
-      color: rgba(var(--theme-colour-white), 1);
+      color: var(--theme-colour--white);
       position: absolute;
       border: none;
       right: 30px;

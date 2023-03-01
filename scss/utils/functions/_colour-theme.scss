@@ -1,17 +1,17 @@
 @function colour-theme-offset( $colour-name: 'white' ) {
 
-  $offset-colour: rgba(var(--theme-colour-black), 1);
+  $offset-colour: var(--theme-colour--black);
 
   @if $colour-name == 'arlo-green' {
-    $offset-colour: rgba(var(--theme-colour-white), 1);
+    $offset-colour: var(--theme-colour--white);
   }
 
   @if $colour-name == 'black' {
-    $offset-colour: rgba(var(--theme-colour-white), 1);
+    $offset-colour: var(--theme-colour--white);
   }
 
   @if $colour-name == 'blue' {
-    $offset-colour: rgba(var(--theme-colour-white), 1);
+    $offset-colour: var(--theme-colour--white);
   }
 
   @return $offset-colour;

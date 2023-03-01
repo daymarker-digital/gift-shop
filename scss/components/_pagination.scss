@@ -12,8 +12,8 @@
   margin-top: 24px;
 
   .active {
-    color: rgba(var(--theme-colour-yellow), 1);
-    border-bottom: 2px solid rgba(var(--theme-colour-yellow), 1);
+    color: var(--theme-colour--yellow);
+    border-bottom: 2px solid var(--theme-colour--yellow);
   }
 
   .disabled {
@@ -21,11 +21,11 @@
   }
 
   .link {
-    color: rgba(var(--theme-colour-black), 1);
+    color: var(--theme-colour--black);
     border-bottom: none;
     &:focus,
     &:hover {
-      color: rgba(var(--theme-colour-yellow), 1);
+      color: var(--theme-colour--yellow);
       border-bottom: none;
     }
   }
