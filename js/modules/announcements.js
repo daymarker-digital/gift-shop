@@ -8,7 +8,7 @@ const cookieName = 'vp_shopify_announcements';
 const hideAnnouncements = () => {
   ( document.querySelectorAll( '.header__announcements' ) || [] ).forEach( element => {
     element.classList.remove( 'show' );
-    Tools.setHeaderHeightTotalCSSVariable();
+    Tools.setElementsHeightToCSSVariable();
     Cookies.set( cookieName, 'hide', 1 );
   });
 };
@@ -16,7 +16,7 @@ const hideAnnouncements = () => {
 const showAnnouncements = () => {
   ( document.querySelectorAll( '.header__announcements' ) || [] ).forEach( element => {
     element.classList.add( 'show' );
-    Tools.setHeaderHeightTotalCSSVariable();
+    Tools.setElementsHeightToCSSVariable();
   });
 };
 

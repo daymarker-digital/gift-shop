@@ -1,11 +1,25 @@
+@use 'sass:map';
+@use '../utils/variables' as *;
+@use '../utils/mixins/breakpoint' as *;
+
 body {
 
   display: flex;
   flex-direction: column;
 
   main {
+    @each $name, $value in map.get( $theme-layout-settings, 'breakpoints' ) {
+      @if $name == 'base' {
+        padding-top: calc(var(--theme-header-height) + var(--theme-announcement-height--total));
+      } @else {
+        @include breakpoint(#{$name}) {
+          padding-top: calc(var(--theme-header-height--#{$name}) + var(--theme-announcement-height--total));
+        }
+      }
+    }
+    transition: padding var(--theme-transition--duration);
     flex: 1 0 auto;
-    padding-top: var(--theme-header-height-total);
+    overflow: hidden;
   }
 
   footer {

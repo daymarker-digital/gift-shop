@@ -3,6 +3,9 @@
   assign section_name = 'footer'
   assign section_id = section_name | append: '--' | append: section.id
 
+  assign locations = section.blocks | where: 'type', 'location' | default: false
+  assign locations_count = 0
+
   assign street_address = shop.address.address1 | default: '1234 Main St'
   assign suite = shop.address.address2 | default: false
   assign city = shop.address.city | default: false
@@ -13,24 +16,83 @@
   assign phone = shop.address.phone
   assign email = 'excuseme@weareverypolite.com'
 
+  if locations and locations.size > 0
+    assign locations_count = locations.size
+  endif
+
 -%}
 
-<div class="{{ section_name }}__main">
+<div class="{{ section_name }}__main" data-grid-columns-desktop="{{ locations_count | plus: 1 }}">
 
-  <div class="{{ section_name }}__address">
-    <p><a class="{{ section_name }}__address-link link" href='{%- render 'google-maps-directions-link', address: shop.address -%}' target='_blank' rel='noopener noreferrer'>{% if suite %}{{ suite }}–{% endif %}{{ street_address }}<br>{{ city }} {{ region_code }} {{ postal }}</a></p>
-  </div>
+    {% if locations_count > 0 %}
+      {% for item in locations %}
 
-  <div class="{{ section_name }}__contact-info">
-    <p>
-      <a class="{{ section_name }}__contact-info-link link" href='mailto:{{ email }}'>{{ email }}</a>
-      <br><a class="{{ section_name }}__contact-info-link link" href='tel:{{ phone }}'>{{ phone }}</a>
-    </p>
-  </div>
+        {%- liquid
 
-  <div class="{{ section_name }}__legal">
-    <p>All The Best™<br>&copy;{{ "today" | date: "%Y" }} {{ company }}</p>
-  </div>
+          assign city = item.settings.city | default: ''
+          assign country = item.settings.country | default: ''
+          assign phone = item.settings.phone | default: ''
+          assign postal = item.settings.postal | default: ''
+          assign region = item.settings.region | default: ''
+          assign street_address = item.settings.street_address | default: ''
+
+          capture address
+            render 'address', location: item
+          endcapture
+
+        -%}
+
+        {% capture other_address %}
+          {% render 'address', location: item %}
+        {% endcapture %}
+
+        <div class="{{ section_name }}__main-location">
+
+          {% if address != blank %}
+            <span class="{{ section_name }}__main-location-address">
+                <a class="{{ section_name }}__main-link link" href="" target="_blank" title="Find Us">{{ address }}{{ other_address }}</a>
+              </span>
+          {% endif %}
+
+          {% if phone != blank %}
+            <span class="{{ section_name }}__main-location-phone">
+              <a class="{{ section_name }}__main-link link" href="tel:{{ phone }}" target="_self" title="Call Us">{{ phone }}</a>
+            </span>
+          {% endif %}
+
+        </div>
+
+      {% endfor %}
+    {% endif %}
+
+
+
+          <div class="{{ section_name }}__main-location">
+            <?php if ( $location_address_human ) : ?>
+              <span class="{{ section_name }}__main-location-address">
+                <a class="{{ section_name }}__main-link link" href="<?= $location_address_directions; ?>" target="_blank" title="Find Us"><?= $location_address_human; ?></a>
+              </span>
+            <?php endif; ?>
+            <?php if ( $location_phone ) : ?>
+              <span class="{{ section_name }}__main-location-phone">
+                <a class="{{ section_name }}__main-link link" href="tel:<?= $location_phone; ?>" target="_self" title="Call Us"><?= $location_phone; ?></a>
+              </span>
+            <?php endif; ?>
+          </div>
+
+        <?php endif; ?>
+      <?php endforeach; ?>
+    <?php endif; ?>
+
+    <div class="{{ section_name }}__main-contact">
+      <?php if ( $acf_company_email ) : ?>
+        <span class="{{ section_name }}__main-contact-email">
+          <a class="{{ section_name }}__main-link link" href="mailto:<?= $acf_company_email; ?>" target="_self" title="Email Us"><?= $acf_company_email; ?></a>
+        </span>
+      <?php endif; ?>
+      <span class="{{ section_name }}__main-contact-copyright">&copy <?= date( 'Y' ); ?> <?= get_bloginfo( 'name' ); ?></span>
+      <span class="{{ section_name }}__main-contact-tagline">All The Best™</span>
+    </div>
 
 </div>
 
@@ -69,6 +131,51 @@
         "id": "policies_menu"
       }
     ],
-	  "blocks": []
+	  "blocks": [
+      {
+        "name": "Location",
+        "type": "location",
+        "settings": [
+          {
+            "content": "Contact",
+            "type": "header"
+          },
+          {
+            "label": "Phone",
+            "type": "text",
+            "id": "phone"
+          },
+          {
+            "content": "Address",
+            "type": "header"
+          },
+          {
+            "label": "Street Address",
+            "type": "text",
+            "id": "street_address"
+          },
+          {
+            "label": "City",
+            "type": "text",
+            "id": "city"
+          },
+          {
+            "label": "Region",
+            "type": "text",
+            "id": "region"
+          },
+          {
+            "label": "Postal",
+            "type": "text",
+            "id": "postal"
+          },
+          {
+            "label": "Country",
+            "type": "text",
+            "id": "country"
+          }
+        ]
+      }
+    ]
   }
 {% endschema %}

@@ -48,14 +48,21 @@ const removeClass = ( $class = '', $elements = [] ) => {
   }
 };
 
-const setCSSVariable = ( $id = '', $value = '' ) => {
-  if ( $id && $value ) {
-    document.documentElement.style.setProperty( '--' + $id, $value );
-  }
+const setCSSVariable = ( id = '', value = '' ) => {
+  if ( id && value ) document.documentElement.style.setProperty( `--${id}`, value );
 };
 
-const setHeaderHeightTotalCSSVariable = () => {
-  setCSSVariable('theme-header-height-total', getElementHeightByTag('header') + 'px'  );
+const setElementsHeightToCSSVariable = () => {
+
+  [
+    { var_id: 'theme-header-height--total', element_id: 'shopify-section-header' },
+    { var_id: 'theme-announcement-height--total', element_id: 'header__announcements' }
+  ].forEach( item => {
+    let { var_id, element_id } = item;
+    let value = document.getElementById( element_id ) ? document.getElementById( element_id ).offsetHeight : 0;
+    document.documentElement.style.setProperty( `--${var_id}`, `${value}px` );
+  });
+
 };
 
 const setLocalStorage = ( $key, $value ) => {
@@ -81,7 +88,7 @@ export default {
   getTimeStamp,
   removeClass,
   setCSSVariable,
-  setHeaderHeightTotalCSSVariable,
+  setElementsHeightToCSSVariable,
   setLocalStorage,
   toggleClass
 };

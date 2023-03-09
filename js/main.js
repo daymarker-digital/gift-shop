@@ -24,14 +24,14 @@ AOS.init({
 });
 
 window.addEventListener( 'load', function (e) {
-  Tools.setHeaderHeightTotalCSSVariable();
+  Tools.setElementsHeightToCSSVariable();
   Gliders.init();
   AOS.refresh();
 });
 
 window.addEventListener( 'resize', Tools.debounce(() => {
   // debounced resize based functions here
-  Tools.setHeaderHeightTotalCSSVariable();
+  Tools.setElementsHeightToCSSVariable();
   console.log( 'resized' );
 }, 300));
 

@@ -1,4 +1,5 @@
 @use "sass:map";
+@use "sass:meta";
 @use "../utils/variables" as *;
 @use "../utils/mixins/tools" as *;
 
@@ -22,7 +23,8 @@
   @include scss-map-to-css-var( '--theme-push-menu-link-font-size', map.get( $theme-push-menu-settings, 'link-font-sizes' ) );
   @include scss-map-to-css-var( '--theme-transition', $theme-transition-settings );
 
-  --theme-layout--gutter: map.get( $theme-layout-settings, 'gutter' );
-  --theme-layout--container-padding: map.get( $theme-layout-settings, 'container-padding' );
+  --theme-announcements--height: 0px;
+  --theme-layout--container-padding: #{meta.inspect(map.get( $theme-layout-settings, 'container-padding' ))};
+  --theme-layout--gutter: #{meta.inspect(map.get( $theme-layout-settings, 'gutter' ))};
 
 }

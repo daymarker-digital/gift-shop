@@ -21,60 +21,56 @@
 
 -%}
 
-{% if announcements_enabled and announcements %}
+{% if announcements_enabled and announcements and announcements.size > 0 %}
 
   {% if announcements.size > 1 %}
     {% assign is_glider = true %}
   {% endif %}
 
-  <div class="{{ section_name }}__announcements">
-    <div class="{{ section_name }}__container">
+  <div class="{{ section_name }}__announcements" id="{{ section_name }}__announcements">
 
-      {% if is_glider %}
-        <div class="glide js--glider" id="{{ glider_id }}" data-glide-style="{{ section_name }}-announcements">
-          <div class="glide__track" data-glide-el="track">
-            <ul class="glide__slides">
-              {% endif %}
+    {% if is_glider %}
+      <div class="glide js--glider" id="{{ glider_id }}" data-glide-style="{{ section_name }}-announcements">
+        <div class="glide__track" data-glide-el="track">
+          <ul class="glide__slides">
+            {% endif %}
 
-                {% for item in announcements %}
+              {% for item in announcements %}
 
-                  {% assign message = item.settings.title | default: '' %}
+                {% assign message = item.settings.title | default: '' %}
 
-                  {% if message != blank %}
-                    {% if is_glider %}<li class="glide__slide">{% endif %}
-                      <div class="{{ section_name }}__announcements-item body-copy--announcement">{{ message }}</div>
-                    {% if is_glider %}</li>{% endif %}
-                  {% endif %}
+                {% if message != blank %}
+                  {% if is_glider %}<li class="glide__slide">{% endif %}
+                    <div class="{{ section_name }}__announcements-item body-copy--announcement">{{ message }}</div>
+                  {% if is_glider %}</li>{% endif %}
+                {% endif %}
 
-                {% endfor %}
+              {% endfor %}
 
-              {% if is_glider %}
-            </ul>
-          </div>
+            {% if is_glider %}
+          </ul>
         </div>
-      {% endif %}
+      </div>
+    {% endif %}
 
-      <button class="{{ section_name }}__announcements-button-close button js-hide-announcements" type="button" title="Hide Announcements">
-        {% render 'svg-icon', type: 'close' %}
-      </button>
+    <button class="{{ section_name }}__announcements-button-close button js-hide-announcements" type="button" title="Hide Announcements">
+      {% render 'svg-icon', type: 'close' %}
+    </button>
 
-    </div>
   </div>
+
+  <script>document.body.classList.add('announcements--active');</script>
 
 {% endif %}
 
 <div class="{{ section_name }}__main">
-  <div class="{{ section_name }}__container">
-
-    <div class="{{ section_name }}__brand">
-      <a class="{{ section_name }}__brand-link link gift-shop" href="/" target="_self" title="Very Polite Gift Shop">
-        {% render 'svg-gift-shop-logo' %}
-      </a>
-      <a class="{{ section_name }}__brand-link link very-polite" href="https://weareverypolite.com" target="_blank" title="Very Polite Agency">
-        {% render 'svg-very-polite-logo' %}
-      </a>
-    </div>
-
+  <div class="{{ section_name }}__brand">
+    <a class="{{ section_name }}__brand-link link gift-shop" href="/" target="_self" title="Very Polite Gift Shop">
+      {% render 'svg-gift-shop-logo' %}
+    </a>
+    <a class="{{ section_name }}__brand-link link very-polite" href="https://weareverypolite.com" target="_blank" title="Very Polite Agency">
+      {% render 'svg-very-polite-logo' %}
+    </a>
   </div>
 </div>
 

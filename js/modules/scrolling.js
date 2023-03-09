@@ -62,7 +62,6 @@ const elementIsInView = ( $element = false ) => {
 const init = ( $options = false ) => {
 
   setScrollStateClassesByScrollPosition( scrollPosition.current );
-  Tools.setHeaderHeightTotalCSSVariable();
 
   // ---------------------------------------- On resize
   document.addEventListener( 'scroll', function(e) {
@@ -73,7 +72,6 @@ const init = ( $options = false ) => {
     if ( !throttled ) {
       window.requestAnimationFrame(function() {
         setScrollStateClassesByScrollPosition( scrollPosition.current );
-        Tools.setHeaderHeightTotalCSSVariable();
         throttled = false;
       });
       throttled = true;

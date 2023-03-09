@@ -16,9 +16,9 @@
     }
   }
 
+  right: var(--theme-layout--container-padding);
   position: fixed;
   z-index: 200;
-  right: 20px;
   width: auto;
   display: flex;
   flex-flow: row nowrap;
@@ -27,14 +27,12 @@
 
   &__icon {
 
+    transition: opacity 0.15s, filter 0.15s;
     background: transparent;
     display: inline-block;
     overflow: visible;
     margin: 0;
     padding: 0;
-    transition-timing-function: linear;
-    transition-duration: .15s;
-    transition-property: opacity, filter;
     outline: none;
     border: none;
 
@@ -55,6 +53,7 @@
   &__icon-stroke {
 
     transition: transform var(--theme-transition--duration);
+    background: var(--theme-colour--black);
     width: var(--theme-burger--width);
     height: var(--theme-burger--stroke-width);
     border-radius: 0;
@@ -75,6 +74,10 @@
       bottom: 0;
     }
 
+  }
+
+  .announcements--active & {
+    top: var(--theme-announcement-height--total);
   }
 
   .push-menu--active & {
