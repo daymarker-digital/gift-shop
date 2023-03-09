@@ -1,13 +1,21 @@
-@use "../utils/mixins/breakpoint" as *;
+@use 'sass:map';
+@use '../utils/variables' as *;
+@use '../utils/mixins/breakpoint' as *;
 
 .burger {
 
-  --burger-width: 30px;
-  --burger-height: 14px;
-  --burger-stroke-width: 3px;
-  --burger-stroke-offset: calc( ( var(--burger-height) - var(--burger-stroke-width) ) * 0.5 );
+  --theme-burger--45-offset: calc( (var(--theme-burger--height) - var(--theme-burger--stroke-width)) * 0.5 );
 
-  height: var(--theme-header-height-total);
+  @each $name, $value in map.get( $theme-layout-settings, 'breakpoints' ) {
+    @if $name == 'base' {
+      height: var(--theme-header-height);
+    } @else {
+      @include breakpoint(#{$name}) {
+        height: var(--theme-header-height--#{$name});
+      }
+    }
+  }
+
   position: fixed;
   z-index: 200;
   right: 20px;
@@ -38,22 +46,18 @@
   }
 
   &__icon-box {
-    width: var(--burger-width);
-    height: var(--burger-height);
+    width: var(--theme-burger--width);
+    height: var(--theme-burger--height);
     display: block;
     position: relative;
   }
 
   &__icon-stroke {
-    transition: transform var(--theme-transition--duration),
-      translate var(--theme-transition--duration),
-      rotate var(--theme-transition--duration),
-      background var(--theme-transition--duration),
-      color var(--theme-transition--duration),
-      opacity var(--theme-transition--duration);
-    background: var(--theme-colour--black);
-    width: var(--burger-width);
-    height: var(--burger-stroke-width);
+
+    transition: transform var(--theme-transition--duration);
+    width: var(--theme-burger--width);
+    height: var(--theme-burger--stroke-width);
+    border-radius: 0;
     display: block;
     position: absolute;
 
@@ -73,14 +77,16 @@
 
   }
 
-  &.is-active {
-    .burger__icon-stroke {
-      background: var(--theme-colour--white);
-      &.top {
-        transform: translate3d( 0, calc( 1 * var(--burger-stroke-offset) ), 0 ) rotate( -45deg );
-      }
-      &.bottom {
-        transform: translate3d( 0, calc( -1 * var(--burger-stroke-offset) ), 0 ) rotate( 45deg );
+  .push-menu--active & {
+    .burger {
+      &__icon-stroke {
+        background: var(--theme-colour--white);
+        &.top {
+          transform: translate3d( 0, var(--theme-burger--45-offset), 0 ) rotate(-45deg);
+        }
+        &.bottom {
+          transform: translate3d( 0, calc(-1 * var(--theme-burger--45-offset)), 0 ) rotate(45deg);
+        }
       }
     }
   }

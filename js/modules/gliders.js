@@ -64,7 +64,7 @@ const createGliderFromElement = ( element = {} ) => {
 
   glide.mount();
 
-  // fix for not 100% width slide
+  // FIX for when single slide does not fill 100% of glider
   setTimeout( () => { glide.update() }, 250 );
 
   gliders[element_id] = { element_id, glide };

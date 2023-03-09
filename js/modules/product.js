@@ -1,7 +1,7 @@
 const addToCartButton = document.querySelector( 'form[action="/cart/add"] button[type="submit"]' ) || false;
 const options = document.querySelectorAll( 'form[action="/cart/add"] input[type="radio"]' ) || [];
 const elements = {
-  modal: document.querySelectorAll( '.main-product__modal' ) || []
+  modal: document.querySelectorAll( '.product-image-gallery-modal' ) || []
 };
 
 const isSelected = () => {
@@ -18,8 +18,8 @@ const showActiveProductImageAfterModalShown = () => {
     element.addEventListener( 'shown.bs.modal', event => {
 
       let delay = 250;
-      let index = event.relatedTarget.dataset.productImageIndex || 0;
-      let target = document.getElementById( `main-product__modal-gallery-item-${index}` ) || false;
+      let index = event.relatedTarget.dataset.productImageGalleryIndex || 0;
+      let target = document.getElementById( `product-image-gallery-modal__item-${index}` ) || false;
 
       if ( target && target.offsetTop > 50 ) {
         setTimeout( () => {

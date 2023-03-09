@@ -6,6 +6,7 @@
 
   @include scss-map-to-css-var( '--theme-aos', $theme-aos-settings );
   @include scss-map-to-css-var( '--theme-border', $theme-border-settings );
+  @include scss-map-to-css-var( '--theme-burger', $theme-burger-settings );
   @include scss-map-to-css-var( '--theme-button-height', $theme-button-heights );
   @include scss-map-to-css-var( '--theme-button-min-width', $theme-button-widths );
   @include scss-map-to-css-var( '--theme-colour', $theme-colours );
@@ -17,7 +18,8 @@
   @include scss-map-to-css-var( '--theme-header-height', $theme-header-heights );
   @include scss-map-to-css-var( '--theme-input-height', $theme-input-heights );
   @include scss-map-to-css-var( '--theme-radio-height', $theme-input-heights );
-  @include scss-map-to-css-var( '--theme-push-menu-width', $theme-push-menu-widths );
+  @include scss-map-to-css-var( '--theme-push-menu-width', map.get( $theme-push-menu-settings, 'widths' ) );
+  @include scss-map-to-css-var( '--theme-push-menu-link-font-size', map.get( $theme-push-menu-settings, 'link-font-sizes' ) );
   @include scss-map-to-css-var( '--theme-transition', $theme-transition-settings );
 
   --theme-layout--gutter: map.get( $theme-layout-settings, 'gutter' );

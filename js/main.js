@@ -2,19 +2,17 @@ import Announcements from './modules/announcements';
 import Cart from './modules/cart';
 import Credits from './modules/credits';
 import Gliders from './modules/gliders';
-import MainMenu from './modules/mainMenu';
 import Product from './modules/product';
+import PushMenu from './modules/pushMenu';
 import RandomImage from './modules/randomImage';
 import Scrolling from './modules/scrolling';
 import Tools from './modules/tools';
 
-let throttled = false;
-
 Cart.init();
 Credits.init();
 Announcements.init();
-MainMenu.init();
 Product.init();
+PushMenu.init();
 RandomImage.init();
 Scrolling.init();
 
@@ -31,12 +29,13 @@ window.addEventListener( 'load', function (e) {
   AOS.refresh();
 });
 
-window.addEventListener( 'resize', function(e) {
-  if ( !throttled ) {
-    window.requestAnimationFrame(function() {
-      Tools.setHeaderHeightTotalCSSVariable();
-      throttled = false;
-    });
-    throttled = true;
-  }
-});
+window.addEventListener( 'resize', Tools.debounce(() => {
+  // debounced resize based functions here
+  Tools.setHeaderHeightTotalCSSVariable();
+  console.log( 'resized' );
+}, 300));
+
+window.addEventListener( 'scroll', Tools.debounce(() => {
+  // debounced scroll based functions here
+  console.log( 'scrolled' );
+}, 300));

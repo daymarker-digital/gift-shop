@@ -1,26 +1,29 @@
 import Tools from 'tools';
 
-let elements = document.querySelectorAll( '.burger, .push-menu' ) || [];
+const config = { debug: false, name: 'pushMenu.js', version: '1.0' };
+const elements = document.querySelectorAll( '.burger, .push-menu' ) || [];
 
-const toggleMobileMenu = () => {
-  ( document.querySelectorAll( '.burger' ) || [] ).forEach( element => {
-    element.addEventListener( 'click', () => {
-      Tools.toggleClass( 'is-active', elements );
+const onClickCloseMobileMenu = () => {
+  ( document.querySelectorAll( 'header, main' ) || [] ).forEach( target => {
+    target.addEventListener('click', () => {
+      document.body.classList.remove('push-menu--active');
     });
   });
 };
 
-const closeMobileMenu = () => {
-  ( document.querySelectorAll( 'header, main' ) || [] ).forEach( element => {
-    element.addEventListener('click', () => {
-      Tools.removeClass( 'is-active', elements );
+const onClickToggleMobileMenu = () => {
+  ( document.querySelectorAll( '.burger' ) || [] ).forEach( burger => {
+    burger.addEventListener( 'click', () => {
+      document.body.classList.toggle('push-menu--active');
     });
   });
 };
 
 const init = () => {
-  toggleMobileMenu();
-  closeMobileMenu();
+  if ( config.debug ) console.log(`[ ${config.name} v.${config.version} initialized ]`);
+    onClickCloseMobileMenu();
+    onClickToggleMobileMenu();
+  if ( config.debug ) console.log(`[ ${config.name} v.${config.version} complete ]`);
 };
 
 export default { init };

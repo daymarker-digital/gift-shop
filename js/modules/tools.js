@@ -8,6 +8,18 @@ const addClass = ( $class = '', $elements = [] ) => {
   }
 };
 
+const debounce = ( func = () => {}, delay = 300 ) => {
+  let timer;
+  return function() {
+    const context = this;
+    const args = arguments;
+    clearTimeout(timer);
+    timer = setTimeout(() => {
+      func.apply(context, args)
+    }, delay );
+  };
+};
+
 const getArrayOfElementsByTag = ( $elements = [ 'body', 'footer', 'header', 'main' ] ) => {
   let filteredElements = $elements.filter( tag => { return document.getElementsByTagName( tag )[0] } ) || [];
   return filteredElements.map( tag => document.getElementsByTagName( tag )[0] ) || [];
@@ -62,6 +74,7 @@ const toggleClass = ( $class = '', $elements = [] ) => {
 
 export default {
   addClass,
+  debounce,
   getArrayOfElementsByTag,
   getElementHeightByTag,
   getLocalStorageValueByKey,

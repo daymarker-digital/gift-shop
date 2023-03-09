@@ -49,8 +49,9 @@
           </button>
 
           <div class="{{ snippet_name }}__main">
-            {% for image in product.images %}
-              <div id='{{ snippet_name }}__item'>
+            {% for image in product_images %}
+              {% capture item_id %}{{ snippet_name }}__item-{{ forloop.index0 }}{% endcapture %}
+              <div class='{{ item_id }}' id='{{ item_id }}'>
                 {% render 'lazyload-image', alt_text: product.title, image: image %}
               </div>
             {% endfor %}
