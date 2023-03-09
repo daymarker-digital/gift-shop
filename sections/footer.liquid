@@ -42,15 +42,11 @@
 
         -%}
 
-        {% capture other_address %}
-          {% render 'address', location: item %}
-        {% endcapture %}
-
         <div class="{{ section_name }}__main-location">
 
           {% if address != blank %}
             <span class="{{ section_name }}__main-location-address">
-                <a class="{{ section_name }}__main-link link" href="" target="_blank" title="Find Us">{{ address }}{{ other_address }}</a>
+                <a class="{{ section_name }}__main-link link" href="" target="_blank" title="Find Us">{{ address }}</a>
               </span>
           {% endif %}
 
