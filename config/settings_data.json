@@ -21,6 +21,22 @@
       },
       "footer": {
         "type": "footer",
+        "blocks": {
+          "a44392f6-d62f-40cd-8b3a-584f8ac64337": {
+            "type": "location",
+            "settings": {
+              "phone": "604-428–6177",
+              "street_address": "601–525 Seymour Street",
+              "city": "Vancouver",
+              "region": "BC",
+              "postal": "V6B 3H6",
+              "country": "Canada"
+            }
+          }
+        },
+        "block_order": [
+          "a44392f6-d62f-40cd-8b3a-584f8ac64337"
+        ],
         "settings": {
           "phone": "",
           "email": "",
