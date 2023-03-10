@@ -36,17 +36,17 @@
           assign region = item.settings.region | default: ''
           assign street_address = item.settings.street_address | default: ''
 
-          capture address
-            render 'address', location: item
+          capture address_human
+            render 'address', location: item, type: 'human'
           endcapture
 
         -%}
 
         <div class="{{ section_name }}__main-location">
 
-          {% if address != blank %}
+          {% if address_human != blank %}
             <span class="{{ section_name }}__main-location-address">
-                <a class="{{ section_name }}__main-link link" href="" target="_blank" title="Find Us">{{ address }}</a>
+                <a class="{{ section_name }}__main-link link" href="" target="_blank" title="Find Us">{{ address_human }}</a>
               </span>
           {% endif %}
 
