@@ -93,8 +93,6 @@
           "9762e825-fe6c-4735-bcbb-708d2c87cf95"
         ],
         "settings": {
-          "main_menu": "push-menu-main",
-          "footer_menu": "push-menu-footer"
         }
       }
     },
