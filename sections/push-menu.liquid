@@ -17,7 +17,7 @@
 <div class="{{ section_name }}__container" data-colour-theme="black">
 
   <div class="{{ section_name }}__main">
-    {% if linklists[menu_main].links.size > 0 %}
+    {% if menu_main and linklists[menu_main].links.size > 0 %}
       <nav class="{{ section_name }}__main-navigation navigation navigation--main">
         {% for link in linklists[menu_main].links %}
 
@@ -71,7 +71,7 @@
       </div>
     {% endif %}
 
-    {% if linklists[menu_footer].links.size > 0 %}
+    {% if menu_footer and linklists[menu_footer].links.size > 0 %}
       <nav class="{{ section_name }}__footer-navigation navigation navigation--footer">
         {% for link in linklists[menu_footer].links %}
 
