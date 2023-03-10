@@ -941,14 +941,6 @@
       "oAP" : "\/layout\/theme.liquid",
       "oF" : 0
     },
-    "\/legacy-stuff.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/legacy-stuff.liquid",
-      "oF" : 0
-    },
     "\/locales\/bg-BG.json" : {
       "ft" : 524288,
       "oA" : 0,
@@ -2845,6 +2837,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/snippets\/lazyload-image.liquid",
+      "oF" : 0
+    },
+    "\/snippets\/legacy-stuff.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/snippets\/legacy-stuff.liquid",
       "oF" : 0
     },
     "\/snippets\/link.liquid" : {
