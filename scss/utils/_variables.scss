@@ -136,6 +136,41 @@ $theme-header-heights: (
   'total': auto
 );
 
+$theme-font-sizes-heading: (
+  '1': (
+    'base': 22px,
+    'sm': 32px,
+    'md': 40px,
+    'lg': 21px,
+    'xl': 25px,
+    'xxl': 28px
+  ),
+  '2': (
+    'base': 22px,
+    'sm': 32px,
+    'md': 40px,
+    'lg': 21px,
+    'xl': 25px,
+    'xxl': 28px
+  ),
+  '3': (
+    'base': 28px,
+    'sm': 34px,
+    'md': 40px,
+    'lg': 48px,
+    'xl': 58px,
+    'xxl': 70px
+  ),
+  'title': (
+    'base': 28px,
+    'sm': 34px,
+    'md': 40px,
+    'lg': 48px,
+    'xl': 58px,
+    'xxl': 70px
+  )
+);
+
 // ---------------------------------------- Input Heights
 $theme-input-heights: (
   'base': 44px,

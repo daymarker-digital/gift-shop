@@ -1,157 +1,37 @@
+@use 'sass:map';
+@use '../variables' as *;
 @use "breakpoint" as *;
+@use "font" as *;
 
-@mixin heading($style:1) {
+@mixin heading-style( $style: 'primary' ) {
 
-  font-family: 'Sorry Sans', sans-serif;
-  display: block;
-  font-style: normal;
-  color: inherit;
   margin: 0;
   padding: 0;
   text-transform: none;
+  display: block;
+  font-style: normal;
+  color: inherit;
 
-  // ---------------------------------------- Primary / 1
-  @if $style == 1 {
-
-    font-weight: 700;
-    font-size: 20px;
+  @if $style == 'primary' {
+    @include font-sorry-sans(700);
     line-height: 1.05;
-
-    @include breakpoint(sm) {
-      font-size: 32px;
-    }
-
-    @include breakpoint(md) {
-      font-size: 40px;
-    }
-
-    @include breakpoint(lg) {
-      font-size: 21px;
-    }
-
-    @include breakpoint(xl) {
-      font-size: 25px;
-    }
-
-    @include breakpoint(xxl) {
-      font-size: 28px;
-    }
-
   }
 
-  // ---------------------------------------- Secondary / 2
-  @if $style == 2 {
-
-    font-family: 'PP Neue Montreal Bold', sans-serif;
-    font-size: 35px;
-    line-height: 1.1;
-    font-weight: 400;
-    letter-spacing: -.02em;
-
-    @include breakpoint(md) {
-      font-size: 34px;
-    }
-
-    @include breakpoint(lg) {
-      font-size: 40px;
-    }
-
-    @include breakpoint(xl) {
-      font-size: 50px;
-    }
-
+  @if $style == 'secondary' {
+    @include font-not-sorry-serif(700);
+    line-height: 1.15;
   }
 
 }
 
-// @use '../variables' as *;
-// @use 'sass:map';
-// @use "breakpoint" as *;
-// @use "font" as *;
-//
-// @mixin heading-style( $style: 1 ) {
-//
-//   display: block;
-//   font-style: normal;
-//   color: inherit;
-//   margin: 0;
-//   padding: 0;
-//
-//   @if $style == 1 {
-//     @include clarendon-wide(700);
-//     text-transform: uppercase;
-//   }
-//
-//   @if $style == 2 {
-//     @include new-sprint(300);
-//   }
-//
-//   @if $style == 2 {
-//     @include sarina(400);
-//   }
-//
-// }
-//
-// @mixin heading-size( $size: 'md' ) {
-//
-//   @if $size == 'xl' {
-//     @each $name, $value in $theme-font-sizes-heading {
-//       @if $name == 'base' {
-//         font-size: $value * 1.2;
-//       } @else {
-//         @include breakpoint(#{$name}) {
-//           font-size: $value * 1.5;
-//         }
-//       }
-//     }
-//   }
-//
-//   @if $size == 'lg' {
-//     @each $name, $value in $theme-font-sizes-heading {
-//       @if $name == 'base' {
-//         font-size: $value * 1.1;
-//       } @else {
-//         @include breakpoint(#{$name}) {
-//           font-size: $value * 1.2;
-//         }
-//       }
-//     }
-//   }
-//
-//   @if $size == 'md' {
-//     @each $name, $value in $theme-font-sizes-heading {
-//       @if $name == 'base' {
-//         font-size: $value;
-//       } @else {
-//         @include breakpoint(#{$name}) {
-//           font-size: $value;
-//         }
-//       }
-//     }
-//   }
-//
-//   @if $size == 'sm' {
-//     @each $name, $value in $theme-font-sizes-heading {
-//       @if $name == 'base' {
-//         font-size: $value * 0.95;
-//       } @else {
-//         @include breakpoint(#{$name}) {
-//           font-size: $value * 0.75;
-//         }
-//       }
-//     }
-//   }
-//
-//   @if $size == 'xs' {
-//     @each $name, $value in $theme-font-sizes-heading {
-//       @if $name == 'base' {
-//         font-size: $value * 0.9;
-//       } @else {
-//         @include breakpoint(#{$name}) {
-//           font-size: $value * 0.7;
-//         }
-//       }
-//     }
-//   }
-//
-// }
+@mixin heading-size( $size: '1' ) {
+  @each $name, $value in map.get($theme-font-sizes-heading, $size) {
+    @if $name == 'base' {
+      font-size: $value;
+    } @else {
+      @include breakpoint(#{$name}) {
+        font-size: $value;
+      }
+    }
+  }
+}

@@ -22,21 +22,40 @@ Production: 121669714008
 - [ ] Product (PDP)
 
 ### Sections
-- [ ] 404
-- [ ] Announcements
-- [ ] Contact Form
-- [ ] Cookie Consent
-- [ ] Dynamic Cart
-- [ ] Footer
-- [ ] Feature Carousel
-- [ ] Feature Panel 01
-- [ ] Feature Panel 02
-- [ ] Feature Panel 03
-- [ ] Fifty-Fifty
-- [ ] Header
-- [ ] Hero (with content option)
-- [ ] Mobile Menu
-- [ ] Navigation
+- [x] apps.liquid
+- [ ] contact-form.liquid
+- [ ] cookie-banner.liquid
+- [x] custom-liquid.liquid
+- [ ] drawer-menu.liquid
+- [x] featured-image.liquid
+- [x] featured-products.liquid
+- [x] footer.liquid
+- [ ] header.liquid
+- [x] main-404.liquid
+- [ ] main-article.liquid
+- [ ] main-blog.liquid
+- [ ] main-cart-footer.liquid
+- [ ] main-cart-hero.liquid
+- [ ] main-cart-items.liquid
+- [ ] main-collection-hero.liquid
+- [ ] main-collection.liquid
+- [ ] main-list-collections.liquid
+- [ ] main-page.liquid
+- [ ] main-password-footer.liquid
+- [ ] main-password-header.liquid
+- [ ] main-product.liquid
+- [ ] main-search.liquid
+- [ ] newsletter.liquid
+- [ ] pickup-availability.liquid
+- [ ] policy-privacy.liquid
+- [ ] policy-refund.liquid
+- [ ] policy-shipping.liquid
+- [ ] policy-subscription.liquid
+- [ ] policy-terms-of-service.liquid
+- [ ] popup.liquid
+- [ ] predictive-search.liquid
+- [ ] product-recommendations.liquid
+- [ ] push-menu.liquid
 
 ### General
 - [ ] Integrate AOS on Fifty-fifty
