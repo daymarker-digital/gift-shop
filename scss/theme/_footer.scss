@@ -19,44 +19,9 @@
     }
   }
 
-  &__front-page {
-    padding: 30px 0;
-    max-width: 400px;
-    &-icon-set {
-      margin-top: 42px;
-      width: 100%;
-      img, svg {
-        display: block;
-        width: 100%;
-        height: auto;
-      }
-    }
-    &-project-title {
-      display: block;
-    }
-    &-projects {
-      text-transform: uppercase;
-      line-height: 1;
-      & + .footer__front-page-summary {
-        margin-top: 18px;
-      }
-    }
-    &-summary {
-      line-height: 1.4;
-      p, li {
-        font-size: inherit;
-        font-weight: inherit;
-        line-height: inherit;
-        &:last-child {
-          margin: 0;
-        }
-      }
-    }
-  }
-
   &__main {
 
-    padding: 45px 0;
+    padding: 45px var(--theme-layout--container-padding);
     text-transform: uppercase;
     line-height: 1.32;
     row-gap: 32px;
@@ -98,18 +63,6 @@
 
     font-size: 14px;
 
-  	&__front-page {
-      max-width: 50%;
-      &-icon-set {
-        margin-top: 42px;
-      }
-      &-projects {
-        & + .footer__front-page-summary {
-          margin-top: 18px;
-        }
-      }
-    }
-
 	}
 
 	@include breakpoint(lg) {
@@ -131,29 +84,9 @@
       }
     }
 
-    &__front-page {
-      padding: 12px 0;
-      max-width: none;
-      justify-content: space-between;
-      align-content: center;
-      flex-flow: row nowrap;
-      &-icon-set {
-        width: auto;
-        margin: 0 0 0 auto;
-        height: 30px;
-        img, svg {
-          width: auto;
-          height: 100%;
-        }
-      }
-      &-project-title {
-        margin-top: 6px;
-      }
-    }
-
     &__main {
 
-      padding: 25px 0 23px;
+      padding: 25px var(--theme-layout--container-padding) 23px;
       row-gap: 0;
 
       &-contact,

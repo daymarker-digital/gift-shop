@@ -1,4 +1,9 @@
+@use 'sass:map';
+@use '../variables' as *;
+@use "border" as *;
 @use "breakpoint" as *;
+@use "font" as *;
+@use "heading" as *;
 
 @mixin body-copy($style:primary) {
 
@@ -99,6 +104,216 @@
         margin-bottom: 26px;
       }
 
+    }
+
+  }
+
+}
+
+// ---------------------------------------- Size
+@mixin body-copy-size( $size: 'md' ) {
+
+  @if $size == 'xl' {
+    @each $name, $value in $theme-font-sizes-body-copy {
+      @if $name == 'base' {
+        font-size: $value * 1.15;
+      } @else {
+        @include breakpoint(#{$name}) {
+          font-size: $value * 1.15;
+        }
+      }
+    }
+  }
+
+  @if $size == 'lg' {
+    @each $name, $value in $theme-font-sizes-body-copy {
+      @if $name == 'base' {
+        font-size: $value * 1.075;
+      } @else {
+        @include breakpoint(#{$name}) {
+          font-size: $value * 1.075;
+        }
+      }
+    }
+  }
+
+  @if $size == 'md' {
+    @each $name, $value in $theme-font-sizes-body-copy {
+      @if $name == 'base' {
+        font-size: $value;
+      } @else {
+        @include breakpoint(#{$name}) {
+          font-size: $value;
+        }
+      }
+    }
+  }
+
+  @if $size == 'sm' {
+    @each $name, $value in $theme-font-sizes-body-copy {
+      @if $name == 'base' {
+        font-size: $value * 0.95;
+      } @else {
+        @include breakpoint(#{$name}) {
+          font-size: $value * 0.85;
+        }
+      }
+    }
+  }
+
+  @if $size == 'xs' {
+    @each $name, $value in $theme-font-sizes-body-copy {
+      @if $name == 'base' {
+        font-size: $value * 0.9;
+      } @else {
+        @include breakpoint(#{$name}) {
+          font-size: $value * 0.8;
+        }
+      }
+    }
+  }
+
+  @if $size == 'xxs' {
+    @each $name, $value in $theme-font-sizes-body-copy {
+      @if $name == 'base' {
+        font-size: $value * 0.75;
+      } @else {
+        @include breakpoint(#{$name}) {
+          font-size: $value * 0.6;
+        }
+      }
+    }
+  }
+
+}
+
+// ---------------------------------------- Style
+@mixin body-copy-style( $style: 1 ) {
+
+  @if $style == 1 or $style == 'primary' {
+    @include font-akkurate-mono();
+    line-height: 1.15;
+    h1, h2, h3, h4, h5, h6 {
+      @include heading-style('primary');
+    }
+    h1 {
+      @include heading-size('lg');
+    }
+    h2 {
+      @include heading-size('md');
+    }
+    h3 {
+      @include heading-size('sm');
+    }
+    h4 {
+      @include heading-size('xs');
+    }
+    h5, h6 {
+      @include heading-size('xxs');
+    }
+    a {
+      line-height: 1;
+    }
+  }
+
+  thead, tbody, tfoot, tr, td, th {
+    border-color: inherit;
+    border-style: solid;
+    border-width: 0;
+  }
+
+  ol, p, ul, table {
+    margin-bottom: 22px;
+    & + h1,
+    & + h2,
+    & + h3,
+    & + h4,
+    & + h5,
+    & + h6 {
+      margin-top: 38px;
+    }
+  }
+
+  ol, ul {
+    strong {
+      margin: 0;
+    }
+    ol, ul {
+      margin-top: 10px;
+    }
+  }
+
+  a {
+    color: inherit;
+    &:focus,
+    &:hover {
+      color: inherit;
+    }
+  }
+
+  table {
+    border-collapse: collapse;
+    width: 100%;
+    table-layout: fixed;
+    word-break: break-word;
+    strong {
+      margin: 0;
+    }
+    th, td, thead {
+      border-width: var(--theme-border--width);
+      border-color: currentColor;
+      border-style: solid;
+      padding: 5px;
+    }
+  }
+
+  p, li {
+
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+    font-style: inherit;
+    font-family: inherit;
+
+    a {
+
+      @include border-solid( 2px, 'inherit', 'bottom' );
+      transition: border var(--theme-transition--duration);
+      color: inherit;
+      display: inline-block;
+      width: auto;
+      text-decoration: none;
+      outline: none;
+
+      &:focus,
+      &:hover {
+        border-bottom-color: transparent;
+        text-decoration: none;
+        outline: none;
+        color: currentcolor;
+      }
+
+    }
+
+  }
+
+  & > *:last-child {
+    margin-bottom: 0;
+  }
+
+  @include breakpoint(lg) {
+
+    ol, p, ul, table {
+      margin-bottom: 26px;
+      & + h1,
+      & + h2,
+      & + h3,
+      & + h4,
+      & + h5,
+      & + h6 {
+        margin-top: 40px;
+      }
     }
 
   }

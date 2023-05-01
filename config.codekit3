@@ -7,7 +7,7 @@
       "uuidString" : "FE8C1B7F-EA9B-47F9-9B46-E9C2C8BF996D"
     }
   ],
-  "creatorBuild" : "34448",
+  "creatorBuild" : "34484",
   "files" : {
     "\/.editorconfig" : {
       "cB" : 0,
@@ -1406,6 +1406,66 @@
       "rFN" : 0,
       "uCM" : 0
     },
+    "\/scss\/cards\/_card-collection.scss" : {
+      "aP" : 1,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/assets\/_card-collection.css",
+      "oF" : 0,
+      "oS" : 3,
+      "pg" : 0,
+      "sct" : 0
+    },
+    "\/scss\/cards\/_card-product.scss" : {
+      "aP" : 1,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/assets\/_card-product.css",
+      "oF" : 0,
+      "oS" : 3,
+      "pg" : 0,
+      "sct" : 0
+    },
+    "\/scss\/cards\/_cart-notification.scss" : {
+      "aP" : 1,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/assets\/_cart-notification.css",
+      "oF" : 0,
+      "oS" : 3,
+      "pg" : 0,
+      "sct" : 0
+    },
+    "\/scss\/cards\/_index.scss" : {
+      "aP" : 1,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/assets\/_index.css",
+      "oF" : 0,
+      "oS" : 3,
+      "pg" : 0,
+      "sct" : 0
+    },
     "\/scss\/components\/_aos.scss" : {
       "aP" : 1,
       "bl" : 0,
@@ -1751,67 +1811,7 @@
       "pg" : 0,
       "sct" : 0
     },
-    "\/scss\/layouts\/_card-collection.scss" : {
-      "aP" : 1,
-      "bl" : 0,
-      "co" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/assets\/_card-collection.css",
-      "oF" : 0,
-      "oS" : 3,
-      "pg" : 0,
-      "sct" : 0
-    },
-    "\/scss\/layouts\/_card-product.scss" : {
-      "aP" : 1,
-      "bl" : 0,
-      "co" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/assets\/_card-product.css",
-      "oF" : 0,
-      "oS" : 3,
-      "pg" : 0,
-      "sct" : 0
-    },
-    "\/scss\/layouts\/_cart-notification.scss" : {
-      "aP" : 1,
-      "bl" : 0,
-      "co" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/assets\/_cart-notification.css",
-      "oF" : 0,
-      "oS" : 3,
-      "pg" : 0,
-      "sct" : 0
-    },
-    "\/scss\/layouts\/_index.scss" : {
-      "aP" : 1,
-      "bl" : 0,
-      "co" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/assets\/_index.css",
-      "oF" : 0,
-      "oS" : 3,
-      "pg" : 0,
-      "sct" : 0
-    },
-    "\/scss\/layouts\/_sticky-column.scss" : {
+    "\/scss\/components\/_sticky-column.scss" : {
       "aP" : 1,
       "bl" : 0,
       "co" : 0,
@@ -1871,7 +1871,7 @@
       "pg" : 0,
       "sct" : 0
     },
-    "\/scss\/sections\/featured-image.scss" : {
+    "\/scss\/sections\/_featured-image.scss" : {
       "aP" : 1,
       "bl" : 0,
       "co" : 0,
@@ -1882,6 +1882,21 @@
       "oA" : 0,
       "oAP" : "\/assets\/section-featured-image.css",
       "oF" : 3,
+      "oS" : 3,
+      "pg" : 0,
+      "sct" : 0
+    },
+    "\/scss\/sections\/_index.scss" : {
+      "aP" : 1,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/assets\/_index.css",
+      "oF" : 0,
       "oS" : 3,
       "pg" : 0,
       "sct" : 0
@@ -1931,6 +1946,21 @@
       "pg" : 0,
       "sct" : 0
     },
+    "\/scss\/theme\/_cart.scss" : {
+      "aP" : 1,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/assets\/_cart.css",
+      "oF" : 0,
+      "oS" : 3,
+      "pg" : 0,
+      "sct" : 0
+    },
     "\/scss\/theme\/_collection.scss" : {
       "aP" : 1,
       "bl" : 0,
@@ -1971,6 +2001,21 @@
       "ma" : 0,
       "oA" : 1,
       "oAP" : "\/assets\/_css-variables.css",
+      "oF" : 0,
+      "oS" : 3,
+      "pg" : 0,
+      "sct" : 0
+    },
+    "\/scss\/theme\/_drawer.scss" : {
+      "aP" : 1,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/assets\/_drawer.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -2036,6 +2081,36 @@
       "pg" : 0,
       "sct" : 0
     },
+    "\/scss\/theme\/_list-collections.scss" : {
+      "aP" : 1,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/assets\/_list-collections.css",
+      "oF" : 0,
+      "oS" : 3,
+      "pg" : 0,
+      "sct" : 0
+    },
+    "\/scss\/theme\/_policy.scss" : {
+      "aP" : 1,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/assets\/_policy.css",
+      "oF" : 0,
+      "oS" : 3,
+      "pg" : 0,
+      "sct" : 0
+    },
     "\/scss\/theme\/_product.scss" : {
       "aP" : 1,
       "bl" : 0,
@@ -2066,7 +2141,7 @@
       "pg" : 0,
       "sct" : 0
     },
-    "\/scss\/utils\/_index.scss" : {
+    "\/scss\/theme\/_utilities.scss" : {
       "aP" : 1,
       "bl" : 0,
       "co" : 0,
@@ -2075,7 +2150,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/assets\/_index.css",
+      "oAP" : "\/assets\/_utilities.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -2383,6 +2458,14 @@
       "oAP" : "\/sections\/custom-liquid.liquid",
       "oF" : 0
     },
+    "\/sections\/drawer-menu.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/sections\/drawer-menu.liquid",
+      "oF" : 0
+    },
     "\/sections\/email-signup-banner.liquid" : {
       "cB" : 0,
       "ft" : 8192,
@@ -2575,14 +2658,6 @@
       "oAP" : "\/sections\/newsletter.liquid",
       "oF" : 0
     },
-    "\/sections\/notification-cart.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/sections\/notification-cart.liquid",
-      "oF" : 0
-    },
     "\/sections\/pickup-availability.liquid" : {
       "cB" : 0,
       "ft" : 8192,
@@ -2765,14 +2840,6 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/snippets\/debug-this.liquid",
-      "oF" : 0
-    },
-    "\/snippets\/element-attrs.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/snippets\/element-attrs.liquid",
       "oF" : 0
     },
     "\/snippets\/element-styles.liquid" : {
@@ -3069,14 +3136,6 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/snippets\/theme--classes.liquid",
-      "oF" : 0
-    },
-    "\/snippets\/theme--css-variables.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/snippets\/theme--css-variables.liquid",
       "oF" : 0
     },
     "\/snippets\/theme--external-javascript.liquid" : {
@@ -4813,7 +4872,7 @@
       "moduleType" : 2,
       "removeComments" : 0,
       "sourceMapStyle" : 0,
-      "targetECMAVersion" : 0
+      "targetECMAVersion" : 2018
     },
     "languageDefaultsUserDefined" : [
 
@@ -4865,10 +4924,14 @@
       "ENVIRONMENT:::$NODE_ENV"
     ],
     "rollupTreeshakingEnabled" : 1,
+    "rollupTreeshakingModuleSideEffects" : 1,
     "skippedFoldersString" : "log, _logs, logs, _cache, cache, .idea, \/storage\/framework\/sessions, node_modules",
     "sourceFolderName" : "source",
     "susyVersion" : 3,
+    "tsAllowArbitraryExtensions" : 0,
+    "tsAllowImportingTSExtensions" : 0,
     "tsAllowSyntheticDefaultImports" : 0,
+    "tsAllowUMDGlobalAccess" : 0,
     "tsAllowUnreachableCode" : 0,
     "tsAllowUnusedLabels" : 0,
     "tsAlwaysStrict" : 0,
@@ -4877,36 +4940,36 @@
     "tsEmitDecoratorMetadata" : 0,
     "tsESModuleInterop" : 0,
     "tsExactOptionalPropertyTypes" : 0,
+    "tsExperimentalDecorators" : 0,
     "tsForceConsistentCasingInFileNames" : 0,
     "tsImportHelpers" : 0,
     "tsIsolatedModules" : 0,
     "tsJSXFactory" : "React.createElement",
-    "tsKeyofStringsOnly" : 0,
     "tsNoEmitHelpers" : 0,
     "tsNoFallthroughCasesInSwitch" : 0,
     "tsNoImplicitAny" : 0,
     "tsNoImplicitOverride" : 0,
     "tsNoImplicitReturns" : 0,
     "tsNoImplicitThis" : 0,
-    "tsNoImplicitUseStrict" : 0,
     "tsNoLib" : 0,
     "tsNoPropertyAccessFromIndexSignature" : 0,
     "tsNoResolve" : 0,
-    "tsNoStrictGenericChecks" : 0,
     "tsNoUncheckedIndexAccess" : 0,
     "tsNoUnusedLocals" : 0,
     "tsNoUnusedParameters" : 0,
     "tsPreserveConstEnums" : 0,
     "tsPreserveSymlinks" : 0,
     "tsResolveJsonModule" : 0,
+    "tsSkipDefaultLibCheck" : 0,
     "tsSkipLibCheck" : 0,
+    "tsStrictBindCallApply" : 0,
     "tsStrictFunctionTypes" : 0,
     "tsStrictNullChecks" : 0,
     "tsStrictPropertyInitialization" : 0,
     "tsStripInternal" : 0,
-    "tsSuppressExcessPropertyErrors" : 0,
-    "tsSuppressImplicitAnyIndexErrors" : 0,
+    "tsUseDefineForClassFields" : 0,
     "tsUseUnknownInCatchVariables" : 0,
+    "tsVerbatimModuleSyntax" : 0,
     "uglifyDefinesString" : "",
     "uglifyFlags2" : {
       "arguments" : {

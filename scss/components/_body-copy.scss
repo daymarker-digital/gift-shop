@@ -1,13 +1,25 @@
+@use '../utils/variables' as *;
 @use '../utils/mixins/body-copy' as *;
 
 .body-copy {
+
   &--announcement {
     @include body-copy(announcement);
   }
+
   &--banner {
     @include body-copy(banner);
   }
+
   &--1 {
     @include body-copy(1);
   }
+
+  // ---------------------------------------- Sizes
+  @each $size in $theme-type-sizes {
+    &--#{$size} {
+      @include body-copy-size( $size );
+    }
+  }
+
 }

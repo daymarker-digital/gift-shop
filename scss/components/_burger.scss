@@ -16,6 +16,7 @@
     }
   }
 
+  transition: top 0.15s;
   right: var(--theme-layout--container-padding);
   position: fixed;
   z-index: 200;
@@ -74,6 +75,10 @@
       bottom: 0;
     }
 
+  }
+
+  .announcements--active.push-menu--active & {
+    top: 0;
   }
 
   .announcements--active & {
