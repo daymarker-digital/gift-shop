@@ -25,6 +25,9 @@
 -%}
 
 {%- style -%}
+  #{{ section_id }} .grid {
+    gap: {{ section_grid_gutter }}px;
+  }
   {%
     render 'element-styles',
       background: section.settings.background,
@@ -138,6 +141,29 @@
       ],
       "default": "container",
       "id": "container"
+    },
+    {
+			"content": "Grid",
+			"type": "header"
+		},
+    {
+      "label": "Grid Layout",
+      "type": "select",
+      "options": [
+        { "value": "two-column", "label": "Two Column" },
+        { "value": "three-column", "label": "Three Column" }
+      ],
+      "default": "two-column",
+      "id": "grid_layout"
+    },
+    {
+      "label": "Grid Gutter",
+			"type": "range",
+			"min": 0,
+			"max": 100,
+			"step": 2,
+			"default": 20,
+      "id": "grid_gutter"
     },
     {
       "content": "Padding",
