@@ -17,8 +17,7 @@
             "title": "Shop Maater",
             "link": "https:\/\/maatercosmetics.com\/",
             "colour": "black",
-            "style": "primary",
-            "alignment": "center"
+            "style": "primary"
           }
         }
       },
@@ -29,8 +28,8 @@
         "image": "shopify:\/\/shop_images\/Maater-Shopify-Home.png",
         "image_height_desktop": "adapt",
         "image_height_mobile": "450px",
-        "content_width_desktop": 100,
-        "content_width_mobile": 100,
+        "content_width_desktop": 76,
+        "content_width_mobile": 76,
         "content_placement_horizontal": "center",
         "content_placement_vertical": "bottom",
         "content_stack_mobile": false,
@@ -76,7 +75,7 @@
         "b439fcdb-2b20-4e92-bcc6-749852735c97"
       ],
       "settings": {
-        "background": "white",
+        "background": "black",
         "container": "container-fluid",
         "grid_layout": "two-column",
         "grid_gutter": 22,
@@ -165,9 +164,8 @@
           "settings": {
             "title": "Shop Space Tees",
             "link": "shopify:\/\/collections\/tees",
-            "colour": "blue",
-            "style": "primary",
-            "alignment": "right"
+            "colour": "black",
+            "style": "primary"
           }
         }
       },

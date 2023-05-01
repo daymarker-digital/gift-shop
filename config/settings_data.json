@@ -56,12 +56,6 @@
           "background": "black"
         }
       },
-      "notification-cart": {
-        "type": "notification-cart",
-        "settings": {
-          "background": "black"
-        }
-      },
       "push-menu": {
         "type": "push-menu",
         "blocks": {
