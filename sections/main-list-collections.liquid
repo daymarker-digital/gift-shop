@@ -44,11 +44,11 @@
     {% paginate collections by section_collections_per_page %}
 
       {% if section_heading != blank %}
-        <h1 class="{{ section_name }}__heading heading--primary">{{ section_heading }}</h1>
+        <h1 class="{{ section_name }}__heading heading--primary heading--lg">{{ section_heading }}</h1>
       {% endif %}
 
       {% if section_message != blank and paginate.current_page == 1 %}
-        <div class="{{ section_name }}__message body-copy--primary">{{ section_message }}</div>
+        <div class="{{ section_name }}__message body-copy--primary body-copy--md">{{ section_message }}</div>
       {% endif %}
 
       <div class="{{ section_name }}__layout grid grid--{{ section_grid_layout }}" role="list">
