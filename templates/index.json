@@ -34,8 +34,8 @@
         "content_width_desktop": 100,
         "content_width_mobile": 100,
         "content_stack_mobile": false,
-        "image_height_desktop": "adapt",
         "image_height_mobile": "650px",
+        "image_height_desktop": "adapt",
         "padding_top": 0,
         "padding_bottom": 0,
         "text_colour": "dark"
@@ -76,7 +76,7 @@
         "b439fcdb-2b20-4e92-bcc6-749852735c97"
       ],
       "settings": {
-        "background": "black",
+        "background": "white",
         "container": "container-fluid",
         "grid_layout": "two-column",
         "grid_gutter": 22,
@@ -185,8 +185,8 @@
         "content_width_desktop": 50,
         "content_width_mobile": 100,
         "content_stack_mobile": true,
-        "image_height_desktop": "adapt",
         "image_height_mobile": "adapt",
+        "image_height_desktop": "adapt",
         "padding_top": 36,
         "padding_bottom": 0,
         "text_colour": "dark"
