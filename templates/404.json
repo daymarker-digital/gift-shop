@@ -17,15 +17,15 @@
         "adaa00c8-2cd2-48ff-b2bc-80fc3f05115a": {
           "type": "message",
           "settings": {
-            "message": "<p>It looks like the content you're looking for cannot be found. Let us take you back home.<\/p>",
+            "message": "<p>It looks like the content you're looking for cannot be found.<\/p>",
             "size": "md"
           }
         },
         "2a44d219-8e8d-4524-a3ae-2943b7cd35d0": {
           "type": "button",
           "settings": {
-            "title": "",
-            "link": "",
+            "title": "Take me home",
+            "link": "\/",
             "colour": "black",
             "style": "primary"
           }
