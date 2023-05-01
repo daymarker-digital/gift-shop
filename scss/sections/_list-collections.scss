@@ -1,0 +1,16 @@
+.list-collections {
+
+  &__heading {
+    & + .list-collections__layout,
+    & + .list-collections__message {
+      margin-top: 22px;
+    }
+  }
+
+  &__message {
+    & + .list-collections__layout {
+      margin-top: 25px;
+    }
+  }
+
+}

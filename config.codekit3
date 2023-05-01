@@ -1916,6 +1916,21 @@
       "pg" : 0,
       "sct" : 0
     },
+    "\/scss\/sections\/_list-collections.scss" : {
+      "aP" : 1,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/assets\/_list-collections.css",
+      "oF" : 0,
+      "oS" : 3,
+      "pg" : 0,
+      "sct" : 0
+    },
     "\/scss\/style.scss" : {
       "aP" : 1,
       "bl" : 0,
@@ -2569,12 +2584,12 @@
       "oAP" : "\/sections\/main-collection-hero.liquid",
       "oF" : 0
     },
-    "\/sections\/main-collection.liquid" : {
+    "\/sections\/main-collection-products.liquid" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/sections\/main-collection.liquid",
+      "oAP" : "\/sections\/main-collection-products.liquid",
       "oF" : 0
     },
     "\/sections\/main-list-collections.liquid" : {
