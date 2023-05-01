@@ -2,7 +2,7 @@
 
 .content {
 
-  padding: calc( 1.75 * var(--bs-gutter-width) );
+  padding: calc( 1.75 * var(--theme-layout--gutter) );
   display: inline-flex;
   flex-flow: column wrap;
 
@@ -42,7 +42,7 @@
 
   @include breakpoint(lg) {
 
-    padding: calc( 2.5 * var(--bs-gutter-width) );
+    padding: calc( 2.5 * var(--theme-layout--gutter) );
 
     &--stack-mobile {
       position: absolute;
@@ -55,7 +55,7 @@
 
   @include breakpoint(xxl) {
 
-    padding: calc( 3.0 * var(--bs-gutter-width) );
+    padding: calc( 3.0 * var(--theme-layout--gutter) );
 
   }
 

@@ -27,6 +27,8 @@
 
   -%}
 
-  <a class="{{ snippet_classes }}" href="{{ link_url }}" target="{{ link_target }}" title="{{ link_title }}">{{ link_content }}</a>
+  <a class="{{ snippet_classes }}" href="{{ link_url }}" target="{{ link_target }}" title="{{ link_title }}">
+    <span class="{{ snippet_name }}__title">{{ link_content }}</span>
+  </a>
 
 {%- endif -%}

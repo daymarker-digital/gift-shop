@@ -1,5 +1,6 @@
 @use 'sass:color';
 @use 'sass:map';
+@use "sass:meta";
 @use '../variables' as *;
 @use "border" as *;
 @use "breakpoint" as *;
@@ -8,103 +9,104 @@
 
 @mixin button-style( $style: 1 ) {
 
-  text-transform: uppercase;
+  $button-font-sizes: map.get( $theme-button-settings, 'font-sizes' );
+  $button-heights: map.get( $theme-button-settings, 'heights' );
+  $button-widths: map.get( $theme-button-settings, 'widths' );
 
-  // ---------------------------------------- Primary
-  @if $style == 'primary' or  $style == 1 {
-
-    .button,
-    .link {
-      &__title {
-        padding-top: 3px;
+  @include font-akkurate-mono();
+  @each $name, $value in $button-font-sizes {
+    @if $name == 'base' {
+      font-size: $value;
+    } @else {
+      @include breakpoint(#{$name}) {
+        font-size: $value;
       }
     }
+  }
+  @each $name, $value in $button-heights {
+    @if $name == 'base' {
+      height: $value;
+    } @else {
+      @include breakpoint(#{$name}) {
+        height: $value;
+      }
+    }
+  }
+  @each $name, $value in $button-widths {
+    @if $name == 'base' {
+      min-width: $value;
+    } @else {
+      @include breakpoint(#{$name}) {
+        min-width: $value;
+      }
+    }
+  }
+  text-transform: uppercase;
 
-    @include font-akkurate-mono();
-    @include breakpoint(xs) { height: 30px; font-size: 10px; }
-    @include breakpoint(sm) { height: 32px; font-size: 12px; }
-    @include breakpoint(md) { height: 34px; font-size: 14px; }
-    @include breakpoint(lg) { height: 38px; }
-    @include breakpoint(xl) { height: 40px; }
-    @include breakpoint(xxl) { height: 42px; font-size: 16px; }
-
+  // ---------------------------------------- Secondary
+  @if $style == 'primary' or  $style == 1  {
     @each $name, $value in $theme-colours {
+      &.button--#{$name} {
 
-      $background: $value;
-      $background-hover: $value;
-      $colour: map.get( $theme-colours, 'white' );
-      $colour-hover: map.get( $theme-colours, 'white' );
-
-      @if $name == 'black' {
-        $background-hover: map.get( $theme-colours, 'yellow' );
-        $colour: map.get( $theme-colours, 'white' );
-        $colour-hover: map.get( $theme-colours, 'black' );
-      }
-
-      @if $name == 'blue' {
-        $background-hover: map.get( $theme-colours, 'yellow' );
-        $colour: map.get( $theme-colours, 'white' );
-        $colour-hover: map.get( $theme-colours, 'black' );
-      }
-
-      @if $name == 'red' {
-        $background-hover: map.get( $theme-colours, 'black' );
+        $background: $value;
+        $background-hover: $value;
         $colour: map.get( $theme-colours, 'white' );
         $colour-hover: map.get( $theme-colours, 'white' );
-      }
 
-      @if $name == 'white' {
-        $background-hover: map.get( $theme-colours, 'black' );
-        $colour: map.get( $theme-colours, 'black' );
-        $colour-hover: map.get( $theme-colours, 'white' );
-      }
+        @if $name == 'black' {
+          $background-hover: map.get( $theme-colours, 'yellow' );
+          $colour: map.get( $theme-colours, 'white' );
+          $colour-hover: map.get( $theme-colours, 'black' );
+        }
 
-      @if $name == 'yellow' {
-        $background-hover: map.get( $theme-colours, 'black' );
-        $colour: map.get( $theme-colours, 'black' );
-        $colour-hover: map.get( $theme-colours, 'white' );
-      }
+        @if $name == 'blue' {
+          $background-hover: map.get( $theme-colours, 'yellow' );
+          $colour: map.get( $theme-colours, 'white' );
+          $colour-hover: map.get( $theme-colours, 'black' );
+        }
 
-      &-#{$name} {
+        @if $name == 'red' {
+          $background-hover: map.get( $theme-colours, 'black' );
+          $colour: map.get( $theme-colours, 'white' );
+          $colour-hover: map.get( $theme-colours, 'white' );
+        }
+
+        @if $name == 'white' {
+          $background-hover: map.get( $theme-colours, 'black' );
+          $colour: map.get( $theme-colours, 'black' );
+          $colour-hover: map.get( $theme-colours, 'white' );
+        }
+
+        @if $name == 'yellow' {
+          $background-hover: map.get( $theme-colours, 'black' );
+          $colour: map.get( $theme-colours, 'black' );
+          $colour-hover: map.get( $theme-colours, 'white' );
+        }
+
         background: $background;
         color: $colour;
         &:hover {
           background: $background-hover;
           color: $colour-hover;
         }
+
       }
-
     }
-
   }
 
   // ---------------------------------------- Secondary
   @if $style == 'secondary' or  $style == 2  {
-
     @include border-solid( var(--theme-border-width), 'inherit' );
-
-    @each $name, $value in $theme-button-heights {
-      @if $name == 'base' {
-        height: $value;
-      } @else {
-        @include breakpoint(#{$name}) {
-          height: $value;
-        }
-      }
-    }
-
     @each $name, $value in $theme-colours {
+      &.button--#{$name} {
 
-      $background: transparent;
-      $background-hover: $value;
+        $background: transparent;
+        $background-hover: $value;
+        $border-color: $value;
+        $border-color-hover: $value;
+        $colour: $value;
+        $colour-hover: map.get( $theme-colours, 'white' );
 
-      $border-color: $value;
-      $border-color-hover: $value;
-
-      $colour: $value;
-      $colour-hover: map.get( $theme-colours, 'white' );
-
-      &-#{$name} {
         background: $background;
         border-color: $border-color;
         color: $colour;
@@ -113,10 +115,9 @@
           border-color: $border-color-hover;
           color: $colour-hover;
         }
+
       }
-
     }
-
   }
 
 }

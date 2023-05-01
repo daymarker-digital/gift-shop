@@ -13,7 +13,7 @@ $theme: (
 
 // ---------------------------------------- AOS Settings
 $theme-aos-settings: (
-  'travel': 12px,
+  'travel': 10px,
 );
 
 // ---------------------------------------- Border Settings
@@ -23,13 +23,31 @@ $theme-border-settings: (
 );
 
 // ---------------------------------------- Button Heights
-$theme-button-heights: (
-  'base': 40px,
-  'sm': 42px,
-  'md': 44px,
-  'lg': 40px,
-  'xl': 42px,
-  'xxl': 44px
+$theme-button-settings: (
+  'font-sizes': (
+    'base': 12px,
+    'sm': 12px,
+    'md': 14px,
+    'lg': 14px,
+    'xl': 14px,
+    'xxl': 16px
+  ),
+  'heights': (
+    'base': 38px,
+    'sm': 40px,
+    'md': 42px,
+    'lg': 40px,
+    'xl': 42px,
+    'xxl': 44px
+  ),
+  'widths': (
+    'base': 150px,
+    'sm': 150px,
+    'md': 180px,
+    'lg': 360px,
+    'xl': 360px,
+    'xxl': 400px
+  )
 );
 
 // ---------------------------------------- Theme Button Font Size
@@ -37,16 +55,6 @@ $theme-burger-settings: (
   'width': 30px,
   'height': 14px,
   'stroke-width': 3px
-);
-
-// ---------------------------------------- Button Widths
-$theme-button-widths: (
-  'base': 136px,
-  'sm': 136px,
-  'md': 136px,
-  'lg': 116px,
-  'xl': 120px,
-  'xxl': 124px
 );
 
 // ---------------------------------------- Colours

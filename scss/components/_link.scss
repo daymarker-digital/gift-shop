@@ -4,7 +4,8 @@
 
 .link {
 
-  @include link();
+  @extend %ui-base;
+  @extend %ui-transition;
 
   &--button {
     &-primary,
@@ -13,6 +14,11 @@
         margin-bottom: -3px;
       }
     }
+  }
+
+  &[disabled],
+  &.disabled {
+    @extend %ui-disabled;
   }
 
 }

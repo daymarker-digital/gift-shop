@@ -8,8 +8,8 @@
   @include scss-map-to-css-var( '--theme-aos', $theme-aos-settings );
   @include scss-map-to-css-var( '--theme-border', $theme-border-settings );
   @include scss-map-to-css-var( '--theme-burger', $theme-burger-settings );
-  @include scss-map-to-css-var( '--theme-button-height', $theme-button-heights );
-  @include scss-map-to-css-var( '--theme-button-min-width', $theme-button-widths );
+  @include scss-map-to-css-var( '--theme-button-height',map.get( $theme-button-settings, 'heights' ) );
+  @include scss-map-to-css-var( '--theme-button-min-width', map.get( $theme-button-settings, 'widths' ) );
   @include scss-map-to-css-var( '--theme-colour', $theme-colours );
   @include scss-map-to-css-var( '--theme-container', map.get( $theme-layout-settings, 'containers' ) );
   @include scss-map-to-css-var( '--theme-font-family', $theme-font-families );
