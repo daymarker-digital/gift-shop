@@ -6,6 +6,14 @@
     "main": {
       "type": "main-404",
       "blocks": {
+        "d3135efb-ee44-4aff-ab38-0c2698c7b2b4": {
+          "type": "heading",
+          "settings": {
+            "heading": "404",
+            "size": "lg",
+            "style": "primary"
+          }
+        },
         "2a44d219-8e8d-4524-a3ae-2943b7cd35d0": {
           "type": "button",
           "settings": {
@@ -14,19 +22,11 @@
             "colour": "black",
             "style": "primary"
           }
-        },
-        "d3135efb-ee44-4aff-ab38-0c2698c7b2b4": {
-          "type": "heading",
-          "settings": {
-            "heading": "",
-            "size": "lg",
-            "style": "primary"
-          }
         }
       },
       "block_order": [
-        "2a44d219-8e8d-4524-a3ae-2943b7cd35d0",
-        "d3135efb-ee44-4aff-ab38-0c2698c7b2b4"
+        "d3135efb-ee44-4aff-ab38-0c2698c7b2b4",
+        "2a44d219-8e8d-4524-a3ae-2943b7cd35d0"
       ],
       "settings": {
         "background": "white",
