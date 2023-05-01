@@ -1,24 +1,14 @@
+@use '../utils/variables' as *;
 @use "../utils/mixins/breakpoint" as *;
-
-$options: (
-  'adapt',
-  '950px',
-  '850px',
-  '750px',
-  '650px',
-  '550px',
-  '450px',
-  '350px',
-);
 
 .media {
 
   width: 100%;
 
-  &--mobile {
-    @each $option in $options {
-      &-#{$option} {
-        @if $option == 'adapt' {
+  &--height-mobile {
+    @each $size in $theme-media-height-sizes {
+      &-#{$size} {
+        @if $size == 'adapt' {
           height: auto;
           img {
             height: auto;
@@ -26,7 +16,7 @@ $options: (
             font-style: italic
           }
         } @else {
-          height: #{$option};
+          height: #{$size};
           img {
             height: 100%;
             object-fit: cover;
@@ -38,17 +28,17 @@ $options: (
 
   @include breakpoint(lg) {
 
-    &--desktop {
-      @each $option in $options {
-        &-#{$option} {
-          @if $option == 'adapt' {
+    &--height-desktop {
+      @each $size in $theme-media-height-sizes {
+        &-#{$size} {
+          @if $size == 'adapt' {
             height: auto;
             img {
               height: auto;
               object-fit: initial;
             }
           } @else {
-            height: #{$option};
+            height: #{$size};
             img {
               height: 100%;
               object-fit: cover;

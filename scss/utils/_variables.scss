@@ -160,6 +160,18 @@ $theme-layout-settings: (
   )
 );
 
+// ---------------------------------------- Media Height Sizes
+$theme-media-height-sizes: (
+  'adapt',
+  '950px',
+  '850px',
+  '750px',
+  '650px',
+  '550px',
+  '450px',
+  '350px'
+);
+
 // ---------------------------------------- Push Menu Width
 $theme-push-menu-settings: (
   'link-font-sizes': (
