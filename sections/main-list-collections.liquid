@@ -6,8 +6,6 @@
 
   assign section_anchor_id = section.settings.anchor_id | default: ''
   assign section_collection_sorting = section.settings.collection_sorting
-  assign section_collection_title_size = section.settings.collection_title_size
-  assign section_collection_description_size = section.settings.collection_description_size
   assign section_collections_per_page = section.settings.collections_per_page
   assign section_grid_gutter = section.settings.grid_gutter | default: 20
   assign section_grid_layout = section.settings.grid_layout | default: 'two-column'
@@ -61,8 +59,6 @@
               card_aria_role: 'listitem',
               card_classes: card_classes,
               card_collection: item
-              card_heading_size: section_collection_title_size,
-              card_message_size: section_collection_description_size
           -%}
         {%- endfor -%}
       </div>
@@ -121,28 +117,6 @@
 			"default": 12,
       "id": "collections_per_page"
 		},
-    {
-      "label": "Collection Title Size",
-      "type": "select",
-      "options": [
-        { "label": "Large", "value": "lg" },
-        { "label": "Medium", "value": "md" },
-        { "label": "Small", "value": "sm" }
-      ],
-      "default": "sm",
-      "id": "collection_title_size"
-    },
-    {
-      "label": "Collection Description Size",
-      "type": "select",
-      "options": [
-        { "label": "Large", "value": "lg" },
-        { "label": "Medium", "value": "md" },
-        { "label": "Small", "value": "sm" }
-      ],
-      "default": "sm",
-      "id": "collection_description_size"
-    },
     {
       "content": "Settings",
       "type": "header"
