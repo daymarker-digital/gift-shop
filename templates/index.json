@@ -35,7 +35,7 @@
         "content_width_mobile": 100,
         "content_stack_mobile": false,
         "image_height_desktop": "adapt",
-        "image_height_mobile": "450px",
+        "image_height_mobile": "650px",
         "padding_top": 0,
         "padding_bottom": 0,
         "text_colour": "dark"
