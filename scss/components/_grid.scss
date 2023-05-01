@@ -4,19 +4,23 @@
 
   display: grid;
   width: 100%;
-  gap: 12px;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr;
 
-  @for $i from 1 through 100 {
-    &--gap-#{$i} {
-      gap: $i * 1px;
-    }
+  &--two-column,
+  &--three-column
+  &--four-column {
+    @extend .grid;
+    grid-template-columns: 1fr 1fr;
   }
 
   @include breakpoint(lg) {
 
     &--three-column {
       grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    &--four-column {
+      grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 
   }

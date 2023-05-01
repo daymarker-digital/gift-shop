@@ -1,68 +1,72 @@
 {%- if card_product and card_product != blank %}
 
+  {% comment %}
+    Renders a product grid card
+
+    Accepts:
+    - card_product: {Object} Product object
+
+    Usage:
+    {%-
+      render 'card-product-grid',
+        card_index: 1,
+        card_product: block.settings.product
+    -%}
+  {% endcomment %}
+
   {%- liquid
 
-    comment
-      Accepts:
-        - card_product: {Object} Product Liquid object
-        - classes: {String} Optionally include additional classes
-        - id: {String} Optionally include a unique ID
-        - style: {String} Optionally load different card types by passing style option
-    endcomment
-
     assign snippet_name = 'card-product'
-    assign snippet_classes = snippet_name | append: ' product'
-    assign snippet_id = id | default: 'card-product--' | append: card_product.id
-    assign style = style | default: 'not-set'
+    assign snippet_classes = snippet_name
+    assign snippet_id = snippet_name | append: '--' | append: card_product.id | append: '--' | append: card_index
 
-    if classes and classes != empty
-      assign snippet_classes = snippet_classes | prepend: ' ' | prepend: classes
-    endif
-
-    assign aos_id = snippet_id | append: '--aos'
     assign aos_delay = 250
     assign aos_delay_increment = 250
+    assign aos_id = snippet_id
 
-    assign available = card_product.available | default: false
-    assign date_published = card_product.published_at
-    assign images = card_product.images | default: false
-    assign price = card_product.price
-    assign price_compare = card_product.compare_at_price
-    assign selected_variant = card_product.selected_or_first_available_variant | default: false
-    assign title = card_product.title | default: ''
-    assign type = card_product.type | default: ''
-    assign url = card_product.url | default: ''
+    assign snippet_available = card_product.available | default: false
+    assign snippet_images = card_product.images | default: false
+    assign snippet_price = card_product.price
+    assign snippet_price_compare = card_product.compare_at_price
+    assign snippet_title = card_product.title | default: ''
+    assign snippet_type = card_product.type | default: ''
+    assign snippet_url = card_product.url | default: ''
+
+    unless snippet_available
+      assign snippet_classes = snippet_classes | append: ' unavailable'
+    endunless
 
   -%}
 
-  <article
-    class="{{ snippet_classes }}"
-    id="{{ snippet_id }}"
-    data-published-at="{{ date_published | date: "%Y-%m-%d %H:%M:%S" }}"
-    data-style="{{ style }}"
-    {% unless available %}data-unavailable{% endunless %}
-  >
-    <div class="{{ snippet_name }}__layout" id="{{ aos_id }}">
-
-      {% case style %}
-        {% when 'featured' %}
-        {% else %}
-          <div class="{{ snippet_name }}__image">
-            <a class="{{ snippet_name }}__image-link link" href="{{ url }}" title="{{ title }}" target="_self">
-              {% render 'lazyload-image', classes: 'card-product__image-01', image: images[0] %}
-              {% render 'lazyload-image', classes: 'card-product__image-02', image: images[1] %}
-              {% unless available %}
-                {% render 'banner', colour: 'red', title: 'Sold Out! (Sorry)' %}
-              {% endunless %}
-            </a>
-          </div>
-          <div class="{{ snippet_name }}__content">
-            <strong class="{{ snippet_name }}__title">
-              <a class="{{ snippet_name }}__title-link link" href="{{ url }}" title="{{ title }}" target="_self">{{ title }}</a>
-            </strong>
-          </div>
-      {% endcase %}
-
+  <article class="{{ snippet_classes }}" id="{{ snippet_id }}">
+    <div class="{{ snippet_name }}__layout">
+        <div class="{{ snippet_name }}__image">
+          <a class="{{ snippet_name }}__image-link link" href="{{ snippet_url }}" title="{{ snippet_title }}" target="_self">
+            {% render 'lazyload-image', classes: 'card-product__image-01', image: snippet_images[0] %}
+            {% render 'lazyload-image', classes: 'card-product__image-02', image: snippet_images[1] %}
+            {% unless snippet_available %}
+              {%- liquid
+                capture aos_attrs
+                  render 'aos-attributes', anchor: aos_id, delay: aos_delay, transition: 'fade-up'
+                endcapture
+                assign aos_delay = aos_delay | plus: aos_delay_increment
+              -%}
+              {%- render 'banner', banner_aos: aos_attrs, banner_colour: 'red', banner_title: 'Sold Out! (Sorry)' -%}
+            {%- endunless -%}
+          </a>
+        </div>
+        <div class="{{ snippet_name }}__content">
+          {%- liquid
+            capture aos_attrs
+              render 'aos-attributes', anchor: aos_id, delay: aos_delay, transition: 'fade-left'
+            endcapture
+            assign aos_delay = aos_delay | plus: aos_delay_increment
+          -%}
+          <strong class="{{ snippet_name }}__title" {{ aos_attrs }}>
+            {%- capture snippet_classes %}{{ snippet_name }}__title-link link{%- endcapture -%}
+            {%- render 'link', link_classes: snippet_classes, link_title: snippet_title, link_url: snippet_url -%}
+          </strong>
+        </div>
     </div>
   </article>
 

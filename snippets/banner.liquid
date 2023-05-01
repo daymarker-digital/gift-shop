@@ -1,12 +1,13 @@
-{%- if title and title != blank %}
+{%- if banner_title and banner_title != blank %}
 
   {%- liquid
+    assign snippet_aos = banner_aos | default: ''
     assign snippet_name = 'banner'
-    assign colour = colour | default: 'black'
+    assign snippet_colour = banner_colour | default: 'black'
   -%}
 
-  <div class="{{ snippet_name }} {{ snippet_name }}--{{ colour }}">
-    <span class="{{ snippet_name }}__title">{{ title }}</span>
+  <div class="{{ snippet_name }} {{ snippet_name }}--{{ snippet_colour }}"{% unless snippet_aos == blank %}{{ snippet_aos }}{% endunless %}>
+    <span class="{{ snippet_name }}__title">{{ banner_title }}</span>
   </div>
 
 {%- endif -%}
