@@ -137,8 +137,8 @@
         "background": "white",
         "container": "container-fluid",
         "grid_layout": "two-column",
-        "grid_gutter": 22,
-        "padding_top": 44,
+        "grid_gutter": 24,
+        "padding_top": 24,
         "padding_bottom": 0,
         "anchor_id": ""
       }
@@ -182,7 +182,7 @@
         "container": "container-fluid",
         "content_placement_horizontal": "center",
         "content_placement_vertical": "center",
-        "content_width_desktop": 50,
+        "content_width_desktop": 65,
         "content_width_mobile": 100,
         "content_stack_mobile": true,
         "image_height_mobile": "adapt",
