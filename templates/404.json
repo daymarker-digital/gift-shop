@@ -1,1 +1,40 @@
-{"name":"404","order":["main"],"sections":{"main":{"settings":{},"type":"main-404"}}}
+{
+  "order": [
+    "main"
+  ],
+  "sections": {
+    "main": {
+      "type": "main-404",
+      "blocks": {
+        "2a44d219-8e8d-4524-a3ae-2943b7cd35d0": {
+          "type": "button",
+          "settings": {
+            "title": "",
+            "link": "",
+            "colour": "black",
+            "style": "primary"
+          }
+        },
+        "d3135efb-ee44-4aff-ab38-0c2698c7b2b4": {
+          "type": "heading",
+          "settings": {
+            "heading": "",
+            "size": "lg",
+            "style": "primary"
+          }
+        }
+      },
+      "block_order": [
+        "2a44d219-8e8d-4524-a3ae-2943b7cd35d0",
+        "d3135efb-ee44-4aff-ab38-0c2698c7b2b4"
+      ],
+      "settings": {
+        "background": "white",
+        "container": "container",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "text_colour": "dark"
+      }
+    }
+  }
+}
