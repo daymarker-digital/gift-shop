@@ -58,9 +58,11 @@
           {%- case block.type -%}
             {%- when 'heading' -%}
 
-              {% assign heading = block.settings.heading | default: '' %}
-              {% assign heading_size = block.settings.size | default: '1' %}
-              {% assign heading_style = block.settings.style | default: 'primary' %}
+              {%- liquid
+                assign heading = block.settings.heading | default: ''
+                assign heading_size = block.settings.size | default: '1'
+                assign heading_style = block.settings.style | default: 'primary'
+              -%}
 
               {% if heading != blank %}
                 {%- liquid
@@ -88,9 +90,9 @@
             {%- when 'button' -%}
 
               {%- liquid
+                assign button_colour = block.settings.colour | default: 'black'
                 assign button_link = block.settings.link | default: ''
                 assign button_style = block.settings.style | default: 'primary'
-                assign button_colour = block.settings.colour | default: 'black'
                 assign button_title = block.settings.title | default: ''
               -%}
 

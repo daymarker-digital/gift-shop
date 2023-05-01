@@ -1,7 +1,7 @@
 {%- liquid
 
   assign section_name = 'header'
-  assign section_id = section_name | append: '--' | append: section.id
+  assign section_id = 'shopify-section-' | append: section.id
 
   assign aos_id = section_id | append: '--aos'
   assign aos_delay = 250

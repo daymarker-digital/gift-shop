@@ -67,8 +67,22 @@
   "tag": "section",
   "class": "section section--featured-products",
   "settings": [
+     {
+			"content": "Settings",
+			"type": "header"
+		},
     {
-			"content": "Layout",
+      "content": "Anchor",
+      "type": "header"
+    },
+    {
+      "label": "Anchor ID",
+      "info": "Optionally include a unique ID so that sections within the page can be linked to. Anchor IDs must be all lowercase, unique and replaced empty spaces with hyphens. For example: my-great-section-anchor",
+      "type": "text",
+      "id": "anchor_id"
+    },
+    {
+			"content": "Background",
 			"type": "header"
 		},
     {
@@ -123,7 +137,7 @@
 			"label": "Top Padding",
 			"type": "range",
 			"min": 0,
-			"max": 200,
+			"max": 300,
 			"step": 4,
 			"default": 36,
       "id": "padding_top"
@@ -132,20 +146,24 @@
 			"label": "Bottom Padding",
 			"type": "range",
 			"min": 0,
-			"max": 200,
+			"max": 300,
 			"step": 4,
 			"default": 36,
       "id": "padding_bottom"
 		},
     {
-			"content": "Anchor",
-			"type": "header"
-		},
+      "content": "Text",
+      "type": "header"
+    },
     {
-      "label": "Anchor ID",
-      "info": "Optionally include a unique ID so that sections within the page can be linked to. Anchor IDs must be all lowercase, unique and replaced empty spaces with hyphens. For example: my-great-section-anchor",
-      "type": "text",
-      "id": "anchor_id"
+      "label": "Text Colour",
+      "type": "select",
+      "options": [
+        { "label": "Dark", "value": "dark" },
+        { "label": "Light", "value": "light" }
+      ],
+      "default": "dark",
+      "id": "text_colour"
     }
   ],
   "blocks": [
