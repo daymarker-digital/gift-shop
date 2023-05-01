@@ -26,18 +26,19 @@
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/Maater-Shopify-Home.png",
-        "image_height_desktop": "adapt",
-        "image_height_mobile": "450px",
-        "content_width_desktop": 76,
-        "content_width_mobile": 76,
-        "content_placement_horizontal": "center",
-        "content_placement_vertical": "bottom",
-        "content_stack_mobile": false,
+        "anchor_id": "",
         "background": "white",
         "container": "container-fluid",
+        "content_placement_horizontal": "center",
+        "content_placement_vertical": "bottom",
+        "content_width_desktop": 100,
+        "content_width_mobile": 100,
+        "content_stack_mobile": false,
+        "image_height_desktop": "adapt",
+        "image_height_mobile": "650px",
         "padding_top": 0,
         "padding_bottom": 0,
-        "anchor_id": ""
+        "text_colour": "dark"
       }
     },
     "1661195827dff74e88": {
@@ -176,18 +177,19 @@
       ],
       "settings": {
         "image": "shopify:\/\/shop_images\/VP-top-3.jpg",
-        "image_height_desktop": "adapt",
-        "image_height_mobile": "adapt",
-        "content_width_desktop": 50,
-        "content_width_mobile": 100,
-        "content_placement_horizontal": "center",
-        "content_placement_vertical": "center",
-        "content_stack_mobile": true,
+        "anchor_id": "",
         "background": "white",
         "container": "container-fluid",
+        "content_placement_horizontal": "center",
+        "content_placement_vertical": "center",
+        "content_width_desktop": 50,
+        "content_width_mobile": 100,
+        "content_stack_mobile": true,
+        "image_height_desktop": "adapt",
+        "image_height_mobile": "adapt",
         "padding_top": 36,
         "padding_bottom": 0,
-        "anchor_id": ""
+        "text_colour": "dark"
       }
     },
     "16611959936ca1502e": {
