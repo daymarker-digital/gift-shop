@@ -7,7 +7,7 @@
       "type": "main-list-collections",
       "settings": {
         "heading": "Everything",
-        "message": "<p>Sed dui odio, consectetur a dictum vitae, cursus non lacus. Maecenas <br\/>porta quam eu fermentum varius. Morbi in feugiat nisi. Integer id risus <br\/>mollis, porttitor augue at, efficitur lectus. Suspendisse velit lectus, <br\/>venenatis sed lacus vitae, hendrerit tincidunt felis. Aliquam id maximus<br\/> metus. Ut quam mauris, suscipit sed posuere vel, mollis at lacus. <br\/>Maecenas faucibus quam est, ac condimentum ante auctor vitae. Fusce eu <br\/>pretium diam. Nulla posuere ultrices quam, ut ultrices elit cursus <br\/>dignissim. Duis posuere, neque quis dignissim pulvinar, justo odio <br\/>mattis nulla, sed consequat lacus neque molestie ipsum. Nunc vitae <br\/>lectus sollicitudin, imperdiet urna ut, malesuada leo. Ut eu ex porta, <br\/>luctus risus sed, venenatis lectus. Nam imperdiet aliquam quam vel <br\/>eleifend.<br\/><\/p>",
+        "message": "<p>Sed dui odio, consectetur a dictum vitae, cursus non lacus. Maecenas <br\/>porta quam eu fermentum varius. Morbi in feugiat nisi. Integer id risus <br\/>mollis, porttitor augue at, efficitur lectus. Suspendisse velit lectus, <br\/>venenatis sed lacus vitae, hendrerit tincidunt felis.<\/p>",
         "collection_sorting": "alphabetical",
         "collections_per_page": 8,
         "collection_title_size": "md",
