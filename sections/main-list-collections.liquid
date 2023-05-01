@@ -8,6 +8,7 @@
   assign section_collection_sorting = section.settings.collection_sorting
   assign section_collection_title_size = section.settings.collection_title_size
   assign section_collection_description_size = section.settings.collection_description_size
+  assign section_collections_per_page = section.settings.collections_per_page
   assign section_grid_gutter = section.settings.grid_gutter | default: 20
   assign section_grid_layout = section.settings.grid_layout | default: 'two-column'
 
@@ -40,19 +41,25 @@
 
 <div class="{{ section_classes }}" id="{{ section_id }}">
   {% render 'bs-container', state: 'open', col: 'col-12 col-lg-10 offset-lg-1', container: section_container %}
-    <div class="{{ section_name }}__layout grid grid--{{ section_grid_layout }}" role="list">
-      {%- for item in collections -%}
-        {%- capture card_classes -%}{{ section_name }}__item card-collection{%- endcapture -%}
-        {%-
-          render 'card-collection',
-            card_aria_role: 'listitem',
-            card_classes: card_classes,
-            card_collection: item
-            card_heading_size: section_collection_title_size,
-            card_message_size: section_collection_description_size
-        -%}
-      {%- endfor -%}
-    </div>
+    {% paginate collections by section_collections_per_page %}
+
+      <div class="{{ section_name }}__layout grid grid--{{ section_grid_layout }}" role="list">
+        {%- for item in collections -%}
+          {%- capture card_classes -%}{{ section_name }}__item card-collection{%- endcapture -%}
+          {%-
+            render 'card-collection',
+              card_aria_role: 'listitem',
+              card_classes: card_classes,
+              card_collection: item
+              card_heading_size: section_collection_title_size,
+              card_message_size: section_collection_description_size
+          -%}
+        {%- endfor -%}
+      </div>
+
+      {% render 'pagination', paginate: paginate %}
+
+    {% endpaginate %}
   {% render 'bs-container', state: 'closed', col: 'col-12 col-lg-10 offset-lg-1', container: section_container %}
 </div>
 
@@ -81,6 +88,15 @@
       "default": "alphabetical",
       "id": "collection_sorting"
     },
+    {
+			"label": "Collections per Page",
+			"type": "range",
+			"min": 1,
+			"max": 50,
+			"step": 1,
+			"default": 12,
+      "id": "collections_per_page"
+		},
     {
       "label": "Collection Title Size",
       "type": "select",
