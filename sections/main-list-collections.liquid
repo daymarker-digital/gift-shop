@@ -11,6 +11,8 @@
   assign section_collections_per_page = section.settings.collections_per_page
   assign section_grid_gutter = section.settings.grid_gutter | default: 20
   assign section_grid_layout = section.settings.grid_layout | default: 'two-column'
+  assign section_heading = section.settings.heading | default: 'All Collections'
+  assign section_message = section.settings.message | default: ''
 
   case section_collection_sorting
     when 'products_high' or 'products_low'
@@ -43,6 +45,14 @@
   {% render 'bs-container', state: 'open', col: 'col-12 col-lg-10 offset-lg-1', container: section_container %}
     {% paginate collections by section_collections_per_page %}
 
+      {% if section_heading != blank %}
+        <h1 class="{{ section_name }}__heading heading--primary">{{ section_heading }}</h1>
+      {% endif %}
+
+      {% if section_message != blank and paginate.current_page == 1 %}
+        <div class="{{ section_name }}__message body-copy--primary">{{ section_message }}</div>
+      {% endif %}
+
       <div class="{{ section_name }}__layout grid grid--{{ section_grid_layout }}" role="list">
         {%- for item in collections -%}
           {%- capture card_classes -%}{{ section_name }}__item card-collection{%- endcapture -%}
@@ -70,6 +80,20 @@
   "class": "section section--list-collections",
   "templates": [ "list-collections" ],
   "settings": [
+    {
+      "content": "Content",
+      "type": "header"
+    },
+    {
+      "label": "Heading",
+      "type": "text",
+      "id": "heading"
+    },
+    {
+      "label": "Message",
+      "type": "richtext",
+      "id": "message"
+    },
     {
       "content": "Collection",
       "type": "header"
