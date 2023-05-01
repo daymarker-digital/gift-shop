@@ -5,13 +5,6 @@
 
 @mixin heading-style( $style: 'primary' ) {
 
-  margin: 0;
-  padding: 0;
-  text-transform: none;
-  display: block;
-  font-style: normal;
-  color: inherit;
-
   @if $style == 'primary' {
     @include font-sorry-sans(700);
     line-height: 1.05;
@@ -21,6 +14,13 @@
     @include font-not-sorry-serif(700);
     line-height: 1.15;
   }
+
+  margin: 0;
+  padding: 0;
+  text-transform: none;
+  display: block;
+  font-style: normal;
+  color: inherit;
 
 }
 

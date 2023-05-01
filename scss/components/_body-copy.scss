@@ -1,25 +1,36 @@
-@use '../utils/variables' as *;
 @use '../utils/mixins/body-copy' as *;
 
 .body-copy {
 
+  &--primary {
+    @include body-copy-style('primary');
+  }
+
+  &--secondary {
+    @include body-copy-style('secondary');
+  }
+
+  &--1,
+  &--lg {
+    @include body-copy-size('1');
+  }
+
+  &--2,
+  &--md {
+    @include body-copy-size('2');
+  }
+
+  &--3,
+  &--sm {
+    @include body-copy-size('3');
+  }
+
   &--announcement {
-    @include body-copy(announcement);
+    @include body-copy-size('announcement');
   }
 
   &--banner {
-    @include body-copy(banner);
-  }
-
-  &--1 {
-    @include body-copy(1);
-  }
-
-  // ---------------------------------------- Sizes
-  @each $size in $theme-type-sizes {
-    &--#{$size} {
-      @include body-copy-size( $size );
-    }
+    @include body-copy-size('banner');
   }
 
 }
