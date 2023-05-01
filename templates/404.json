@@ -38,9 +38,9 @@
       ],
       "settings": {
         "background": "white",
-        "container": "container",
-        "padding_top": 36,
-        "padding_bottom": 36,
+        "container": "container-fluid",
+        "padding_top": 0,
+        "padding_bottom": 0,
         "text_colour": "dark"
       }
     }
