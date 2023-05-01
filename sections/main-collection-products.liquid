@@ -30,7 +30,7 @@
 
     {% paginate collection.products by products_per_page %}
 
-      <div class="{{ section_name }}__layout grid grid--{{ section_grid_layout }} role="list">
+      <div class="{{ section_name }}__layout grid grid--{{ section_grid_layout }}" role="list">
         {% for product in collection.products %}
           <div class="{{ section_name }}__item grid__item" data-index="{{ forloop.index }}" role="listitem">
             {% render 'card-product', card_index: forloop.index, card_product: product %}
