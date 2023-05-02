@@ -19,8 +19,8 @@
 
 %ui-disabled {
   &[disabled] {
-    cursor: no-drop;
-    opacity: 0.33;
+    cursor: not-allowed;
+    opacity: 0.3333;
     &:focus,
     &:hover {
       background: initial;
