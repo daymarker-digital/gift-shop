@@ -96,7 +96,7 @@
 
   // ---------------------------------------- Secondary
   @if $style == 'secondary' or  $style == 2  {
-    @include border-solid( var(--theme-border-width), 'inherit' );
+    @include border-solid( var(--theme-border--width), 'inherit' );
     @each $name, $value in $theme-colours {
       &.button--#{$name} {
 

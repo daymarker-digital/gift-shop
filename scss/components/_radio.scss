@@ -1,3 +1,5 @@
+@use 'sass:math';
+@use "../utils/variables" as *;
 @use "../utils/mixins/border" as *;
 @use "../utils/mixins/breakpoint" as *;
 @use "../utils/mixins/font" as *;
@@ -8,21 +10,18 @@
     display: none;
     &:checked {
       & + .radio__item {
-        background: var(--theme-colour--black);
-        color: var(--theme-colour--white);
+        background: var(--theme-colour--yellow);
+        .radio__title {
+          color: var(--theme-colour--black);
+        }
       }
     }
     &[disabled] {
       & + .radio__item {
         cursor: not-allowed;
+        opacity: 0.5;
         &:after {
-          content: '';
-          width: 2px;
-          background: var(--theme-colour--black);
-          position: absolute;
-          transform-origin: center center;
-          height: calc( var(--theme-radio-height) + 30px );
-          transform: rotate(45deg);
+          opacity: 1;
         }
       }
     }
@@ -31,48 +30,55 @@
         cursor: pointer;
         &:hover {
           background: var(--theme-colour--yellow);
-          color: var(--theme-colour--black);
+          .radio__title {
+            color: var(--theme-colour--black);
+          }
         }
       }
     }
   }
 
   &__item {
-    @include border-solid( var(--theme-border-width), 'black' );
-    @include font-akkurate-mono();
-    height: var(--theme-radio-height);
-    width: var(--theme-radio-height);
-    color: #111;
-    transition: all .28s;
+    @include border-solid( var(--theme-border-width), 'inherit' );
+    @each $name, $value in $theme-input-heights {
+      @if $name == 'base' {
+        height: $value;
+        width: $value;
+        &:after {
+          width: math.hypot($value, $value);
+        }
+      } @else {
+        @include breakpoint(#{$name}) {
+          height: $value;
+          width: $value;
+          &:after {
+            width: math.hypot($value, $value);
+          }
+        }
+      }
+    }
+    color: currentcolor;
     display: inline-flex;
     justify-content: center;
     align-items: center;
     position: relative;
     overflow: hidden;
+    &:after {
+      height: var(--theme-border--width);
+      opacity: 0;
+      content: '';
+      background: currentcolor;
+      position: absolute;
+      transform: rotate(-45deg);
+    }
   }
 
   &__title {
     font-size: 15px;
     display: block;
-    margin-bottom: -4px;
   }
 
   @include breakpoint(lg) {
-
-    &__input {
-      &[disabled] {
-        & + .radio__item {
-          &:after {
-            height: calc( var(--theme-radio-height--lg) + 30px );
-          }
-        }
-      }
-    }
-
-    &__item {
-      height: var(--theme-radio-height--lg);
-      width: var(--theme-radio-height--lg);
-    }
 
     &__title {
       font-size: 17px;
@@ -81,21 +87,6 @@
   }
 
   @include breakpoint(xxl) {
-
-    &__input {
-      &[disabled] {
-        & + .radio__item {
-          &:after {
-            height: calc( var(--theme-radio-height--xxl) + 30px );
-          }
-        }
-      }
-    }
-
-    &__item {
-      height: var(--theme-radio-height--xxl);
-      width: var(--theme-radio-height--xxl);
-    }
 
     &__title {
       font-size: 19px;

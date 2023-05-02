@@ -2,6 +2,8 @@
 
 .product-options {
 
+  padding: var(--theme-layout--gutter) 0;
+
   &__list {
     display: flex;
     gap: 10px;
@@ -11,28 +13,28 @@
     width: 100%;
   }
 
-  @include breakpoint(lg) {
-
+  @include breakpoint(md) {
     &__list {
       gap: 12px;
     }
-
   }
 
   @include breakpoint(lg) {
-
     &__list {
       gap: 14px;
     }
+  }
 
+  @include breakpoint(xl) {
+    &__list {
+      gap: 15px;
+    }
   }
 
   @include breakpoint(xxl) {
-
     &__list {
       gap: 16px;
     }
-
   }
 
 }

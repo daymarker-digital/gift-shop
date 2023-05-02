@@ -15,16 +15,14 @@
 
     assign template_name = 'main-product'
     assign snippet_name = 'product-actions'
-
     assign classes = classes | default: 'main-product__actions'
-
     assign product_available = product.available | default: false
 
   -%}
 
   <div class='{{ classes }} {{ snippet_name }}'>
     <button
-      class='{{ snippet_name }}__button-add-to-cart button button--secondary button--secondary-black js--add-to-cart'
+      class='{{ snippet_name }}__button-add-to-cart button--secondary js--add-to-cart'
       name='add'
       type='submit'
       {% unless product_available %}disabled{% endunless %}

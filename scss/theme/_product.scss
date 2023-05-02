@@ -1,28 +1,14 @@
+@use "../utils/variables" as *;
 @use "../utils/mixins/body-copy" as *;
 @use "../utils/mixins/breakpoint" as *;
 @use "../utils/mixins/ui" as *;
 
 .product {
 
+  @import '../components/product-options';
+
   [data-bs-toggle] {
     cursor: pointer;
-  }
-
-  .glide {
-    &__button-open-modal {
-      position: absolute;
-      top: 30px;
-      right: 24px;
-      height: 24px;
-      width: auto;
-      z-index: 100;
-      svg {
-        transform: rotate(45deg);
-        height: 100%;
-        width: 100%;
-        display: block;
-      }
-    }
   }
 
   &__badge {
@@ -43,15 +29,28 @@
 
   &__button {
     &-add-to-cart {
-      height: var(--theme-radio-size);
+      @each $name, $value in $theme-input-heights {
+        @if $name == 'base' {
+          height: $value;
+        } @else {
+          @include breakpoint(#{$name}) {
+            height: $value;
+          }
+        }
+      }
       font-size: 15px;
       width: 100%;
-      max-width: 350px;
+      max-width: 400px;
     }
     &-modal-trigger {
-      height: 30px;
-      width: 30px;
-      border: 1px solid red;
+      top: var(--theme-layout--gutter);
+      right: var(--theme-layout--gutter);
+      position: absolute;
+      z-index: 50;
+      &:after,
+      &:before {
+        background: var(--theme-colour--black);
+      }
     }
   }
 
@@ -73,6 +72,9 @@
   &__price {
     font-size: 17px;
     margin-top: 10px;
+    & + .product__images {
+      margin-top: var(--theme-layout--gutter);
+    }
   }
 
   @include breakpoint(sm) {
@@ -109,7 +111,6 @@
 
     &__button {
       &-add-to-cart {
-        height: var(--theme-radio-size--lg);
         font-size: 17px;
       }
     }
@@ -127,8 +128,8 @@
     }
 
     &__price {
-      font-size: 18px;
-      margin-top: 22px;
+      font-size: 20px;
+      margin: 15px 0;
     }
 
   }
@@ -136,8 +137,8 @@
   @include breakpoint(xl) {
 
     &__price {
-      font-size: 21px;
-      margin-top: 24px;
+      font-size: 22px;
+      margin: 16px 0;
     }
 
   }
@@ -152,14 +153,13 @@
 
     &__button {
       &-add-to-cart {
-        height: var(--theme-radio-size--xxl);
         font-size: 19px;
       }
     }
 
     &__price {
-      font-size: 24px;
-      margin-top: 26px;
+      font-size: 22px;
+      margin: 18px 0;
     }
 
   }

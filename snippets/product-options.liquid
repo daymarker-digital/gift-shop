@@ -24,10 +24,10 @@
 
   -%}
 
-  <div class='{{ classes }} {{ snippet_name }}'>
+  <div class='product__options {{ snippet_name }}'>
 
     {% unless product_has_no_options %}
-      <strong class='{{ snippet_name }}__heading'>Select a Size:</strong>
+      <strong class='{{ snippet_name }}__heading d-none'>Select a Size:</strong>
     {% endunless %}
 
     <div class='{{ snippet_name }}__list'>

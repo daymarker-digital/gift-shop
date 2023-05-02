@@ -10,8 +10,6 @@
   &__container {
     margin: auto;
     width: 100%;
-    display: flex;
-    flex-flow: row wrap;
   }
 
   @include breakpoint(lg) {
@@ -25,7 +23,6 @@
         .sticky-column__content {
           margin-top: calc( -1 * var(--theme-header-height-total) );
           padding-top: calc( var(--theme-header-height-total) );
-          padding-left: 30px;
         }
         .sticky-column__main {
           position: sticky;
@@ -34,12 +31,6 @@
           padding: 0;
         }
       }
-      &[data-column-width="two-thirds"] {
-        width: 66.6666%;
-      }
-      &[data-column-width="one-third"] {
-        width: 33.3333%;
-      }
     }
 
     &__content {
@@ -47,7 +38,10 @@
     }
 
     &__container {
-      flex-flow: row nowrap;
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+      grid-template-columns: auto 38%;
+      gap: var(--theme-layout--gutter);
     }
 
   }

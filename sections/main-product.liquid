@@ -11,12 +11,14 @@
   assign section_background_colour = section.settings.background
   assign section_container = section.settings.container
 
+  assign section_product_available = product.available
+  assign section_product_description = product.description | default: ''
   assign section_product_images = product.images | default: false
   assign section_product_modal_id = section_id | append: '--modal'
   assign section_product_shop_button_enabled = false
   assign section_product_tags = product.tags | default: false
 
-  if product.has_only_default_variant and product.available
+  if product.has_only_default_variant and section_product_available
     assign section_product_shop_button_enabled = true
   endif
 
@@ -52,14 +54,12 @@
               {% if section_product_images.size > 0 %}
 
                 <div class='{{ section_name }}__images d-lg-none'>
-
                   <button class='{{ section_name }}__button-modal-trigger button--open'
                     data-bs-target='#{{ section_product_modal_id }}'
                     data-bs-toggle='modal'
                     data-product-image-gallery-index='0'
                     type='button'
                   ></button>
-
                   {% capture product_badge_classes %}{{ section_name }}__badge product-badge{% endcapture %}
                   {% render 'product-badge', badge_classes: product_badge_classes, product: product  %}
                   {% render 'product-image-gallery-carousel', carousel_bullets: true, modal_id: section_product_modal_id, product: product %}
@@ -87,13 +87,26 @@
               {% capture product_price_classes %}{{ section_name }}__price d-none d-lg-block{% endcapture %}
               {% render 'product-price', classes: product_price_classes, product: product, show_symbol: true %}
 
-              {% render 'product-description', product: product %}
+              {%- if section_product_description != blank -%}
+                <div class='product__description product-description body-copy--primary body-copy--3'>{{ section_product_description }}</div>
+              {%- endif -%}
 
               <form class="{{ section_name }}__form-add-to-cart" action='/cart/add' method='post' enctype='multipart/form-data'>
                 {% render 'product-options', product: product %}
                 {% capture product_quantity_classes %}{{ section_name }}__quantity d-none{% endcapture %}
                 {% render 'product-quantity', classes: product_quantity_classes, product: product %}
-                {% render 'product-actions', product: product %}
+
+                <div class='{{ section_name }}__actions'>
+                  <button
+                    class='{{ section_name }}__button-add-to-cart button--secondary js--add-to-cart'
+                    name='add'
+                    type='submit'
+                    {% unless section_product_available %}disabled{% endunless %}
+                  >
+                    <span class='button__title'>{% if section_product_available %}Add to Bag{% else %}Sold Out!{% endif %}</span>
+                  </button>
+                </div>
+
               </form>
 
             </div>
