@@ -32,6 +32,7 @@
       }
       &:focus,
       &:hover {
+        color: inherit;
         img {
           &:nth-child(2) {
             opacity: 1;
