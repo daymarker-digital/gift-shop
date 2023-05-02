@@ -7,9 +7,9 @@
       "type": "main-list-collections",
       "settings": {
         "heading": "Everything",
-        "message": "<p>Sed dui odio, consectetur a dictum vitae, cursus non lacus. Maecenas porta quam eu fermentum varius. Morbi in feugiat nisi. Integer id risus mollis, porttitor augue at, efficitur lectus. Suspendisse velit lectus, venenatis sed lacus vitae, hendrerit tincidunt felis.<\/p>",
-        "collection_sorting": "alphabetical",
-        "collections_per_page": 8,
+        "message": "<p>Checkout our diverse collection of products that cater to a wide range of interests and needs. Each category features a vast array of products that are carefully selected to meet the highest standards of quality, functionality, and style.<\/p>",
+        "collection_sorting": "products_high",
+        "collections_per_page": 10,
         "anchor_id": "",
         "background": "white",
         "container": "container-fluid",
