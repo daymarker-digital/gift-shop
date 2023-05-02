@@ -31,7 +31,7 @@
 
     {% paginate collection.products by products_per_page %}
 
-      <div class="{{ section_name }}__sort-filter">
+      <div class="{{ section_name }}__sort-filter d-none">
         <label class="{{ section_name }}__sort-filter-label">Sort by</label>
         <select class="{{ section_name }}__sort-filter-options select--primary" id="sort-by">
           {%- for option in collection.sort_options -%}
