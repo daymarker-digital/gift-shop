@@ -1,12 +1,4 @@
 .collection {
-  &-hero {
-    &__heading {
-      margin-bottom: 20px;
-    }
-  }
-}
-
-.collection {
-  // @import '../sections/collection-hero';
-  // @import '../sections/collection-products';
+  @import '../sections/collection-hero';
+  @import '../sections/collection-products';
 }

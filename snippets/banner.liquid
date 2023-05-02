@@ -6,7 +6,7 @@
     assign snippet_colour = banner_colour | default: 'black'
   -%}
 
-  <div class="{{ snippet_name }} {{ snippet_name }}--{{ snippet_colour }}"{% unless snippet_aos == blank %}{{ snippet_aos }}{% endunless %}>
+  <div class="{{ snippet_name }} {{ snippet_name }}--{{ snippet_colour }} body-copy--primary body-copy--banner"{% unless snippet_aos == blank %}{{ snippet_aos }}{% endunless %}>
     <span class="{{ snippet_name }}__title">{{ banner_title }}</span>
   </div>
 

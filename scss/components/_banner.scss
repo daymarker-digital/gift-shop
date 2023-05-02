@@ -47,6 +47,12 @@
 
   &__title {
     display: block;
+    line-height: 1;
+    padding-top: 3px;
+  }
+
+  a & {
+    color: inherit;
   }
 
   @include breakpoint(lg) {
