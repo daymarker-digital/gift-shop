@@ -72,9 +72,9 @@
         }
 
         @if $name == 'white' {
-          $background-hover: map.get( $theme-colours, 'black' );
+          $background-hover: map.get( $theme-colours, 'yellow' );
           $colour: map.get( $theme-colours, 'black' );
-          $colour-hover: map.get( $theme-colours, 'white' );
+          $colour-hover: map.get( $theme-colours, 'black' );
         }
 
         @if $name == 'yellow' {
