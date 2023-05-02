@@ -40,7 +40,7 @@ https://weareverypolite.myshopify.com
 - [ ] main-cart-items.liquid
 - [ ] main-collection-hero.liquid
 - [ ] main-collection.liquid
-- [ ] main-list-collections.liquid
+- [x] main-list-collections.liquid
 - [ ] main-page.liquid
 - [ ] main-password-footer.liquid
 - [ ] main-password-header.liquid
