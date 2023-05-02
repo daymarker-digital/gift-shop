@@ -39,7 +39,7 @@
   }
 
   &__item {
-    @include border-solid( var(--theme-border-width), 'inherit' );
+    @include border-solid( var(--theme-border--width), 'inherit' );
     @each $name, $value in $theme-input-heights {
       @if $name == 'base' {
         height: $value;
