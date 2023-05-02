@@ -42,6 +42,7 @@
 
 <div class="{{ section_classes }}" id="{{ section_id }}">
   {% render 'bs-container', state: 'open', col: 'col-12 col-lg-10 offset-lg-1', container: section_container %}
+
     {% paginate collections by section_collections_per_page %}
 
       <div class="{{ section_name }}__content">
@@ -52,13 +53,13 @@
       </div>
 
       <div class="{{ section_name }}__grid grid grid--{{ section_grid_layout }}" role="list">
-        {%- for item in collections -%}
+        {%- for collection in collections -%}
           {%- capture card_classes -%}{{ section_name }}__item card-collection{%- endcapture -%}
           {%-
             render 'card-collection',
               card_aria_role: 'listitem',
               card_classes: card_classes,
-              card_collection: item
+              card_collection: collection
           -%}
         {%- endfor -%}
       </div>
@@ -66,6 +67,7 @@
       {% render 'pagination', paginate: paginate %}
 
     {% endpaginate %}
+
   {% render 'bs-container', state: 'closed', col: 'col-12 col-lg-10 offset-lg-1', container: section_container %}
 </div>
 

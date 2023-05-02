@@ -29,7 +29,7 @@
 <div class="{{ section_classes }}" id="{{ section_id }}">
   {% render 'bs-container', state: 'open', col: 'col-12 col-lg-10 offset-lg-1', container: section_container %}
 
-    {% paginate collection.products by products_per_page %}
+    {% paginate collection.products by section_products_per_page %}
 
       <div class="{{ section_name }}__sort-filter d-none">
         <label class="{{ section_name }}__sort-filter-label">Sort by</label>

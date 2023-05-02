@@ -7,6 +7,7 @@ https://weareverypolite.myshopify.com
 ## Phase 1.0
 ### General
 - [ ] Add sort-filter to main-collection-products.liquid
+- [ ] Fix pagination bug on main-list-collections.liquid
 
 ### Templates
 - [ ] 404
@@ -39,7 +40,7 @@ https://weareverypolite.myshopify.com
 - [ ] main-cart-hero.liquid
 - [ ] main-cart-items.liquid
 - [ ] main-collection-hero.liquid
-- [ ] main-collection.liquid
+- [ ] main-collection-products.liquid
 - [x] main-list-collections.liquid
 - [ ] main-page.liquid
 - [ ] main-password-footer.liquid
