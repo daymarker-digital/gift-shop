@@ -60,7 +60,7 @@
 
               {%- liquid
                 assign heading = block.settings.heading | default: ''
-                assign heading_size = block.settings.size | default: '1'
+                assign heading_size = block.settings.size | default: 'md'
                 assign heading_style = block.settings.style | default: 'primary'
               -%}
 
@@ -76,7 +76,10 @@
 
             {%- when 'message' -%}
 
-              {% assign message = block.settings.message | default: '' %}
+              {%- liquid
+                assign message = block.settings.message | default: ''
+                assign message_size = block.settings.size | default: 'md'
+              %}
               {% if message != blank %}
                 {%- liquid
                   capture aos_attrs
@@ -84,7 +87,7 @@
                   endcapture
                   assign aos_delay = aos_delay | plus: aos_delay_increment
                 -%}
-                <div class="{{ section_name }}__message body-copy--1" {{ aos_attrs }}>{{ message }}</div>
+                <div class="{{ section_name }}__message body-copy--primary body-copy--{{ message_size }}" {{ aos_attrs }}>{{ message }}</div>
               {% endif %}
 
             {%- when 'button' -%}
@@ -317,11 +320,11 @@
           "label": "Size",
           "type": "select",
           "options": [
-            { "label": "H1", "value": "1" },
-            { "label": "H2", "value": "2" },
-            { "label": "H3", "value": "3" }
+            { "label": "Large", "value": "lg" },
+            { "label": "Medium", "value": "md" },
+            { "label": "Small", "value": "sm" }
           ],
-          "default": "1",
+          "default": "md",
           "id": "size"
         },
         {
@@ -345,6 +348,17 @@
           "label": "Message",
           "type": "richtext",
           "id": "message"
+        },
+        {
+          "label": "Size",
+          "type": "select",
+          "options": [
+            { "label": "Large", "value": "lg" },
+            { "label": "Medium", "value": "md" },
+            { "label": "Small", "value": "sm" }
+          ],
+          "default": "md",
+          "id": "size"
         }
       ]
     },
