@@ -66,7 +66,7 @@
           <div class='sticky-column__main'>
             <div class='sticky-column__content'>
 
-              {% capture product_title_classes %}{{ section_name }}__title heading--1 d-lg-none{% endcapture %}
+              {% capture product_title_classes %}{{ section_name }}__title heading--primary heading--lg d-lg-none{% endcapture %}
               {% render 'product-title', classes: product_title_classes, element_tag: 'h1', product: product %}
 
               {% capture product_price_classes %}{{ section_name }}__price d-lg-none{% endcapture %}
@@ -95,7 +95,7 @@
           <div class='sticky-column__main'>
             <div class='sticky-column__content'>
 
-              {% capture product_title_classes %}{{ section_name }}__title heading--1 d-none d-lg-block{% endcapture %}
+              {% capture product_title_classes %}{{ section_name }}__title heading--primary heading--lg d-none d-lg-block{% endcapture %}
               {% render 'product-title', classes: product_title_classes, element_tag: 'strong', product: product %}
 
               {% capture product_price_classes %}{{ section_name }}__price d-none d-lg-block{% endcapture %}
