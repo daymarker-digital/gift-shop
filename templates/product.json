@@ -7,11 +7,11 @@
       "type": "main-product",
       "settings": {
         "anchor_id": "",
-        "background": "black",
+        "background": "white",
         "container": "container-fluid",
-        "padding_top": 56,
-        "padding_bottom": 56,
-        "text_colour": "light"
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "text_colour": "dark"
       }
     }
   }
