@@ -1,15 +1,15 @@
 .list-collections {
 
-  &__heading {
-    & + .list-collections__layout,
-    & + .list-collections__message {
-      margin-top: 22px;
+  &__content {
+    color: inherit;
+    & + .list-collections__grid {
+      margin-top: 25px;
     }
   }
 
-  &__message {
-    & + .list-collections__layout {
-      margin-top: 25px;
+  &__heading {
+    & + .list-collections__message {
+      margin-top: 22px;
     }
   }
 

@@ -71,7 +71,7 @@
                   endcapture
                   assign aos_delay = aos_delay | plus: aos_delay_increment
                 -%}
-                <h{{ heading_size }} class="{{ section_name }}__heading heading--{{ heading_size }} heading--{{ heading_style }}" {{ aos_attrs }}>{{ heading | escape }}</h{{ heading_size }}>
+                <h2 class="{{ section_name }}__heading heading--{{ heading_size }} heading--{{ heading_style }}" {{ aos_attrs }}>{{ heading | escape }}</h2>
               {% endif %}
 
             {%- when 'message' -%}

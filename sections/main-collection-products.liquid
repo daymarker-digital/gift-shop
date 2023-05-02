@@ -4,6 +4,7 @@
   assign section_classes = section_name
   assign section_id = section_name | append: '--' | append: section.id
 
+  assign section_collection_sort_by = collection.sort_by | default: collection.default_sort_by
   assign section_container = section.settings.container
   assign section_grid_gutter = section.settings.grid_gutter
   assign section_grid_layout = section.settings.grid_layout
@@ -30,6 +31,17 @@
 
     {% paginate collection.products by products_per_page %}
 
+      <div class="{{ section_name }}__sort-filter">
+        <label class="{{ section_name }}__sort-filter-label">Sort by</label>
+        <select class="{{ section_name }}__sort-filter-options select--primary" id="sort-by">
+          {%- for option in collection.sort_options -%}
+            <option value="{{ option.value }}" {%- if option.value == collection_sort_by -%}selected="selected"{%- endif -%}>
+              {%- render 'sort-option-name', option_value: option.value -%}
+            </option>
+          {%- endfor -%}
+        </select>
+      </div>
+
       <div class="{{ section_name }}__layout grid grid--{{ section_grid_layout }}" role="list">
         {% for product in collection.products %}
           <div class="{{ section_name }}__item grid__item" data-index="{{ forloop.index }}" role="listitem">
@@ -44,6 +56,29 @@
 
   {% render 'bs-container', state: 'closed', col: 'col-12 col-lg-10 offset-lg-1', container: section_container %}
 </div>
+
+<script>
+
+  Shopify.queryParams = {};
+
+  // Preserve existing query parameters
+  if (location.search.length) {
+    var params = location.search.substr(1).split('&');
+    for (var i = 0; i < params.length; i++) {
+      var keyValue = params[i].split('=');
+      if (keyValue.length) {
+        Shopify.queryParams[decodeURIComponent(keyValue[0])] = decodeURIComponent(keyValue[1]);
+      }
+    }
+  }
+
+  // Update sort_by query parameter on select change
+  document.querySelector('#sort-by').addEventListener('change', function(e) {
+    Shopify.queryParams.sort_by = e.target.value;
+    location.search = new URLSearchParams(Shopify.queryParams).toString();
+  });
+
+</script>
 
 {% schema %}
 {

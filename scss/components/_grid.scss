@@ -7,7 +7,7 @@
   grid-template-columns: 1fr;
 
   &--two-column,
-  &--three-column
+  &--three-column,
   &--four-column {
     @extend .grid;
     grid-template-columns: 1fr 1fr;
