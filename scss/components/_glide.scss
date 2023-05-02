@@ -1,3 +1,60 @@
+@use "../utils/mixins/breakpoint" as *;
+
 .glide {
+
   position: relative;
+  min-width: 0; // fix for when glide is child of display: grid
+  max-width: 100%;
+
+  &__bullet {
+    opacity: 0.3333;
+    &:hover,
+    &--active {
+      opacity: 1;
+    }
+  }
+
+  &__bullets {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__slides {
+    touch-action: auto;
+  }
+
+  &__track {
+    transition: height var(--theme-transition--duration);
+  }
+
+  .product & {
+    &__bullet {
+      background: currentcolor;
+      height: 3px;
+      width: 30px;
+    }
+    &__bullets {
+      padding: 20px 0;
+    }
+  }
+
+  @include breakpoint(md) {
+
+    &__bullets {
+      gap: 12px;
+    }
+
+  }
+
+  @include breakpoint(xl) {
+
+    &__bullets {
+      gap: 14px;
+    }
+
+  }
+
 }

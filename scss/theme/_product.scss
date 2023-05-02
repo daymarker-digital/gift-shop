@@ -1,7 +1,7 @@
 @use "../utils/mixins/breakpoint" as *;
 @use "../utils/mixins/ui" as *;
 
-.main-product {
+.product {
 
   [data-bs-toggle] {
     cursor: pointer;
