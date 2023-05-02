@@ -6,11 +6,11 @@
     "main": {
       "type": "main-product",
       "settings": {
-        "background": "black",
+        "background": "white",
         "container": "container-fluid",
         "padding_top": 0,
         "padding_bottom": 0,
-        "text_colour": "light"
+        "text_colour": "dark"
       }
     }
   }
