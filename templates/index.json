@@ -76,13 +76,14 @@
         "b439fcdb-2b20-4e92-bcc6-749852735c97"
       ],
       "settings": {
+        "anchor_id": "",
         "background": "white",
         "container": "container-fluid",
         "grid_layout": "two-column",
         "grid_gutter": 24,
         "padding_top": 24,
         "padding_bottom": 0,
-        "anchor_id": ""
+        "text_colour": "dark"
       }
     },
     "16611958947ef1ecd7": {
@@ -134,13 +135,14 @@
         "2637f584-4aa5-4d94-8ceb-0d4386faa73e"
       ],
       "settings": {
+        "anchor_id": "",
         "background": "white",
         "container": "container-fluid",
         "grid_layout": "two-column",
         "grid_gutter": 24,
         "padding_top": 24,
         "padding_bottom": 0,
-        "anchor_id": ""
+        "text_colour": "dark"
       }
     },
     "166386587599b4f4fd": {
@@ -150,14 +152,15 @@
           "type": "heading",
           "settings": {
             "heading": "Sample Featured Image Heading",
-            "size": "1",
-            "style": "primary"
+            "size": "md",
+            "style": "secondary"
           }
         },
         "4d670097-fa47-449a-a090-eb0150fbd90b": {
           "type": "message",
           "settings": {
-            "message": "<p>Nunc eu lectus porta, varius enim nec, varius augue. Vivamus tortor ex, aliquam pellentesque elementum in, dictum sed purus. Cras quis diam tristique, mollis mi quis, consequat tellus.<\/p>"
+            "message": "<p>Nunc eu lectus porta, varius enim nec, varius augue. Vivamus tortor ex, aliquam pellentesque elementum in, dictum sed purus. Cras quis diam tristique, mollis mi quis, consequat tellus.<\/p>",
+            "size": "md"
           }
         },
         "c1b58684-1d95-452e-9ceb-b3496ede2459": {
@@ -213,13 +216,14 @@
         "c158dd33-2b11-4704-99d9-1138a8e3f0d9"
       ],
       "settings": {
+        "anchor_id": "",
         "background": "white",
         "container": "container-fluid",
         "grid_layout": "two-column",
         "grid_gutter": 24,
         "padding_top": 52,
         "padding_bottom": 0,
-        "anchor_id": ""
+        "text_colour": "dark"
       }
     },
     "1661196025228eb79a": {
@@ -250,13 +254,14 @@
         "8a3097ce-d248-4b6e-acf0-1f5e3b9f8034"
       ],
       "settings": {
+        "anchor_id": "",
         "background": "white",
         "container": "container-fluid",
         "grid_layout": "two-column",
         "grid_gutter": 24,
         "padding_top": 24,
         "padding_bottom": 0,
-        "anchor_id": ""
+        "text_colour": "dark"
       }
     }
   }
