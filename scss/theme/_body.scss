@@ -19,7 +19,7 @@ body {
     }
     transition: padding var(--theme-transition--duration);
     flex: 1 0 auto;
-    overflow: hidden;
+    // overflow: hidden; ### WARNING, any parent of 'sticky' element cannot have overflow setting ###
   }
 
   footer {
