@@ -1,0 +1,13 @@
+.product-price {
+
+  display: inline-flex;
+  justify-content: flex-start;
+  align-items: baseline;
+  gap: 12px;
+
+  .compare-at-price {
+    opacity: .33;
+    text-decoration: line-through;
+  }
+
+}

@@ -1,3 +1,4 @@
+@use 'sass:math';
 @use "../utils/mixins/button" as *;
 @use "../utils/mixins/ui" as *;
 
@@ -7,8 +8,28 @@
   @extend %ui-transition;
 
   &--primary,
-  &--secondary {
+  &--secondary,
+  &--open,
+  &--close {
     @extend .button;
+  }
+
+  &--open,
+  &--close {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 24px;
+    height: 24px;
+    position: relative;
+    &:after,
+    &:before {
+      background: currentcolor;
+      height: var(--theme-border--width);
+      content: '';
+      display: block;
+      position: absolute;
+    }
   }
 
   &--primary {
@@ -17,6 +38,29 @@
 
   &--secondary {
     @include button-style( 'secondary' );
+  }
+
+  &--open {
+    &:after,
+    &:before {
+      width: 100%;
+    }
+    &:after {
+      transform: rotate(90deg);
+    }
+  }
+
+  &--close {
+    &:after,
+    &:before {
+      width: math.hypot(24px, 24px);
+    }
+    &:after {
+      transform: rotate(45deg);
+    }
+    &:before {
+      transform: rotate(-45deg);
+    }
   }
 
   &[disabled],

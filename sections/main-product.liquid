@@ -52,13 +52,22 @@
               {% if section_product_images.size > 0 %}
 
                 <div class='{{ section_name }}__images d-lg-none'>
-                  {% render 'product-badge', product: product  %}
-                  {% render 'product-image-gallery-modal-trigger', modal_id: section_product_modal_id %}
+
+                  <button class='{{ section_name }}__button-modal-trigger button--open'
+                    data-bs-target='#{{ section_product_modal_id }}'
+                    data-bs-toggle='modal'
+                    data-product-image-gallery-index='0'
+                    type='button'
+                  ></button>
+
+                  {% capture product_badge_classes %}{{ section_name }}__badge product-badge{% endcapture %}
+                  {% render 'product-badge', badge_classes: product_badge_classes, product: product  %}
                   {% render 'product-image-gallery-carousel', carousel_bullets: true, modal_id: section_product_modal_id, product: product %}
                 </div>
 
                 <div class='{{ section_name }}__images d-none d-lg-block'>
-                  {% render 'product-badge', product: product  %}
+                  {% capture product_badge_classes %}{{ section_name }}__badge product-badge{% endcapture %}
+                  {% render 'product-badge', badge_classes: product_badge_classes, product: product  %}
                   {% render 'product-image-gallery-grid', modal_id: section_product_modal_id, product: product %}
                 </div>
 

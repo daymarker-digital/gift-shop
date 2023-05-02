@@ -2,15 +2,17 @@
 
   {%- liquid
 
-    assign template_name = 'main-product'
     assign snippet_name = 'product-image-gallery-modal-trigger'
+    assign snippet_classes = snippet_name
 
-    assign classes = classes | default: 'main-product__image-gallery-modal-trigger'
+    if badge_classes != blank
+      assign snippet_classes = badge_classes
+    endif
 
   -%}
 
   <button
-    class='{{ classes }} button'
+    class='{{ snippet_classes }} button'
     data-bs-target='#{{ modal_id }}'
     data-bs-toggle='modal'
     data-product-image-gallery-index='0'

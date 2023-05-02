@@ -1,3 +1,4 @@
+@use "../utils/mixins/body-copy" as *;
 @use "../utils/mixins/breakpoint" as *;
 @use "../utils/mixins/ui" as *;
 
@@ -8,28 +9,6 @@
   }
 
   .glide {
-
-    &__bullet {
-      @extend %ui-base;
-      @extend %ui-transition;
-      background: var(--theme-colour--black);
-      opacity: 0.33;
-      width: 30px;
-      height: 2px;
-      &--active {
-        opacity: 1;
-      }
-    }
-
-    &__bullets {
-      display: flex;
-      width: 100%;
-      justify-content: center;
-      align-items: center;
-      gap: 15px;
-      margin-top: 26px;
-    }
-
     &__button-open-modal {
       position: absolute;
       top: 30px;
@@ -44,10 +23,10 @@
         display: block;
       }
     }
-
   }
 
   &__badge {
+    display: none;
     position: absolute;
     top: 10px;
     left: 10px;
@@ -69,6 +48,11 @@
       width: 100%;
       max-width: 350px;
     }
+    &-modal-trigger {
+      height: 30px;
+      width: 30px;
+      border: 1px solid red;
+    }
   }
 
   &__images {
@@ -81,7 +65,7 @@
   }
 
   &__info {
-    & + .main-product__info {
+    & + .product__info {
       margin-top: 20px;
     }
   }

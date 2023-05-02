@@ -14,16 +14,18 @@
 
   {%- liquid
 
-    assign template_name = 'main-product'
     assign snippet_name = 'product-badge'
+    assign snippet_classes = snippet_name
 
-    assign classes = classes | default: 'main-product__badge'
+    if badge_classes != blank
+      assign snippet_classes = badge_classes
+    endif
 
   -%}
 
   {%- for tag in product.tags -%}
     {%- if 'Natures' == tag -%}
-      <div class='{{ classes }} {{ snippet_name }}'>
+      <div class='{{ snippet_classes }}'>
         {%- render 'svg', type: 'icon.20%' -%}
       </div>
     {%- endif -%}
