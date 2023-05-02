@@ -11,53 +11,30 @@
   assign section_background_colour = section.settings.background
   assign section_container = section.settings.container
 
-  assign product_images = product.images | default: false
-  assign product_modal_id = section_id | append: '--modal'
-  assign product_shop_button_enabled = false
-  assign product_tags = product.tags | default: false
+  assign section_product_images = product.images | default: false
+  assign section_product_modal_id = section_id | append: '--modal'
+  assign section_product_shop_button_enabled = false
+  assign section_product_tags = product.tags | default: false
 
   if product.has_only_default_variant and product.available
-    assign product_shop_button_enabled = true
-  endif
-
-  if section.settings.anchor_id != blank
-    assign section_id = section.settings.anchor_id
+    assign section_product_shop_button_enabled = true
   endif
 
 -%}
 
 {%- style -%}
-
-  {% if background_colour != blank %}
-    #shopify-section-{{ section.id }} {
-      background: rgba(var(--theme-colour-{{ background_colour }}), 1);
-      {% case background_colour %}
-        {% when 'orange' %}
-          color: var(--theme-colour--black);
-        {% when 'white' %}
-          color: var(--theme-colour--black);
-        {% else %}
-          color: var(--theme-colour--white);
-      {% endcase %}
-    }
-  {% endif %}
-
-  .section-{{ section.id }}-padding {
-    padding-top: calc({{ section.settings.padding_top }}px * 0.75);
-    padding-bottom: calc({{ section.settings.padding_bottom }}px  * 0.75);
-  }
-
-  @media screen and (min-width: 992px) {
-    .section-{{ section.id }}-padding {
-      padding-top: {{ section.settings.padding_top }}px;
-      padding-bottom: {{ section.settings.padding_bottom }}px;
-    }
-  }
-
+  {%-
+    render 'element-styles',
+      background: section.settings.background,
+      id: section_id,
+      padding_bottom: section.settings.padding_bottom,
+      padding_top: section.settings.padding_top,
+      text_colour: section.settings.text_colour
+  -%}
 {%- endstyle -%}
 
 <div class="{{ section_classes }}" id="{{ section_id }}">
-  {% render 'bs-container', state: 'open', container: container %}
+  {% render 'bs-container', state: 'open', container: section_container %}
 
     <div class='sticky-column'>
       <div class='sticky-column__container'>
@@ -72,17 +49,17 @@
               {% capture product_price_classes %}{{ section_name }}__price d-lg-none{% endcapture %}
               {% render 'product-price', classes: product_price_classes, product: product, show_symbol: true %}
 
-              {% if product.images.size > 0 %}
+              {% if section_product_images.size > 0 %}
 
                 <div class='{{ section_name }}__images d-lg-none'>
                   {% render 'product-badge', product: product  %}
-                  {% render 'product-image-gallery-modal-trigger', modal_id: product_modal_id %}
-                  {% render 'product-image-gallery-carousel', carousel_bullets: true, modal_id: product_modal_id, product: product %}
+                  {% render 'product-image-gallery-modal-trigger', modal_id: section_product_modal_id %}
+                  {% render 'product-image-gallery-carousel', carousel_bullets: true, modal_id: section_product_modal_id, product: product %}
                 </div>
 
                 <div class='{{ section_name }}__images d-none d-lg-block'>
                   {% render 'product-badge', product: product  %}
-                  {% render 'product-image-gallery-grid', modal_id: product_modal_id, product: product %}
+                  {% render 'product-image-gallery-grid', modal_id: section_product_modal_id, product: product %}
                 </div>
 
               {% endif %}
@@ -117,82 +94,97 @@
       </div>
     </div>
 
-  {% render 'bs-container', state: 'closed', container %}
+  {% render 'bs-container', state: 'closed', container: section_container %}
 
-  {% if product.images.size > 0 %}
-    {% render 'product-image-gallery-modal', modal_id: product_modal_id, product: product %}
+  {% if section_product_images.size > 0 %}
+    {% render 'product-image-gallery-modal', modal_id: section_product_modal_id, product: product %}
   {% endif %}
 
 </div>
 
 {% schema %}
 {
-	"name": "Main Product",
+	"name": "Product",
 	"tag": "section",
-	"class": "section section--main-product",
+	"class": "section section--product",
 	"settings": [
     {
-			"content": "Layout",
-			"type": "header"
-		},
-		{
-			"label": "Background",
-			"type": "select",
-			"options": [{
-					"label": "Black",
-					"value": "black"
-				},
-				{
-					"label": "White",
-					"value": "white"
-				}
-			],
-			"default": "white",
-			"id": "background"
-		},
-		{
-			"label": "Container",
-			"type": "select",
-			"options": [{
-					"label": "Static",
-					"value": "container"
-				},
-				{
-					"label": "Fluid",
-					"value": "container-fluid"
-				},
-				{
-					"label": "Full Width",
-					"value": "full-width"
-				}
-			],
-			"default": "container",
-			"id": "container"
+      "content": "Settings",
+      "type": "header"
+    },
+    {
+      "content": "Anchor",
+      "type": "header"
+    },
+    {
+      "label": "Anchor ID",
+      "info": "Optionally include a unique ID so that sections within the page can be linked to. Anchor IDs must be all lowercase, unique and replaced empty spaces with hyphens. For example: my-great-section-anchor",
+      "type": "text",
+      "id": "anchor_id"
+    },
+    {
+		  "label": "Background",
+		  "type": "select",
+		  "options": [
+        { "label": "Black", "value": "black" },
+			  { "label": "White", "value": "white" }
+		  ],
+		  "default": "white",
+		  "id": "background"
 		},
     {
-			"content": "Padding",
+			"content": "Container",
 			"type": "header"
 		},
-		{
-			"label": "Top Padding",
-			"type": "range",
-			"min": 0,
-			"max": 120,
-			"step": 4,
-			"unit": "px",
-			"default": 36,
+    {
+      "label": "Container",
+      "type": "select",
+      "options": [
+        { "label": "Static", "value": "container" },
+        { "label": "Fluid", "value": "container-fluid" },
+        { "label": "Full Width", "value": "full-width" }
+      ],
+      "default": "container",
+      "id": "container"
+    },
+    {
+      "content": "Padding",
+      "type": "header"
+    },
+    {
+      "label": "Top Padding",
+      "type": "range",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "default": 36,
       "id": "padding_top"
-		},
-		{
-			"label": "Bottom Padding",
-			"type": "range",
-			"min": 0,
-			"max": 120,
-			"step": 4,
-			"unit": "px",
-			"default": 36,
+    },
+    {
+      "label": "Bottom Padding",
+      "type": "range",
+      "min": 0,
+      "max": 200,
+      "step": 4,
+      "unit": "px",
+      "default": 36,
       "id": "padding_bottom"
-		}
+    },
+    {
+      "content": "Text",
+      "type": "header"
+    },
+    {
+      "label": "Text Colour",
+      "type": "select",
+      "options": [
+        { "label": "Dark", "value": "dark" },
+        { "label": "Light", "value": "light" }
+      ],
+      "default": "dark",
+      "id": "text_colour"
+    }
 	],
 	"blocks": [
     {
