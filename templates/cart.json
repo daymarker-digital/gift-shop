@@ -8,8 +8,9 @@
     "cart-hero": {
       "type": "main-cart-hero",
       "settings": {
-        "heading_alignment": "left",
-        "heading_size": "sm",
+        "heading": "Your Order",
+        "heading_alignment": "center",
+        "heading_size": "md",
         "background": "black",
         "container": "container",
         "padding_top": 52,
