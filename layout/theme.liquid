@@ -96,7 +96,7 @@
       Theme.moneyFormat = {{ shop.money_format | json }};
       Theme.orders = [];
       Theme.icons = {
-        triangle: {{ "VPAGS--icon--notification-triangle.svg" | asset_url | json }}
+        triangle: `{% render 'svg-icon', type: 'notification-triangle' %}`
       };
       Theme.images = {
         placeholder: {

@@ -12,7 +12,12 @@
 -%}
 
 <div class="{{ snippet_name }}">
-  <button class="{{ snippet_name }}__icon" type="button" aria-label="{{ snippet_name }}">
+  <button
+    aria-label="{{ snippet_name }}"
+    class="{{ snippet_name }}__icon js--toggle-drawer"
+    data-drawer-id="shopify-section-drawer-menu"
+    type="button"
+  >
     <div class="{{ snippet_name }}__icon-box">
       <span class="{{ snippet_name }}__icon-stroke top"></span>
       <span class="{{ snippet_name }}__icon-stroke bottom"></span>

@@ -6,235 +6,257 @@
 
 .drawer {
 
-  $width: map.get($theme-drawer-widths, 'base');
+  @each $name, $value in map.get( $theme-drawer-settings, 'widths' ) {
+    @if $name == 'base' {
+      width: $value;
+    } @else {
+      @include breakpoint(#{$name}) {
+        width: $value;
+      }
+    }
+  }
 
-  width: $width;
+  background: var(--theme-colour--black);
+  color: var(--theme-colour--white);
   transition: transform var(--theme-transition--duration);
   height: 100vh;
   min-height: 100vh;
   position: fixed;
   top: 0;
   bottom: 0;
-  z-index: 150;
+  z-index: 200;
   display: flex;
   flex-direction: column;
   text-transform: uppercase;
   overflow: hidden;
 
-  &-cart {
-    @include border-solid( var(--theme-border--width), 'black', 'left' );
-    transform: translate3d( $width, 0, 0 );
-    height: 100vh;
+  &-menu {
+
+    transform: translate3d( 100%, 0, 0 );
     right: 0;
-    top: 0;
-    z-index: 250;
-    &__actions {
-      @include border-solid( var(--theme-border--width), 'black', 'top' );
-      padding: var(--theme-layout--container-padding);
-      display: flex;
-      width: 100%;
-      justify-content: center;
-    }
-    &__button {
-      &-checkout {
-        height: 52px;
+
+    .navigation {
+      display: inline-grid;
+      &__item,
+      &__link {
+        line-height: 1;
       }
-      &-close {
-        right: var(--theme-layout--container-padding);
-        display: inline-flex;
-        position: absolute;
-        height: 22px;
-        width: 22px;
-        flex-flow: column;
-        justify-content: center;
-        align-items: center;
-        &:after,
-        &:before {
-          transition:
-            bottom var(--theme-transition--duration),
-            top var(--theme-transition--duration);
-          background: var(--theme-colour--black);
-          height: var(--theme-border--width);
-          content: "";
-          display: block;
-          width: 135%;
-          position: absolute;
-        }
-        &:after {
-          transform: rotate(45deg);
-        }
-        &:before {
-          transform: rotate(-45deg);
+      &__link {
+        color: var(--theme-colour--yellow);
+        &.active,
+        &:hover {
+          color: var(--theme-colour--white);
         }
       }
     }
-    &__cart-subtotal {
-      background: var(--theme-colour--lemon);
-      padding: calc(0.5 * var(--theme-layout--container-padding)) var(--theme-layout--container-padding);
-      font-size: 24px;
-      line-height: .9;
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-    }
-    &__footer {
-      @include border-solid( var(--theme-border--width), 'black', 'top' );
-      flex-shrink: 0;
-    }
-    &__header {
-      @include border-solid( var(--theme-border--width), 'black', 'bottom' );
-      height: var(--theme-header-height--mobile);
-      padding-left: var(--theme-layout--container-padding);
-      padding-right: var(--theme-layout--container-padding);
-      display: flex;
-      width: 100%;
-      justify-content: space-between;
-      align-items: center;
-      flex-shrink: 0;
-    }
-    &__heading {
-      font-size: 24px;
-    }
-    &__line-items {
-      overflow: hidden;
-    }
+
+    &__footer,
     &__main {
-      flex: 1 1 auto;
-      overflow-y: auto;
+      padding: 30px;
     }
-    .shopify-section-drawer-cart--active & {
-      transform: translate3d( 0,0,0 );
-    }
-  }
 
-  &-mobile-menu {
-
-    transform: translate3d( -1 * $width, 0, 0 );
-    height: calc(100vh - var(--theme-header-height--mobile));
-    top: var(--theme-header-height--mobile);
-    left: 0;
-
-    &__main {
-
-      padding-bottom: var(--theme-header-height--mobile);
+    &__container {
+      display: flex;
+      flex-direction: column;
       height: 100%;
-      overflow-y: auto;
+    }
 
-      &-navigation {
-        @include border-solid( var(--theme-border--width), 'black', 'bottom' );
-        background: var(--theme-colour--black);
-        gap: var(--theme-border--width);
-        display: grid;
-        grid-template-columns: repeat( 1, 1fr );
+    &__footer {
+      flex-shrink: 0;
+      display: flex;
+      width: 100%;
+      flex-flow: row wrap;
+      &-cart-summary {
+        @include font-sorry-sans();
+        margin-bottom: 20px;
+        display: block;
         width: 100%;
-        &-item,
         &-link {
-          line-height: 1;
-        }
-        &-item {
-          font-size: min( 100px, 13.5vw );
-          padding: 14px var(--theme-layout--container-padding);
-          &:nth-child(5n+1) {
-            background: var(--theme-colour--grey);
+          @each $name, $value in map.get( $theme-layout-settings, 'breakpoints' ) {
+            @if $name == 'base' {
+              font-size: calc( var(--theme-push-menu-link-font-size) * 0.8 );
+            } @else {
+              @include breakpoint(#{$name}) {
+                font-size: calc( var(--theme-push-menu-link-font-size--#{$name}) * 0.8 );
+              }
+            }
           }
-          &:nth-child(5n+2) {
-            background: var(--theme-colour--orange);
-          }
-          &:nth-child(5n+3) {
-            background: var(--theme-colour--mango);
-          }
-          &:nth-child(5n+4) {
-            background: var(--theme-colour--lemon);
-          }
-          &:nth-child(5n+5) {
-            background: var(--theme-colour--lime);
-          }
-        }
-        &-link {
-          width: auto;
-          &.active,
+          color: var(--theme-colour--white);
           &:hover {
-            opacity: var(--theme-transition--opacity);
-            color: inherit;
+            color: var(--theme-colour--yellow);
+          }
+        }
+      }
+      &-navigation {
+        grid-template-columns: repeat(2, 140px);
+        row-gap: 12px;
+        width: 100%;
+        text-transform: uppercase;
+      }
+      &-social {
+        display: inline-flex;
+        width: 100%;
+        justify-content: flex-start;
+        align-items: center;
+        column-gap: 20px;
+        &-item {
+          height: 18px;
+          width: 18px;
+        }
+        &-link {
+          color: var(--theme-colour--yellow);
+          height: 100%;
+          width: 100%;
+          &:hover {
+            color: var(--theme-colour--white);
+          }
+        }
+        & + .drawer-menu__footer-navigation {
+          margin-top: 25px;
+        }
+      }
+    }
+
+    &__main {
+      flex: 1 0 auto;
+      padding-bottom: 0;
+      &-message {
+        margin-top: 30px;
+        width: 100%;
+        max-width: 400px;
+      }
+      &-navigation {
+        @include font-sorry-sans();
+        grid-template-columns: repeat(1, 1fr);
+        width: 100%;
+        row-gap: 12px;
+        &-link {
+          @each $name, $value in map.get( $theme-drawer-settings, 'link-font-sizes' ) {
+            @if $name == 'base' {
+              font-size: $value;
+            } @else {
+              @include breakpoint(#{$name}) {
+                font-size: $value;
+              }
+            }
           }
         }
       }
     }
 
-    .shopify-section-drawer-mobile-menu--active & {
-      transform: translate3d( 0,0,0 );
+    .shopify-section-drawer-menu--active & {
+      transform: translate3d( 0, 0, 0 );
     }
 
-  }
+    @include breakpoint(sm) {
 
-  @include breakpoint(sm) {
-
-    $width: map.get($theme-drawer-widths, 'sm');
-    width: $width;
-
-    &-cart {
-      transform: translate3d( $width, 0, 0 );
-    }
-
-    &-mobile-menu {
-      transform: translate3d( -1 * $width, 0, 0 );
-    }
-
-  }
-
-  @include breakpoint(md) {
-
-    $width: map.get($theme-drawer-widths, 'md');
-    width: $width;
-
-    &-cart {
-      transform: translate3d( $width, 0, 0 );
-    }
-
-    &-mobile-menu {
-      transform: translate3d( -1 * $width, 0, 0 );
-    }
-
-  }
-
-  @include breakpoint(lg) {
-
-    $width: map.get($theme-drawer-widths, 'lg');
-    width: $width;
-
-    &-cart {
-      transform: translate3d( $width, 0, 0 );
-      &__header {
-        height: var(--theme-header-height--desktop);
+      &__footer {
+        justify-content: space-between;
+        align-items: flex-end;
+        &-navigation {
+          order: 1;
+          grid-template-columns: repeat(2, 140px);
+          row-gap: 12px;
+          width: auto;
+          flex: 1;
+        }
+        &-social {
+          order: 2;
+          width: auto;
+          justify-content: flex-end;
+          align-items: center;
+          column-gap: 22px;
+          &-item {
+            height: 20px;
+            width: 20px;
+          }
+          & + .drawer-menu__footer-navigation {
+            margin-top: 0;
+          }
+        }
       }
+
     }
 
-    &-mobile-menu {
-      .shopify-section-drawer-mobile-menu--active & {
-        transform: translate3d( -1 * $width, 0, 0 );
+    @include breakpoint(md) {
+
+      &__footer {
+        &-navigation {
+          grid-template-columns: repeat(2, 150px);
+        }
+        &-social {
+          column-gap: 24px;
+          &-item {
+            height: 22px;
+            width: 22px;
+          }
+        }
       }
+
+      &__main {
+        &-message {
+          max-width: 450px;
+        }
+      }
+
     }
 
-  }
+    @include breakpoint(lg) {
 
-  @include breakpoint(xl) {
+      &__footer {
+        &-navigation {
+          grid-template-columns: repeat(2, 160px);
+        }
+        &-social {
+          column-gap: 22px;
+          &-item {
+            height: 20px;
+            width: 20px;
+          }
+        }
+      }
 
-    $width: map.get($theme-drawer-widths, 'lg');
-    width: $width;
+      &__main {
+        &-message {
+          max-width: 390px;
+        }
+        &-navigation {
+          row-gap: 8px;
+        }
+      }
 
-    &-cart {
-      transform: translate3d( $width, 0, 0 );
     }
 
-  }
+    @include breakpoint(xl) {
 
-  @include breakpoint(xxl) {
+      &__footer {
+        &-navigation {
+          grid-template-columns: repeat(2, 170px);
+        }
+      }
 
-    $width: map.get($theme-drawer-widths, 'lg');
-    width: $width;
+      &__main {
+        &-message {
+          max-width: 405px;
+        }
+      }
 
-    &-cart {
-      transform: translate3d( $width, 0, 0 );
+    }
+
+    @include breakpoint(xxl) {
+
+      &__footer {
+        &-navigation {
+          grid-template-columns: repeat(2, 180px);
+        }
+      }
+
+      &__main {
+        &-message {
+          max-width: 420px;
+        }
+      }
+
     }
 
   }

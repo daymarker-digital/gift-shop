@@ -111,8 +111,9 @@ const cartLineItemsTotal = ( line_items_total = 0 ) => {
 const cartNotification = ( status = 'success', data = {} ) => {
 
   let block_name = 'cart-notification';
-  let element = document.createElement("div");
-  let parent = document.querySelector(`main[role="main"]`) || false;
+  let element = document.createElement('div');
+  let parent = document.querySelector('main[role="main"]') || false;
+  let animation_delay = 'error' == status ? 4000 : 3000;
 
   switch( status ) {
     case 'error': {
@@ -130,18 +131,20 @@ const cartNotification = ( status = 'success', data = {} ) => {
   anime.timeline({
     targets: element,
     complete: function(anim) {
-      element.remove();
+      setTimeout(() => {
+        element.remove();
+      }, 250);
     }
   }).add({
     delay: 0,
-    duration: 750,
+    duration: 1000,
     opacity: 1,
-    translateY: [ -250, 0 ]
+    translateY: [ -20, 0 ]
    }).add({
-    delay: 20000,
+    delay: animation_delay,
     duration: 550,
     opacity: 0,
-    translateY: [ 0, -250 ]
+    translateY: [ 0, -100 ]
   }).play
 
 }
@@ -160,6 +163,6 @@ export default {
   cartLineItemsQuantity,
   cartLineItemsToElement,
   cartLineItemsTotal,
-  cartNotificationFromProduct,
+  cartNotification,
   cartSubtotal
 };

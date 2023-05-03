@@ -19,7 +19,7 @@
   transition: top 0.15s;
   right: var(--theme-layout--container-padding);
   position: fixed;
-  z-index: 200;
+  z-index: 250;
   width: auto;
   display: flex;
   flex-flow: row nowrap;
@@ -77,7 +77,7 @@
 
   }
 
-  .announcements--active.push-menu--active & {
+  .announcements--active.shopify-section-drawer-menu--active & {
     top: 0;
   }
 
@@ -85,7 +85,7 @@
     top: var(--theme-announcement-height--total);
   }
 
-  .push-menu--active & {
+  .shopify-section-drawer-menu--active & {
     .burger {
       &__icon-stroke {
         background: var(--theme-colour--white);

@@ -60,11 +60,67 @@ const cartLineItemsTotal = ( line_items_total = 0 ) => {
 };
 
 const cartNotificationError = ( data = {} ) => {
-  console.log( 'cartNotificationError', data );
+
+  let {
+    block_name = 'cart-notification',
+    description,
+    triangle = Theme.icons?.triangle ?? '',
+  } = data;
+
+  return `
+    ${ triangle ? `<div class="${block_name}__triangle">${triangle}</div>` : '' }
+    <div class="${block_name}__main">
+      <span class="${block_name}__notice">Oops!</span>
+      <strong class="${block_name}__heading heading--primary">${description}</strong>
+    </div>
+  `;
+
 }
 
 const cartNotificationSuccess = ( data = {} ) => {
-  console.log( 'cartNotificationSuccess', data );
+
+  let {
+    block_name = 'cart-notification',
+    featured_image,
+    options_with_values = [],
+    product_title,
+    product_type,
+    triangle = Theme.icons?.triangle ?? '',
+    url,
+    variant_title
+  } = data;
+
+  let image = {
+    classes: 'lazyload lazyload-item lazyload-item--image lazypreload',
+    src: Theme.tools?.imgURLFilter ? Theme.tools.imgURLFilter( featured_image.url, 'medium' ) : featured_image.url,
+  };
+
+  let options = options_with_values.map((option) => {
+    return `
+      <div class="${block_name}__option">
+        <span class="${block_name}__option-name">${option.name}</span>
+        <span class="${block_name}__option-value">${option.value}</span>
+      </div>
+    `;
+  }).join('');
+
+  return `
+    ${ triangle ? `<div class="${block_name}__triangle">${triangle}</div>` : '' }
+    <div class="${block_name}__main">
+      <span class="${block_name}__notice">1 Item Added to Cart!</span>
+        <div class="${block_name}__image">
+          <a class="${block_name}__image-link link" href="${url}" title="${product_title}" target="_self">
+            <img class="${image.classes}" src="${image.src}" alt="${featured_image.alt}" width="${featured_image.width}" height="${featured_image.height}" />
+          </a>
+        </div>
+      <strong class="${block_name}__heading heading--primary">${product_title}</strong>
+      ${ options ? `<span class="${block_name}__options">${options}</span>` : '' }
+      <div class="${block_name}__cta">
+        <a class="${block_name}__cta-link link" href="/checkout" title="Checkout" target="_self" />Checkout</a>
+      </div>
+    </div>
+  `;
+
 }
 
 const cartNotification = ( data = {} ) => {

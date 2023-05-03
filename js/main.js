@@ -1,18 +1,18 @@
 import Announcements from './modules/announcements';
 import Cart from './modules/cart';
 import Credits from './modules/credits';
+import Drawers from './modules/drawers';
 import Gliders from './modules/gliders';
 import Product from './modules/product';
-import PushMenu from './modules/pushMenu';
 import RandomImage from './modules/randomImage';
 import Scrolling from './modules/scrolling';
 import Tools from './modules/tools';
 
+Announcements.init();
 Cart.init();
 Credits.init();
-Announcements.init();
+Drawers.init();
 Product.init();
-PushMenu.init();
 RandomImage.init();
 Scrolling.init();
 

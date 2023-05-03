@@ -74,6 +74,25 @@ $theme-colours-rgb: (
   'yellow': #ffc700,
 );
 
+$theme-drawer-settings: (
+  'link-font-sizes': (
+    'base': 36px,
+    'sm': 40px,
+    'md': 55px,
+    'lg': 32px,
+    'xl': 36px,
+    'xxl': 40px
+  ),
+  'widths': (
+    'base': 100%,
+    'sm': 100%,
+    'md': 100%,
+    'lg': 50%,
+    'xl': 50%,
+    'xxl': 40%
+  )
+);
+
 // ---------------------------------------- Font Families
 $theme-font-families: (
   'sans-serif': sans-serif,

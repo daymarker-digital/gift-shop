@@ -1,0 +1,159 @@
+{%- liquid
+
+  assign section_name = 'drawer-menu'
+  assign section_classes = section_name
+  assign section_id = 'shopify-section-' | append: section.id
+
+  assign aos_id = section_id
+  assign aos_delay = 250
+  assign aos_delay_increment = 250
+
+  assign blocks_social = section.blocks | where: 'type', 'social' | default: false
+
+  assign menu_footer = section.settings.menu_footer | default: false
+  assign menu_main = section.settings.menu_main | default: false
+
+-%}
+
+{%- style -%}
+  {%-
+    render 'element-styles',
+      background: section.settings.background,
+      id: section_id,
+      text_colour: section.settings.text_colour
+  -%}
+{%- endstyle -%}
+
+<div class="{{ section_name }}__container">
+
+  <div class="{{ section_name }}__main">
+    {% if menu_main and linklists[menu_main].links.size > 0 %}
+      <nav class="{{ section_name }}__main-navigation navigation navigation--main">
+        {% for link in linklists[menu_main].links %}
+
+          {%- liquid
+            assign is_active = link.active | default: false
+            assign title = link.title
+            assign type = link.type
+            assign url = link.url
+          -%}
+          {%- capture link_classes -%}
+            {{ section_name }}__main-navigation-link navigation__link link{% if is_active %} active{% endif %}
+          {%- endcapture -%}
+
+          <div class="{{ section_name }}__main-navigation-item navigation__item">
+            {% render 'link', classes: link_classes, link: url title: title %}
+          </div>
+
+        {% endfor %}
+      </nav>
+    {% endif %}
+  </div>
+
+  <div class="{{ section_name }}__footer">
+
+    <div class="{{ section_name }}__footer-cart-summary">
+      <a class="{{ section_name }}__footer-cart-summary-link link" href='/cart' target="_self" title="Cart">Cart (<span class="{{ section_name }}__cart-items-total js--cart-line-items-total">{{ cart.item_count }}</span>)</a>
+    </div>
+
+    {% if blocks_social and blocks_social.size > 0 %}
+      <div class="{{ section_name }}__footer-social">
+        {% for block in blocks_social %}
+
+          {%- liquid
+            assign type = block.settings.type | default: 'facebook'
+            assign url = block.settings.url | default: ''
+            assign svg_icon = 'icon.' | append: type
+          -%}
+
+          {% if url != blank %}
+            {% if 'email' == type %}
+              {% assign url = url | prepend: 'mailto:' %}
+            {% endif %}
+            <div class="{{ section_name }}__footer-social-item {{ type }} {{ svg_icon }}">
+              <a class="{{ section_name }}__footer-social-link link" href="{{ url }}" target="_blank" title="{{ shop.name }} {{ type | capitalize }}">
+                {% render 'svg', type: svg_icon %}
+              </a>
+            </div>
+          {% endif %}
+
+        {% endfor %}
+      </div>
+    {% endif %}
+
+    {% if menu_footer and linklists[menu_footer].links.size > 0 %}
+      <nav class="{{ section_name }}__footer-navigation navigation navigation--footer">
+        {% for link in linklists[menu_footer].links %}
+
+          {%- liquid
+            assign is_active = link.active | default: false
+            assign title = link.title
+            assign type = link.type
+            assign url = link.url
+          -%}
+          {%- capture link_classes -%}
+            {{ section_name }}__footer-navigation-link navigation__link link body-copy--xs{% if is_active %} active{% endif %}
+          {%- endcapture -%}
+
+          <div class="{{ section_name }}__footer-navigation-item navigation__item">
+            {% render 'link', classes: link_classes, link: url title: title %}
+          </div>
+
+        {% endfor %}
+      </nav>
+    {% endif %}
+
+  </div>
+
+</div>
+
+{% schema %}
+  {
+    "name": "Drawer | Menu",
+    "tag": "section",
+    "class": "drawer drawer-menu",
+    "settings": [
+      {
+        "content": "Navigation",
+        "type": "header"
+      },
+      {
+        "label": "Main Menu",
+        "type": "link_list",
+        "id": "menu_main"
+      },
+      {
+        "label": "Footer Menu",
+        "type": "link_list",
+        "id": "menu_footer"
+      }
+    ],
+    "blocks": [
+      {
+        "name": "Social Media",
+        "type": "social",
+        "settings": [
+          {
+            "label": "Type",
+            "type": "select",
+            "options": [
+              { "label": "Email", "value": "email" },
+              { "label": "Facebook", "value": "facebook" },
+			        { "label": "Instagram", "value": "instagram" },
+              { "label": "LinkedIn", "value": "linkedin" },
+              { "label": "Spotify", "value": "spotify" }
+            ],
+            "default": "facebook",
+            "id": "type"
+          },
+          {
+            "label": "Link",
+            "type": "url",
+            "id": "url"
+          }
+        ]
+      }
+    ]
+  }
+{% endschema %}
+
