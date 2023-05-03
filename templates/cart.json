@@ -11,11 +11,11 @@
         "heading": "Your Order",
         "heading_alignment": "center",
         "heading_size": "md",
-        "background": "black",
+        "background": "white",
         "container": "container",
-        "padding_top": 52,
-        "padding_bottom": 52,
-        "text_colour": "light"
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "text_colour": "dark"
       }
     },
     "cart-line-items": {
