@@ -11,7 +11,7 @@
       "settings": {}
     },
     "main": {
-      "type": "main-cart-items",
+      "type": "main-cart-line-items",
       "settings": {}
     },
     "footer": {
