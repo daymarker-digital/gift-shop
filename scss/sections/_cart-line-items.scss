@@ -1,6 +1,11 @@
 @use "../utils/mixins/border" as *;
 
 .cart-line-items {
+  &__line-item {
+    & + .cart-line-items__line-item {
+      @include border-solid( var(--theme-border--width), 'inherit', 'top' );
+    }
+  }
   &__main {
     @include border-solid( var(--theme-border--width), 'inherit', 'top' );
     @include border-solid( var(--theme-border--width), 'inherit', 'bottom' );
