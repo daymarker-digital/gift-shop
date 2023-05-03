@@ -107,11 +107,19 @@
               "type": "spotify",
               "url": "https:\/\/open.spotify.com\/user\/rz68loexgu05u20qt8ej246bi?si=f7bbcf276e9c4315&nd=1"
             }
+          },
+          "71ee7ae9-3233-43e8-b31c-a3209787de1c": {
+            "type": "social",
+            "settings": {
+              "type": "email",
+              "url": "mailto:excuseme@weareverypolite.com"
+            }
           }
         },
         "block_order": [
           "a6c62c02-f813-41c9-8bb3-ff456fd9af2b",
-          "c5c73986-699d-4240-99e1-bcbeac4fbf32"
+          "c5c73986-699d-4240-99e1-bcbeac4fbf32",
+          "71ee7ae9-3233-43e8-b31c-a3209787de1c"
         ],
         "settings": {
           "menu_main": "push-menu-main",
