@@ -90,6 +90,13 @@
           "menu_main": "push-menu-main",
           "menu_footer": "push-menu-footer"
         }
+      },
+      "drawer-menu": {
+        "type": "drawer-menu",
+        "settings": {
+          "menu_main": "push-menu-main",
+          "menu_footer": ""
+        }
       }
     },
     "content_for_index": [
