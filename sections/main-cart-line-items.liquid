@@ -69,8 +69,13 @@
     <div class="{{ section_name }}__main">
       <form action="{{ section_form_action }}" class="{{ section_name }}__form js--cart" id="cart" method="post">
         {%- for item in cart.items -%}
-          {%- capture snippet_classes -%}{{ section_name }}__line-item{%- endcapture -%}
-          {%- render 'cart-line-item', cart_line_item_classes: snippet_classes, cart_line_item_index: forloop.index, cart_line_item: item -%}
+          {%- capture snippet_classes -%}{{ section_name }}__line-item cart-line-item{%- endcapture -%}
+          {%-
+            render 'cart-line-item',
+              cart_line_item: item,
+              cart_line_item_classes: snippet_classes,
+              cart_line_item_index: forloop.index
+          -%}
         {%- else -%}
            <div class='cart-empty-message'>
             <div class='cart-empty-message__content body-copy--primary body-copy--2'>{{ section_empty_cart_message }}</div>

@@ -2540,14 +2540,6 @@
       "oAP" : "\/sections\/main-cart-hero.liquid",
       "oF" : 0
     },
-    "\/sections\/main-cart-items.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/sections\/main-cart-items.liquid",
-      "oF" : 0
-    },
     "\/sections\/main-cart-line-items.liquid" : {
       "cB" : 0,
       "ft" : 8192,
@@ -2802,6 +2794,14 @@
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/snippets\/card-product.liquid",
+      "oF" : 0
+    },
+    "\/snippets\/cart-line-item.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/snippets\/cart-line-item.liquid",
       "oF" : 0
     },
     "\/snippets\/debug-this.liquid" : {

@@ -53,17 +53,19 @@
 
       <div class="{{ section_name }}__ctas">
 
-        <div>
-          <p><a href="/collections" target="_self" title="Continue Shopping">Continue shopping</a> or</p>
-        </div>
+        <button class="{{ section_name }}__button-update button--secondary" form="cart" type="submit" name="update">Update</button>
 
-        <button class="{{ section_name }}__button-update button--secondary" form="cart" type="submit">Update</button>
-        <button class="{{ section_name }}__button-checkout button--primary" form="cart" type="submit" name="checkout"{%- if cart == empty -%} disabled{%- endif -%} >Checkout</button>
+        <button class="{{ section_name }}__button-checkout button--primary" form="cart" type="submit" name="checkout"{%- if cart == empty -%} disabled{%- endif -%}>Checkout</button>
+
         {%- if additional_checkout_buttons -%}
           <div class="{{ section_name }}__additional-checkout-buttons">
             {{ content_for_additional_checkout_buttons }}
           </div>
         {%- endif -%}
+
+        <div>
+          <p><a class="link" href="/collections" target="_self" title="Continue Shopping">Continue shopping</a> or</p>
+        </div>
 
       </div>
 
