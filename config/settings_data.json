@@ -93,6 +93,18 @@
       },
       "drawer-menu": {
         "type": "drawer-menu",
+        "blocks": {
+          "a6c62c02-f813-41c9-8bb3-ff456fd9af2b": {
+            "type": "social",
+            "settings": {
+              "type": "instagram",
+              "url": "https:\/\/www.instagram.com\/verypoliteagency\/"
+            }
+          }
+        },
+        "block_order": [
+          "a6c62c02-f813-41c9-8bb3-ff456fd9af2b"
+        ],
         "settings": {
           "menu_main": "push-menu-main",
           "menu_footer": "push-menu-footer"
