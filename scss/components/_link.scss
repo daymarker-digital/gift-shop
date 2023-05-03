@@ -16,6 +16,11 @@
     }
   }
 
+  &__content {
+    width: 100%;
+    height: auto;
+  }
+
   &[disabled],
   &.disabled {
     @extend %ui-disabled;

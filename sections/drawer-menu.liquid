@@ -38,12 +38,12 @@
             assign url = link.url
           -%}
 
-          <div class="{{ section_name }}__main-navigation-item navigation__item">
-            {%- capture link_classes -%}
-              {{ section_name }}__main-navigation-link navigation__link link
-            {%- endcapture -%}
-            {% render 'link', link_active: is_active, link_classes: link_classes, link_url: url link_title: title %}
-          </div>
+          {% if title != blank and url != blank %}
+            <div class="{{ section_name }}__main-navigation-item navigation__item">
+              {%- capture link_classes -%}{{ section_name }}__main-navigation-link navigation__link link{%- endcapture -%}
+              {% render 'link', link_active: is_active, link_classes: link_classes, link_url: url link_title: title %}
+            </div>
+          {% endif %}
 
         {% endfor %}
       </nav>
@@ -64,9 +64,6 @@
             assign type = block.settings.type | default: 'facebook'
             assign url = block.settings.url | default: ''
             assign svg_icon = 'icon.' | append: type
-            if 'email' == type
-              assign url = url | prepend: 'mailto:'
-            endif
           -%}
 
           {% if url != blank %}
@@ -92,13 +89,13 @@
             assign type = link.type
             assign url = link.url
           -%}
-          {%- capture link_classes -%}
-            {{ section_name }}__footer-navigation-link navigation__link link body-copy--xs{% if is_active %} active{% endif %}
-          {%- endcapture -%}
 
-          <div class="{{ section_name }}__footer-navigation-item navigation__item">
-            {% render 'link', classes: link_classes, link: url title: title %}
-          </div>
+          {% if title != blank and url != blank %}
+            <div class="{{ section_name }}__footer-navigation-item navigation__item">
+              {%- capture link_classes -%}{{ section_name }}__footer-navigation-link navigation__link link{%- endcapture -%}
+              {% render 'link', link_active: is_active, link_classes: link_classes, link_url: url link_title: title %}
+            </div>
+          {% endif %}
 
         {% endfor %}
       </nav>
