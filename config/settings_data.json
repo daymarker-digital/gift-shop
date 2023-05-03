@@ -100,10 +100,18 @@
               "type": "instagram",
               "url": "https:\/\/www.instagram.com\/verypoliteagency\/"
             }
+          },
+          "c5c73986-699d-4240-99e1-bcbeac4fbf32": {
+            "type": "social",
+            "settings": {
+              "type": "spotify",
+              "url": "https:\/\/open.spotify.com\/user\/rz68loexgu05u20qt8ej246bi?si=f7bbcf276e9c4315&nd=1"
+            }
           }
         },
         "block_order": [
-          "a6c62c02-f813-41c9-8bb3-ff456fd9af2b"
+          "a6c62c02-f813-41c9-8bb3-ff456fd9af2b",
+          "c5c73986-699d-4240-99e1-bcbeac4fbf32"
         ],
         "settings": {
           "menu_main": "push-menu-main",
