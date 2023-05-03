@@ -37,12 +37,12 @@
             assign type = link.type
             assign url = link.url
           -%}
-          {%- capture link_classes -%}
-            {{ section_name }}__main-navigation-link navigation__link link{% if is_active %} active{% endif %}
-          {%- endcapture -%}
 
           <div class="{{ section_name }}__main-navigation-item navigation__item">
-            {% render 'link', classes: link_classes, link: url title: title %}
+            {%- capture link_classes -%}
+              {{ section_name }}__main-navigation-link navigation__link link
+            {%- endcapture -%}
+            {% render 'link', link_active: is_active, link_classes: link_classes, link_url: url link_title: title %}
           </div>
 
         {% endfor %}
@@ -64,16 +64,17 @@
             assign type = block.settings.type | default: 'facebook'
             assign url = block.settings.url | default: ''
             assign svg_icon = 'icon.' | append: type
+            if 'email' == type
+              assign url = url | prepend: 'mailto:'
+            endif
           -%}
 
           {% if url != blank %}
-            {% if 'email' == type %}
-              {% assign url = url | prepend: 'mailto:' %}
-            {% endif %}
             <div class="{{ section_name }}__footer-social-item {{ type }} {{ svg_icon }}">
-              <a class="{{ section_name }}__footer-social-link link" href="{{ url }}" target="_blank" title="{{ shop.name }} {{ type | capitalize }}">
-                {% render 'svg', type: svg_icon %}
-              </a>
+              {%- capture link_classes -%}{{ section_name }}__footer-social-link link{%- endcapture -%}
+              {%- capture link_content -%}{% render 'svg', type: svg_icon %}{%- endcapture -%}
+              {%- capture link_title -%}{{ shop.name }} {{ type | capitalize }}{%- endcapture -%}
+              {% render 'link', link_classes: link_classes, link_content: link_content, link_url: url link_title: link_title %}
             </div>
           {% endif %}
 
