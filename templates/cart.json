@@ -1,5 +1,4 @@
 {
-  "name": "Cart",
   "order": [
     "hero",
     "main",
@@ -8,15 +7,40 @@
   "sections": {
     "hero": {
       "type": "main-cart-hero",
-      "settings": {}
+      "settings": {
+        "heading_alignment": "left",
+        "heading_size": "sm",
+        "background": "black",
+        "container": "container",
+        "padding_top": 52,
+        "padding_bottom": 52,
+        "text_colour": "light"
+      }
     },
     "main": {
       "type": "main-cart-line-items",
-      "settings": {}
+      "settings": {
+        "line_item_image_aspect_ratio_mobile": "",
+        "line_item_image_aspect_ratio_desktop": "",
+        "line_item_padding_top": 24,
+        "line_item_padding_bottom": 24,
+        "background": "white",
+        "container": "container",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "text_colour": "dark"
+      }
     },
     "footer": {
       "type": "main-cart-footer",
-      "settings": {}
+      "settings": {
+        "cart_note_enable": false,
+        "background": "white",
+        "container": "container",
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "text_colour": "dark"
+      }
     }
   }
 }
