@@ -4,7 +4,7 @@
 
 .burger {
 
-  --theme-burger--45-offset: calc( (var(--theme-burger--height) - var(--theme-burger--stroke-width)) * 0.5 );
+  --theme-burger--45-offset: calc( (var(--theme-burger--height) - var(--theme-border--width)) * 0.5 );
 
   @each $name, $value in map.get( $theme-layout-settings, 'breakpoints' ) {
     @if $name == 'base' {
@@ -56,7 +56,7 @@
     transition: transform var(--theme-transition--duration);
     background: var(--theme-colour--black);
     width: var(--theme-burger--width);
-    height: var(--theme-burger--stroke-width);
+    height: var(--theme-border--width);
     border-radius: 0;
     display: block;
     position: absolute;

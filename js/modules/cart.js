@@ -7,71 +7,6 @@ const elements = {
   cart: document.querySelectorAll('form.js--cart') || []
 };
 
-const LEGACYgetCart = () => {
-  fetch( '/cart.js', {
-    method: 'GET',
-  })
-  .then(response => {
-    return response.json();
-  })
-  .then((data) => {
-    Render.cartTotal(data.item_count);
-  })
-  .catch((error) => {
-    console.error('Error:', error);
-  });
-};
-
-const LEGACYemptyCart = () => {
-  fetch('/cart/clear.js', {
-    method: 'POST',
-  })
-  .then(response => {
-    return response.json();
-  })
-  .then((data) => {
-    console.log(data);
-  })
-  .catch((error) => {
-    console.error('Error:', error);
-  });
-}
-
-const LEGACYaddToCart = () => {
-  productForm.forEach( form => {
-    form.addEventListener('submit', event => {
-
-      event.preventDefault();
-
-      let quantity = form.elements['quantity'].value || false;
-      let id = form.elements['id'].value || false;
-
-      if ( quantity && id ) {
-        fetch('/cart/add.js', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json'
-          },
-          body: JSON.stringify({
-            items: [{ id, quantity }]
-          })
-        })
-        .then(response => {
-          getCart();
-          return response.json();
-        })
-        .then((data) => {
-          Render.cartNotification(data);
-        })
-        .catch((error) => {
-          console.error('Error:', error);
-        });
-      }
-
-    });
-  });
-};
-
 const addToCart = ( id = 0, quantity = 1 ) => {
 
   if ( id ) {
@@ -301,8 +236,6 @@ const updateStepperButtonStates = ( quantity = 0, min = 0, max = 99999, stepper 
 const init = () => {
   if ( config.debug ) console.log(`[ ${config.name} v.${config.version} initialized ]`);
 
-  emptyCart();
-
   if ( Theme.cart.items.length ) {
     Render.cartLineItemsToElement( Theme.cart.items, elements.cart );
     toggleCheckoutButtonUsability( 'enable' );
@@ -321,4 +254,9 @@ const init = () => {
   if ( config.debug ) console.log(`[ ${config.name} v.${config.version} complete ]`);
 };
 
-export default { addToCart, emptyCart, getCart, init };
+export default {
+  addToCart,
+  emptyCart,
+  getCart,
+  init
+};

@@ -117,7 +117,7 @@
 }
 
 @mixin body-copy-size( $size: '1' ) {
-  @each $name, $value in map.get($theme-font-sizes-body-copy, $size) {
+  @each $name, $value in map.get($theme-body-copy-font-sizes, $size) {
     @if $name == 'base' {
       font-size: $value;
     } @else {
