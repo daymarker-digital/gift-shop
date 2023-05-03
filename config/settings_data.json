@@ -95,7 +95,7 @@
         "type": "drawer-menu",
         "settings": {
           "menu_main": "push-menu-main",
-          "menu_footer": ""
+          "menu_footer": "push-menu-footer"
         }
       }
     },
