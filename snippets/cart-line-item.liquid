@@ -31,9 +31,15 @@
     assign cart_line_item_key = cart_line_item.key | default: false
     assign cart_line_item_original_line_price = cart_line_item.original_line_price
     assign cart_line_item_product_title = cart_line_item.product.title | default: ''
+    assign cart_line_item_product_has_variants = true
     assign cart_line_item_type = cart_line_item.product.type | default: ''
     assign cart_line_item_url = cart_line_item.url | default: ''
     assign cart_line_item_url_to_remove = cart_line_item.url_to_remove | default: ''
+    assign cart_line_item_variant_title = cart_line_item.variant.title | default: ''
+
+    if cart_line_item.product.has_only_default_variant
+      assign cart_line_item_product_has_variants = false
+    endif
 
   -%}
 
@@ -46,10 +52,24 @@
     </div>
 
     <div class="{{ snippet_name }}__content">
-      <strong class="{{ snippet_name }}__title" {{ aos_attrs }}>
-        {%- capture snippet_classes %}{{ snippet_name }}__title-link link{%- endcapture -%}
-        {%- render 'link', link_classes: snippet_classes, link_title: snippet_title, link_url: snippet_url -%}
+
+      <strong class="{{ snippet_name }}__title">
+        <a class="{{ snippet_name }}__title-link link" href="{{ cart_line_item_url }}" title="{{ cart_line_item_product_title }}" target="_self">
+          {{ cart_line_item_product_title }}
+        </a>
       </strong>
+
+      {% if cart_line_item_product_has_variants %}
+        <div class="{{ snippet_name }}__options">
+          {% for option in cart_line_item.options_with_values %}
+            <div class="{{ snippet_name }}__option">
+              <span class="{{ snippet_name }}__option-name">{{ option.name }}</span>
+              <span class="{{ snippet_name }}__option-value">{{ option.value }}</span>
+            </div>
+          {% endfor %}
+        </div>
+      {% endif %}
+
     </div>
 
   </div>
