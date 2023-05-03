@@ -26,6 +26,15 @@ const debounce = (func, delay) => {
   };
 };
 
+const filterObjectFromArrayByID = ( id = 0, arr = [] ) => {
+  for ( let i = 0; i < arr.length; i++ ) {
+    if ( arr[i].id === id ) {
+      return arr[i];
+    }
+  }
+  return false;
+}
+
 const getArrayOfElementsByTag = ( $elements = [ 'body', 'footer', 'header', 'main' ] ) => {
   let filteredElements = $elements.filter( tag => { return document.getElementsByTagName( tag )[0] } ) || [];
   return filteredElements.map( tag => document.getElementsByTagName( tag )[0] ) || [];
@@ -117,6 +126,7 @@ const toggleClass = ( $class = '', $elements = [] ) => {
 export default {
   addClass,
   debounce,
+  filterObjectFromArrayByID,
   getArrayOfElementsByTag,
   getElementHeightByTag,
   getLocalStorageValueByKey,
@@ -125,5 +135,6 @@ export default {
   setCSSVariable,
   setElementsHeightToCSSVariable,
   setLocalStorage,
+  throttle,
   toggleClass
 };

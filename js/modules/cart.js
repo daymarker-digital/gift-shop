@@ -1,11 +1,10 @@
 import Render from 'render';
+import Tools from 'tools';
 
 const config = { debug: true, name: 'cart.js', version: '1.0' };
 
 const elements = {
-  button: {
-    checkout: document.querySelectorAll( 'button[name="checkout"]' ) || []
-  }
+  cart: document.querySelectorAll('form.js--cart') || []
 };
 
 const LEGACYgetCart = () => {
@@ -74,6 +73,7 @@ const LEGACYaddToCart = () => {
 };
 
 const addToCart = ( id = 0, quantity = 1 ) => {
+
   if ( id ) {
     fetch('/cart/add.js', {
       method: 'POST',
@@ -88,19 +88,25 @@ const addToCart = ( id = 0, quantity = 1 ) => {
       return response.json();
     })
     .then( data => {
-      getCart().then( cart => {
-        toggleCheckoutButtonUsability( 'enable' );
-        Render.cartLineItemsTotal( cart.item_count );
-        Render.cartLineItems( cart.items );
-        Render.cartSubtotal( cart.items_subtotal_price );
-        Drawers.openDrawer( 'drawer-cart', 500 );
-        Drawers.closeDrawer( 'drawer-cart', 500 + 3000 );
-      });
+
+      if ( 422 == data.status ) {
+        Render.cartNotification( 'error', data );
+      } else {
+        Render.cartNotification( 'success', data.items?.[0] );
+        getCart().then( cart => {
+          toggleCheckoutButtonUsability( 'enable' );
+          Render.cartLineItemsTotal( cart.item_count );
+          Render.cartLineItemsToElement( cart.items, elements.cart );
+          Render.cartSubtotal( cart.items_subtotal_price );
+        });
+      }
+
     })
     .catch( error => {
-      console.log('success add to cart', error );
+      console.log('[ addToCart() ] :: Error', error );
     });
   }
+
 };
 
 const emptyCart = () => {
@@ -110,11 +116,9 @@ const emptyCart = () => {
   .then(response => {
     return response.json();
   })
-  .then((data) => {
-    console.log(data);
-  })
+  .then((data) => {})
   .catch((error) => {
-    console.error('Error:', error);
+    console.error('[ emptyCart() ] :: Error', error);
   });
 };
 
@@ -125,8 +129,9 @@ const getCart = async () => {
   });
 };
 
+
 const onClickAddProductToCart = () => {
-  ( document.querySelectorAll( '.js--add-to-cart-product, .js--add-to-cart-product-card' ) || [] ).forEach( button => {
+  ( document.querySelectorAll( '.js--add-to-cart, .js--add-to-cart-from-collection' ) || [] ).forEach( button => {
     button.addEventListener( 'click', event => {
 
       event.preventDefault();
@@ -165,9 +170,8 @@ const onClickRemoveCartLineItem = () => {
       let button = event.target.closest( '.js--remove-cart-line-item' );
       let cart_line_item = button.closest( '.cart-line-item' ) ?? false;
       let cart_line_item_key = cart_line_item.dataset.key || '';
-      let cart_line_item_quantity = 0;
 
-      updateCartLineItemByKey( cart_line_item_key, cart_line_item_quantity );
+      updateCartLineItemByKey( cart_line_item_key, 0 );
 
     }
   });
@@ -178,11 +182,13 @@ const onClickUpdateStepper = () => {
     if ( event.target.closest( '.js--stepper-button' ) ) {
 
       let button = event.target.closest( '.js--stepper-button' );
-      let cart_line_item = button.closest( '.cart-line-item' ) ?? false;
+      let cart_line_item = button.closest( '.cart-line-item') ?? false;
       let cart_line_item_key = cart_line_item ? cart_line_item.dataset?.key || '' : '';
       let stepper = button.closest('.stepper') || false;
       let stepper_input = stepper.querySelector('input[type="number"]') || false;
       let timer = { button: false, delay: 500 };
+
+      console.log( '[ onClickUpdateStepper() ] :: ', button, cart_line_item, cart_line_item_key, stepper );
 
       if ( button && stepper_input ) {
 
@@ -198,11 +204,13 @@ const onClickUpdateStepper = () => {
           }
         }
 
-        stepper_input.value = quantity;
-
         updateStepperButtonStates( quantity, min, max, stepper );
 
-        if ( cart_line_item ) updateCartLineItemByKey( cart_line_item_key, quantity );
+        if ( cart_line_item ) {
+          updateCartLineItemByKey( cart_line_item_key, quantity, stepper );
+        } else {
+          updateStepperInputQuantity( quantity, stepper );
+        }
 
       }
 
@@ -211,7 +219,7 @@ const onClickUpdateStepper = () => {
 };
 
 const toggleCheckoutButtonUsability = ( state = 'enable' ) => {
-  elements.button.checkout.forEach( button => {
+  ( document.querySelectorAll( 'button[name="checkout"]' ) || [] ).forEach( button => {
     switch ( state ) {
       case 'enable': {
         button.disabled = false;
@@ -225,63 +233,92 @@ const toggleCheckoutButtonUsability = ( state = 'enable' ) => {
   });
 };
 
-const updateCartLineItemByKey = ( key = '', quantity = 0 ) => {
-  if ( key ) {
+const updateCartLineItemByKey = ( key = '', quantity = 0, stepper = false ) => {
 
+  if ( key ) {
     fetch('/cart/change.js', {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
+      headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({ id: key, quantity: quantity })
     })
     .then( response => {
       return response.json();
     })
     .then( cart => {
-      if ( 0 == quantity ) Render.removeCartLineItem( key );
-      if ( cart.items.length ) {
-        toggleCheckoutButtonUsability( 'enable' );
-        Render.cartLineItemsLinePrice( key, cart.items );
-        Render.cartLineItemsQuantity( key, quantity, cart.items );
+
+      if ( 0 == quantity ) Render.cartLineItemRemoveByKey( key );
+
+      if ( cart.status == 422 ) {
+        updateStepperInputQuantity( quantity - 1, stepper );
+        Render.cartLineItemErrorMessage( key, cart.message );
       } else {
-        toggleCheckoutButtonUsability( 'disable' );
-        Render.cartEmptyMessage();
+
+        if ( cart.item_count > 0 ) {
+          toggleCheckoutButtonUsability( 'enable' );
+          Render.cartLineItemsLinePrice( key, cart.items );
+          Render.cartLineItemsQuantity( key, quantity, cart.items );
+          updateStepperInputQuantity( quantity, stepper );
+        } else {
+          toggleCheckoutButtonUsability( 'disable' );
+          Render.cartEmptyMessage();
+        }
+
+        Render.cartLineItemsTotal( cart.item_count );
+        Render.cartSubtotal( cart.items_subtotal_price );
+
       }
-      Render.cartLineItemsTotal( cart.item_count );
-      Render.cartSubtotal( cart.items_subtotal_price );
+
     })
     .catch( error => {
-      console.log('updateCartLineItemByKey error', error )
+      console.log('[ updateCartLineItemByKey() ] :: Error', error );
     });
-
   };
+};
+
+const updateStepperInputQuantity = ( quantity = 0, stepper = false ) => {
+  if ( stepper.querySelector('input[name="quantity"]') ) {
+    stepper.querySelector('input[name="quantity"]').value = quantity;
+  }
+};
+
+const updateStepperButtonStates = ( quantity = 0, min = 0, max = 99999, stepper = false ) => {
+  if ( stepper ) {
+    let btnDecrease = stepper.querySelector('.stepper__button.decrease') || false;
+    let btnIncrease = stepper.querySelector('.stepper__button.increase') || false;
+    if ( quantity == min ) {
+      btnDecrease.disabled = true;
+      btnIncrease.disabled = false;
+    } else if ( quantity > min && quantity < max ) {
+      btnDecrease.disabled = false;
+      btnIncrease.disabled = false;
+    } else {
+      btnDecrease.disabled = false;
+      btnIncrease.disabled = true;
+    }
+  }
 };
 
 const init = () => {
   if ( config.debug ) console.log(`[ ${config.name} v.${config.version} initialized ]`);
 
-    if ( Theme.cart.items.length ) {
-      Render.cartLineItems( Theme.cart.items );
-      toggleCheckoutButtonUsability( 'enable' );
-    } else {
-      Render.cartEmptyMessage();
-      toggleCheckoutButtonUsability( 'disable' );
-    }
+  emptyCart();
 
-    Render.cartLineItemsTotal( Theme.cart.item_count );
-    Render.cartSubtotal( Theme.cart.items_subtotal_price );
+  if ( Theme.cart.items.length ) {
+    Render.cartLineItemsToElement( Theme.cart.items, elements.cart );
+    toggleCheckoutButtonUsability( 'enable' );
+  } else {
+    Render.cartEmptyMessage();
+    toggleCheckoutButtonUsability( 'disable' );
+  }
 
-    onClickAddProductToCart();
-    onClickRemoveCartLineItem();
-    onClickUpdateStepper();
+  Render.cartLineItemsTotal( Theme.cart.item_count );
+  Render.cartSubtotal( Theme.cart.items_subtotal_price );
+
+  onClickAddProductToCart();
+  onClickRemoveCartLineItem();
+  onClickUpdateStepper();
 
   if ( config.debug ) console.log(`[ ${config.name} v.${config.version} complete ]`);
 };
 
-export default {
-  addToCart,
-  emptyCart,
-  getCart,
-  init
-};
+export default { addToCart, emptyCart, getCart, init };

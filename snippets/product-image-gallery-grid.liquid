@@ -19,10 +19,9 @@
 
   {%- liquid
 
-    assign template_name = 'main-product'
     assign snippet_name = 'product-image-gallery-grid'
 
-    assign classes = classes | default: 'main-product__image-gallery-grid'
+    assign classes = snippet_name
     assign modal_id = modal_id | default: ''
 
     assign has_images = false
@@ -35,7 +34,7 @@
   -%}
 
   {%- if has_images -%}
-    <div class='{{ classes }} {{ snippet_name }}'>
+    <div class='{{ classes }}'>
       {%- for image in product.images -%}
         <div
           class='{{ snippet_name }}__item'

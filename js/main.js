@@ -30,20 +30,13 @@ window.addEventListener( 'load', function (e) {
 });
 
 window.addEventListener( 'resize', Tools.debounce(() => {
-  console.log('resize debounced');
   Tools.setElementsHeightToCSSVariable();
 }, 300));
 
-window.addEventListener( 'resize', Tools.throttle(() => {
-  console.log('resize throttled');
-}, 300));
+window.addEventListener( 'resize', Tools.throttle(() => {}, 300));
 
-window.addEventListener( 'scroll', Tools.debounce(() => {
-  console.log('scroll debounced');
-}, 300));
+window.addEventListener( 'scroll', Tools.debounce(() => {}, 300));
 
-window.addEventListener( 'scroll', Tools.throttle(() => {
-  console.log('scroll throttled');
-}, 300));
+window.addEventListener( 'scroll', Tools.throttle(() => {}, 300));
 
 
