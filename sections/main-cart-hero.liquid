@@ -9,7 +9,7 @@
   assign aos_id = section_id
 
   assign section_container = section.settings.container
-  assign section_heading = settings.cart_heading | default: 'Cart'
+  assign section_heading =  section.settings.heading | default: 'Cart'
   assign section_heading_alignment = section.settings.heading_alignment
   assign section_heading_size = section.settings.heading_size
 
@@ -21,7 +21,8 @@
       background: section.settings.background,
       id: section_id,
       padding_bottom: section.settings.padding_bottom,
-      padding_top: section.settings.padding_top
+      padding_top: section.settings.padding_top,
+      text_colour: section.settings.text_colour
   -%}
 {%- endstyle -%}
 

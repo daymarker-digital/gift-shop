@@ -32,16 +32,16 @@
     color: var(--theme-colour--black);
   }
   &--light {
-    color: var(--theme-colour--lemon);
+    color: var(--theme-colour--white);
   }
 
   // ---------------------------------------- Style
   &--primary {
-    @include hobeaux( 700 );
+    //@include hobeaux( 700 );
   }
 
   &--secondary {
-    @include sorry-sans( 700 );
+    //@include sorry-sans( 700 );
   }
 
   // ---------------------------------------- Weight
