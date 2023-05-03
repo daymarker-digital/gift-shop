@@ -34,39 +34,22 @@
     assign cart_line_item_type = cart_line_item.product.type | default: ''
     assign cart_line_item_url = cart_line_item.url | default: ''
     assign cart_line_item_url_to_remove = cart_line_item.url_to_remove | default: ''
+    assign cart_line_item_variant_title = cart_line_item.variant.title | default: ''
 
   -%}
 
   <div class="{{ snippet_classes }}" id="{{ snippet_id }}" data-key="{{ cart_line_item_key }}">
 
     <div class="{{ snippet_name }}__image">
-          <a class="{{ snippet_name }}__image-link link" href="{{ snippet_url }}" title="{{ snippet_title }}" target="_self">
-            {% render 'lazyload-image', classes: 'card-product__image-01', image: snippet_images[0] %}
-            {% render 'lazyload-image', classes: 'card-product__image-02', image: snippet_images[1] %}
-            {% unless snippet_available %}
-              {%- liquid
-                capture aos_attrs
-                  render 'aos-attributes', anchor: aos_id, delay: aos_delay, transition: 'fade-up'
-                endcapture
-                assign aos_delay = aos_delay | plus: aos_delay_increment
-              -%}
-              {%- render 'banner', banner_aos: aos_attrs, banner_colour: 'red', banner_title: 'Sold Out! (Sorry)' -%}
-            {%- endunless -%}
-          </a>
-        </div>
+      <a class="{{ snippet_name }}__image-link link" href="{{ snippet_url }}" title="{{ snippet_title }}" target="_self">
+        {% render 'lazyload-image', image: cart_line_item_image %}
+      </a>
+    </div>
 
     <div class="{{ snippet_name }}__content">
-          {%- liquid
-            capture aos_attrs
-              render 'aos-attributes', anchor: aos_id, delay: aos_delay, transition: 'fade-left'
-            endcapture
-            assign aos_delay = aos_delay | plus: aos_delay_increment
-          -%}
-          <strong class="{{ snippet_name }}__title" {{ aos_attrs }}>
-            {%- capture snippet_classes %}{{ snippet_name }}__title-link link{%- endcapture -%}
-            {%- render 'link', link_classes: snippet_classes, link_title: snippet_title, link_url: snippet_url -%}
-          </strong>
-        </div>
+      <strong class="{{ snippet_name }}__title" {{ aos_attrs }}>{{ cart_line_item_product_title }}</strong>
+      {% cart_line_item_variant_title != %}<span>{{ cart_line_item_variant_title }}</span>{% endif %}
+    </div>
 
   </div>
 

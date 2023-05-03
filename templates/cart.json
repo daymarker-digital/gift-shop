@@ -1,11 +1,11 @@
 {
   "order": [
-    "hero",
-    "main",
-    "footer"
+    "cart-hero",
+    "cart-line-items",
+    "cart-footer"
   ],
   "sections": {
-    "hero": {
+    "cart-hero": {
       "type": "main-cart-hero",
       "settings": {
         "heading_alignment": "left",
@@ -17,7 +17,7 @@
         "text_colour": "light"
       }
     },
-    "main": {
+    "cart-line-items": {
       "type": "main-cart-line-items",
       "settings": {
         "line_item_image_aspect_ratio_mobile": "",
@@ -31,7 +31,7 @@
         "text_colour": "dark"
       }
     },
-    "footer": {
+    "cart-footer": {
       "type": "main-cart-footer",
       "settings": {
         "cart_note_enable": false,
