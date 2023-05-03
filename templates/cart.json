@@ -21,10 +21,10 @@
     "cart-line-items": {
       "type": "main-cart-line-items",
       "settings": {
-        "line_item_image_aspect_ratio_mobile": "",
-        "line_item_image_aspect_ratio_desktop": "",
-        "line_item_padding_top": 24,
-        "line_item_padding_bottom": 24,
+        "line_item_image_aspect_ratio_mobile": "1.25\/2",
+        "line_item_image_aspect_ratio_desktop": "1.45\/2",
+        "line_item_padding_top": 32,
+        "line_item_padding_bottom": 32,
         "background": "white",
         "container": "container",
         "padding_top": 36,
