@@ -23,8 +23,8 @@
       "settings": {
         "line_item_image_aspect_ratio_mobile": "1.25\/2",
         "line_item_image_aspect_ratio_desktop": "1.45\/2",
-        "line_item_padding_top": 32,
-        "line_item_padding_bottom": 32,
+        "line_item_padding_top": 20,
+        "line_item_padding_bottom": 20,
         "background": "white",
         "container": "container",
         "padding_top": 36,
