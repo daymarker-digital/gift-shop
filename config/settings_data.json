@@ -9,10 +9,17 @@
             "settings": {
               "title": "<p>Free Shipping Over $75<\/p>"
             }
+          },
+          "66878742-1db7-4255-8fe4-7c5cb84ef2ec": {
+            "type": "announcement",
+            "settings": {
+              "title": "<p>Another sweet announcement.<\/p>"
+            }
           }
         },
         "block_order": [
-          "b9f4c506-1615-40c5-b9df-3115417641b5"
+          "b9f4c506-1615-40c5-b9df-3115417641b5",
+          "66878742-1db7-4255-8fe4-7c5cb84ef2ec"
         ],
         "settings": {
           "announcements_enabled": true,
