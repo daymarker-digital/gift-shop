@@ -1,4 +1,5 @@
 @use 'sass:math';
+@use "../utils/mixins/breakpoint" as *;
 @use "../utils/mixins/button" as *;
 @use "../utils/mixins/ui" as *;
 
@@ -70,6 +71,9 @@
     &.decrease {
       transform: rotate(180deg);
     }
+    &:hover {
+      opacity: 0.5;
+    }
   }
 
   &--open {
@@ -91,21 +95,32 @@
 
   &--remove-cart-line-item {
     opacity: 0.3333;
-    width: 16px;
-    height: 16px;
+    width: 12px;
+    height: 12px;
     &:after,
     &:before {
-      width: math.hypot(16px, 16px);
+      width: math.hypot(12px, 12px);
     }
     &:hover {
       opacity: 1;
     }
   }
 
-
   &[disabled],
   &.disabled {
     @extend %ui-disabled;
+  }
+
+  @include breakpoint(lg) {
+    &--remove-cart-line-item {
+      opacity: 0.2;
+      width: 15px;
+      height: 15px;
+      &:after,
+      &:before {
+        width: math.hypot(15px, 15px);
+      }
+    }
   }
 
 }

@@ -1,0 +1,63 @@
+@use "../utils/mixins/border" as *;
+@use "../utils/mixins/breakpoint" as *;
+
+.cart-footer {
+
+  &__ctas,
+  &__subtotal {
+    padding: 26px 0;
+  }
+
+  &__additional-checkout-buttons {
+    display: block;
+    width: 100%;
+    .dynamic-checkout__content {
+      width: 100%;
+      & > div {
+        display: flex;
+      }
+    }
+  }
+
+  &__ctas {
+    display: flex;
+    width: 100%;
+    justify-content: flex-end;
+    flex-flow: row wrap;
+    gap: 26px;
+  }
+
+  &__subtotal {
+    @include border-solid( var(--theme-border--width), 'inherit', 'top' );
+    @include border-solid( var(--theme-border--width), 'inherit', 'bottom' );
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: baseline;
+    line-height: 1;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1;
+  }
+
+  @include breakpoint(sm) {
+
+    &__subtotal {
+      font-size: 14px;
+    }
+
+  }
+
+  @include breakpoint(md) {
+
+    &__subtotal {
+      font-size: 16px;
+    }
+
+  }
+
+  @include breakpoint(xl) {}
+
+  @include breakpoint(xxl) {}
+
+}

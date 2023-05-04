@@ -137,8 +137,39 @@
     grid-template-columns: 110px auto;
     gap: 22px;
 
+    &__info,
+    &__price,
+    &__stepper {
+      align-self: center;
+    }
+
+    &__content {
+      width: 100%;
+      display: grid;
+      grid: auto/repeat(10, 1fr);
+      gap: 12px;
+    }
+
+    &__info {
+      grid-column: span 6;
+      order: 1;
+    }
+
+    &__stepper {
+      grid-column: span 2;
+      order: 2;
+      margin: 0 0 0 auto;
+    }
+
+    &__price {
+      grid-column: span 2;
+      order: 3;
+      text-align: right;
+      margin: 0;
+    }
+
     &__title {
-      font-size: 32px;
+      font-size: 28px;
     }
 
   }
@@ -149,7 +180,7 @@
     gap: 24px;
 
     &__title {
-      font-size: 34px;
+      font-size: 32px;
     }
 
   }
@@ -160,7 +191,7 @@
     gap: 26px;
 
     &__title {
-      font-size: 36px;
+      font-size: 34px;
     }
 
   }
