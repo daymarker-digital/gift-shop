@@ -15,11 +15,18 @@
             "settings": {
               "title": "<p>Another sweet announcement.<\/p>"
             }
+          },
+          "92eb0f94-15c0-4b2d-b749-62d296fc4f6e": {
+            "type": "announcement",
+            "settings": {
+              "title": "<p>An announcement with a link to <a href=\"\/collections\/all\" title=\"All\">something<\/a>.<\/p>"
+            }
           }
         },
         "block_order": [
           "b9f4c506-1615-40c5-b9df-3115417641b5",
-          "66878742-1db7-4255-8fe4-7c5cb84ef2ec"
+          "66878742-1db7-4255-8fe4-7c5cb84ef2ec",
+          "92eb0f94-15c0-4b2d-b749-62d296fc4f6e"
         ],
         "settings": {
           "announcements_enabled": true,
