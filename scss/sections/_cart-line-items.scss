@@ -2,7 +2,6 @@
 
 .cart-line-items {
   &__line-item {
-    @include border-solid( var(--theme-border--width), 'inherit', 'top' );
-
+    @include border-solid( 2px, 'inherit', 'top' );
   }
 }

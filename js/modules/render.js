@@ -11,7 +11,7 @@ const cartEmptyMessage = () => {
   let message = Theme.settings?.cart_empty_message ?? '<p>Oops! Nothing added to your cart yet :(</p>';
   elements.cart.forEach( element => {
     element.innerHTML = `
-      <div class="cart-empty-message body-copy--primary body-copy--2">${message}</div>
+      <div class="cart-empty-message body-copy--primary body-copy--1">${message}</div>
     `;
   });
 };

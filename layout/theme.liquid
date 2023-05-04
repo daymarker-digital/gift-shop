@@ -63,8 +63,9 @@
   <body class="{% render 'theme--classes' %}">
 
     {% render 'burger' %}
-    {% section 'drawer-menu' %}
+    {% section 'announcements' %}
     {% section 'header' %}
+    {% section 'drawer-menu' %}
 
     <main class="{% render 'theme--classes' %} content-for-layout focus-none" role="main" tabindex="-1">
       {% case request.path %}

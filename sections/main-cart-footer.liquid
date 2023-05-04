@@ -31,8 +31,8 @@
 
       {%- if section_cart_note_enable -%}
         <div class="{{ section_name }}__note">
-          <label for="Cart-note">Order note:</label>
-          <textarea class="text-area field__input" name="note" form="cart" id="Cart-note" placeholder="{{ 'sections.cart.note' | t }}">{{ cart.note }}</textarea>
+          <label for="cart-note">Order Note</label>
+          <textarea class="text-area field__input" name="note" form="cart" id="cart-note" placeholder="Special Instructions..." rows="7">{{ cart.note }}</textarea>
         </div>
       {%- endif -%}
 
@@ -64,8 +64,8 @@
           </div>
         {%- endif -%}
 
-        <div>
-          <p><a class="link" href="/collections" target="_self" title="Continue Shopping">Continue shopping</a> or</p>
+        <div class="{{ section_name }}__extras">
+          <p>or <a class="link" href="/collections" target="_self" title="Continue Shopping">Continue shopping</a></p>
         </div>
 
       </div>

@@ -77,12 +77,12 @@
         display: block;
         width: 100%;
         &-link {
-          @each $name, $value in map.get( $theme-layout-settings, 'breakpoints' ) {
+          @each $name, $value in map.get( $theme-drawer-settings, 'link-font-sizes' ) {
             @if $name == 'base' {
-              font-size: calc( var(--theme-push-menu-link-font-size) * 0.8 );
+              font-size: $value * 0.8;
             } @else {
               @include breakpoint(#{$name}) {
-                font-size: calc( var(--theme-push-menu-link-font-size--#{$name}) * 0.8 );
+                font-size: $value * 0.8;
               }
             }
           }
