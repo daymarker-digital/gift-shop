@@ -1,4 +1,5 @@
 @use "../utils/mixins/breakpoint" as *;
+@use "../utils/mixins/font" as *;
 
 .cart-line-item {
 
@@ -6,11 +7,11 @@
   width: 100%;
   grid-template-columns: 90px auto;
   gap: 16px;
+  position: relative;
 
   &__title,
   &__options,
-  &__price,
-  &__stepper {
+  &__price {
     width: 100%;
     display: block;
   }
@@ -18,13 +19,50 @@
   &__options,
   &__price {
     font-weight: 400;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 1;
+    margin-top: 8px;
+  }
+
+  &__button {
+    &-remove {
+      position: absolute;
+      right: 0;
+    }
   }
 
   &__content {
+    width: calc(100% - 30px);
     display: flex;
     flex-direction: column;
+  }
+
+  &__error-message {
+    @include font-sorry-sans(700);
+    padding: var(--theme-layout--gutter);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    & > * {
+      position: relative;
+      z-index: 1;
+    }
+    &:after {
+      position: absolute;
+      content: '';
+      display: block;
+      width: 100%;
+      height: 100%;
+      background: var(--theme-colour--yellow);
+      opacity: 0.9;
+      z-index: 0;
+    }
   }
 
   &__image {
@@ -51,7 +89,7 @@
   }
 
   &__title {
-    font-size: 20px;
+    font-size: 18px;
     &-link {
       &:hover {
         color: inherit;
@@ -62,8 +100,14 @@
 
   @include breakpoint(sm) {
 
-    grid-template-columns: 92px auto;
+    grid-template-columns: 100px auto;
     gap: 18px;
+
+    &__options,
+    &__price {
+      font-size: 14px;
+      margin-top: 10px;
+    }
 
     &__title {
       font-size: 22px;
@@ -73,11 +117,17 @@
 
   @include breakpoint(md) {
 
-    grid-template-columns: 100px auto;
+    grid-template-columns: 120px auto;
     gap: 20px;
 
+    &__options,
+    &__price {
+      font-size: 16px;
+      margin-top: 12px;
+    }
+
     &__title {
-      font-size: 30px;
+      font-size: 32px;
     }
 
   }

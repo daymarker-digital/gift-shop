@@ -64,7 +64,6 @@ const getCart = async () => {
   });
 };
 
-
 const onClickAddProductToCart = () => {
   ( document.querySelectorAll( '.js--add-to-cart, .js--add-to-cart-from-collection' ) || [] ).forEach( button => {
     button.addEventListener( 'click', event => {
@@ -169,6 +168,8 @@ const toggleCheckoutButtonUsability = ( state = 'enable' ) => {
 };
 
 const updateCartLineItemByKey = ( key = '', quantity = 0, stepper = false ) => {
+
+  console.log( 'updateCartLineItemByKey :: ', key, quantity );
 
   if ( key ) {
     fetch('/cart/change.js', {

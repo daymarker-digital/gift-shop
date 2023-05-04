@@ -1,0 +1,19 @@
+@use "../utils/mixins/border" as *;
+
+.stepper {
+
+  --theme-stepper--height: 30px;
+
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+
+  @include border-solid( 2px, 'inherit' );
+
+  &__button,
+  &__input {
+    height: var(--theme-stepper--height);
+    width: var(--theme-stepper--height);
+  }
+
+}
