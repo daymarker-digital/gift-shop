@@ -32,6 +32,7 @@
     assign cart_line_item_original_line_price = cart_line_item.original_line_price
     assign cart_line_item_product_title = cart_line_item.product.title | default: ''
     assign cart_line_item_product_has_variants = true
+    assign cart_line_item_quantity = cart_line_item.quantity
     assign cart_line_item_type = cart_line_item.product.type | default: ''
     assign cart_line_item_url = cart_line_item.url | default: ''
     assign cart_line_item_url_to_remove = cart_line_item.url_to_remove | default: ''
@@ -43,7 +44,7 @@
 
   -%}
 
-  <div class="{{ snippet_classes }}" id="{{ snippet_id }}" data-key="{{ cart_line_item_key }}">
+  <div class="{{ snippet_classes }} body-copy--primary" id="{{ snippet_id }}" data-key="{{ cart_line_item_key }}">
 
     <div class="{{ snippet_name }}__image">
       <a class="{{ snippet_name }}__image-link link" href="{{ cart_line_item_url }}" title="{{ cart_line_item_product_title }}" target="_self">
@@ -53,7 +54,7 @@
 
     <div class="{{ snippet_name }}__content">
 
-      <strong class="{{ snippet_name }}__title">
+      <strong class="{{ snippet_name }}__title heading--primary">
         <a class="{{ snippet_name }}__title-link link" href="{{ cart_line_item_url }}" title="{{ cart_line_item_product_title }}" target="_self">
           {{ cart_line_item_product_title }}
         </a>
@@ -69,6 +70,10 @@
           {% endfor %}
         </div>
       {% endif %}
+
+      <strong class="{{ snippet_name }}__price">{{ cart_line_item_original_line_price | money }}</strong>
+
+      {% render 'stepper', stepper_value: cart_line_item_quantity %}
 
     </div>
 
