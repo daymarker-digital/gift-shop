@@ -10,7 +10,7 @@
       "settings": {
         "heading": "Your Order",
         "heading_alignment": "center",
-        "heading_size": "md",
+        "heading_size": "lg",
         "background": "white",
         "container": "container",
         "padding_top": 0,
