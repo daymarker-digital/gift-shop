@@ -67,6 +67,9 @@
 
   @include breakpoint(lg) {
 
+    grid-template-columns: 110px auto;
+    gap: 22px;
+
     &__title {
       font-size: 32px;
     }
@@ -75,6 +78,9 @@
 
   @include breakpoint(xl) {
 
+    grid-template-columns: 120px auto;
+    gap: 24px;
+
     &__title {
       font-size: 34px;
     }
@@ -82,6 +88,9 @@
   }
 
   @include breakpoint(xxl) {
+
+    grid-template-columns: 130px auto;
+    gap: 26px;
 
     &__title {
       font-size: 36px;
