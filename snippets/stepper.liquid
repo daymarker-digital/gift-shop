@@ -1,13 +1,8 @@
 {%- liquid
 
   assign snippet_name = 'stepper'
-  assign snippet_classes = classes | default: snippet_name
-
+  assign snippet_classes = stepper_classes | default: snippet_name
   assign stepper_value = stepper_value | default: 1
-
-  if stepper_classes and stepper_classes != blank
-    assign snippet_classes = snippet_name | prepend: ' ' | prepend: stepper_classes
-  endif
 
 -%}
 

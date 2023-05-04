@@ -73,7 +73,8 @@
 
       <strong class="{{ snippet_name }}__price">{{ cart_line_item_original_line_price | money }}</strong>
 
-      {% render 'stepper', stepper_value: cart_line_item_quantity %}
+      {%- capture stepper_classes -%}{{ snippet_name }}__stepper stepper{%- endcapture -%}
+      {%- render 'stepper', stepper_classes: stepper_classes, stepper_value: cart_line_item_quantity -%}
 
     </div>
 

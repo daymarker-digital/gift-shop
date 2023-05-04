@@ -6,7 +6,14 @@
   width: 100%;
   grid-template-columns: 90px auto;
   gap: 16px;
-  align-items: center;
+
+  &__title,
+  &__options,
+  &__price,
+  &__stepper {
+    width: 100%;
+    display: block;
+  }
 
   &__options,
   &__price {
@@ -15,12 +22,18 @@
     line-height: 1;
   }
 
+  &__content {
+    display: flex;
+    flex-direction: column;
+  }
+
   &__image {
     width: 100%;
     height: auto;
     &-link {
       height: 100%;
       width: 100%;
+      display: block;
       &:hover {
         opacity: 0.5;
       }
@@ -31,6 +44,10 @@
       height: 100%;
       object-fit: cover;
     }
+  }
+
+  &__stepper {
+    margin-top: auto;
   }
 
   &__title {
