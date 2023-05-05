@@ -23,16 +23,8 @@ const createGliderFromElement = ( element = {} ) => {
   });
 
   switch ( style ) {
-    case 'custom': {
-      options.breakpoints = {
-        9999: {
-          perView: 3
-        },
-        768: {
-          perView: 2
-        }
-      };
-      options.perView = 2;
+    case 'announcements': {
+      options.hoverpause = true;
       break;
     }
   }
@@ -68,7 +60,7 @@ const createGliderFromElement = ( element = {} ) => {
 
   // FIX for when single slide does not fill 100% of glider
   setTimeout( () => {
-    console.log( element_id, options );
+    console.log( element_id, style, options );
      glide.update();
    }, 250 );
 
