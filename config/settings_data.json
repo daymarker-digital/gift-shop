@@ -1,1 +1,160 @@
-{"current":{"content_for_index":[],"sections":{"cookie-banner":{"settings":{"background":"black"},"type":"cookie-banner"},"drawer-menu":{"block_order":["a6c62c02-f813-41c9-8bb3-ff456fd9af2b","c5c73986-699d-4240-99e1-bcbeac4fbf32","71ee7ae9-3233-43e8-b31c-a3209787de1c"],"blocks":{"71ee7ae9-3233-43e8-b31c-a3209787de1c":{"settings":{"type":"email","url":"mailto:excuseme@weareverypolite.com"},"type":"social"},"a6c62c02-f813-41c9-8bb3-ff456fd9af2b":{"settings":{"type":"instagram","url":"https:\/\/www.instagram.com\/verypoliteagency\/"},"type":"social"},"c5c73986-699d-4240-99e1-bcbeac4fbf32":{"settings":{"type":"spotify","url":"https:\/\/open.spotify.com\/user\/rz68loexgu05u20qt8ej246bi?si=f7bbcf276e9c4315&nd=1"},"type":"social"}},"settings":{"menu_footer":"push-menu-footer","menu_main":"push-menu-main"},"type":"drawer-menu"},"footer":{"block_order":["a44392f6-d62f-40cd-8b3a-584f8ac64337"],"blocks":{"a44392f6-d62f-40cd-8b3a-584f8ac64337":{"settings":{"city":"Vancouver","country":"Canada","phone":"604-428–6177","postal":"V6B 3H6","region":"BC","street_address":"601–525 Seymour Street"},"type":"location"}},"settings":{"email":"","menu_menu":"","phone":"","policies_menu":""},"type":"footer"},"header":{"block_order":[],"blocks":{},"settings":{},"type":"header"},"popup":{"settings":{"background":"white"},"type":"popup"},"push-menu":{"block_order":["769c3b83-ea45-41b6-9eed-d8513d4e78ff","1843ad1d-aa04-45f9-b1b3-9e7445981bba","9762e825-fe6c-4735-bcbb-708d2c87cf95"],"blocks":{"769c3b83-ea45-41b6-9eed-d8513d4e78ff":{"settings":{"type":"instagram","url":"https:\/\/www.instagram.com\/verypoliteagency\/"},"type":"social"},"1843ad1d-aa04-45f9-b1b3-9e7445981bba":{"settings":{"type":"spotify","url":"https:\/\/open.spotify.com\/user\/rz68loexgu05u20qt8ej246bi?si=7039b0348e754bab"},"type":"social"},"9762e825-fe6c-4735-bcbb-708d2c87cf95":{"settings":{"type":"email","url":"mailto:excuseme@weareverypolite.com"},"type":"social"}},"settings":{"menu_footer":"push-menu-footer","menu_main":"push-menu-main"},"type":"push-menu"}}}}
+{
+  "current": {
+    "sections": {
+      "cookie-banner": {
+        "type": "cookie-banner",
+        "settings": {
+          "background": "black"
+        }
+      },
+      "drawer-menu": {
+        "type": "drawer-menu",
+        "blocks": {
+          "a6c62c02-f813-41c9-8bb3-ff456fd9af2b": {
+            "type": "social",
+            "settings": {
+              "type": "instagram",
+              "url": "https:\/\/www.instagram.com\/verypoliteagency\/"
+            }
+          },
+          "c5c73986-699d-4240-99e1-bcbeac4fbf32": {
+            "type": "social",
+            "settings": {
+              "type": "spotify",
+              "url": "https:\/\/open.spotify.com\/user\/rz68loexgu05u20qt8ej246bi?si=f7bbcf276e9c4315&nd=1"
+            }
+          },
+          "71ee7ae9-3233-43e8-b31c-a3209787de1c": {
+            "type": "social",
+            "settings": {
+              "type": "email",
+              "url": "mailto:excuseme@weareverypolite.com"
+            }
+          }
+        },
+        "block_order": [
+          "a6c62c02-f813-41c9-8bb3-ff456fd9af2b",
+          "c5c73986-699d-4240-99e1-bcbeac4fbf32",
+          "71ee7ae9-3233-43e8-b31c-a3209787de1c"
+        ],
+        "settings": {
+          "menu_main": "push-menu-main",
+          "menu_footer": "push-menu-footer"
+        }
+      },
+      "footer": {
+        "type": "footer",
+        "blocks": {
+          "a44392f6-d62f-40cd-8b3a-584f8ac64337": {
+            "type": "location",
+            "settings": {
+              "phone": "604-428–6177",
+              "street_address": "601–525 Seymour Street",
+              "city": "Vancouver",
+              "region": "BC",
+              "postal": "V6B 3H6",
+              "country": "Canada"
+            }
+          }
+        },
+        "block_order": [
+          "a44392f6-d62f-40cd-8b3a-584f8ac64337"
+        ],
+        "settings": {
+          "phone": "",
+          "email": "",
+          "menu_menu": "",
+          "policies_menu": ""
+        }
+      },
+      "header": {
+        "type": "header",
+        "settings": {
+        }
+      },
+      "popup": {
+        "type": "popup",
+        "settings": {
+          "background": "white"
+        }
+      },
+      "push-menu": {
+        "type": "push-menu",
+        "blocks": {
+          "769c3b83-ea45-41b6-9eed-d8513d4e78ff": {
+            "type": "social",
+            "settings": {
+              "type": "instagram",
+              "url": "https:\/\/www.instagram.com\/verypoliteagency\/"
+            }
+          },
+          "1843ad1d-aa04-45f9-b1b3-9e7445981bba": {
+            "type": "social",
+            "settings": {
+              "type": "spotify",
+              "url": "https:\/\/open.spotify.com\/user\/rz68loexgu05u20qt8ej246bi?si=7039b0348e754bab"
+            }
+          },
+          "9762e825-fe6c-4735-bcbb-708d2c87cf95": {
+            "type": "social",
+            "settings": {
+              "type": "email",
+              "url": "mailto:excuseme@weareverypolite.com"
+            }
+          }
+        },
+        "block_order": [
+          "769c3b83-ea45-41b6-9eed-d8513d4e78ff",
+          "1843ad1d-aa04-45f9-b1b3-9e7445981bba",
+          "9762e825-fe6c-4735-bcbb-708d2c87cf95"
+        ],
+        "settings": {
+          "menu_main": "push-menu-main",
+          "menu_footer": "push-menu-footer"
+        }
+      },
+      "announcements": {
+        "type": "announcements",
+        "blocks": {
+          "5492952f-f798-4f38-94d9-bb7753ade47e": {
+            "type": "announcement",
+            "settings": {
+              "title": ""
+            }
+          },
+          "a063fba5-da22-4789-9d85-0cb1a397025d": {
+            "type": "announcement",
+            "settings": {
+              "title": ""
+            }
+          },
+          "d18fd938-5871-4142-a714-d4aeeafdc2d5": {
+            "type": "announcement",
+            "settings": {
+              "title": ""
+            }
+          }
+        },
+        "block_order": [
+          "5492952f-f798-4f38-94d9-bb7753ade47e",
+          "a063fba5-da22-4789-9d85-0cb1a397025d",
+          "d18fd938-5871-4142-a714-d4aeeafdc2d5"
+        ],
+        "settings": {
+          "enable": true,
+          "homepage_only": false,
+          "background": "white",
+          "carousel_autoplay": 3000,
+          "carousel_animation_duration": 450,
+          "container": "container",
+          "padding_top": 36,
+          "padding_bottom": 36,
+          "text_colour": "dark"
+        }
+      }
+    },
+    "content_for_index": [
+
+    ]
+  }
+}
