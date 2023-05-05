@@ -142,7 +142,7 @@
           "d18fd938-5871-4142-a714-d4aeeafdc2d5"
         ],
         "settings": {
-          "enable": true,
+          "enable": false,
           "homepage_only": true,
           "background": "black",
           "carousel_autoplay": 4000,
