@@ -3,6 +3,9 @@
 ## Shopify Site URL
 https://weareverypolite.myshopify.com
 
+## Run Local Development
+$ shopify theme dev --store=https://weareverypolite.myshopify.com
+
 ## Todo
 ## Phase 1.0
 ### General
