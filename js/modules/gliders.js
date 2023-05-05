@@ -11,26 +11,28 @@ const createGliderFromElement = ( element = {} ) => {
   let element_id = element?.id ?? '';
   let animationDuration = parseInt( element.dataset?.glideAnimationDuration ) ?? 450;
   let autoplay = parseInt( element.dataset?.glideAutoplay ) ?? 3500;
+  let direction = element.dataset?.glideDirection ?? 'rtl';
   let gap = parseInt( element.dataset?.glideGap ) ?? 36;
   let style = element.dataset?.glideStyle ?? '';
-  let options = getOptions();
+
+  let options = getOptions({
+    animationDuration,
+    autoplay,
+    direction,
+    gap
+  });
 
   switch ( style ) {
     case 'custom': {
-      options = getOptions({
-        animationDuration,
-        autoplay,
-        breakpoints: {
-          9999: {
-            perView: 3
-          },
-          768: {
-            perView: 2
-          }
+      options.breakpoints = {
+        9999: {
+          perView: 3
         },
-        gap,
-        perView: 2,
-      });
+        768: {
+          perView: 2
+        }
+      };
+      options.perView = 2;
       break;
     }
   }
@@ -65,7 +67,10 @@ const createGliderFromElement = ( element = {} ) => {
   glide.mount();
 
   // FIX for when single slide does not fill 100% of glider
-  setTimeout( () => { glide.update() }, 250 );
+  setTimeout( () => {
+    console.log( element_id, options );
+     glide.update();
+   }, 250 );
 
   gliders[element_id] = { element_id, glide };
 
@@ -78,6 +83,7 @@ const getOptions = ( custom = {} ) => {
     animationDuration: 350,
     autoHeight: true,
     autoplay: 3250,
+    direction: 'rtl',
     dragThreshold: 35,
     hoverpause: false,
     perView: 1,

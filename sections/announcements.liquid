@@ -9,6 +9,11 @@
 
   assign section_container = section.settings.container
   assign section_announcements = section.blocks | where: 'type', 'announcement' | default: false
+
+  assign section_announcements_carousel_animation_duration = section.settings.carousel_animation_duration
+  assign section_announcements_carousel_autoplay = section.settings.carousel_autoplay
+  assign section_announcements_carousel_direction = section.settings.carousel_direction
+
   assign section_announcements_enable = section.settings.enable | default: false
   assign section_announcements_homepage_only = section.settings.homepage_only | default: false
   assign section_announcements_glider_id = section_id | append: '--glider'
@@ -41,7 +46,15 @@
   <div class="{{ section_name }}__main">
 
     {% if section_announcements_glider_enable %}
-      <div class="glide js--glider" id="{{ section_announcements_glider_id }}" data-glide-style="{{ section_name }}">
+      <div
+        class="glide js--glide"
+        id="{{ section_announcements_glider_id }}"
+        data-glide-animation-duration="{{ section_announcements_carousel_animation_duration }}"
+        data-glide-autoplay="{{ section_announcements_carousel_autoplay }}"
+        data-glide-direction="{{ section_announcements_carousel_direction }}"
+        data-glide-gap="0"
+        data-glide-style="{{ section_name }}"
+      >
         <div class="glide__track" data-glide-el="track">
           <ul class="glide__slides">
             {% endif %}
@@ -127,6 +140,17 @@
         "step": 50,
         "default": 450,
         "id": "carousel_animation_duration"
+      },
+      {
+        "label": "Carousel Direction",
+        "info": "Direction of a how a slide moves.",
+        "type": "select",
+		    "options": [
+          { "label": "Left to Right", "value": "ltr" },
+			    { "label": "Right to Left", "value": "rtl" }
+		    ],
+		    "default": "rtl",
+        "id": "carousel_direction"
       },
       {
 			  "content": "Container",
