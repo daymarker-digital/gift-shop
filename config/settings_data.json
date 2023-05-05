@@ -131,7 +131,7 @@
           "d18fd938-5871-4142-a714-d4aeeafdc2d5": {
             "type": "announcement",
             "settings": {
-              "title": ""
+              "title": "<p>Link to <a href=\"\/collections\/all\" title=\"All\">buy stuff<\/a> here<\/p>"
             }
           }
         },
@@ -143,13 +143,13 @@
         "settings": {
           "enable": true,
           "homepage_only": false,
-          "background": "white",
+          "background": "black",
           "carousel_autoplay": 3000,
           "carousel_animation_duration": 450,
           "container": "container",
           "padding_top": 36,
           "padding_bottom": 36,
-          "text_colour": "dark"
+          "text_colour": "light"
         }
       }
     },
