@@ -32,7 +32,7 @@
       {%- if section_cart_note_enable -%}
         <div class="{{ section_name }}__note">
           <label for="cart-note">Order Note</label>
-          <textarea class="textarea--primary" name="note" form="cart" id="cart-note" placeholder="Special Instructions..." rows="7">{{ cart.note }}</textarea>
+          <textarea class="textarea--primary body-copy--3" name="note" form="cart" id="cart-note" placeholder="Special Instructions..." rows="7">{{ cart.note }}</textarea>
         </div>
       {%- endif -%}
 
@@ -74,42 +74,6 @@
 
   {%- render 'bs-container', state: 'closed', col: 'col-12', container: section_container -%}
 </div>
-
-{%- javascript -%}
-  class CartNote extends HTMLElement {
-    constructor() {
-      super();
-
-      this.addEventListener('change', debounce((event) => {
-        const body = JSON.stringify({ note: event.target.value });
-        fetch(`${routes.cart_update_url}`, {...fetchConfig(), ...{ body }});
-      }, 300))
-    }
-  }
-
-  customElements.define('cart-note', CartNote);
-{%- endjavascript -%}
-
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    function isIE() {
-      const ua = window.navigator.userAgent;
-      const msie = ua.indexOf('MSIE ');
-      const trident = ua.indexOf('Trident/');
-
-      return (msie > 0 || trident > 0);
-    }
-
-    if (!isIE()) return;
-    const cartSubmitInput = document.createElement('input');
-    cartSubmitInput.setAttribute('name', 'checkout');
-    cartSubmitInput.setAttribute('type', 'hidden');
-    document.querySelector('#cart').appendChild(cartSubmitInput);
-    document.querySelector('#checkout').addEventListener('click', function(event) {
-      document.querySelector('#cart').submit();
-    });
-  });
-</script>
 
 {%- schema -%}
 {

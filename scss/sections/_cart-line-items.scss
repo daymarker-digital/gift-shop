@@ -1,6 +1,7 @@
 @use "../utils/mixins/border" as *;
 
 .cart-line-items {
+  overflow: hidden;
   &__line-item {
     @include border-solid( 2px, 'inherit', 'top' );
   }

@@ -54,19 +54,8 @@
     display: flex;
     gap: 8px;
     flex-flow: row wrap;
-    label,
-    textarea {
-      display: block;
-      width: 100%;
-      font-size: 12px;
-    }
     label {
       line-height: 1;
-    }
-    textarea {
-      @include border-solid( 2px, 'inherit' );
-      padding: 12px;
-      line-height: 1.2;
     }
   }
 

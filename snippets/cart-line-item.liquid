@@ -37,14 +37,26 @@
     assign cart_line_item_url = cart_line_item.url | default: ''
     assign cart_line_item_url_to_remove = cart_line_item.url_to_remove | default: ''
     assign cart_line_item_variant_title = cart_line_item.variant.title | default: ''
+    assign cart_line_item_variant_inventory_management = cart_line_item.variant.inventory_management
+    assign cart_line_item_variant_inventory_quantity = 9999
 
     if cart_line_item.product.has_only_default_variant
       assign cart_line_item_product_has_variants = false
     endif
 
+    if cart_line_item_variant_inventory_management != nil
+      assign cart_line_item_variant_inventory_quantity = cart_line_item.variant.inventory_quantity
+    endif
+
   -%}
 
-  <div class="{{ snippet_classes }} body-copy--primary" id="{{ snippet_name }}--{{ cart_line_item_key }}" data-key="{{ cart_line_item_key }}">
+  <div
+    class="{{ snippet_classes }} body-copy--primary"
+    id="{{ snippet_name }}--{{ cart_line_item_key }}"
+    data-key="{{ cart_line_item_key }}"
+    data-inventory-management="{{ cart_line_item_variant_inventory_management }}"
+    data-inventory-quantity="{{ cart_line_item_variant_inventory_quantity }}"
+  >
 
     <div class="{{ snippet_name }}__image">
       <a class="{{ snippet_name }}__image-link link" href="{{ cart_line_item_url }}" title="{{ cart_line_item_product_title }}" target="_self">
@@ -75,7 +87,7 @@
       <strong class="{{ snippet_name }}__price">{{ cart_line_item_original_line_price | money_with_currency }}</strong>
 
       {%- capture stepper_classes -%}{{ snippet_name }}__stepper stepper{%- endcapture -%}
-      {%- render 'stepper', stepper_classes: stepper_classes, stepper_value: cart_line_item_quantity -%}
+      {%- render 'stepper', stepper_classes: stepper_classes, stepper_max: cart_line_item_variant_inventory_quantity, stepper_value: cart_line_item_quantity -%}
 
       <button class="{{ snippet_name }}__button-remove button--remove-cart-line-item js--remove-cart-line-item" aria-label="Remove" type="button"></button>
 

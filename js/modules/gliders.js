@@ -9,10 +9,10 @@ const gliders = {};
 const createGliderFromElement = ( element = {} ) => {
 
   let element_id = element?.id ?? '';
-  let animationDuration = parseInt( element.dataset?.glideAnimationDuration ) ?? 450;
-  let autoplay = parseInt( element.dataset?.glideAutoplay ) ?? 3500;
+  let animationDuration = parseInt( element.dataset?.glideAnimationDuration ?? 450 );
+  let autoplay = parseInt( element.dataset?.glideAutoplay ?? 3500 );
   let direction = element.dataset?.glideDirection ?? 'rtl';
-  let gap = parseInt( element.dataset?.glideGap ) ?? 36;
+  let gap = parseInt( element.dataset?.glideGap ?? 36 );
   let style = element.dataset?.glideStyle ?? '';
 
   let options = getOptions({
