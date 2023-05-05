@@ -78,7 +78,7 @@
 {% render 'bs-container', state: 'closed', col: 'col-12', container: section_container %}
 
 {% unless section_announcements_enable %}
-  <srcipt>document?.getElementById(`{{ section_id }}`).remove();</srcipt>
+  <script>document?.getElementById(`{{ section_id }}`).remove();</script>
 {% endunless %}
 
 {% schema %}
