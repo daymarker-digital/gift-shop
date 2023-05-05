@@ -64,6 +64,10 @@
   {% render 'bs-container', state: 'closed', col: 'col-12', container: section_container %}
 </div>
 
+{% unless section_announcements_enable %}
+  <srcipt>document.getElementById(`{{ section_id }}`).remove();</srcipt>
+{% endunless %}
+
 {% schema %}
   {
     "name": "Announcements",
