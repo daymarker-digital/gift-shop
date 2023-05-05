@@ -7,7 +7,7 @@
   assign aos_delay_increment = 250
   assign aos_id = section_id
 
-  assign section_container = section.settings.container | default: 'container'
+  assign section_container = section.settings.container
   assign section_announcements = section.blocks | where: 'type', 'announcement' | default: false
   assign section_announcements_enable = section.settings.enable | default: false
   assign section_announcements_homepage_only = section.settings.homepage_only | default: false
@@ -37,8 +37,8 @@
   -%}
 {%- endstyle -%}
 
-<div class="{{ section_name }}__main">
-  {% render 'bs-container', state: 'open', col: 'col-12', container: section_container %}
+{% render 'bs-container', state: 'open', col: 'col-12', container: section_container %}
+  <div class="{{ section_name }}__main">
 
     {% if section_announcements_glider_enable %}
       <div class="glide js--glider" id="{{ section_announcements_glider_id }}" data-glide-style="{{ section_name }}">
@@ -61,18 +61,18 @@
       </div>
     {% endif %}
 
-  {% render 'bs-container', state: 'closed', col: 'col-12', container: section_container %}
-</div>
+  </div>
+{% render 'bs-container', state: 'closed', col: 'col-12', container: section_container %}
 
 {% unless section_announcements_enable %}
-  <srcipt>document.getElementById(`{{ section_id }}`).remove();</srcipt>
+  <srcipt>document?.getElementById(`{{ section_id }}`).remove();</srcipt>
 {% endunless %}
 
 {% schema %}
   {
     "name": "Announcements",
     "tag": "section",
-    "class": "announcements",
+    "class": "announcements position--fixed z-index--200",
     "settings": [
       {
         "content": "Settings",

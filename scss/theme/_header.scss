@@ -6,42 +6,12 @@
 
   $announcement-btn-close-size: 12px;
 
-  &__announcements,
   &__main {
     width: 100%;
-    padding: 0 var(--theme-layout--container-padding);
     display: flex;
     justify-content: flex-start;
     align-items: center;
     position: relative;
-  }
-
-  &__announcements {
-    background: var(--theme-colour--black);
-    color: var(--theme-colour--white);
-    display: none;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    &-button-close {
-      color: var(--theme-colour--white);
-      right: var(--theme-layout--container-padding);
-      position: absolute;
-      border: none;
-      top: calc( 50% - ($announcement-btn-close-size * 0.5) );
-      height: $announcement-btn-close-size;
-      width: $announcement-btn-close-size;
-      &:focus,
-      &:hover {
-        opacity: 0.5;
-      }
-    }
-    &-item {
-      text-align: center;
-      width: 100%;
-    }
-    &.show {
-      display: block;
-    }
   }
 
   &__brand {
@@ -80,17 +50,9 @@
     }
   }
 
-  &--sticky {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 100;
+  &.position--fixed {
+    top: var(--theme-announcement-height--total);
   }
-
-  .scroll-position--scrolled & {}
-
-  .push-menu--active & {}
 
   @include breakpoint(sm) {
 
