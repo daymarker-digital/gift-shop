@@ -25,8 +25,9 @@
     @include body-copy-size('3');
   }
 
-  &--announcement {
-    @include body-copy-size('announcement');
+  &--4,
+  &--xs {
+    @include body-copy-size('4');
   }
 
   &--banner {

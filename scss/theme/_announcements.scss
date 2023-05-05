@@ -6,6 +6,11 @@
     }
   }
 
+  &__item {
+    line-height: 1;
+    text-align: center;
+  }
+
   &__main {
     width: 100%;
     display: flex;

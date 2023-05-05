@@ -63,7 +63,7 @@
                 {% assign message = item.settings.title | default: '' %}
                 {% if message != blank %}
                   {% if section_announcements_glider_enable %}<li class="glide__slide">{% endif %}
-                    <div class="{{ section_name }}__item body-copy--primary body-copy--3">{{ message }}</div>
+                    <div class="{{ section_name }}__item body-copy--primary body-copy--4">{{ message }}</div>
                   {% if section_announcements_glider_enable %}</li>{% endif %}
                 {% endif %}
               {% endfor %}
