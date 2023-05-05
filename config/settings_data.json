@@ -70,6 +70,7 @@
       "header": {
         "type": "header",
         "settings": {
+          "container": "container-fluid"
         }
       },
       "popup": {
@@ -146,7 +147,7 @@
           "background": "black",
           "carousel_autoplay": 3000,
           "carousel_animation_duration": 450,
-          "container": "container",
+          "container": "container-fluid",
           "padding_top": 12,
           "padding_bottom": 12,
           "text_colour": "light"
