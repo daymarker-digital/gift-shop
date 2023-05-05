@@ -97,6 +97,7 @@
               {%- endif -%}
 
               <form class="{{ section_name }}__form-add-to-cart" action='/cart/add' method='post' enctype='multipart/form-data'>
+
                 {% render 'product-options', product: product %}
                 {% capture product_quantity_classes %}{{ section_name }}__quantity d-none{% endcapture %}
                 {% render 'product-quantity', classes: product_quantity_classes, product: product %}

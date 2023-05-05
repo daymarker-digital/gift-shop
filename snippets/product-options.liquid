@@ -24,11 +24,7 @@
 
   -%}
 
-  <div class='product__options {{ snippet_name }}'>
-
-    {% unless product_has_no_options %}
-      <strong class='{{ snippet_name }}__heading d-none'>Select a Size:</strong>
-    {% endunless %}
+  <div class='product__options {{ snippet_name }}{% if product_has_no_options %} d-none{% endif %}'>
 
     <div class='{{ snippet_name }}__list'>
       {% for variant in product.variants %}

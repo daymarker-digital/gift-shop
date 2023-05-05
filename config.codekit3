@@ -41,6 +41,18 @@
       "oAP" : "\/.shopifyignore",
       "oF" : 0
     },
+    "\/assets\/_announcements.css" : {
+      "aP" : 1,
+      "bl" : 0,
+      "ci" : 0,
+      "co" : 0,
+      "ft" : 16,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/assets\/_announcements.css",
+      "oF" : 0,
+      "pg" : 0
+    },
     "\/assets\/AkkuratMonoLLSub-RegularSubset.woff" : {
       "cB" : 0,
       "ft" : 8192,
@@ -1708,21 +1720,6 @@
       "pg" : 0,
       "sct" : 0
     },
-    "\/scss\/components\/_product-actions.scss" : {
-      "aP" : 1,
-      "bl" : 0,
-      "co" : 0,
-      "dP" : 10,
-      "ec" : 1,
-      "ft" : 4,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/assets\/_product-actions.css",
-      "oF" : 0,
-      "oS" : 3,
-      "pg" : 0,
-      "sct" : 0
-    },
     "\/scss\/components\/_product-image-gallery-grid.scss" : {
       "aP" : 1,
       "bl" : 0,
@@ -1823,6 +1820,21 @@
       "ma" : 0,
       "oA" : 1,
       "oAP" : "\/assets\/_sticky-column.css",
+      "oF" : 0,
+      "oS" : 3,
+      "pg" : 0,
+      "sct" : 0
+    },
+    "\/scss\/components\/_textarea.scss" : {
+      "aP" : 1,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/assets\/_textarea.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,

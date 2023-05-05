@@ -1,0 +1,26 @@
+@use 'sass:math';
+@use "../utils/mixins/breakpoint" as *;
+@use "../utils/mixins/button" as *;
+@use "../utils/mixins/ui" as *;
+
+.textarea {
+
+  @extend %ui-base;
+  @extend %ui-transition;
+
+  &--primary,
+  &--secondary {
+    @extend .textarea;
+  }
+
+  &--primary {
+    line-height: 1.35;
+    padding: 12px;
+  }
+
+  &[disabled],
+  &.disabled {
+    @extend %ui-disabled;
+  }
+
+}

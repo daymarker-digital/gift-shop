@@ -9,6 +9,11 @@
     cursor: pointer;
   }
 
+  &__actions,
+  &__options {
+    margin-top: var(--theme-layout--gutter);
+  }
+
   &__badge {
     display: none;
     position: absolute;

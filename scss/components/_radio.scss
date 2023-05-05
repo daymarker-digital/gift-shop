@@ -57,6 +57,7 @@
         }
       }
     }
+    transition: background var(--theme-transition--duration);
     color: currentcolor;
     display: inline-flex;
     justify-content: center;
