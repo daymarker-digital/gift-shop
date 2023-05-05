@@ -1,23 +1,23 @@
 {
   "order": [
-    "hero",
-    "main"
+    "collection-hero",
+    "collection-products"
   ],
   "sections": {
-    "hero": {
+    "collection-hero": {
       "type": "main-collection-hero",
       "settings": {
-        "show_featured_image": false,
-        "image_height_desktop": "450px",
-        "image_height_mobile": "350px",
+        "anchor_id": "",
         "background": "white",
         "container": "container-fluid",
+        "show_featured_image": false,
+        "image_height_mobile": "350px",
+        "image_height_desktop": "450px",
         "padding_top": 0,
-        "padding_bottom": 0,
-        "anchor_id": ""
+        "padding_bottom": 0
       }
     },
-    "main": {
+    "collection-products": {
       "type": "main-collection-products",
       "settings": {
         "products_per_page": 9,
