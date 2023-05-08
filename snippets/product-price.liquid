@@ -16,6 +16,7 @@
 
     assign snippet_name = 'product-price'
 
+    assign aos_attrs = aos_attrs | default: ''
     assign classes = classes | default: 'main-product__price'
     assign currency_symbol = shop.currency.symbol | default: '$'
     assign show_symbol = show_symbol | default: false
@@ -29,7 +30,7 @@
 
   -%}
 
-  <div class="{{ classes }} {{ snippet_name }}">
+  <div class="{{ classes }} {{ snippet_name }}" {% unless aos_attrs == blank %}{{ aos_attrs }}{% endunless %}>
     <span class="{{ snippet_name }}__amount">
       {%- if show_symbol -%}<span class="{{ snippet_name }}__currency-symbol">{{- currency_symbol -}}</span>{%- endif -%}
       <span class="{{ snippet_name }}__cost">{{- product_price | divided_by: 100 -}}</span>

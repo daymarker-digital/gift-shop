@@ -26,8 +26,6 @@
 
     assign snippet_available = card_product.available | default: false
     assign snippet_images = card_product.images | default: false
-    assign snippet_price = card_product.price
-    assign snippet_price_compare = card_product.compare_at_price
     assign snippet_title = card_product.title | default: ''
     assign snippet_type = card_product.type | default: ''
     assign snippet_url = card_product.url | default: ''
@@ -66,7 +64,13 @@
             {%- capture snippet_classes %}{{ snippet_name }}__title-link link{%- endcapture -%}
             {%- render 'link', link_classes: snippet_classes, link_title: snippet_title, link_url: snippet_url -%}
           </strong>
-          {% render 'product-price', card_classes: '', card_product: card_product, card_show_symbol: true %}
+          {%- liquid
+            capture aos_attrs
+              render 'aos-attributes', anchor: aos_id, delay: aos_delay, transition: 'fade-down'
+            endcapture
+          -%}
+          {%- capture snippet_classes %}{{ snippet_name }}__price product-price{%- endcapture -%}
+          {%- render 'product-price', aos_attrs: aos_attrs, classes: snippet_classes, product: card_product, show_symbol: true -%}
         </div>
     </div>
   </article>

@@ -1,13 +1,23 @@
+@use "../utils/mixins/breakpoint" as *;
+
 .product-price {
 
   display: inline-flex;
   justify-content: flex-start;
   align-items: baseline;
-  gap: 12px;
+  gap: 8px;
 
   .compare-at-price {
     opacity: .3333;
     text-decoration: line-through;
+  }
+
+  @include breakpoint(sm) {
+    gap: 10px;
+  }
+
+  @include breakpoint(lg) {
+    gap: 12px;
   }
 
 }

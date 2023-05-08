@@ -54,7 +54,7 @@
               {% render 'product-title', classes: product_title_classes, element_tag: 'h1', product: product %}
 
               {% capture product_price_classes %}{{ section_name }}__price d-lg-none{% endcapture %}
-              {% render 'product-price', card_classes: product_price_classes, card_product: product, card_show_symbol: true %}
+              {% render 'product-price', classes: product_price_classes, product: product, show_symbol: true %}
 
               {% if section_product_images.size > 0 %}
 
@@ -90,7 +90,7 @@
               {% render 'product-title', classes: product_title_classes, element_tag: 'strong', product: product %}
 
               {% capture product_price_classes %}{{ section_name }}__price d-none d-lg-flex{% endcapture %}
-              {% render 'product-price', card_classes: product_price_classes, card_product: product, card_show_symbol: true %}
+              {% render 'product-price', classes: product_price_classes, product: product, show_symbol: true %}
 
               {%- if section_product_description != blank -%}
                 <div class='product__description product-description body-copy--primary body-copy--2'>{{ section_product_description }}</div>
