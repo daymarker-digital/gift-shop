@@ -5,7 +5,8 @@
     "16611958947ef1ecd7",
     "166386587599b4f4fd",
     "16611959936ca1502e",
-    "1661196025228eb79a"
+    "1661196025228eb79a",
+    "d6939208-a96c-4799-9a1a-2c8f4a151b8d"
   ],
   "sections": {
     "16638658704a46d741": {
@@ -230,6 +231,30 @@
         "grid_layout": "three-column",
         "grid_gutter": 24,
         "padding_top": 24,
+        "padding_bottom": 0,
+        "text_colour": "dark"
+      }
+    },
+    "d6939208-a96c-4799-9a1a-2c8f4a151b8d": {
+      "type": "featured-products",
+      "blocks": {
+        "7aa5dc1b-f88c-4a76-9840-646aa8016c4e": {
+          "type": "product",
+          "settings": {
+            "product": "space-club-tee-in-supernova"
+          }
+        }
+      },
+      "block_order": [
+        "7aa5dc1b-f88c-4a76-9840-646aa8016c4e"
+      ],
+      "settings": {
+        "anchor_id": "",
+        "background": "white",
+        "container": "container-fluid",
+        "grid_layout": "two-column",
+        "grid_gutter": 20,
+        "padding_top": 36,
         "padding_bottom": 0,
         "text_colour": "dark"
       }
