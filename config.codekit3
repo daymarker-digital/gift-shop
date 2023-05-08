@@ -621,7 +621,7 @@
       "oA" : 0,
       "oAP" : "\/assets\/VPAGS--placeholder-product-image--03.svg",
       "oF" : 0,
-      "opt" : 0,
+      "opt" : 1,
       "plM" : 52780316221407,
       "prP" : 0
     },
@@ -1835,6 +1835,21 @@
       "ma" : 0,
       "oA" : 1,
       "oAP" : "\/assets\/_sticky-column.css",
+      "oF" : 0,
+      "oS" : 3,
+      "pg" : 0,
+      "sct" : 0
+    },
+    "\/scss\/components\/_svg.scss" : {
+      "aP" : 1,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/assets\/_svg.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -3208,6 +3223,14 @@
       "oAP" : "\/snippets\/svg-icon.liquid",
       "oF" : 0
     },
+    "\/snippets\/svg-placeholder.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/snippets\/svg-placeholder.liquid",
+      "oF" : 0
+    },
     "\/snippets\/svg-very-polite-logo.liquid" : {
       "cB" : 0,
       "ft" : 8192,
@@ -3240,20 +3263,20 @@
       "oAP" : "\/snippets\/textarea.liquid",
       "oF" : 0
     },
+    "\/snippets\/theme--additional-javascript.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/snippets\/theme--additional-javascript.liquid",
+      "oF" : 0
+    },
     "\/snippets\/theme--classes.liquid" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
       "oAP" : "\/snippets\/theme--classes.liquid",
-      "oF" : 0
-    },
-    "\/snippets\/theme--external-javascript.liquid" : {
-      "cB" : 0,
-      "ft" : 8192,
-      "hM" : 0,
-      "oA" : 0,
-      "oAP" : "\/snippets\/theme--external-javascript.liquid",
       "oF" : 0
     },
     "\/snippets\/theme--google-analytics.liquid" : {

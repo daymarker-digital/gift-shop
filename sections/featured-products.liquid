@@ -13,7 +13,7 @@
   assign section_grid_layout = section.settings.grid_layout | default: 'two-column'
   assign section_products = section.blocks | where: 'type', 'product' | default: false
   assign section_products_size = section_products.size | default: 0
-  assign section_products_modulo = section_products | modulo: 2
+  assign section_products_modulo = section_products_size | modulo: 2
   assign section_products_placeholder_enabled = false
 
   if 'three-column' == section_grid_layout and section_products_modulo == 1
@@ -49,8 +49,11 @@
 
           {% if section_products_placeholder_enabled and forloop.last %}
             {% assign item_index = forloop.index | plus: 1 %}
-            <div class="{{ section_name }}__item grid__item" data-index="{{ item_index }}" role="listitem">
-              {% render 'card-product-placeholder', card_index: item_index %}
+            {% capture item_classes %}{{ section_name }}__item grid__item placeholder{% endcapture %}
+            <div class="{{ item_classes }}" data-index="{{ item_index }}" role="listitem">
+              {% capture card_classes %}{{ section_name }}__placeholder card-product-placeholder{% endcapture %}
+              {% capture card_id %}{{ section_name }}__placeholder-{{ section.id }}-{{ item_index }}{% endcapture %}
+              {% render 'card-product-placeholder', card_id: card_id, card_index: item_index %}
             </div>
           {% endif %}
 

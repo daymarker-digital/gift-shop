@@ -1,0 +1,10 @@
+@use 'sass:map';
+@use '../utils/variables' as *;
+
+.svg {
+  @each $name, $value in $theme-colours {
+    &-fill--#{$name} {
+      fill: var(--theme-colour--#{$name});
+    }
+  }
+}

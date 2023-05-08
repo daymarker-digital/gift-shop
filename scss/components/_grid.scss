@@ -17,6 +17,9 @@
 
     &--three-column {
       grid-template-columns: 1fr 1fr 1fr;
+      .grid__item.placeholder {
+        display: none;
+      }
     }
 
     &--four-column {

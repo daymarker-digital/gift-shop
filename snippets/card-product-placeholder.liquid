@@ -13,13 +13,22 @@
 {% endcomment %}
 
 {%- liquid
+
   assign snippet_name = 'card-product-placeholder'
-  assign snippet_classes = snippet_name
-  assign snippet_id = snippet_name | append: '--' | append: card_index
+  assign snippet_classes = card_classes | default: snippet_name
+
+  assign card_id = card_id | default: snippet_name
+  assign card_index = card_index | default: 1
+
 -%}
 
-<article class="{{ snippet_classes }}">
-  <div class="{{ snippet_name }}__media">
-    <img class="{{ snippet_name }}__image lazyload-item lazyload js--product-image-placeholder" src="" alt="Fallback Image" width="" height="" />
-  </div>
+<article class="{{ snippet_classes }}" id="{{ card_id }}" data-index="{{ card_index }}"">
+  <!-- Inject Random Image Here with JavaScript... -->
 </article>
+
+<script>
+  var images = Theme?.images?.placeholder?.product_images || [];
+  var randomImage = images[Math.floor(Math.random() * images.length)];
+  var element = document.getElementById(`{{ card_id }}`) || false;
+  if ( element && randomImage ) element.innerHTML = randomImage;
+</script>
