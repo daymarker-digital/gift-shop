@@ -134,8 +134,12 @@
     }
 
     &__main {
-      flex: 1 0 auto;
+      flex: 1 1 auto;
       padding-bottom: 0;
+      overflow-y: auto;
+      &-content {
+        min-height: 100%;
+      }
       &-message {
         margin-top: 30px;
         width: 100%;

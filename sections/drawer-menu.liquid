@@ -24,9 +24,9 @@
   -%}
 {%- endstyle -%}
 
-<div class="{{ section_name }}__container">
+<div class="{{ section_name }}__main">
+  <div class="{{ section_name }}__main-content">
 
-  <div class="{{ section_name }}__main">
     {% if menu_main and linklists[menu_main].links.size > 0 %}
       <nav class="{{ section_name }}__main-navigation navigation navigation--main">
         {% for link in linklists[menu_main].links %}
@@ -48,60 +48,60 @@
         {% endfor %}
       </nav>
     {% endif %}
+
+  </div>
+</div>
+
+<div class="{{ section_name }}__footer">
+
+  <div class="{{ section_name }}__footer-cart-summary">
+    <a class="{{ section_name }}__footer-cart-summary-link link" href='/cart' target="_self" title="Cart">Cart (<span class="{{ section_name }}__cart-items-total js--cart-line-items-total">{{ cart.item_count }}</span>)</a>
   </div>
 
-  <div class="{{ section_name }}__footer">
+  {% if blocks_social and blocks_social.size > 0 %}
+    <div class="{{ section_name }}__footer-social">
+      {% for block in blocks_social %}
 
-    <div class="{{ section_name }}__footer-cart-summary">
-      <a class="{{ section_name }}__footer-cart-summary-link link" href='/cart' target="_self" title="Cart">Cart (<span class="{{ section_name }}__cart-items-total js--cart-line-items-total">{{ cart.item_count }}</span>)</a>
+        {%- liquid
+          assign type = block.settings.type | default: 'facebook'
+          assign url = block.settings.url | default: ''
+          assign svg_icon = 'icon.' | append: type
+        -%}
+
+        {% if url != blank %}
+          <div class="{{ section_name }}__footer-social-item {{ type }} {{ svg_icon }}">
+            {%- capture link_classes -%}{{ section_name }}__footer-social-link link{%- endcapture -%}
+            {%- capture link_content -%}{% render 'svg', type: svg_icon %}{%- endcapture -%}
+            {%- capture link_title -%}{{ shop.name }} {{ type | capitalize }}{%- endcapture -%}
+            {% render 'link', link_classes: link_classes, link_content: link_content, link_url: url link_title: link_title %}
+          </div>
+        {% endif %}
+
+      {% endfor %}
     </div>
+  {% endif %}
 
-    {% if blocks_social and blocks_social.size > 0 %}
-      <div class="{{ section_name }}__footer-social">
-        {% for block in blocks_social %}
+  {% if menu_footer and linklists[menu_footer].links.size > 0 %}
+    <nav class="{{ section_name }}__footer-navigation navigation navigation--footer">
+      {% for link in linklists[menu_footer].links %}
 
-          {%- liquid
-            assign type = block.settings.type | default: 'facebook'
-            assign url = block.settings.url | default: ''
-            assign svg_icon = 'icon.' | append: type
-          -%}
+        {%- liquid
+          assign is_active = link.active | default: false
+          assign title = link.title
+          assign type = link.type
+          assign url = link.url
+        -%}
 
-          {% if url != blank %}
-            <div class="{{ section_name }}__footer-social-item {{ type }} {{ svg_icon }}">
-              {%- capture link_classes -%}{{ section_name }}__footer-social-link link{%- endcapture -%}
-              {%- capture link_content -%}{% render 'svg', type: svg_icon %}{%- endcapture -%}
-              {%- capture link_title -%}{{ shop.name }} {{ type | capitalize }}{%- endcapture -%}
-              {% render 'link', link_classes: link_classes, link_content: link_content, link_url: url link_title: link_title %}
-            </div>
-          {% endif %}
+        {% if title != blank and url != blank %}
+          <div class="{{ section_name }}__footer-navigation-item navigation__item">
+            {%- capture link_classes -%}{{ section_name }}__footer-navigation-link navigation__link link{%- endcapture -%}
+            {% render 'link', link_active: is_active, link_classes: link_classes, link_url: url link_title: title %}
+          </div>
+        {% endif %}
 
-        {% endfor %}
-      </div>
-    {% endif %}
-
-    {% if menu_footer and linklists[menu_footer].links.size > 0 %}
-      <nav class="{{ section_name }}__footer-navigation navigation navigation--footer">
-        {% for link in linklists[menu_footer].links %}
-
-          {%- liquid
-            assign is_active = link.active | default: false
-            assign title = link.title
-            assign type = link.type
-            assign url = link.url
-          -%}
-
-          {% if title != blank and url != blank %}
-            <div class="{{ section_name }}__footer-navigation-item navigation__item">
-              {%- capture link_classes -%}{{ section_name }}__footer-navigation-link navigation__link link{%- endcapture -%}
-              {% render 'link', link_active: is_active, link_classes: link_classes, link_url: url link_title: title %}
-            </div>
-          {% endif %}
-
-        {% endfor %}
-      </nav>
-    {% endif %}
-
-  </div>
+      {% endfor %}
+    </nav>
+  {% endif %}
 
 </div>
 
