@@ -66,6 +66,7 @@
             {%- capture snippet_classes %}{{ snippet_name }}__title-link link{%- endcapture -%}
             {%- render 'link', link_classes: snippet_classes, link_title: snippet_title, link_url: snippet_url -%}
           </strong>
+          {% render 'product-price', card_classes: '', card_product: card_product, card_show_symbol: true %}
         </div>
     </div>
   </article>

@@ -133,6 +133,7 @@ const onClickUpdateStepper = () => {
         let min = parseInt(stepper_input.min);
         let max = parseInt(stepper_input.max);
         let quantity = parseInt(stepper_input.value);
+        let warning = `Oops! It looks like the maximum quantity of this item has been added to your cart!`
 
         if ( button.classList.contains('increase') ) {
           if ( quantity < max ) {
@@ -214,6 +215,7 @@ const changeCartLineItemByKey = ( key = '', quantity = 0, stepper = false ) => {
           toggleCartNoteUsability( 'enable' );
           Render.cartLineItemPrice( key, cart.items );
         } else {
+          console.log('cart empty!');
           toggleCheckoutButtonUsability( 'disable' );
           toggleCartNoteUsability( 'disable' );
           Render.cartEmptyMessage();

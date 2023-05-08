@@ -68,7 +68,7 @@
   {% render 'bs-container', state: 'open', col: 'col-12', container: section_container %}
 
     <div class="{{ section_name }}__main">
-      <form action="{{ section_form_action }}" class="{{ section_name }}__form" id="cart" method="post">
+      <form action="{{ section_form_action }} js--cart" class="{{ section_name }}__form" id="cart" method="post">
         {%- for item in cart.items -%}
           {%- capture snippet_classes -%}{{ section_name }}__line-item cart-line-item{%- endcapture -%}
           {%-
