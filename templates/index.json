@@ -3,7 +3,6 @@
     "16638658704a46d741",
     "1661195827dff74e88",
     "16611958947ef1ecd7",
-    "166386587599b4f4fd",
     "16611959936ca1502e",
     "1661196025228eb79a",
     "d6939208-a96c-4799-9a1a-2c8f4a151b8d"
@@ -128,40 +127,6 @@
         "grid_layout": "three-column",
         "grid_gutter": 24,
         "padding_top": 20,
-        "padding_bottom": 0,
-        "text_colour": "dark"
-      }
-    },
-    "166386587599b4f4fd": {
-      "type": "featured-image",
-      "disabled": true,
-      "blocks": {
-        "c1b58684-1d95-452e-9ceb-b3496ede2459": {
-          "type": "button",
-          "settings": {
-            "title": "Shop Space Tees",
-            "link": "shopify:\/\/collections\/tees",
-            "colour": "yellow",
-            "style": "primary"
-          }
-        }
-      },
-      "block_order": [
-        "c1b58684-1d95-452e-9ceb-b3496ede2459"
-      ],
-      "settings": {
-        "image": "shopify:\/\/shop_images\/VP-top-3.jpg",
-        "anchor_id": "",
-        "background": "white",
-        "container": "container-fluid",
-        "content_placement_horizontal": "center",
-        "content_placement_vertical": "bottom",
-        "content_width_desktop": 100,
-        "content_width_mobile": 100,
-        "content_stack_mobile": false,
-        "image_height_mobile": "adapt",
-        "image_height_desktop": "adapt",
-        "padding_top": 36,
         "padding_bottom": 0,
         "text_colour": "dark"
       }
