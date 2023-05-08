@@ -172,10 +172,10 @@
         "type": "policy-terms-of-service",
         "settings": {
           "anchor_id": "",
-          "background": "black",
+          "background": "white",
           "padding_top": 28,
           "padding_bottom": 28,
-          "text_colour": "light"
+          "text_colour": "dark"
         }
       }
     },
