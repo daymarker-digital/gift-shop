@@ -11,6 +11,7 @@
   assign section_background_colour = section.settings.background
   assign section_container = section.settings.container
 
+  assign section_product_image_aspect_ratio_mobile = section.settings.product_image_aspect_ratio_mobile
   assign section_product_available = product.available
   assign section_product_button_add_to_cart = 'black'
   assign section_product_description = product.description | default: ''
@@ -30,6 +31,11 @@
 -%}
 
 {%- style -%}
+
+  #{{ section_id }} .product-image-gallery-carousel__item {
+    aspect-ratio: {{ section_product_image_aspect_ratio_mobile }};
+  }
+
   {%-
     render 'element-styles',
       background: section.settings.background,
@@ -38,6 +44,7 @@
       padding_top: section.settings.padding_top,
       text_colour: section.settings.text_colour
   -%}
+
 {%- endstyle -%}
 
 <div class="{{ section_classes }}" id="{{ section_id }}">
@@ -136,6 +143,17 @@
 	"tag": "section",
 	"class": "section section--product",
 	"settings": [
+    {
+      "content": "Product",
+      "type": "header"
+    },
+    {
+      "label": "Product Image Aspect Ratio (Mobile)",
+      "info": "Optionally include an aspect ratio for the product images for consistent user experience on smaller devices.",
+      "type": "text",
+      "default": "3.2/4",
+      "id": "product_image_aspect_ratio_mobile"
+    },
     {
       "content": "Settings",
       "type": "header"
