@@ -243,10 +243,17 @@
           "settings": {
             "product": "space-club-tee-in-supernova"
           }
+        },
+        "3c990ff9-e9b9-4826-b63e-6cad83225b4d": {
+          "type": "product",
+          "settings": {
+            "product": "office-mug"
+          }
         }
       },
       "block_order": [
-        "7aa5dc1b-f88c-4a76-9840-646aa8016c4e"
+        "7aa5dc1b-f88c-4a76-9840-646aa8016c4e",
+        "3c990ff9-e9b9-4826-b63e-6cad83225b4d"
       ],
       "settings": {
         "anchor_id": "",
