@@ -1975,6 +1975,21 @@
       "pg" : 0,
       "sct" : 0
     },
+    "\/scss\/sections\/_error-404.scss" : {
+      "aP" : 1,
+      "bl" : 0,
+      "co" : 0,
+      "dP" : 10,
+      "ec" : 1,
+      "ft" : 4,
+      "ma" : 0,
+      "oA" : 1,
+      "oAP" : "\/assets\/_error-404.css",
+      "oF" : 0,
+      "oS" : 3,
+      "pg" : 0,
+      "sct" : 0
+    },
     "\/scss\/sections\/_featured-image.scss" : {
       "aP" : 1,
       "bl" : 0,

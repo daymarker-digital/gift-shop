@@ -1,0 +1,79 @@
+@use 'sass:map';
+@use '../utils/variables' as *;
+@use "../utils/mixins/breakpoint" as *;
+
+.error-404 {
+
+  min-height: calc( 100vh - var(--theme-header-height--total));
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+
+  .heading {
+    &--lg {
+      @each $name, $value in map.get($theme-heading-font-sizes, '1') {
+        @if $name == 'base' {
+          font-size: $value * 3;
+        } @else {
+          @include breakpoint(#{$name}) {
+            font-size: $value * 3;
+          }
+        }
+      }
+    }
+    &--md {
+      @each $name, $value in map.get($theme-heading-font-sizes, '2') {
+        @if $name == 'base' {
+          font-size: $value * 3;
+        } @else {
+          @include breakpoint(#{$name}) {
+            font-size: $value * 3;
+          }
+        }
+      }
+    }
+    &--sm {
+      @each $name, $value in map.get($theme-heading-font-sizes, '3') {
+        @if $name == 'base' {
+          font-size: $value * 3;
+        } @else {
+          @include breakpoint(#{$name}) {
+            font-size: $value * 3;
+          }
+        }
+      }
+    }
+  }
+
+  &__cta,
+  &__heading,
+  &__message {
+    width: 100%;
+  }
+
+  &__content {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  &__heading {
+    & + .error-404__cta,
+    & + .error-404__message {
+      margin-top: 25px;
+    }
+  }
+
+  &__main {
+    width: 100%;
+  }
+
+  &__message {
+     & + .error-404__cta {
+       margin-top: 20px;
+     }
+  }
+
+}

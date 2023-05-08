@@ -24,71 +24,73 @@
 <div class="{{ section_classes }}" id="{{ section_id }}">
   <div class="{{ section_name }}__main">
     {% render 'bs-container', state: 'open', col: 'col-12', container: section_container %}
+      <div class="{{ section_name }}__content">
 
-      {%- for block in section.blocks -%}
-        {%- case block.type -%}
+        {%- for block in section.blocks -%}
+          {%- case block.type -%}
 
-          {%- when 'button' -%}
+            {%- when 'button' -%}
 
-            {%- liquid
-              assign button_colour = block.settings.colour | default: 'black'
-              assign button_link = block.settings.link | default: ''
-              assign button_style = block.settings.style | default: 'primary'
-              assign button_title = block.settings.title | default: ''
-            -%}
-
-            {%- if button_link != blank and button_title != blank -%}
               {%- liquid
+                assign button_colour = block.settings.colour | default: 'black'
+                assign button_link = block.settings.link | default: ''
+                assign button_style = block.settings.style | default: 'primary'
+                assign button_title = block.settings.title | default: ''
+              -%}
+
+              {%- if button_link != blank and button_title != blank -%}
+                {%- liquid
+                  capture aos_attrs
+                    render 'aos-attributes', anchor: aos_id, delay: aos_delay, transition: 'fade-up'
+                  endcapture
+                  assign aos_delay = aos_delay | plus: aos_delay_increment
+                -%}
+                {%- capture button_classes -%}{{ section_name }}__button button--{{ button_style }} button--{{ button_colour }}{%- endcapture %}
+                <div class="{{ section_name }}__cta" {{ aos_attrs }}>
+                  {%-
+                    render 'link',
+                      link_classes: button_classes,
+                      link_url: button_link,
+                      link_title: button_title
+                  -%}
+                </div>
+              {%- endif -%}
+
+            {%- when 'heading' -%}
+
+              {%- liquid
+                assign heading = block.settings.heading | default: ''
+                assign heading_size = block.settings.size | default: 'md'
+                assign heading_style = block.settings.style | default: 'primary'
                 capture aos_attrs
-                  render 'aos-attributes', anchor: aos_id, delay: aos_delay, transition: 'fade-up'
+                  render 'aos-attributes', anchor: aos_id, delay: aos_delay, transition: 'fade-left'
                 endcapture
                 assign aos_delay = aos_delay | plus: aos_delay_increment
               -%}
-              {%- capture button_classes -%}{{ section_name }}__button button--{{ button_style }} button--{{ button_colour }}{%- endcapture %}
-              <div class="{{ section_name }}__cta" {{ aos_attrs }}>
-                {%-
-                  render 'link',
-                    link_classes: button_classes,
-                    link_url: button_link,
-                    link_title: button_title
-                -%}
-              </div>
-            {%- endif -%}
 
-          {%- when 'heading' -%}
+              {% if heading != blank %}
+                <h1 class="{{ section_name }}__heading heading--{{ heading_style }} heading--{{ heading_size }}" {{ aos_attrs }}>{{ heading | escape }}</h1>
+              {% endif %}
 
-            {%- liquid
-              assign heading = block.settings.heading | default: ''
-              assign heading_size = block.settings.size | default: '1'
-              assign heading_style = block.settings.style | default: 'primary'
-              capture aos_attrs
-                render 'aos-attributes', anchor: aos_id, delay: aos_delay, transition: 'fade-left'
-              endcapture
-              assign aos_delay = aos_delay | plus: aos_delay_increment
-            -%}
+            {%- when 'message' -%}
 
-            {% if heading != blank %}
-              <h1 class="{{ section_name }}__heading heading--{{ heading_style }} heading--{{ heading-size }}" {{ aos_attrs }}>{{ heading | escape }}</h1>
-            {% endif %}
+              {%- liquid
+                assign message = block.settings.message | default: ''
+                assign message_size = block.settings.message_size | default: 'sm'
+                capture aos_attrs
+                  render 'aos-attributes', anchor: aos_id, delay: aos_delay, transition: 'fade-left'
+                endcapture
+                assign aos_delay = aos_delay | plus: aos_delay_increment
+              -%}
 
-          {%- when 'message' -%}
+              {% if message != blank %}
+                <div class="{{ section_name }}__message body-copy--primary body-copy--{{ message_size }}" {{ aos_attrs }}>{{ message }}</div>
+              {% endif %}
 
-            {%- liquid
-              assign message = block.settings.message | default: ''
-              assign message_size = block.settings.message_size | default: 'sm'
-              capture aos_attrs
-                render 'aos-attributes', anchor: aos_id, delay: aos_delay, transition: 'fade-left'
-              endcapture
-              assign aos_delay = aos_delay | plus: aos_delay_increment
-            -%}
+          {%- endcase -%}
+        {%- endfor -%}
 
-            {% if message != blank %}
-              <div class="{{ section_name }}__message body-copy--primary body-copy--{{ message_size }}" {{ aos_attrs }}>{{ message }}</div>
-            {% endif %}
-
-        {%- endcase -%}
-      {%- endfor -%}
-
+      </div>
     {% render 'bs-container', state: 'closed', col: 'col-12', container: section_container %}
   </div>
 </div>
