@@ -177,6 +177,20 @@
           "padding_bottom": 28,
           "text_colour": "dark"
         }
+      },
+      "policy-privacy": {
+        "type": "policy-privacy",
+        "settings": {
+          "anchor_id": "",
+          "background": "white",
+          "background_image_position_mobile": "center center",
+          "background_image_position_desktop": "center center",
+          "background_image_repeat": "no-repeat",
+          "background_image_size": "cover",
+          "padding_top": 28,
+          "padding_bottom": 28,
+          "text_colour": "dark"
+        }
       }
     },
     "content_for_index": [
