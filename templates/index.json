@@ -10,22 +10,8 @@
   "sections": {
     "16638658704a46d741": {
       "type": "featured-image",
-      "blocks": {
-        "b9151a0c-efc1-4c6e-89a1-7356ee08f06e": {
-          "type": "button",
-          "settings": {
-            "title": "Shop Maater",
-            "link": "https:\/\/maatercosmetics.com\/",
-            "colour": "black",
-            "style": "primary"
-          }
-        }
-      },
-      "block_order": [
-        "b9151a0c-efc1-4c6e-89a1-7356ee08f06e"
-      ],
       "settings": {
-        "image": "shopify:\/\/shop_images\/Maater-Shopify-Home.png",
+        "image": "shopify:\/\/shop_images\/VPSpringClean.png",
         "anchor_id": "",
         "background": "white",
         "container": "container-fluid",
@@ -34,7 +20,7 @@
         "content_width_desktop": 100,
         "content_width_mobile": 100,
         "content_stack_mobile": false,
-        "image_height_mobile": "650px",
+        "image_height_mobile": "adapt",
         "image_height_desktop": "adapt",
         "padding_top": 0,
         "padding_bottom": 0,
