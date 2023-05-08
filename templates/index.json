@@ -39,7 +39,7 @@
         "f55b6b53-7f51-4c9b-a71f-5e967d2ad292": {
           "type": "product",
           "settings": {
-            "product": "natures™-x-plant-ecology-club-tee"
+            "product": "space-club-tee-in-supernova"
           }
         },
         "8e33acf9-4964-464e-9957-ce064038f657": {
@@ -108,7 +108,7 @@
         "2637f584-4aa5-4d94-8ceb-0d4386faa73e": {
           "type": "product",
           "settings": {
-            "product": "vpsa-challenger-shorts-in-cosmic-glow"
+            "product": "natures™-x-plant-ecology-club-tee"
           }
         }
       },
@@ -133,6 +133,7 @@
     },
     "166386587599b4f4fd": {
       "type": "featured-image",
+      "disabled": true,
       "blocks": {
         "c1b58684-1d95-452e-9ceb-b3496ede2459": {
           "type": "button",
