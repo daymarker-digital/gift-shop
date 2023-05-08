@@ -134,34 +134,17 @@
     "166386587599b4f4fd": {
       "type": "featured-image",
       "blocks": {
-        "10355e76-c59e-4d61-aac8-5fa3b497d00f": {
-          "type": "heading",
-          "settings": {
-            "heading": "Sample Featured Image Heading",
-            "size": "md",
-            "style": "primary"
-          }
-        },
-        "4d670097-fa47-449a-a090-eb0150fbd90b": {
-          "type": "message",
-          "settings": {
-            "message": "<p>Nunc eu lectus porta, varius enim nec, varius augue. Vivamus tortor ex, aliquam pellentesque elementum in, dictum sed purus. Cras quis diam tristique, mollis mi quis, consequat tellus.<\/p>",
-            "size": "md"
-          }
-        },
         "c1b58684-1d95-452e-9ceb-b3496ede2459": {
           "type": "button",
           "settings": {
             "title": "Shop Space Tees",
             "link": "shopify:\/\/collections\/tees",
-            "colour": "black",
+            "colour": "yellow",
             "style": "primary"
           }
         }
       },
       "block_order": [
-        "10355e76-c59e-4d61-aac8-5fa3b497d00f",
-        "4d670097-fa47-449a-a090-eb0150fbd90b",
         "c1b58684-1d95-452e-9ceb-b3496ede2459"
       ],
       "settings": {
@@ -170,10 +153,10 @@
         "background": "white",
         "container": "container-fluid",
         "content_placement_horizontal": "center",
-        "content_placement_vertical": "center",
-        "content_width_desktop": 85,
-        "content_width_mobile": 90,
-        "content_stack_mobile": true,
+        "content_placement_vertical": "bottom",
+        "content_width_desktop": 100,
+        "content_width_mobile": 100,
+        "content_stack_mobile": false,
         "image_height_mobile": "adapt",
         "image_height_desktop": "adapt",
         "padding_top": 36,
