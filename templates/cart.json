@@ -35,7 +35,7 @@
     "cart-footer": {
       "type": "main-cart-footer",
       "settings": {
-        "cart_note_enable": true,
+        "cart_note_enable": false,
         "background": "white",
         "container": "container",
         "padding_top": 0,
