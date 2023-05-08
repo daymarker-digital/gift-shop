@@ -3,12 +3,16 @@
 .policy {
 
   &__title {
-    margin-bottom: 20px;
+    & + .policy__body-copy {
+      margin-top: 20px;
+    }
   }
 
   @include breakpoint(lg) {
     &__title {
-      margin-bottom: 28px;
+      & + .policy__body-copy {
+        margin-top: 28px;
+      }
     }
   }
 
