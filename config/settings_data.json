@@ -120,28 +120,12 @@
           "5492952f-f798-4f38-94d9-bb7753ade47e": {
             "type": "announcement",
             "settings": {
-              "title": "<p>Free shipping on all orders over $40<\/p>"
-            }
-          },
-          "a063fba5-da22-4789-9d85-0cb1a397025d": {
-            "type": "announcement",
-            "disabled": true,
-            "settings": {
-              "title": "<p>Some other great announcement<\/p>"
-            }
-          },
-          "d18fd938-5871-4142-a714-d4aeeafdc2d5": {
-            "type": "announcement",
-            "disabled": true,
-            "settings": {
-              "title": "<p>Link to <a href=\"\/collections\/all\" title=\"All\">buy stuff<\/a> here<\/p>"
+              "title": "<p>FREE shipping on ALL orders over $40<\/p>"
             }
           }
         },
         "block_order": [
-          "5492952f-f798-4f38-94d9-bb7753ade47e",
-          "a063fba5-da22-4789-9d85-0cb1a397025d",
-          "d18fd938-5871-4142-a714-d4aeeafdc2d5"
+          "5492952f-f798-4f38-94d9-bb7753ade47e"
         ],
         "settings": {
           "enable": true,
