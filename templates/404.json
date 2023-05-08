@@ -10,7 +10,7 @@
           "type": "heading",
           "settings": {
             "heading": "404",
-            "size": "lg",
+            "size": "md",
             "style": "primary"
           }
         },
