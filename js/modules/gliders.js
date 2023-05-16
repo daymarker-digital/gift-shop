@@ -1,6 +1,6 @@
 import Glide from '@glidejs/glide';
 
-const config = { debug: true, name: 'gliders.js', version: '1.0' };
+const config = { debug: false, name: 'gliders.js', version: '1.0' };
 
 const events = [ "build.after", "run.after" ];
 const elements = document.querySelectorAll( '.js--glide' ) || [];
@@ -58,11 +58,9 @@ const createGliderFromElement = ( element = {} ) => {
 
   glide.mount();
 
-  // FIX for when single slide does not fill 100% of glider
   setTimeout( () => {
-    console.log( element_id, style, options );
-     glide.update();
-   }, 250 );
+    glide.update();
+  }, 250 );
 
   gliders[element_id] = { element_id, glide };
 

@@ -6,9 +6,8 @@ const elements = {
 
 const isSelected = () => {
   for (let i = 0; i < options.length; i++) {
-    console.log(options[i]);
     if ( options[i].checked ) {
-      console.log('checked!');
+
     }
   }
 }
@@ -39,10 +38,7 @@ const variantSelector = () => {
   options.forEach( input => {
     input.addEventListener( 'input', event => {
       if ( !input.disabled ) {
-        console.log('not disabled');
         addToCartButton.disabled = false;
-      } else {
-        console.log('disabled');
       }
     });
   });

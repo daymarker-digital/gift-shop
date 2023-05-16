@@ -4,7 +4,6 @@ import Credits from './modules/credits';
 import Drawers from './modules/drawers';
 import Gliders from './modules/gliders';
 import Product from './modules/product';
-import RandomImage from './modules/randomImage';
 import Scrolling from './modules/scrolling';
 import Tools from './modules/tools';
 
@@ -13,7 +12,6 @@ Cart.init();
 Credits.init();
 Drawers.init();
 Product.init();
-RandomImage.init();
 Scrolling.init();
 
 AOS.init({

@@ -1,7 +1,7 @@
 import Render from 'render';
 import Tools from 'tools';
 
-const config = { debug: true, name: 'cart.js', version: '1.0' };
+const config = { debug: false, name: 'cart.js', version: '1.0' };
 
 const elements = {
   cart: document.querySelectorAll('form.js--cart') || [],
@@ -188,8 +188,6 @@ const toggleCartNoteUsability = ( state = 'enable' ) => {
 
 const changeCartLineItemByKey = ( key = '', quantity = 0, stepper = false ) => {
 
-  console.log( 'changeCartLineItemByKey :: ', key, quantity );
-
   if ( key ) {
     fetch('/cart/change.js', {
       method: 'POST',
@@ -215,7 +213,6 @@ const changeCartLineItemByKey = ( key = '', quantity = 0, stepper = false ) => {
           toggleCartNoteUsability( 'enable' );
           Render.cartLineItemPrice( key, cart.items );
         } else {
-          console.log('cart empty!');
           toggleCheckoutButtonUsability( 'disable' );
           toggleCartNoteUsability( 'disable' );
           Render.cartEmptyMessage();
@@ -268,12 +265,7 @@ const updateStepperButtonStates = ( value = 0, min = 0, max = 99999, stepper = f
 const init = () => {
   if ( config.debug ) console.log(`[ ${config.name} v.${config.version} initialized ]`);
 
-  getCart().then( cart => {
-    console.log( cart.items );
-  });
-
   if ( Theme.cart.items.length ) {
-    //Render.cartLineItemsToElement( Theme.cart.items, elements.cart );
     toggleCheckoutButtonUsability( 'enable' );
     toggleCartNoteUsability( 'enable' );
   } else {

@@ -1,7 +1,7 @@
 import Tools from 'tools';
 import Cookies from 'cookies';
 
-const config = { debug: true, name: 'announcements.js', version: '1.0' };
+const config = { debug: false, name: 'announcements.js', version: '1.0' };
 
 const cookieName = 'vp_shopify_announcements';
 

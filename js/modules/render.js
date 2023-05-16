@@ -46,7 +46,6 @@ const cartLineItemErrorMessage = ( key = '', message = 'Something went wrong!' )
 };
 
 const cartLineItemRemoveByKey = ( key = '' ) => {
-  console.log( 'cartLineItemRemoveByKey :: ', key );
   let element = document.getElementById(`cart-line-item--${key}`) || false;
   if ( element ) {
     anime.timeline({
