@@ -128,7 +128,7 @@
         "container": "container-fluid",
         "grid_layout": "three-column",
         "grid_gutter": 24,
-        "padding_top": 20,
+        "padding_top": 52,
         "padding_bottom": 0,
         "text_colour": "dark"
       }
@@ -197,7 +197,7 @@
         "container": "container-fluid",
         "grid_layout": "three-column",
         "grid_gutter": 24,
-        "padding_top": 24,
+        "padding_top": 52,
         "padding_bottom": 0,
         "text_colour": "dark"
       }
@@ -308,7 +308,7 @@
         "container": "container-fluid",
         "grid_layout": "three-column",
         "grid_gutter": 24,
-        "padding_top": 28,
+        "padding_top": 52,
         "padding_bottom": 0,
         "text_colour": "dark"
       }
@@ -353,7 +353,7 @@
         "container": "container-fluid",
         "grid_layout": "two-column",
         "grid_gutter": 24,
-        "padding_top": 28,
+        "padding_top": 52,
         "padding_bottom": 0,
         "text_colour": "dark"
       }
