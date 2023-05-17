@@ -339,20 +339,13 @@
           "settings": {
             "product": "galactic-sweats-in-venus-dust"
           }
-        },
-        "d2255791-8769-4d03-bdbb-1080cdb9b3e6": {
-          "type": "product",
-          "settings": {
-            "product": "always-be-polite-hoodie"
-          }
         }
       },
       "block_order": [
         "d28a020c-f1ac-4b0d-ba69-a2a3c7b8d766",
         "05a56780-75bc-464a-9d5c-79e8232aad41",
         "a91da574-0243-4611-a3b5-d46d8092bfb3",
-        "7753479d-d968-41f9-b664-1ef475ffba89",
-        "d2255791-8769-4d03-bdbb-1080cdb9b3e6"
+        "7753479d-d968-41f9-b664-1ef475ffba89"
       ],
       "settings": {
         "anchor_id": "",
