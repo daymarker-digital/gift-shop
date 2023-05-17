@@ -235,6 +235,12 @@
     "cf2b7ca3-307b-4972-95ef-b0994d7525b1": {
       "type": "featured-products",
       "blocks": {
+        "ccc35486-aefe-4587-87b0-910e33958b3f": {
+          "type": "product",
+          "settings": {
+            "product": "botanical-department-hoodie"
+          }
+        },
         "1fd53054-9b44-4a75-b3be-b10a4da97d0c": {
           "type": "product",
           "settings": {
@@ -253,12 +259,6 @@
             "product": "complaints-beanie"
           }
         },
-        "ccc35486-aefe-4587-87b0-910e33958b3f": {
-          "type": "product",
-          "settings": {
-            "product": "botanical-department-hoodie"
-          }
-        },
         "5d97ee46-08f4-4934-8a2d-60dc05ecc5da": {
           "type": "product",
           "settings": {
@@ -270,20 +270,41 @@
           "settings": {
             "product": "space-club-tee-in-dark-matter"
           }
+        },
+        "69a4f0b4-9e6d-4e80-95d9-03b8f48f9044": {
+          "type": "product",
+          "settings": {
+            "product": "the-desk-vessel-all-in-one"
+          }
+        },
+        "8557505f-4327-4b87-b590-18167fb4affb": {
+          "type": "product",
+          "settings": {
+            "product": "unofficial-astronaut-tee-in-supernova"
+          }
+        },
+        "268fd6c6-5966-4602-8b4c-4e785000283c": {
+          "type": "product",
+          "settings": {
+            "product": "vpsa-challenger-shorts-in-cosmic-glow"
+          }
         }
       },
       "block_order": [
+        "ccc35486-aefe-4587-87b0-910e33958b3f",
         "1fd53054-9b44-4a75-b3be-b10a4da97d0c",
         "6de41927-ee05-47b4-a58f-c16a1a73dc3b",
         "2a3496b6-1ebd-4bcb-b2c9-912316b3dfc6",
-        "ccc35486-aefe-4587-87b0-910e33958b3f",
         "5d97ee46-08f4-4934-8a2d-60dc05ecc5da",
-        "e5a510c8-28ba-4510-81d0-016ddb53f0db"
+        "e5a510c8-28ba-4510-81d0-016ddb53f0db",
+        "69a4f0b4-9e6d-4e80-95d9-03b8f48f9044",
+        "8557505f-4327-4b87-b590-18167fb4affb",
+        "268fd6c6-5966-4602-8b4c-4e785000283c"
       ],
       "settings": {
         "anchor_id": "",
         "background": "white",
-        "container": "container",
+        "container": "container-fluid",
         "grid_layout": "three-column",
         "grid_gutter": 20,
         "padding_top": 28,
