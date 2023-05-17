@@ -316,10 +316,16 @@
     "6929c9cc-944c-4645-b944-e482c070dd52": {
       "type": "featured-products",
       "blocks": {
+        "d28a020c-f1ac-4b0d-ba69-a2a3c7b8d766": {
+          "type": "product",
+          "settings": {
+            "product": "vpsa-hoodie-in-venus-dust"
+          }
+        },
         "05a56780-75bc-464a-9d5c-79e8232aad41": {
           "type": "product",
           "settings": {
-            "product": "vpsa-challenger-sweatpants-in-dark-matter"
+            "product": "smile-socks-black"
           }
         },
         "a91da574-0243-4611-a3b5-d46d8092bfb3": {
@@ -342,6 +348,7 @@
         }
       },
       "block_order": [
+        "d28a020c-f1ac-4b0d-ba69-a2a3c7b8d766",
         "05a56780-75bc-464a-9d5c-79e8232aad41",
         "a91da574-0243-4611-a3b5-d46d8092bfb3",
         "7753479d-d968-41f9-b664-1ef475ffba89",
