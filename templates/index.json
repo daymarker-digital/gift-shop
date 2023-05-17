@@ -227,7 +227,7 @@
         "background": "white",
         "container": "container-fluid",
         "grid_layout": "two-column",
-        "grid_gutter": 20,
+        "grid_gutter": 24,
         "padding_top": 36,
         "padding_bottom": 0,
         "text_colour": "dark"
@@ -307,7 +307,7 @@
         "background": "white",
         "container": "container-fluid",
         "grid_layout": "three-column",
-        "grid_gutter": 20,
+        "grid_gutter": 24,
         "padding_top": 28,
         "padding_bottom": 0,
         "text_colour": "dark"
@@ -352,7 +352,7 @@
         "background": "white",
         "container": "container-fluid",
         "grid_layout": "two-column",
-        "grid_gutter": 20,
+        "grid_gutter": 24,
         "padding_top": 28,
         "padding_bottom": 0,
         "text_colour": "dark"
