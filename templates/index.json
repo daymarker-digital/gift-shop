@@ -6,7 +6,8 @@
     "16611959936ca1502e",
     "1661196025228eb79a",
     "d6939208-a96c-4799-9a1a-2c8f4a151b8d",
-    "cf2b7ca3-307b-4972-95ef-b0994d7525b1"
+    "cf2b7ca3-307b-4972-95ef-b0994d7525b1",
+    "6929c9cc-944c-4645-b944-e482c070dd52"
   ],
   "sections": {
     "16638658704a46d741": {
@@ -306,6 +307,51 @@
         "background": "white",
         "container": "container-fluid",
         "grid_layout": "three-column",
+        "grid_gutter": 20,
+        "padding_top": 28,
+        "padding_bottom": 0,
+        "text_colour": "dark"
+      }
+    },
+    "6929c9cc-944c-4645-b944-e482c070dd52": {
+      "type": "featured-products",
+      "blocks": {
+        "05a56780-75bc-464a-9d5c-79e8232aad41": {
+          "type": "product",
+          "settings": {
+            "product": ""
+          }
+        },
+        "17c7ec9a-964a-4132-8a5d-147e6274862c": {
+          "type": "product",
+          "settings": {
+            "product": ""
+          }
+        },
+        "a91da574-0243-4611-a3b5-d46d8092bfb3": {
+          "type": "product",
+          "settings": {
+            "product": ""
+          }
+        },
+        "7753479d-d968-41f9-b664-1ef475ffba89": {
+          "type": "product",
+          "settings": {
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "05a56780-75bc-464a-9d5c-79e8232aad41",
+        "17c7ec9a-964a-4132-8a5d-147e6274862c",
+        "a91da574-0243-4611-a3b5-d46d8092bfb3",
+        "7753479d-d968-41f9-b664-1ef475ffba89"
+      ],
+      "settings": {
+        "anchor_id": "",
+        "background": "white",
+        "container": "container-fluid",
+        "grid_layout": "two-column",
         "grid_gutter": 20,
         "padding_top": 28,
         "padding_bottom": 0,
