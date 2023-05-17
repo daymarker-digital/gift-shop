@@ -241,23 +241,44 @@
             "product": "vp-wool-hat"
           }
         },
+        "6de41927-ee05-47b4-a58f-c16a1a73dc3b": {
+          "type": "product",
+          "settings": {
+            "product": "staff-tee"
+          }
+        },
         "2a3496b6-1ebd-4bcb-b2c9-912316b3dfc6": {
           "type": "product",
           "settings": {
             "product": "complaints-beanie"
           }
         },
-        "6de41927-ee05-47b4-a58f-c16a1a73dc3b": {
+        "ccc35486-aefe-4587-87b0-910e33958b3f": {
           "type": "product",
           "settings": {
-            "product": "staff-tee"
+            "product": "botanical-department-hoodie"
+          }
+        },
+        "5d97ee46-08f4-4934-8a2d-60dc05ecc5da": {
+          "type": "product",
+          "settings": {
+            "product": "space-club-hoodie-in-supernova"
+          }
+        },
+        "e5a510c8-28ba-4510-81d0-016ddb53f0db": {
+          "type": "product",
+          "settings": {
+            "product": "space-club-tee-in-dark-matter"
           }
         }
       },
       "block_order": [
         "1fd53054-9b44-4a75-b3be-b10a4da97d0c",
+        "6de41927-ee05-47b4-a58f-c16a1a73dc3b",
         "2a3496b6-1ebd-4bcb-b2c9-912316b3dfc6",
-        "6de41927-ee05-47b4-a58f-c16a1a73dc3b"
+        "ccc35486-aefe-4587-87b0-910e33958b3f",
+        "5d97ee46-08f4-4934-8a2d-60dc05ecc5da",
+        "e5a510c8-28ba-4510-81d0-016ddb53f0db"
       ],
       "settings": {
         "anchor_id": "",
