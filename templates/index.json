@@ -272,22 +272,22 @@
             "product": "complaints-beanie"
           }
         },
-        "e5a510c8-28ba-4510-81d0-016ddb53f0db": {
-          "type": "product",
-          "settings": {
-            "product": "space-club-tee-in-dark-matter"
-          }
-        },
         "69a4f0b4-9e6d-4e80-95d9-03b8f48f9044": {
           "type": "product",
           "settings": {
             "product": "the-desk-vessel-all-in-one"
           }
         },
+        "e5a510c8-28ba-4510-81d0-016ddb53f0db": {
+          "type": "product",
+          "settings": {
+            "product": "space-club-tee-in-dark-matter"
+          }
+        },
         "8557505f-4327-4b87-b590-18167fb4affb": {
           "type": "product",
           "settings": {
-            "product": "always-be-polite-hoodie"
+            "product": "vpsa-discovery-shorts-in-supernova"
           }
         }
       },
@@ -298,8 +298,8 @@
         "6de41927-ee05-47b4-a58f-c16a1a73dc3b",
         "5d97ee46-08f4-4934-8a2d-60dc05ecc5da",
         "2a3496b6-1ebd-4bcb-b2c9-912316b3dfc6",
-        "e5a510c8-28ba-4510-81d0-016ddb53f0db",
         "69a4f0b4-9e6d-4e80-95d9-03b8f48f9044",
+        "e5a510c8-28ba-4510-81d0-016ddb53f0db",
         "8557505f-4327-4b87-b590-18167fb4affb"
       ],
       "settings": {
@@ -322,12 +322,6 @@
             "product": "vpsa-challenger-sweatpants-in-dark-matter"
           }
         },
-        "17c7ec9a-964a-4132-8a5d-147e6274862c": {
-          "type": "product",
-          "settings": {
-            "product": "vpsa-discovery-shorts-in-supernova"
-          }
-        },
         "a91da574-0243-4611-a3b5-d46d8092bfb3": {
           "type": "product",
           "settings": {
@@ -339,13 +333,19 @@
           "settings": {
             "product": "galactic-sweats-in-venus-dust"
           }
+        },
+        "d2255791-8769-4d03-bdbb-1080cdb9b3e6": {
+          "type": "product",
+          "settings": {
+            "product": "always-be-polite-hoodie"
+          }
         }
       },
       "block_order": [
         "05a56780-75bc-464a-9d5c-79e8232aad41",
-        "17c7ec9a-964a-4132-8a5d-147e6274862c",
         "a91da574-0243-4611-a3b5-d46d8092bfb3",
-        "7753479d-d968-41f9-b664-1ef475ffba89"
+        "7753479d-d968-41f9-b664-1ef475ffba89",
+        "d2255791-8769-4d03-bdbb-1080cdb9b3e6"
       ],
       "settings": {
         "anchor_id": "",
