@@ -5,13 +5,15 @@
     "16611958947ef1ecd7",
     "16611959936ca1502e",
     "1661196025228eb79a",
-    "d6939208-a96c-4799-9a1a-2c8f4a151b8d"
+    "d6939208-a96c-4799-9a1a-2c8f4a151b8d",
+    "cf2b7ca3-307b-4972-95ef-b0994d7525b1",
+    "6929c9cc-944c-4645-b944-e482c070dd52"
   ],
   "sections": {
     "16638658704a46d741": {
       "type": "featured-image",
       "settings": {
-        "image": "shopify:\/\/shop_images\/VPSpringClean.png",
+        "image": "shopify:\/\/shop_images\/VPSpringClean--resized--opt.jpg",
         "anchor_id": "",
         "background": "white",
         "container": "container-fluid",
@@ -126,7 +128,7 @@
         "container": "container-fluid",
         "grid_layout": "three-column",
         "grid_gutter": 24,
-        "padding_top": 20,
+        "padding_top": 52,
         "padding_bottom": 0,
         "text_colour": "dark"
       }
@@ -195,7 +197,7 @@
         "container": "container-fluid",
         "grid_layout": "three-column",
         "grid_gutter": 24,
-        "padding_top": 24,
+        "padding_top": 52,
         "padding_bottom": 0,
         "text_colour": "dark"
       }
@@ -225,8 +227,133 @@
         "background": "white",
         "container": "container-fluid",
         "grid_layout": "two-column",
-        "grid_gutter": 20,
+        "grid_gutter": 24,
         "padding_top": 36,
+        "padding_bottom": 0,
+        "text_colour": "dark"
+      }
+    },
+    "cf2b7ca3-307b-4972-95ef-b0994d7525b1": {
+      "type": "featured-products",
+      "blocks": {
+        "ccc35486-aefe-4587-87b0-910e33958b3f": {
+          "type": "product",
+          "settings": {
+            "product": "botanical-department-hoodie"
+          }
+        },
+        "1fd53054-9b44-4a75-b3be-b10a4da97d0c": {
+          "type": "product",
+          "settings": {
+            "product": "vp-wool-hat"
+          }
+        },
+        "268fd6c6-5966-4602-8b4c-4e785000283c": {
+          "type": "product",
+          "settings": {
+            "product": "vpsa-challenger-shorts-in-cosmic-glow"
+          }
+        },
+        "6de41927-ee05-47b4-a58f-c16a1a73dc3b": {
+          "type": "product",
+          "settings": {
+            "product": "staff-tee"
+          }
+        },
+        "5d97ee46-08f4-4934-8a2d-60dc05ecc5da": {
+          "type": "product",
+          "settings": {
+            "product": "space-club-hoodie-in-supernova"
+          }
+        },
+        "2a3496b6-1ebd-4bcb-b2c9-912316b3dfc6": {
+          "type": "product",
+          "settings": {
+            "product": "complaints-beanie"
+          }
+        },
+        "69a4f0b4-9e6d-4e80-95d9-03b8f48f9044": {
+          "type": "product",
+          "settings": {
+            "product": "the-desk-vessel-all-in-one"
+          }
+        },
+        "e5a510c8-28ba-4510-81d0-016ddb53f0db": {
+          "type": "product",
+          "settings": {
+            "product": "space-club-tee-in-dark-matter"
+          }
+        },
+        "8557505f-4327-4b87-b590-18167fb4affb": {
+          "type": "product",
+          "settings": {
+            "product": "vpsa-discovery-shorts-in-supernova"
+          }
+        }
+      },
+      "block_order": [
+        "ccc35486-aefe-4587-87b0-910e33958b3f",
+        "1fd53054-9b44-4a75-b3be-b10a4da97d0c",
+        "268fd6c6-5966-4602-8b4c-4e785000283c",
+        "6de41927-ee05-47b4-a58f-c16a1a73dc3b",
+        "5d97ee46-08f4-4934-8a2d-60dc05ecc5da",
+        "2a3496b6-1ebd-4bcb-b2c9-912316b3dfc6",
+        "69a4f0b4-9e6d-4e80-95d9-03b8f48f9044",
+        "e5a510c8-28ba-4510-81d0-016ddb53f0db",
+        "8557505f-4327-4b87-b590-18167fb4affb"
+      ],
+      "settings": {
+        "anchor_id": "",
+        "background": "white",
+        "container": "container-fluid",
+        "grid_layout": "three-column",
+        "grid_gutter": 24,
+        "padding_top": 52,
+        "padding_bottom": 0,
+        "text_colour": "dark"
+      }
+    },
+    "6929c9cc-944c-4645-b944-e482c070dd52": {
+      "type": "featured-products",
+      "blocks": {
+        "d28a020c-f1ac-4b0d-ba69-a2a3c7b8d766": {
+          "type": "product",
+          "settings": {
+            "product": "vpsa-hoodie-in-venus-dust"
+          }
+        },
+        "05a56780-75bc-464a-9d5c-79e8232aad41": {
+          "type": "product",
+          "settings": {
+            "product": "smile-socks-black"
+          }
+        },
+        "a91da574-0243-4611-a3b5-d46d8092bfb3": {
+          "type": "product",
+          "settings": {
+            "product": "studio-hoodie"
+          }
+        },
+        "7753479d-d968-41f9-b664-1ef475ffba89": {
+          "type": "product",
+          "settings": {
+            "product": "galactic-sweats-in-venus-dust"
+          }
+        }
+      },
+      "block_order": [
+        "d28a020c-f1ac-4b0d-ba69-a2a3c7b8d766",
+        "05a56780-75bc-464a-9d5c-79e8232aad41",
+        "a91da574-0243-4611-a3b5-d46d8092bfb3",
+        "7753479d-d968-41f9-b664-1ef475ffba89"
+      ],
+      "settings": {
+        "anchor_id": "",
+        "background": "white",
+        "container": "container-fluid",
+        "grid_layout": "two-column",
+        "grid_gutter": 24,
+        "padding_top": 52,
         "padding_bottom": 0,
         "text_colour": "dark"
       }
