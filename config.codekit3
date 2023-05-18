@@ -41,18 +41,6 @@
       "oAP" : "\/.shopifyignore",
       "oF" : 0
     },
-    "\/assets\/_announcements.css" : {
-      "aP" : 1,
-      "bl" : 0,
-      "ci" : 0,
-      "co" : 0,
-      "ft" : 16,
-      "ma" : 0,
-      "oA" : 1,
-      "oAP" : "\/assets\/_announcements.css",
-      "oF" : 0,
-      "pg" : 0
-    },
     "\/assets\/AkkuratMonoLLSub-RegularSubset.woff" : {
       "cB" : 0,
       "ft" : 8192,
@@ -153,28 +141,6 @@
       "oAP" : "\/assets\/AkkuratMonoLLWeb-Regular.woff2",
       "oF" : 0
     },
-    "\/assets\/alpha.min.js" : {
-      "bF" : 4,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/assets\/alpha.min.min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 1
-    },
-    "\/assets\/announcements.min.js" : {
-      "bF" : 4,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/assets\/announcements.min.min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 1
-    },
     "\/assets\/apple-touch-icon.png" : {
       "ft" : 32768,
       "iS" : 9587,
@@ -187,50 +153,6 @@
       "ou" : "lpckwebp-none",
       "q" : 100,
       "rq" : 75
-    },
-    "\/assets\/breakpoints.min.js" : {
-      "bF" : 4,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/assets\/breakpoints.min.min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 1
-    },
-    "\/assets\/cart-notification.js" : {
-      "bF" : 4,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/assets\/cart-notification.min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 1
-    },
-    "\/assets\/cart.js" : {
-      "bF" : 4,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/assets\/cart.min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 1
-    },
-    "\/assets\/cart.min.js" : {
-      "bF" : 4,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/assets\/cart.min.min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 1
     },
     "\/assets\/customer.css" : {
       "aP" : 1,
@@ -251,39 +173,6 @@
       "mi" : 1,
       "oA" : 0,
       "oAP" : "\/assets\/customer.min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 1
-    },
-    "\/assets\/details-disclosure.js" : {
-      "bF" : 4,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/assets\/details-disclosure.min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 1
-    },
-    "\/assets\/details-modal.js" : {
-      "bF" : 4,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/assets\/details-modal.min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 1
-    },
-    "\/assets\/drawer.min.js" : {
-      "bF" : 4,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/assets\/drawer.min.min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 1
@@ -331,50 +220,6 @@
       "oF" : 0,
       "pg" : 0
     },
-    "\/assets\/forms.min.js" : {
-      "bF" : 4,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/assets\/forms.min.min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 1
-    },
-    "\/assets\/global.js" : {
-      "bF" : 4,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/assets\/global.min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 1
-    },
-    "\/assets\/instagramFeed.min.js" : {
-      "bF" : 4,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/assets\/instagramFeed.min.min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 1
-    },
-    "\/assets\/main-LEGACY.min.js" : {
-      "bF" : 4,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/assets\/main-LEGACY.min.min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 1
-    },
     "\/assets\/main.css" : {
       "aP" : 1,
       "bl" : 0,
@@ -394,28 +239,6 @@
       "mi" : 1,
       "oA" : 0,
       "oAP" : "\/assets\/main.min.min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 1
-    },
-    "\/assets\/main.min.LEGACY.js" : {
-      "bF" : 4,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/assets\/main.min.LEGACY.min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 1
-    },
-    "\/assets\/mainMenu.min.js" : {
-      "bF" : 4,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/assets\/mainMenu.min.min.js",
       "oF" : 0,
       "sC" : 3,
       "tS" : 1
@@ -461,41 +284,6 @@
       "oA" : 0,
       "oAP" : "\/assets\/NotSorrySerif-Bold.woff2",
       "oF" : 0
-    },
-    "\/assets\/section-featured-image.css" : {
-      "aP" : 1,
-      "bl" : 0,
-      "ci" : 0,
-      "co" : 0,
-      "ft" : 16,
-      "ma" : 0,
-      "oA" : 2,
-      "oAP" : "\/assets\/section-featured-image.css",
-      "oF" : 0,
-      "pg" : 0
-    },
-    "\/assets\/section-featured-products.css" : {
-      "aP" : 1,
-      "bl" : 0,
-      "ci" : 0,
-      "co" : 0,
-      "ft" : 16,
-      "ma" : 0,
-      "oA" : 2,
-      "oAP" : "\/assets\/section-featured-products.css",
-      "oF" : 0,
-      "pg" : 0
-    },
-    "\/assets\/share.js" : {
-      "bF" : 4,
-      "ft" : 64,
-      "ma" : 0,
-      "mi" : 1,
-      "oA" : 0,
-      "oAP" : "\/assets\/share.min.js",
-      "oF" : 0,
-      "sC" : 3,
-      "tS" : 1
     },
     "\/assets\/SorrySans-BoldExtended.eot" : {
       "cB" : 0,
@@ -3283,12 +3071,12 @@
       "oAP" : "\/snippets\/theme--classes.liquid",
       "oF" : 0
     },
-    "\/snippets\/theme--google-analytics.liquid" : {
+    "\/snippets\/theme--google-site-tag.liquid" : {
       "cB" : 0,
       "ft" : 8192,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/snippets\/theme--google-analytics.liquid",
+      "oAP" : "\/snippets\/theme--google-site-tag.liquid",
       "oF" : 0
     },
     "\/snippets\/theme--google-tag-manager.liquid" : {

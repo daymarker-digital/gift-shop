@@ -5,10 +5,22 @@
 @use "font" as *;
 @use "heading" as *;
 
+@mixin body-copy-size( $size: '1' ) {
+  @each $name, $value in map.get($theme-body-copy-font-sizes, $size) {
+    @if $name == 'base' {
+      font-size: $value;
+    } @else {
+      @include breakpoint(#{$name}) {
+        font-size: $value;
+      }
+    }
+  }
+}
+
 @mixin body-copy-style( $style: 'primary' ) {
 
   @if $style == 'primary' {
-    @include font-akkurate-mono(400);
+    @include font-akkurat-mono-ll(400);
     line-height: 1.3333;
   }
 
@@ -116,14 +128,3 @@
 
 }
 
-@mixin body-copy-size( $size: '1' ) {
-  @each $name, $value in map.get($theme-body-copy-font-sizes, $size) {
-    @if $name == 'base' {
-      font-size: $value;
-    } @else {
-      @include breakpoint(#{$name}) {
-        font-size: $value;
-      }
-    }
-  }
-}

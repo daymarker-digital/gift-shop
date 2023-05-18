@@ -1,8 +1,8 @@
-@mixin border-solid( $width: 1px, $colour: 'inherit', $side: false ) {
+@mixin border-solid( $width: 1px, $colour: 'currentcolor', $side: false ) {
 
-  $color: currentcolor;
+  $color: #{$colour};
 
-  @if 'inherit' != $colour {
+  @if 'inherit' != $colour and 'transparent' != $colour {
     $color: var(--theme-colour--#{$colour});
   }
 

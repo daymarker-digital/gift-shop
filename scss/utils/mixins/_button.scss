@@ -12,7 +12,7 @@
   $button-heights: map.get( $theme-button-settings, 'heights' );
   $button-widths: map.get( $theme-button-settings, 'widths' );
 
-  @include font-akkurate-mono();
+  @include font-akkurat-mono-ll();
   @each $name, $value in $button-font-sizes {
     @if $name == 'base' {
       font-size: $value;

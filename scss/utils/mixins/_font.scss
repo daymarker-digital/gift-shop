@@ -1,17 +1,17 @@
-@mixin font-akkurate-mono( $weight: normal ) {
-  font-family: 'Akkurat Mono', monospace;
+@mixin font-akkurat-mono-ll( $weight: 400 ) {
+  font-family: var(--theme-font-family--mono-akkurat-mono-ll);
   font-style: normal;
   font-weight: $weight;
 }
 
 @mixin font-not-sorry-serif( $weight: bold ) {
-  font-family: 'Not Sorry Serif', serif;
+  font-family: var(--theme-font-family--serif-not-sorry-serif);
   font-style: normal;
   font-weight: $weight;
 }
 
 @mixin font-sorry-sans( $weight: bold ) {
-  font-family: 'Sorry Sans', sans-serif;
+  font-family: var(--theme-font-family--sans-serif-sorry-sans);
   font-style: normal;
   font-weight: $weight;
 }

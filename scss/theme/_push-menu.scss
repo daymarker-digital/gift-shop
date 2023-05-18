@@ -16,7 +16,7 @@
     }
   }
 
-  @include font-akkurate-mono();
+  @include font-akkurat-mono-ll();
   transition:
     transform var(--theme-transition--duration),
     width var(--theme-transition--duration);

@@ -98,7 +98,7 @@
         width: 100%;
         text-transform: uppercase;
         &-link {
-          @each $name, $value in map.get( $theme-body-copy-font-sizes, '3' ) {
+          @each $name, $value in map.get( $theme-body-copy-font-sizes, 'sm' ) {
             @if $name == 'base' {
               font-size: $value * 0.8;
             } @else {

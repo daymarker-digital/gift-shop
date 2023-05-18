@@ -12,22 +12,22 @@
 
   &--1,
   &--lg {
-    @include body-copy-size('1');
+    @include body-copy-size('lg');
   }
 
   &--2,
   &--md {
-    @include body-copy-size('2');
+    @include body-copy-size('md');
   }
 
   &--3,
   &--sm {
-    @include body-copy-size('3');
+    @include body-copy-size('sm');
   }
 
   &--4,
   &--xs {
-    @include body-copy-size('4');
+    @include body-copy-size('xs');
   }
 
   &--banner {
