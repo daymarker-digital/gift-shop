@@ -53,7 +53,7 @@
             {%- endunless -%}
           </a>
         </div>
-        <div class="{{ snippet_name }}__content">
+        <div class="{{ snippet_name }}__content body-copy--primary">
           {%- liquid
             capture aos_attrs
               render 'aos-attributes', anchor: aos_id, delay: aos_delay, transition: 'fade-left'
@@ -61,7 +61,7 @@
             assign aos_delay = aos_delay | plus: aos_delay_increment
           -%}
           <strong class="{{ snippet_name }}__title" {{ aos_attrs }}>
-            {%- capture snippet_classes %}{{ snippet_name }}__title-link link{%- endcapture -%}
+            {%- capture snippet_classes %}{{ snippet_name }}__title-link body-copy--primary link{%- endcapture -%}
             {%- render 'link', link_classes: snippet_classes, link_title: snippet_title, link_url: snippet_url -%}
           </strong>
           {%- liquid
