@@ -2,39 +2,39 @@
 
   {%- liquid
 
-    assign snippet_type = type | default: ''
-    assign snippet_location = location | default: ''
-    assign snippet_location_name = location_name | default: ''
+    assign snippet_type = type | default: ""
+    assign snippet_location = location | default: ""
+    assign snippet_location_name = location_name | default: ""
 
-    assign address = ''
-    assign city = snippet_location.settings.city | default: ''
-    assign country = snippet_location.settings.country | default: ''
-    assign google_maps_query = 'https://www.google.com/maps/search/?api=1&query='
-    assign postal = snippet_location.settings.postal | default: ''
-    assign region = snippet_location.settings.region | default: ''
-    assign street_address = snippet_location.settings.street_address | default: ''
+    assign address = ""
+    assign city = snippet_location.settings.city | default: ""
+    assign country = snippet_location.settings.country | default: ""
+    assign google_maps_query = "https://www.google.com/maps/search/?api=1&query="
+    assign postal = snippet_location.settings.postal | default: ""
+    assign region = snippet_location.settings.region | default: ""
+    assign street_address = snippet_location.settings.street_address | default: ""
 
     assign address = street_address
     if city != blank
-      assign address = address | append: '<br>' | append: city
+      assign address = address | append: "<br>" | append: city
     endif
     if region != blank
-      assign address = address | append: ' ' | append: region
+      assign address = address | append: " " | append: region
     endif
 
     case snippet_type
-      when 'human'
-        assign address = address | append: ' ' | append: postal
-      when 'human-full'
-        assign address = address | append: '<br>' | append: country
-        assign address = address | append: ' ' | append: postal
+      when "human"
+        assign address = address | append: " " | append: postal
+      when "human-full"
+        assign address = address | append: "<br>" | append: country
+        assign address = address | append: " " | append: postal
     endcase
 
-    if 'directions' == snippet_type
+    if "directions" == snippet_type
       if snippet_location_name != blank
-        assign address = address | append: ', ' | append: snippet_location_name
+        assign address = address | append: ", " | append: snippet_location_name
       endif
-      assign address = address | replace: "<br>", "" | strip | url_encode | prepend: google_maps_query
+      assign address = address | replace: "<br>", " " | strip | url_encode | prepend: google_maps_query
     endif
 
   -%}
