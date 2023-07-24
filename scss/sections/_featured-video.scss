@@ -30,6 +30,15 @@
     width: 100%;
     height: auto;
     position: relative;
+    &.lazyloaded {
+      .featured-video__placholder-image {
+        opacity: 0;
+        z-index: 0;
+      }
+      .featured-video__embed {
+        z-index: 10;
+      }
+    }
   }
 
 }

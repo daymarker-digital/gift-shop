@@ -12,7 +12,13 @@
   assign section_container = section.settings.container | default: 'container'
   assign section_video_aspect_ratio_height = section.settings.video_aspect_ratio_height | default: '9'
   assign section_video_aspect_ratio_width = section.settings.video_aspect_ratio_width | default: '16'
+  assign section_video_inline = true
   assign section_video_placeholder_image = section.settings.video_placeholder_image | default: false
+  assign section_video_style = section.settings.video_style | default: "inline"
+
+  if "background" == section_video_style
+    assign section_video_inline = false
+  endif
 
 -%}
 
@@ -41,7 +47,7 @@
         {% assign video_id = block.settings.video_id | default: '' %}
         {% if video_host != blank and video_id != blank %}
           {% capture snippet_classes %}{{ section_name }}__embed{% endcapture %}
-          {% render 'lazyload-embed', classes: snippet_classes, video_host: video_host, video_id: video_id %}
+          {% render 'lazyload-embed', classes: snippet_classes, video_host: video_host, video_id: video_id, video_inline: section_video_inline %}
         {% endif %}
       {% endfor %}
 
@@ -139,6 +145,16 @@
 			"content": "Video",
 			"type": "header"
 		},
+    {
+      "label": "Video Style",
+      "type": "select",
+      "options": [
+        { "label": "Inline (with playback controls)", "value": "inline" },
+        { "label": "Background", "value": "background" }
+      ],
+      "default": "inline",
+      "id": "video_style"
+    },
     {
       "label": "Video Aspect Ratio (Width)",
       "type": "text",
