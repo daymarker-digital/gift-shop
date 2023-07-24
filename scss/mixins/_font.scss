@@ -11,7 +11,7 @@
 }
 
 @mixin font-sorry-sans( $weight: bold ) {
-  font-family: var(--theme-font-family--serif-sorry-sans);
+  font-family: var(--theme-font-family--sorry-sans);
   font-style: normal;
   font-weight: $weight;
 }
