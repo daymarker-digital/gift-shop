@@ -33,7 +33,13 @@
     <div class="{{ section_name }}__main">
 
       {% for block in section.blocks %}
-
+        {% assign video_host = block.type | default: '' %}
+        {% assign video_id = block.settings.video_id | default: '' %}
+        {% if video_host != blank and video_id != blank %}
+          <div class="{{ section_name }}__embed">
+            {% render 'lazyload-image', video_host: video_host, video_id: video_id %}
+          </div>
+        {% endif %}
       {% endfor %}
 
       {% if section_video_placeholder_image %}
@@ -152,9 +158,9 @@
       "type": "vimeo",
       "settings": [
         {
-          "label": "Vimeo ID",
+          "label": "Video ID",
           "type": "text",
-          "id": "vimeo_id"
+          "id": "video_id"
         }
       ]
     }
