@@ -8,6 +8,9 @@
   assign aos_delay_increment = 250
   assign aos_id = section_id
 
+  assign section_carousel_animation_duration = section.settings.carousel_animation_duration | default: 500
+  assign section_carousel_autoplay = section.settings.carousel_autoplay | default: 500
+  assign section_carousel_gap = section.settings.carousel_gap | default: 20
   assign section_cols = section.settings.cols | default: 'col-12'
   assign section_container = section.settings.container | default: 'container'
   assign section_instagram_account = section.settings.instagram_account | default: ""
@@ -33,18 +36,23 @@
   {%- render 'bs-container', state: 'open', col: section_cols, container: section_container -%}
     <div class="{{ section_name }}__main">
 
-      <h2 class="{{ section_name }}__heading">Follow us <a href="https://www.instagram.com/{{ section_instagram_account }}" target="_blank" title="Follow us on Instagram">@{{ section_instagram_account }}</a></h2>
-
       <div
         class="{{ section_name }}__main js--instagram-feed"
         data-instagram-feed-account="{{ section_instagram_account }}"
         data-instagram-feed-limit="{{ section_instagram_feed_limit }}"
       >
-        <div class="glide js--glide" id="{{ section_instagram_glide_id }}" data-glide-style="{{ section_name }}">
+        <div
+          class="glide js--glide"
+          id="{{ section_instagram_glide_id }}"
+          data-glide-animation-duration="{{ section_carousel_animation_duration }}"
+          data-glide-autoplay="{{ section_carousel_autoplay }}"
+          data-glide-gap="{{ section_carousel_gap }}"
+          data-glide-style="{{ section_name }}"
+        >
           <div class="glide__track" data-glide-el="track">
             <ul class="glide__slides">
 
-              {%- for i in range -%}
+              {%- for i in section_instagram_feed_range -%}
                 <li class='glide__slide'>
                   <div class='{{ section_name }}__item' data-index='{{ i }}'>
                     <a class='{{ section_name }}__link link' href='' target='_blank' title='Follow {{ section_instagram_account }} on Instagram'>
@@ -100,6 +108,37 @@
 		  ],
 		  "default": "white",
 		  "id": "background"
+		},
+    {
+			"content": "Carousel",
+			"type": "header"
+		},
+    {
+			"label": "Carousel Animation Duration",
+			"type": "range",
+			"min": 0,
+			"max": 2500,
+			"step": 100,
+			"default": 500,
+      "id": "carousel_animation_duration"
+		},
+    {
+			"label": "Carousel Autoplay",
+			"type": "range",
+			"min": 0,
+			"max": 7500,
+			"step": 100,
+			"default": 3200,
+      "id": "section_carousel_autoplay"
+		},
+    {
+			"label": "Carousel Gap",
+			"type": "range",
+			"min": 0,
+			"max": 100,
+			"step": 1,
+			"default": 24,
+      "id": "carousel_gap"
 		},
     {
 			"content": "Container",

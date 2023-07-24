@@ -6,6 +6,56 @@ const events = [ "build.after", "run.after" ];
 const elements = document.querySelectorAll( '.js--glide' ) || [];
 const gliders = {};
 
+const UpdateNavigationStateBasedOnGlideSize = ( Glide, Components, Events ) => {
+
+  var updateButtons = {
+    mount () {},
+    method () {
+
+      let length = Components.Sizes.length;
+      let index0 = Glide.index;
+      let index = Glide.index + 1;
+      let next = document.querySelectorAll( `[data-glide-navigation="${Glide.selector}"].next, [data-target="${Glide.selector}"].next` ) || [];
+      let prev = document.querySelectorAll( `[data-glide-navigation="${Glide.selector}"].prev, [data-target="${Glide.selector}"].prev` ) || [];
+
+      if ( 1 === index ) {
+        prev.forEach( button => {
+          button.classList.add('disabled');
+        });
+        next.forEach( button => {
+          button.classList.remove('disabled');
+        });
+      }
+
+      if ( length === index ) {
+        prev.forEach( button => {
+          button.classList.remove('disabled');
+        });
+        next.forEach( button => {
+          button.classList.add('disabled');
+        });
+      }
+
+      if ( length > 2 && ( index > 1 ) && ( index < length ) ) {
+        prev.forEach( button => {
+          button.classList.remove('disabled');
+        });
+        next.forEach( button => {
+          button.classList.remove('disabled');
+        });
+      }
+
+    }
+  }
+
+  Events.on( events, (event) => {
+    updateButtons.method()
+  })
+
+  return updateButtons;
+
+}
+
 const createGliderFromElement = ( element = {} ) => {
 
   let element_id = element?.id ?? '';
@@ -27,6 +77,36 @@ const createGliderFromElement = ( element = {} ) => {
       options.hoverpause = true;
       break;
     }
+    case 'instagram-feed': {
+      options.breakpoints = {
+        575: {
+          peek: { before: 35, after: 35 },
+          perView: 3,
+        },
+        767: {
+          peek: { before: 65, after: 65 },
+          perView: 3,
+        },
+        991: {
+          peek: { before: 35, after: 35 },
+          perView: 4,
+        },
+        1199: {
+          peek: { before: 65, after: 65 },
+          perView: 4,
+        },
+        1399: {
+          peek: { before: 35, after: 35 },
+          perView: 5,
+        },
+        9999: {
+          peek: { before: 65, after: 65 },
+          perView: 6,
+        }
+      };
+      options.gap = 24;
+      break;
+    }
   }
 
   let glide = new Glide( "#" + element_id, options );
@@ -44,23 +124,25 @@ const createGliderFromElement = ( element = {} ) => {
     }
   });
 
-  ( document.querySelectorAll( '[data-glide-navigation="#' + element_id + '"].next, [data-target="#' + element_id + '"].next' ) || [] ).forEach( button => {
+  ( document.querySelectorAll( `[data-glide-navigation="#${element_id}"].next, [data-target="#${element_id}"].next` ) || [] ).forEach( button => {
     button.addEventListener("click", function () {
       glide.go(">");
     });
   });
 
-  ( document.querySelectorAll( '[data-glide-navigation="#' + element_id + '"].prev, [data-target="#' + element_id + '"].prev' ) || [] ).forEach( button => {
+  ( document.querySelectorAll( `[data-glide-navigation="#${element_id}"].prev, [data-target="#${element_id}"].prev` ) || [] ).forEach( button => {
     button.addEventListener("click", function () {
       glide.go("<");
     });
   });
 
+  // glide.mount({ UpdateNavigationStateBasedOnGlideSize });
   glide.mount();
 
+  // FIX for when single slide does not fill 100% of glider
   setTimeout( () => {
     glide.update();
-  }, 250 );
+  }, 175 );
 
   gliders[element_id] = { element_id, glide };
 
