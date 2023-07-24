@@ -373,11 +373,18 @@
           "settings": {
             "text": "Everything Must Go"
           }
+        },
+        "4a2a9800-6974-4bef-93fc-155fc2e37460": {
+          "type": "marquee",
+          "settings": {
+            "text": "Are You Nuts? Buy Something."
+          }
         }
       },
       "block_order": [
         "42f080b1-1262-427b-9755-d1ec3698d54f",
-        "a748f7c1-4594-451c-8416-39c63cdffa1f"
+        "a748f7c1-4594-451c-8416-39c63cdffa1f",
+        "4a2a9800-6974-4bef-93fc-155fc2e37460"
       ],
       "settings": {
         "anchor_id": "",
