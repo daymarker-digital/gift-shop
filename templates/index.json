@@ -10,7 +10,8 @@
     "1661196025228eb79a",
     "d6939208-a96c-4799-9a1a-2c8f4a151b8d",
     "cf2b7ca3-307b-4972-95ef-b0994d7525b1",
-    "6929c9cc-944c-4645-b944-e482c070dd52"
+    "6929c9cc-944c-4645-b944-e482c070dd52",
+    "8dfbe13e-08d0-45c9-afb3-619776df0993"
   ],
   "sections": {
     "16638658704a46d741": {
@@ -64,8 +65,8 @@
         "background": "white",
         "marquee_background": "yellow",
         "marquee_direction": "ltr",
-        "marquee_duration": 35,
-        "marquee_font_size": 40,
+        "marquee_duration": 500,
+        "marquee_font_size": 76,
         "marquee_font_style": "not-sorry-serif",
         "marquee_gap": 75,
         "marquee_padding_top": 36,
@@ -478,6 +479,19 @@
         "grid_gutter": 24,
         "padding_top": 52,
         "padding_bottom": 0,
+        "text_colour": "dark"
+      }
+    },
+    "8dfbe13e-08d0-45c9-afb3-619776df0993": {
+      "type": "featured-products",
+      "settings": {
+        "anchor_id": "",
+        "background": "white",
+        "container": "container",
+        "grid_layout": "two-column",
+        "grid_gutter": 20,
+        "padding_top": 36,
+        "padding_bottom": 36,
         "text_colour": "dark"
       }
     }
