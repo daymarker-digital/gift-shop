@@ -92,7 +92,7 @@
       "settings": {
         "anchor_id": "",
         "background": "white",
-        "container": "container",
+        "container": "full-width",
         "padding_top": 0,
         "padding_bottom": 0,
         "video_aspect_ratio_width": "1718",
