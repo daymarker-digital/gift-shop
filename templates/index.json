@@ -104,8 +104,8 @@
       ],
       "settings": {
         "anchor_id": "",
-        "background": "yellow",
-        "marquee_background": "black",
+        "background": "white",
+        "marquee_background": "yellow",
         "marquee_direction": "ltr",
         "marquee_duration": 35,
         "marquee_font_size": 40,
@@ -116,7 +116,7 @@
         "padding_top": 12,
         "padding_bottom": 12,
         "text_case": "uppercase",
-        "text_colour": "light"
+        "text_colour": "dark"
       }
     },
     "16611958947ef1ecd7": {
