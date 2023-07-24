@@ -9,12 +9,12 @@
   assign aos_id = section_id
 
   assign section_container = section.settings.container | default: 'container'
+  assign section_marquee_blocks = section.blocks | where: 'type', 'marquee' | default: false
   assign section_marquee_direction = section.settings.marquee_direction | default: ''
   assign section_marquee_duration = section.settings.marquee_duration | default: 1000
+  assign section_marquee_font_size = section.settings.marquee_font_size | default: ''
   assign section_marquee_gap = section.settings.marquee_gap | default: 0
-  assign section_marquee_blocks = section.blocks | where: 'type', 'marquee' | default: false
   assign section_marquee_range = (1..10)
-  assign section_marquee_size = section.settings.marquee_size | default: ''
   assign section_marquee_style = section.settings.marquee_style | default: ''
 
   assign section_classes = section_classes | append: " " | append: section_name | append: "--" | append: marquee_direction
@@ -96,6 +96,57 @@
 		  ],
 		  "default": "white",
 		  "id": "background"
+		},
+    {
+			"content": "Marquee",
+			"type": "header"
+		},
+    {
+		  "label": "Marquee Direction",
+		  "type": "select",
+		  "options": [
+        { "label": "Left to Right", "value": "ltr" },
+			  { "label": "Right to Left", "value": "rtl" }
+		  ],
+		  "default": "ltr",
+		  "id": "marquee_direction"
+		},
+    {
+		  "label": "Marquee Duration",
+		  "type": "range",
+			"min": 0,
+			"max": 5000,
+			"step": 100,
+			"default": 2500,
+		  "id": "marquee_duration"
+		},
+    {
+		  "label": "Marquee Font Size",
+		  "type": "range",
+			"min": 10,
+			"max": 200,
+			"step": 2,
+			"default": 30,
+		  "id": "marquee_font_size"
+		},
+    {
+		  "label": "Marquee Gap",
+		  "type": "range",
+			"min": 0,
+			"max": 200,
+			"step": 5,
+			"default": 25,
+		  "id": "marquee_gap"
+		},
+    {
+		  "label": "Marquee Style",
+		  "type": "select",
+		  "options": [
+        { "label": "Sorry Sans", "value": "sorry-sans" },
+			  { "label": "Not Sorry Serif", "value": "not-sorry-serif" }
+		  ],
+		  "default": "sorry-sans",
+		  "id": "marquee_style"
 		},
     {
 			"content": "Padding",
