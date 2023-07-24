@@ -61,3 +61,98 @@
     </div>
   </div>
 </div>
+
+{% schema %}
+{
+  "name": "Marquee",
+  "tag": "section",
+  "class": "section section--marquee",
+  "settings": [
+     {
+			"content": "Settings",
+			"type": "header"
+		},
+    {
+      "content": "Anchor",
+      "type": "header"
+    },
+    {
+      "label": "Anchor ID",
+      "info": "Optionally include a unique ID so that sections within the page can be linked to. Anchor IDs must be all lowercase, unique and replaced empty spaces with hyphens. For example: my-great-section-anchor",
+      "type": "text",
+      "id": "anchor_id"
+    },
+    {
+			"content": "Background",
+			"type": "header"
+		},
+    {
+		  "label": "Background",
+		  "type": "select",
+		  "options": [
+        { "label": "Black", "value": "black" },
+			  { "label": "White", "value": "white" },
+        { "label": "Yellow", "value": "yellow" }
+		  ],
+		  "default": "white",
+		  "id": "background"
+		},
+    {
+			"content": "Padding",
+			"type": "header"
+		},
+		{
+			"label": "Top Padding",
+			"type": "range",
+			"min": 0,
+			"max": 300,
+			"step": 4,
+			"default": 36,
+      "id": "padding_top"
+		},
+		{
+			"label": "Bottom Padding",
+			"type": "range",
+			"min": 0,
+			"max": 300,
+			"step": 4,
+			"default": 36,
+      "id": "padding_bottom"
+		},
+    {
+      "content": "Text",
+      "type": "header"
+    },
+    {
+      "label": "Text Colour",
+      "type": "select",
+      "options": [
+        { "label": "Dark", "value": "dark" },
+        { "label": "Light", "value": "light" }
+      ],
+      "default": "dark",
+      "id": "text_colour"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Marquee",
+      "type": "marquee",
+      "limit": 9,
+      "settings": [
+        {
+          "label": "Text",
+          "type": "text",
+          "id": "text"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Marquee",
+      "category": "Text"
+    }
+  ]
+}
+{% endschema %}
