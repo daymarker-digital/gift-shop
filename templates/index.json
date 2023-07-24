@@ -119,7 +119,7 @@
         "carousel_animation_duration": 500,
         "section_carousel_autoplay": 2500,
         "carousel_gap": 24,
-        "container": "container",
+        "container": "full-width",
         "instagram_account": "verypoliteagency",
         "instagram_feed_limit": 12,
         "padding_top": 0,
