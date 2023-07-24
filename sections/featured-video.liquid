@@ -32,6 +32,23 @@
   {% render 'bs-container', state: 'open', col: section_cols, container: section_container %}
     <div class="{{ section_name }}__main">
 
+      {% for block in section.blocks %}
+
+      {% endfor %}
+
+      {% if section_video_placeholder_image %}
+        <div class="{{ section_name }}__placholder-image">
+          {%
+            render 'lazyload-image',
+            alt_text: 'Great Picture',
+            delay: 0,
+            image: section_video_placeholder_image,
+            preload: true,
+            responsive: true,
+            duration: 350,
+          %}
+        </div>
+      {% endif %}
 
     </div>
   {% render 'bs-container', state: 'closed', col: section_cols, container: section_container %}
@@ -122,6 +139,11 @@
       "label": "Video Aspect Ratio (Height)",
       "type": "text",
       "id": "video_aspect_ratio_height"
+    },
+    {
+      "label": "Video Placeholder Image",
+      "type": "image_picker",
+      "id": "video_placeholder_image"
     }
   ],
   "blocks": [
