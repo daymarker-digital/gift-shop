@@ -1,0 +1,22 @@
+
+      <?php if ( !empty($marquee_items) ) : ?>
+        <div class="<?= $block_name; ?>__group">
+          <?php for ( $x = 0; $x <= 10; $x++ ) : ?>
+            <?php if ( 0 === $x ) : ?>
+              <?= $THEME->render_marquee_items([ 'hidden' => false, 'items' => $marquee_items ]); ?>
+            <?php else : ?>
+              <?= $THEME->render_marquee_items([ 'hidden' => true, 'items' => $marquee_items ]); ?>
+            <?php endif; ?>
+          <?php endfor; ?>
+        </div>
+        <div class="<?= $block_name; ?>__group" aria-hidden="true">
+          <?php for ( $x = 0; $x <= 10; $x++ ) : ?>
+            <?= $THEME->render_marquee_items([ 'hidden' => false, 'items' => $marquee_items ]); ?>
+          <?php endfor; ?>
+        </div>
+      <?php endif; ?>
+
+    </div>
+  </section>
+
+<?php endif; ?>

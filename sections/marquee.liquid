@@ -9,13 +9,13 @@
   assign aos_id = section_id
 
   assign section_container = section.settings.container | default: 'container'
-  assign marquee_direction = section.settings.marquee_direction | default: ''
-  assign marquee_duration = section.settings.marquee_duration | default: 1000
-  assign marquee_gap = section.settings.marquee_gap | default: 0
-  assign marquee_blocks = section.blocks | where: 'type', 'marquee' | default: false
-  assign marquee_range = (1..10)
-  assign marquee_size = section.settings.marquee_size | default: ''
-  assign marquee_style = section.settings.marquee_style | default: ''
+  assign section_marquee_direction = section.settings.marquee_direction | default: ''
+  assign section_marquee_duration = section.settings.marquee_duration | default: 1000
+  assign section_marquee_gap = section.settings.marquee_gap | default: 0
+  assign section_marquee_blocks = section.blocks | where: 'type', 'marquee' | default: false
+  assign section_marquee_range = (1..10)
+  assign section_marquee_size = section.settings.marquee_size | default: ''
+  assign section_marquee_style = section.settings.marquee_style | default: ''
 
   assign section_classes = section_classes | append: " " | append: section_name | append: "--" | append: marquee_direction
   assign section_classes = section_classes | append: " " | append: section_name | append: "--" | append: marquee_style
@@ -31,8 +31,8 @@
 {%- style -%}
 
   #{{ section_id }} {
-    --marquee-duration: {{ marquee_direction }}s;
-    --marquee-gap: {{ marquee_gap }}px;
+    --marquee-duration: {{ section_marquee_direction }}s;
+    --marquee-gap: {{ section_marquee_gap }}px;
   }
 
   @media screen and (min-width: 992px) {}
@@ -42,11 +42,20 @@
 <div class="{{ section_classes }}" id="{{ section_id }}">
   <div class="{{ section_name }}__layout">
     <div class="{{ section_name }}__main" {{ aos_attrs }}>
-      {%- if marquee_blocks.size > 0 -%}
+      {%- if section_marquee_blocks.size > 0 -%}
         <div class="{{ section_name }}__group">
-          {% for i in marquee_range %}
-            {{ i }}
-          {% endfor %}
+          {%- for i in section_marquee_range -%}
+            {%- if 1 == i -%}
+              {%- render 'marquee-items', hidden: false, marquee_items: section_marquee_blocks -%}
+            {%- else -%}
+              {%- render 'marquee-items', hidden: true, marquee_items: section_marquee_blocks -%}
+            {%- endif -%}
+          {%- endfor -%}
+        </div>
+        <div class="{{ section_name }}__group" aria-hidden="true">
+          {%- for i in section_marquee_range -%}
+            {%- render 'marquee-items', hidden: false, marquee_items: section_marquee_blocks -%}
+          {%- endfor -%}
         </div>
       {%- endif -%}
     </div>
