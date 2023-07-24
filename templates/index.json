@@ -128,10 +128,17 @@
           "settings": {
             "text": "Fascinating Stuff"
           }
+        },
+        "7776c19e-0fb6-4b2c-8395-5f9431cb26b1": {
+          "type": "marquee",
+          "settings": {
+            "text": "Legend"
+          }
         }
       },
       "block_order": [
-        "bad22ee9-62f6-482a-8238-16bf3b8671b8"
+        "bad22ee9-62f6-482a-8238-16bf3b8671b8",
+        "7776c19e-0fb6-4b2c-8395-5f9431cb26b1"
       ],
       "settings": {
         "anchor_id": "",
