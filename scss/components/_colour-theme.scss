@@ -1,6 +1,6 @@
-@use '../utils/variables' as *;
-@use '../utils/functions/colour-theme' as *;
-@use '../utils/mixins/colour-theme' as *;
+@use "../variables" as *;
+@use '../functions/colour-theme' as *;
+@use '../mixins/colour-theme' as *;
 
 [data-colour-theme='blue'] {
   @include colour-theme('blue');

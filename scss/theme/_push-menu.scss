@@ -1,7 +1,7 @@
-@use 'sass:map';
-@use '../utils/variables' as *;
-@use '../utils/mixins/breakpoint' as *;
-@use '../utils/mixins/font' as *;
+@use "sass:map";
+@use "../variables" as *;
+@use "../mixins/breakpoint" as *;
+@use '../mixins/font' as *;
 
 
 .push-menu {

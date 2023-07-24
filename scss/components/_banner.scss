@@ -1,8 +1,8 @@
 @use 'sass:color';
-@use 'sass:map';
-@use '../utils/variables' as *;
-@use "../utils/mixins/body-copy" as *;
-@use "../utils/mixins/breakpoint" as *;
+@use "sass:map";
+@use "../variables" as *;
+@use "../mixins/body-copy" as *;
+@use "../mixins/breakpoint" as *;
 
 .banner {
 

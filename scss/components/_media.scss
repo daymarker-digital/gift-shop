@@ -1,5 +1,5 @@
-@use '../utils/variables' as *;
-@use "../utils/mixins/breakpoint" as *;
+@use "../variables" as *;
+@use "../mixins/breakpoint" as *;
 
 .media {
 

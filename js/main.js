@@ -30,11 +30,3 @@ window.addEventListener( 'load', function (e) {
 window.addEventListener( 'resize', Tools.debounce(() => {
   Tools.setElementsHeightToCSSVariable();
 }, 300));
-
-window.addEventListener( 'resize', Tools.throttle(() => {}, 300));
-
-window.addEventListener( 'scroll', Tools.debounce(() => {}, 300));
-
-window.addEventListener( 'scroll', Tools.throttle(() => {}, 300));
-
-

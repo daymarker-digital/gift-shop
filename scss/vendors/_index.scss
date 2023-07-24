@@ -1,5 +1,5 @@
 @use "sass:map";
-@use '../utils/variables' as *;
+@use "../variables" as *;
 @import "../node_modules/aos/dist/aos";
 @import "../node_modules/@glidejs/glide/dist/css/glide.core.min";
 
