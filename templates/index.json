@@ -116,8 +116,8 @@
       "settings": {
         "anchor_id": "",
         "background": "white",
-        "carousel_animation_duration": 500,
-        "section_carousel_autoplay": 2500,
+        "carousel_animation_duration": 400,
+        "carousel_autoplay": 2800,
         "carousel_gap": 24,
         "container": "full-width",
         "instagram_account": "verypoliteagency",
