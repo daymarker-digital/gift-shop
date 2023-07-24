@@ -1,9 +1,9 @@
 {
   "order": [
     "16638658704a46d741",
-    "a70f1a19-bdf0-4839-8acc-dcc59523bd7a",
-    "06f1c7ee-e277-4b25-b3de-8452a04dd605",
     "10b9faaa-619f-491c-a137-f00b15905306",
+    "06f1c7ee-e277-4b25-b3de-8452a04dd605",
+    "a70f1a19-bdf0-4839-8acc-dcc59523bd7a",
     "1661195827dff74e88",
     "16611958947ef1ecd7",
     "16611959936ca1502e",
@@ -31,75 +31,6 @@
         "padding_top": 0,
         "padding_bottom": 28,
         "text_colour": "dark"
-      }
-    },
-    "a70f1a19-bdf0-4839-8acc-dcc59523bd7a": {
-      "type": "marquee",
-      "blocks": {
-        "42f080b1-1262-427b-9755-d1ec3698d54f": {
-          "type": "marquee",
-          "settings": {
-            "text": "Sale"
-          }
-        },
-        "a748f7c1-4594-451c-8416-39c63cdffa1f": {
-          "type": "marquee",
-          "settings": {
-            "text": "Everything Must Go"
-          }
-        },
-        "4a2a9800-6974-4bef-93fc-155fc2e37460": {
-          "type": "marquee",
-          "settings": {
-            "text": "Are You Nuts? Buy Something"
-          }
-        }
-      },
-      "block_order": [
-        "42f080b1-1262-427b-9755-d1ec3698d54f",
-        "a748f7c1-4594-451c-8416-39c63cdffa1f",
-        "4a2a9800-6974-4bef-93fc-155fc2e37460"
-      ],
-      "settings": {
-        "anchor_id": "",
-        "background": "white",
-        "marquee_background": "yellow",
-        "marquee_direction": "ltr",
-        "marquee_duration": 500,
-        "marquee_font_size": 76,
-        "marquee_font_style": "not-sorry-serif",
-        "marquee_gap": 75,
-        "marquee_padding_top": 36,
-        "marquee_padding_bottom": 36,
-        "padding_top": 40,
-        "padding_bottom": 0,
-        "text_case": "uppercase",
-        "text_colour": "dark"
-      }
-    },
-    "06f1c7ee-e277-4b25-b3de-8452a04dd605": {
-      "type": "featured-video",
-      "blocks": {
-        "a1f1ef28-d3e7-45e1-87d7-85bad219567d": {
-          "type": "vimeo",
-          "settings": {
-            "video_id": "398063627"
-          }
-        }
-      },
-      "block_order": [
-        "a1f1ef28-d3e7-45e1-87d7-85bad219567d"
-      ],
-      "settings": {
-        "anchor_id": "",
-        "background": "white",
-        "container": "full-width",
-        "padding_top": 0,
-        "padding_bottom": 0,
-        "video_style": "background",
-        "video_aspect_ratio_width": "16",
-        "video_aspect_ratio_height": "9",
-        "video_placeholder_image": "shopify:\/\/shop_images\/Maater-Shopify-Home.png"
       }
     },
     "10b9faaa-619f-491c-a137-f00b15905306": {
@@ -151,6 +82,75 @@
         "padding_bottom": 0,
         "text_case": "uppercase",
         "text_colour": "light"
+      }
+    },
+    "06f1c7ee-e277-4b25-b3de-8452a04dd605": {
+      "type": "featured-video",
+      "blocks": {
+        "a1f1ef28-d3e7-45e1-87d7-85bad219567d": {
+          "type": "vimeo",
+          "settings": {
+            "video_id": "398063627"
+          }
+        }
+      },
+      "block_order": [
+        "a1f1ef28-d3e7-45e1-87d7-85bad219567d"
+      ],
+      "settings": {
+        "anchor_id": "",
+        "background": "white",
+        "container": "full-width",
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "video_style": "background",
+        "video_aspect_ratio_width": "16",
+        "video_aspect_ratio_height": "9",
+        "video_placeholder_image": "shopify:\/\/shop_images\/Maater-Shopify-Home.png"
+      }
+    },
+    "a70f1a19-bdf0-4839-8acc-dcc59523bd7a": {
+      "type": "marquee",
+      "blocks": {
+        "42f080b1-1262-427b-9755-d1ec3698d54f": {
+          "type": "marquee",
+          "settings": {
+            "text": "Sale"
+          }
+        },
+        "a748f7c1-4594-451c-8416-39c63cdffa1f": {
+          "type": "marquee",
+          "settings": {
+            "text": "Everything Must Go"
+          }
+        },
+        "4a2a9800-6974-4bef-93fc-155fc2e37460": {
+          "type": "marquee",
+          "settings": {
+            "text": "Are You Nuts? Buy Something"
+          }
+        }
+      },
+      "block_order": [
+        "42f080b1-1262-427b-9755-d1ec3698d54f",
+        "a748f7c1-4594-451c-8416-39c63cdffa1f",
+        "4a2a9800-6974-4bef-93fc-155fc2e37460"
+      ],
+      "settings": {
+        "anchor_id": "",
+        "background": "white",
+        "marquee_background": "yellow",
+        "marquee_direction": "ltr",
+        "marquee_duration": 500,
+        "marquee_font_size": 76,
+        "marquee_font_style": "not-sorry-serif",
+        "marquee_gap": 75,
+        "marquee_padding_top": 36,
+        "marquee_padding_bottom": 36,
+        "padding_top": 40,
+        "padding_bottom": 0,
+        "text_case": "uppercase",
+        "text_colour": "dark"
       }
     },
     "1661195827dff74e88": {
