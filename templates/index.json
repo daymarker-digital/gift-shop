@@ -123,6 +123,17 @@
     },
     "06f1c7ee-e277-4b25-b3de-8452a04dd605": {
       "type": "featured-video",
+      "blocks": {
+        "a1f1ef28-d3e7-45e1-87d7-85bad219567d": {
+          "type": "vimeo",
+          "settings": {
+            "vimeo_id": "398062673"
+          }
+        }
+      },
+      "block_order": [
+        "a1f1ef28-d3e7-45e1-87d7-85bad219567d"
+      ],
       "settings": {
         "anchor_id": "",
         "background": "white",
