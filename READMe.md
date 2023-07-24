@@ -9,8 +9,10 @@ $ shopify theme dev --store=https://weareverypolite.myshopify.com
 ## Todo
 ## Phase 1.0
 ### General
-- [ ] Add sort-filter to main-collection-products.liquid
+- [x] Add marquee.liquid to sections
+- [x] Add feature-video.liquid to sections
 - [ ] Fix pagination bug on main-list-collections.liquid
+- [ ] Add sort-filter to main-collection-products.liquid
 
 ### Templates
 - [ ] 404
