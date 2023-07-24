@@ -116,11 +116,14 @@
       "settings": {
         "anchor_id": "",
         "background": "white",
+        "carousel_animation_duration": 500,
+        "section_carousel_autoplay": 3200,
+        "carousel_gap": 24,
         "container": "container",
         "instagram_account": "verypoliteagency",
         "instagram_feed_limit": 12,
-        "padding_top": 44,
-        "padding_bottom": 44
+        "padding_top": 0,
+        "padding_bottom": 0
       }
     },
     "a70f1a19-bdf0-4839-8acc-dcc59523bd7a": {
