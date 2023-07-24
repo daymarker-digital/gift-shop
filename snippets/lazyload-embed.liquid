@@ -1,5 +1,22 @@
 {%- if video_id and video_id != blank -%}
 
+  {% comment %}
+    Renders an iframe
+
+    Accepts:
+    - video_host: {String} Video host, lowercase either "vimeo" or "youtube"
+    - video_id: {String} Unique video ID from either Vimeo or YouTube
+    - video_inline: {Boolean} Conditionally display controls or embed video as a looping background asset
+
+    Usage:
+    {%-
+      render lazyload-embed',
+        video_host: "vimeo",
+        video_id: "1234567",
+        video_inline: false
+    -%}
+  {% endcomment %}
+
   {%- liquid
 
     assign snippet_name = 'lazyload-embed'
@@ -10,8 +27,8 @@
     assign aos_delay_increment = 250
     assign aos_id = snippet_id
 
-    assign snippet_video_id = video_id
-    assign snippet_video_host = video_host | default: 'vimeo'
+    assign snippet_video_id = video_id | default: ""
+    assign snippet_video_host = video_host | default: "vimeo"
     assign snippet_video_inline = video_inline | default: false
     assign snippet_video_src = ''
 
