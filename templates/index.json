@@ -1,10 +1,10 @@
 {
   "order": [
     "16638658704a46d741",
-    "1661195827dff74e88",
     "a70f1a19-bdf0-4839-8acc-dcc59523bd7a",
     "06f1c7ee-e277-4b25-b3de-8452a04dd605",
     "10b9faaa-619f-491c-a137-f00b15905306",
+    "1661195827dff74e88",
     "16611958947ef1ecd7",
     "16611959936ca1502e",
     "1661196025228eb79a",
@@ -29,51 +29,6 @@
         "image_height_desktop": "adapt",
         "padding_top": 0,
         "padding_bottom": 28,
-        "text_colour": "dark"
-      }
-    },
-    "1661195827dff74e88": {
-      "type": "featured-products",
-      "blocks": {
-        "52cc44ac-ba5f-4723-83c9-c4c2d09a93df": {
-          "type": "product",
-          "settings": {
-            "product": "natures™-boxy-crew"
-          }
-        },
-        "f55b6b53-7f51-4c9b-a71f-5e967d2ad292": {
-          "type": "product",
-          "settings": {
-            "product": "voyager-tee-in-supernova"
-          }
-        },
-        "8e33acf9-4964-464e-9957-ce064038f657": {
-          "type": "product",
-          "settings": {
-            "product": "smile-tee"
-          }
-        },
-        "b439fcdb-2b20-4e92-bcc6-749852735c97": {
-          "type": "product",
-          "settings": {
-            "product": "dont-ask-me-mug"
-          }
-        }
-      },
-      "block_order": [
-        "52cc44ac-ba5f-4723-83c9-c4c2d09a93df",
-        "f55b6b53-7f51-4c9b-a71f-5e967d2ad292",
-        "8e33acf9-4964-464e-9957-ce064038f657",
-        "b439fcdb-2b20-4e92-bcc6-749852735c97"
-      ],
-      "settings": {
-        "anchor_id": "",
-        "background": "white",
-        "container": "container-fluid",
-        "grid_layout": "two-column",
-        "grid_gutter": 24,
-        "padding_top": 24,
-        "padding_bottom": 0,
         "text_colour": "dark"
       }
     },
@@ -127,7 +82,7 @@
         "a1f1ef28-d3e7-45e1-87d7-85bad219567d": {
           "type": "vimeo",
           "settings": {
-            "vimeo_id": "398062673"
+            "video_id": "398063342"
           }
         }
       },
@@ -193,6 +148,51 @@
         "padding_bottom": 0,
         "text_case": "uppercase",
         "text_colour": "light"
+      }
+    },
+    "1661195827dff74e88": {
+      "type": "featured-products",
+      "blocks": {
+        "52cc44ac-ba5f-4723-83c9-c4c2d09a93df": {
+          "type": "product",
+          "settings": {
+            "product": "natures™-boxy-crew"
+          }
+        },
+        "f55b6b53-7f51-4c9b-a71f-5e967d2ad292": {
+          "type": "product",
+          "settings": {
+            "product": "voyager-tee-in-supernova"
+          }
+        },
+        "8e33acf9-4964-464e-9957-ce064038f657": {
+          "type": "product",
+          "settings": {
+            "product": "smile-tee"
+          }
+        },
+        "b439fcdb-2b20-4e92-bcc6-749852735c97": {
+          "type": "product",
+          "settings": {
+            "product": "dont-ask-me-mug"
+          }
+        }
+      },
+      "block_order": [
+        "52cc44ac-ba5f-4723-83c9-c4c2d09a93df",
+        "f55b6b53-7f51-4c9b-a71f-5e967d2ad292",
+        "8e33acf9-4964-464e-9957-ce064038f657",
+        "b439fcdb-2b20-4e92-bcc6-749852735c97"
+      ],
+      "settings": {
+        "anchor_id": "",
+        "background": "white",
+        "container": "container-fluid",
+        "grid_layout": "two-column",
+        "grid_gutter": 24,
+        "padding_top": 24,
+        "padding_bottom": 0,
+        "text_colour": "dark"
       }
     },
     "16611958947ef1ecd7": {
