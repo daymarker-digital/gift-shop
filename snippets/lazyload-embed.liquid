@@ -18,24 +18,24 @@
   -%}
 
   {% case snippet_video_host %}
-      {% when 'vimeo' %}
-        {%- liquid
-          assign snippet_video_src = 'https://player.vimeo.com/video/' | append: snippet_video_id
-          if snippet_video_inline
-            assign snippet_video_src = snippet_video_src | append: '?controls=1&keyboard=1&background=0&loop=0'
-          else
-            assign snippet_video_src = snippet_video_src | append: '?controls=0&keyboard=0&background=1&loop=1'
-          endif
-        -%}
-      {% when 'youtube' %}
-        {%- liquid
-          assign snippet_video_src = 'https://www.youtube.com/embed/' | append: snippet_video_id
-          if snippet_video_inline
-            assign snippet_video_src = snippet_video_src | append: '?controls=1&disablekb=0&loop=0'
-          else
-            assign snippet_video_src = snippet_video_src | append: '?controls=0&disablekb=1&loop=1'
-          endif
-        -%}
+    {% when 'vimeo' %}
+      {%- liquid
+        assign snippet_video_src = 'https://player.vimeo.com/video/' | append: snippet_video_id
+        if snippet_video_inline
+          assign snippet_video_src = snippet_video_src | append: '?controls=1&keyboard=1&background=0&loop=0'
+        else
+          assign snippet_video_src = snippet_video_src | append: '?controls=0&keyboard=0&background=1&loop=1'
+        endif
+      -%}
+    {% when 'youtube' %}
+      {%- liquid
+        assign snippet_video_src = 'https://www.youtube.com/embed/' | append: snippet_video_id
+        if snippet_video_inline
+          assign snippet_video_src = snippet_video_src | append: '?controls=1&disablekb=0&loop=0'
+        else
+          assign snippet_video_src = snippet_video_src | append: '?controls=0&disablekb=1&loop=1'
+        endif
+      -%}
   {% endcase %}
 
   <iframe

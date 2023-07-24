@@ -40,9 +40,8 @@
         {% assign video_host = block.type | default: '' %}
         {% assign video_id = block.settings.video_id | default: '' %}
         {% if video_host != blank and video_id != blank %}
-          <div class="{{ section_name }}__embed">
-            {% render 'lazyload-embed', video_host: video_host, video_id: video_id %}
-          </div>
+          {% capture snippet_classes %}{{ section_name }}__embed{% endcapture %}
+          {% render 'lazyload-embed', classes: snippet_classes, video_host: video_host, video_id: video_id %}
         {% endif %}
       {% endfor %}
 
