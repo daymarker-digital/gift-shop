@@ -134,11 +134,18 @@
           "settings": {
             "text": "Legend"
           }
+        },
+        "23dfbe68-44f2-4288-bf8d-c455b2c594bb": {
+          "type": "marquee",
+          "settings": {
+            "text": "Legend"
+          }
         }
       },
       "block_order": [
         "bad22ee9-62f6-482a-8238-16bf3b8671b8",
-        "7776c19e-0fb6-4b2c-8395-5f9431cb26b1"
+        "7776c19e-0fb6-4b2c-8395-5f9431cb26b1",
+        "23dfbe68-44f2-4288-bf8d-c455b2c594bb"
       ],
       "settings": {
         "anchor_id": "",
