@@ -142,19 +142,19 @@
       ],
       "settings": {
         "anchor_id": "",
-        "background": "white",
+        "background": "black",
         "marquee_background": "black",
-        "marquee_direction": "ltr",
+        "marquee_direction": "rtl",
         "marquee_duration": 100,
         "marquee_font_size": 30,
         "marquee_font_style": "sorry-sans",
-        "marquee_gap": 25,
+        "marquee_gap": 0,
         "marquee_padding_top": 36,
         "marquee_padding_bottom": 36,
-        "padding_top": 36,
-        "padding_bottom": 36,
-        "text_case": "none",
-        "text_colour": "dark"
+        "padding_top": 0,
+        "padding_bottom": 0,
+        "text_case": "uppercase",
+        "text_colour": "light"
       }
     },
     "16611958947ef1ecd7": {
