@@ -19,6 +19,7 @@
   assign section_marquee_padding_bottom = section.settings.marquee_padding_bottom | default: 0
   assign section_marquee_padding_top = section.settings.marquee_padding_top | default: 0
   assign section_marquee_range = (1..10)
+  assign section_text_case = section.settings.text_case | default: "none"
 
   assign section_classes = section_classes | append: " " | append: section_name | append: "--" | append: section_marquee_direction
 
@@ -42,6 +43,7 @@
     font-size: {{ section_marquee_font_size }}px;
     padding-top: calc({{ section_marquee_padding_top }}px * 0.75);
     padding-bottom: calc({{ section_marquee_padding_bottom }}px * 0.75);
+    text-transform: {{ section_text_case }};
   }
 
   {%
@@ -142,9 +144,9 @@
 		  "label": "Marquee Duration",
 		  "type": "range",
 			"min": 0,
-			"max": 5000,
-			"step": 100,
-			"default": 2500,
+			"max": 1000,
+			"step": 25,
+			"default": 500,
 		  "id": "marquee_duration"
 		},
     {

@@ -140,12 +140,12 @@ $theme-drawer-settings: (
 // ---------------------------------------- Font Families
 $theme-font-families: (
   'sans-serif': sans-serif,
-  'sans-serif-sorry-sans': '"Sorry Sans", sans-serif',
   'serif': serif,
-  'serif-not-sorry-serif': '"Not Sorry Serif", serif',
   'cursive': cursive,
   'mono': monospace,
-  'mono-akkurat-mono-ll': '"Akkurat Mono LL", monospace'
+  'akkurat-mono-ll': '"Akkurat Mono LL", monospace',
+  'not-sorry-serif': '"Not Sorry Serif", serif',
+  'sorry-sans': '"Sorry Sans", sans-serif',
 );
 
 // ---------------------------------------- Header Heights
