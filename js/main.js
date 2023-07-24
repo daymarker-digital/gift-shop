@@ -3,6 +3,7 @@ import Cart from './modules/cart';
 import Credits from './modules/credits';
 import Drawers from './modules/drawers';
 import Gliders from './modules/gliders';
+import InstagramFeed from './modules/instagramFeed';
 import Product from './modules/product';
 import Scrolling from './modules/scrolling';
 import Tools from './modules/tools';
@@ -21,9 +22,10 @@ AOS.init({
   easing: 'ease-in-out',      // default easing for AOS animations
 });
 
-window.addEventListener( 'load', function (e) {
+window.addEventListener( 'load', (event) => {
   Tools.setElementsHeightToCSSVariable();
   Gliders.init();
+  InstagramFeed.init();
   AOS.refresh();
 });
 
