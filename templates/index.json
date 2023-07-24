@@ -3,6 +3,7 @@
     "16638658704a46d741",
     "1661195827dff74e88",
     "a70f1a19-bdf0-4839-8acc-dcc59523bd7a",
+    "06f1c7ee-e277-4b25-b3de-8452a04dd605",
     "10b9faaa-619f-491c-a137-f00b15905306",
     "16611958947ef1ecd7",
     "16611959936ca1502e",
@@ -118,6 +119,18 @@
         "padding_bottom": 0,
         "text_case": "uppercase",
         "text_colour": "dark"
+      }
+    },
+    "06f1c7ee-e277-4b25-b3de-8452a04dd605": {
+      "type": "featured-video",
+      "settings": {
+        "anchor_id": "",
+        "background": "white",
+        "container": "container",
+        "padding_top": 44,
+        "padding_bottom": 44,
+        "video_aspect_ratio_width": "16",
+        "video_aspect_ratio_height": "9"
       }
     },
     "10b9faaa-619f-491c-a137-f00b15905306": {
