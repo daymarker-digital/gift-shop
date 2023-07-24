@@ -1,0 +1,170 @@
+{%- liquid
+
+  assign section_name = 'instagram-feed'
+  assign section_classes = section_name
+  assign section_id = section_name | append: '--' | append: section.id
+
+  assign aos_delay = 250
+  assign aos_delay_increment = 250
+  assign aos_id = section_id
+
+  assign section_cols = section.settings.cols | default: 'col-12'
+  assign section_container = section.settings.container | default: 'container'
+  assign section_instagram_account = section.settings.instagram_account | default: ""
+  assign section_instagram_feed_limit = section.settings.feed_limit | default: 9
+  assign section_instagram_feed_range = (0..section_instagram_feed_limit)
+  assign section_instagram_glide_id = section_id | append: "--instagram-feed"
+
+-%}
+
+{%- style -%}
+
+  {%
+    render 'element-styles',
+      background: section.settings.background,
+      id: section_id,
+      padding_bottom: section.settings.padding_bottom,
+      padding_top: section.settings.padding_top,
+  -%}
+
+{%- endstyle -%}
+
+<div class="{{ section_classes }}" id="{{ section_id }}">
+  {%- render 'bs-container', state: 'open', col: section_cols, container: section_container -%}
+    <div class="{{ section_name }}__main">
+
+      <h2 class="{{ section_name }}__heading">Follow us <a href="https://www.instagram.com/{{ section_instagram_account }}" target="_blank" title="Follow us on Instagram">@{{ section_instagram_account }}</a></h2>
+
+      <div
+        class="{{ section_name }}__main js--instagram-feed"
+        data-instagram-feed-account="{{ section_instagram_account }}"
+        data-instagram-feed-limit="{{ section_instagram_feed_limit }}"
+      >
+        <div class="glide js--glide" id="{{ section_instagram_glide_id }}" data-glide-style="{{ section_name }}">
+          <div class="glide__track" data-glide-el="track">
+            <ul class="glide__slides">
+
+              {%- for i in range -%}
+                <li class='glide__slide'>
+                  <div class='{{ section_name }}__item' data-index='{{ i }}'>
+                    <a class='{{ section_name }}__link link' href='' target='_blank' title='Follow {{ section_instagram_account }} on Instagram'>
+                      <div class='{{ section_name }}__image lazyload-item lazyload-item--image'
+                        data-transition-delay='0'
+                        data-transition-duration='300'
+                        data-bg=''
+                      /></div>
+                    </a>
+                  </div>
+                </li>
+              {%- endfor -%}
+
+            </ul>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  {%- render 'bs-container', state: 'closed', col: section_cols, container: section_container -%}
+</div>
+
+{%- schema -%}
+{
+  "name": "Instagram Feed",
+  "tag": "section",
+  "class": "section section--instagram-feed",
+  "settings": [
+    {
+			"content": "Settings",
+			"type": "header"
+		},
+    {
+      "content": "Anchor",
+      "type": "header"
+    },
+    {
+      "label": "Anchor ID",
+      "info": "Optionally include a unique ID so that sections within the page can be linked to. Anchor IDs must be all lowercase, unique and replaced empty spaces with hyphens. For example: my-great-section-anchor",
+      "type": "text",
+      "id": "anchor_id"
+    },
+    {
+			"content": "Background",
+			"type": "header"
+		},
+    {
+		  "label": "Background",
+		  "type": "select",
+		  "options": [
+        { "label": "Black", "value": "black" },
+			  { "label": "White", "value": "white" }
+		  ],
+		  "default": "white",
+		  "id": "background"
+		},
+    {
+			"content": "Container",
+			"type": "header"
+		},
+    {
+      "label": "Container",
+      "type": "select",
+      "options": [
+        { "label": "Static", "value": "container" },
+        { "label": "Fluid", "value": "container-fluid" },
+        { "label": "Full Width", "value": "full-width" }
+      ],
+      "default": "container",
+      "id": "container"
+    },
+    {
+			"content": "Instagram",
+			"type": "header"
+		},
+    {
+      "label": "Instagram Account Name",
+      "info": "The name of the instagram account, without the '@' symbol or anything else.",
+      "type": "text",
+      "id": "instagram_account"
+    },
+    {
+      "label": "Instagram Feed Limit",
+      "type": "range",
+			"min": 1,
+			"max": 25,
+			"step": 1,
+			"default": 9,
+      "id": "instagram_feed_limit"
+    },
+    {
+			"content": "Padding",
+			"type": "header"
+		},
+		{
+			"label": "Top Padding",
+			"type": "range",
+			"min": 0,
+			"max": 300,
+			"step": 4,
+			"default": 44,
+      "id": "padding_top"
+		},
+		{
+			"label": "Bottom Padding",
+			"type": "range",
+			"min": 0,
+			"max": 300,
+			"step": 4,
+			"default": 44,
+      "id": "padding_bottom"
+		}
+  ],
+  "presets": [
+    {
+      "name": "Instagram Feed"
+    }
+  ],
+  "enabled_on": {
+    "templates": ["*"]
+  }
+}
+{%- endschema -%}
