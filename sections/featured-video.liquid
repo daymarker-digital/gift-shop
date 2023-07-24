@@ -10,8 +10,8 @@
 
   assign section_cols = section.settings.cols | default: 'col-12'
   assign section_container = section.settings.container | default: 'container'
-  assign section_video_aspect_ratio_height = section.settings.video_aspect_ratio_height | default: ''
-  assign section_video_aspect_ratio_width = section.settings.video_aspect_ratio_width | default: ''
+  assign section_video_aspect_ratio_height = section.settings.video_aspect_ratio_height | default: '9'
+  assign section_video_aspect_ratio_width = section.settings.video_aspect_ratio_width | default: '16'
   assign section_video_placeholder_image = section.settings.video_placeholder_image | default: false
 
 -%}
@@ -26,6 +26,10 @@
       padding_top: section.settings.padding_top,
   -%}
 
+  #{{ section_id }} .{{ section_name }}__main {
+    aspect-ratio: {{ section_video_aspect_ratio_width }}/{{ section_video_aspect_ratio_height }};
+  }
+
 {%- endstyle -%}
 
 <div class="{{ section_classes }}" id="{{ section_id }}">
@@ -37,7 +41,7 @@
         {% assign video_id = block.settings.video_id | default: '' %}
         {% if video_host != blank and video_id != blank %}
           <div class="{{ section_name }}__embed">
-            {% render 'lazyload-image', video_host: video_host, video_id: video_id %}
+            {% render 'lazyload-embed', video_host: video_host, video_id: video_id %}
           </div>
         {% endif %}
       {% endfor %}
@@ -139,11 +143,13 @@
     {
       "label": "Video Aspect Ratio (Width)",
       "type": "text",
+      "default": "16",
       "id": "video_aspect_ratio_width"
     },
     {
       "label": "Video Aspect Ratio (Height)",
       "type": "text",
+      "default": "9",
       "id": "video_aspect_ratio_height"
     },
     {
