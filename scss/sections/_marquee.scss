@@ -22,6 +22,10 @@
     line-height: 1;
   }
 
+  span {
+    display: block;
+  }
+
   &__group {
     gap: var(--marquee-gap);
     animation-duration: var(--marquee-duration);
