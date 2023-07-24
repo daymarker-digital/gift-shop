@@ -9,11 +9,14 @@
   assign aos_id = section_id
 
   assign section_container = section.settings.container | default: 'container'
+  assign section_marquee_background =  section.settings.marquee_background | default: 'black'
   assign section_marquee_blocks = section.blocks | where: 'type', 'marquee' | default: false
   assign section_marquee_direction = section.settings.marquee_direction | default: ''
   assign section_marquee_duration = section.settings.marquee_duration | default: 1000
   assign section_marquee_font_size = section.settings.marquee_font_size | default: ''
   assign section_marquee_gap = section.settings.marquee_gap | default: 0
+  assign section_marquee_padding_bottom = section.settings.marquee_padding_bottom | default: 0
+  assign section_marquee_padding_top = section.settings.marquee_padding_top | default: 0
   assign section_marquee_range = (1..10)
   assign section_marquee_style = section.settings.marquee_style | default: ''
 
@@ -35,6 +38,12 @@
     --marquee-font-size: {{ section_marquee_font_size }}px;
     --marquee-gap: {{ section_marquee_gap }}px;
     --marquee-style: {{ section_marquee_style }};
+  }
+
+  #{{ section_id }} .{{ section_name }}__main {
+    background: var(--theme-colour--{{ section_marquee_background }});
+    padding-top: calc({{ section_marquee_padding_top }}px * 0.75);
+    padding-bottom: calc({{ section_marquee_padding_bottom }}px * 0.75);
   }
 
   {%
@@ -111,6 +120,17 @@
 			"type": "header"
 		},
     {
+		  "label": "Marquee Background",
+		  "type": "select",
+		  "options": [
+        { "label": "Black", "value": "black" },
+			  { "label": "White", "value": "white" },
+        { "label": "Yellow", "value": "yellow" }
+		  ],
+		  "default": "black",
+		  "id": "marquee_background"
+		},
+    {
 		  "label": "Marquee Direction",
 		  "type": "select",
 		  "options": [
@@ -146,6 +166,24 @@
 			"step": 5,
 			"default": 25,
 		  "id": "marquee_gap"
+		},
+    {
+			"label": "Marquee Top Padding",
+			"type": "range",
+			"min": 0,
+			"max": 300,
+			"step": 4,
+			"default": 36,
+      "id": "marquee_padding_top"
+		},
+    {
+			"label": "Marquee Bottom Padding",
+			"type": "range",
+			"min": 0,
+			"max": 300,
+			"step": 4,
+			"default": 36,
+      "id": "marquee_padding_bottom"
 		},
     {
 		  "label": "Marquee Style",
