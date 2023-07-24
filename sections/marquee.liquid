@@ -14,15 +14,13 @@
   assign section_marquee_direction = section.settings.marquee_direction | default: ''
   assign section_marquee_duration = section.settings.marquee_duration | default: 1000
   assign section_marquee_font_size = section.settings.marquee_font_size | default: ''
+  assign section_marquee_font_style = section.settings.marquee_font_style | default: ''
   assign section_marquee_gap = section.settings.marquee_gap | default: 0
   assign section_marquee_padding_bottom = section.settings.marquee_padding_bottom | default: 0
   assign section_marquee_padding_top = section.settings.marquee_padding_top | default: 0
   assign section_marquee_range = (1..10)
-  assign section_marquee_style = section.settings.marquee_style | default: ''
 
-  assign section_classes = section_classes | append: " " | append: section_name | append: "--" | append: marquee_direction
-  assign section_classes = section_classes | append: " " | append: section_name | append: "--" | append: marquee_style
-  assign section_classes = section_classes | append: " " | append: section_name | append: "--" | append: marquee_size
+  assign section_classes = section_classes | append: " " | append: section_name | append: "--" | append: section_marquee_direction
 
   capture aos_attrs
     render 'aos-attributes', anchor: aos_id, delay: aos_delay, transition: 'fade-left'
@@ -34,14 +32,14 @@
 {%- style -%}
 
   #{{ section_id }} {
-    --marquee-duration: {{ section_marquee_direction }}s;
-    --marquee-font-size: {{ section_marquee_font_size }}px;
+    --marquee-duration: {{ section_marquee_duration }}s;
     --marquee-gap: {{ section_marquee_gap }}px;
-    --marquee-style: {{ section_marquee_style }};
   }
 
   #{{ section_id }} .{{ section_name }}__main {
     background: var(--theme-colour--{{ section_marquee_background }});
+    font-family: var(--theme-font-family--{{ section_marquee_font_style }});
+    font-size: {{ section_marquee_font_size }}px;
     padding-top: calc({{ section_marquee_padding_top }}px * 0.75);
     padding-bottom: calc({{ section_marquee_padding_bottom }}px * 0.75);
   }
@@ -159,6 +157,17 @@
 		  "id": "marquee_font_size"
 		},
     {
+		  "label": "Marquee Font Style",
+		  "type": "select",
+		  "options": [
+        { "label": "Akkurat Mono LL", "value": "akkurat-mono-ll" },
+        { "label": "Not Sorry Serif", "value": "not-sorry-serif" },
+        { "label": "Sorry Sans", "value": "sorry-sans" }
+		  ],
+		  "default": "sorry-sans",
+		  "id": "marquee_font_style"
+		},
+    {
 		  "label": "Marquee Gap",
 		  "type": "range",
 			"min": 0,
@@ -184,16 +193,6 @@
 			"step": 4,
 			"default": 36,
       "id": "marquee_padding_bottom"
-		},
-    {
-		  "label": "Marquee Style",
-		  "type": "select",
-		  "options": [
-        { "label": "Sorry Sans", "value": "sorry-sans" },
-			  { "label": "Not Sorry Serif", "value": "not-sorry-serif" }
-		  ],
-		  "default": "sorry-sans",
-		  "id": "marquee_style"
 		},
     {
 			"content": "Padding",
