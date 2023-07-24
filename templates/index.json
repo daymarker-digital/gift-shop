@@ -3,6 +3,7 @@
     "16638658704a46d741",
     "1661195827dff74e88",
     "a70f1a19-bdf0-4839-8acc-dcc59523bd7a",
+    "10b9faaa-619f-491c-a137-f00b15905306",
     "16611958947ef1ecd7",
     "16611959936ca1502e",
     "1661196025228eb79a",
@@ -116,6 +117,36 @@
         "padding_top": 12,
         "padding_bottom": 12,
         "text_case": "uppercase",
+        "text_colour": "dark"
+      }
+    },
+    "10b9faaa-619f-491c-a137-f00b15905306": {
+      "type": "marquee",
+      "blocks": {
+        "bad22ee9-62f6-482a-8238-16bf3b8671b8": {
+          "type": "marquee",
+          "settings": {
+            "text": "Fascinating Stuff"
+          }
+        }
+      },
+      "block_order": [
+        "bad22ee9-62f6-482a-8238-16bf3b8671b8"
+      ],
+      "settings": {
+        "anchor_id": "",
+        "background": "white",
+        "marquee_background": "black",
+        "marquee_direction": "ltr",
+        "marquee_duration": 100,
+        "marquee_font_size": 30,
+        "marquee_font_style": "sorry-sans",
+        "marquee_gap": 25,
+        "marquee_padding_top": 36,
+        "marquee_padding_bottom": 36,
+        "padding_top": 36,
+        "padding_bottom": 36,
+        "text_case": "none",
         "text_colour": "dark"
       }
     },
