@@ -7,7 +7,7 @@
       "uuidString" : "FE8C1B7F-EA9B-47F9-9B46-E9C2C8BF996D"
     }
   ],
-  "creatorBuild" : "34484",
+  "creatorBuild" : "34513",
   "files" : {
     "\/.editorconfig" : {
       "cB" : 0,
@@ -446,7 +446,7 @@
       "mi" : 1,
       "oA" : 0,
       "oAP" : "\/assets\/main.min.js",
-      "oF" : 2,
+      "oF" : 0,
       "sC" : 3,
       "tS" : 1
     },
@@ -1088,7 +1088,7 @@
       "oAP" : "\/README.html",
       "oF" : 0
     },
-    "\/README.md" : {
+    "\/READMe.md" : {
       "cB" : 0,
       "cS" : 0,
       "eF" : 1,
@@ -1098,7 +1098,7 @@
       "ft" : 4096,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/README.html",
+      "oAP" : "\/READMe.html",
       "oF" : 0,
       "oFM" : 0,
       "oS" : 0,
@@ -1236,7 +1236,7 @@
       "ft" : 4,
       "ma" : 0,
       "oA" : 1,
-      "oAP" : "\/scss\/components\/_button.css",
+      "oAP" : "\/assets\/_button.css",
       "oF" : 0,
       "oS" : 3,
       "pg" : 0,
@@ -4177,9 +4177,6 @@
       "no-return-assign" : {
         "active" : 0,
         "optionString" : "'except-parens'"
-      },
-      "no-return-await" : {
-        "active" : 0
       },
       "no-script-url" : {
         "active" : 0
