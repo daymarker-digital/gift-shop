@@ -196,6 +196,32 @@
       "oAP" : "\/assets\/favicon.ico",
       "oF" : 0
     },
+    "\/assets\/featured-image-tall.png" : {
+      "ft" : 32768,
+      "iS" : 19972,
+      "oA" : 0,
+      "oAP" : "\/assets\/featured-image-tall.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/assets\/featured-image-wide.png" : {
+      "ft" : 32768,
+      "iS" : 15872,
+      "oA" : 0,
+      "oAP" : "\/assets\/featured-image-wide.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
     "\/assets\/featured-image.css" : {
       "aP" : 1,
       "bl" : 0,
@@ -285,6 +311,19 @@
       "oAP" : "\/assets\/NotSorrySerif-Bold.woff2",
       "oF" : 0
     },
+    "\/assets\/screenshot.png" : {
+      "ft" : 32768,
+      "iS" : 11607,
+      "oA" : 0,
+      "oAP" : "\/assets\/screenshot.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
     "\/assets\/SorrySans-BoldExtended.eot" : {
       "cB" : 0,
       "ft" : 8192,
@@ -361,6 +400,32 @@
       "oF" : 0,
       "sC" : 3,
       "tS" : 1
+    },
+    "\/assets\/tile-wide.png" : {
+      "ft" : 32768,
+      "iS" : 6812,
+      "oA" : 0,
+      "oAP" : "\/assets\/tile-wide.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
+    },
+    "\/assets\/tile.png" : {
+      "ft" : 32768,
+      "iS" : 8164,
+      "oA" : 0,
+      "oAP" : "\/assets\/tile.png",
+      "oF" : 0,
+      "oIPL" : 0,
+      "opt" : 0,
+      "oT" : 1,
+      "ou" : "lpckwebp-none",
+      "q" : 100,
+      "rq" : 75
     },
     "\/assets\/vendor.min.js" : {
       "bF" : 4,
