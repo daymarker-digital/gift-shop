@@ -7,7 +7,7 @@
       "uuidString" : "FE8C1B7F-EA9B-47F9-9B46-E9C2C8BF996D"
     }
   ],
-  "creatorBuild" : "34510",
+  "creatorBuild" : "34513",
   "files" : {
     "\/.editorconfig" : {
       "cB" : 0,
@@ -4300,9 +4300,6 @@
       "no-return-assign" : {
         "active" : 0,
         "optionString" : "'except-parens'"
-      },
-      "no-return-await" : {
-        "active" : 0
       },
       "no-script-url" : {
         "active" : 0
