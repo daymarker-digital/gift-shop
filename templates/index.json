@@ -5,7 +5,6 @@
     "16611958947ef1ecd7",
     "16611959936ca1502e",
     "1661196025228eb79a",
-    "d6939208-a96c-4799-9a1a-2c8f4a151b8d",
     "cf2b7ca3-307b-4972-95ef-b0994d7525b1",
     "6929c9cc-944c-4645-b944-e482c070dd52"
   ],
@@ -47,7 +46,7 @@
         "8e33acf9-4964-464e-9957-ce064038f657": {
           "type": "product",
           "settings": {
-            "product": "smile-tee"
+            "product": "space-club-tee-in-supernova"
           }
         },
         "b439fcdb-2b20-4e92-bcc6-749852735c97": {
@@ -202,37 +201,6 @@
         "text_colour": "dark"
       }
     },
-    "d6939208-a96c-4799-9a1a-2c8f4a151b8d": {
-      "type": "featured-products",
-      "blocks": {
-        "7aa5dc1b-f88c-4a76-9840-646aa8016c4e": {
-          "type": "product",
-          "settings": {
-            "product": "space-club-tee-in-supernova"
-          }
-        },
-        "3c990ff9-e9b9-4826-b63e-6cad83225b4d": {
-          "type": "product",
-          "settings": {
-            "product": "office-mug"
-          }
-        }
-      },
-      "block_order": [
-        "7aa5dc1b-f88c-4a76-9840-646aa8016c4e",
-        "3c990ff9-e9b9-4826-b63e-6cad83225b4d"
-      ],
-      "settings": {
-        "anchor_id": "",
-        "background": "white",
-        "container": "container-fluid",
-        "grid_layout": "two-column",
-        "grid_gutter": 24,
-        "padding_top": 36,
-        "padding_bottom": 0,
-        "text_colour": "dark"
-      }
-    },
     "cf2b7ca3-307b-4972-95ef-b0994d7525b1": {
       "type": "featured-products",
       "blocks": {
@@ -322,18 +290,6 @@
             "product": "vpsa-hoodie-in-venus-dust"
           }
         },
-        "05a56780-75bc-464a-9d5c-79e8232aad41": {
-          "type": "product",
-          "settings": {
-            "product": "smile-socks-black"
-          }
-        },
-        "a91da574-0243-4611-a3b5-d46d8092bfb3": {
-          "type": "product",
-          "settings": {
-            "product": "studio-hoodie"
-          }
-        },
         "7753479d-d968-41f9-b664-1ef475ffba89": {
           "type": "product",
           "settings": {
@@ -343,8 +299,6 @@
       },
       "block_order": [
         "d28a020c-f1ac-4b0d-ba69-a2a3c7b8d766",
-        "05a56780-75bc-464a-9d5c-79e8232aad41",
-        "a91da574-0243-4611-a3b5-d46d8092bfb3",
         "7753479d-d968-41f9-b664-1ef475ffba89"
       ],
       "settings": {
