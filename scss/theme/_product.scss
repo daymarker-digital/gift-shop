@@ -5,6 +5,12 @@
 
 .product {
 
+  .modal {
+    &-content {
+      background: var(--theme--primary-colour);
+    }
+  }
+
   .simulation {
     &__graphic {
       margin-top: 28px;
@@ -75,7 +81,7 @@
       z-index: 50;
       &:after,
       &:before {
-        background: var(--theme-colour--black);
+        background: var(--theme--secondary-colour);
       }
     }
   }
