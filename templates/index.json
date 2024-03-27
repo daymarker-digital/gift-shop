@@ -123,13 +123,13 @@
       ],
       "settings": {
         "anchor_id": "",
-        "background": "white",
+        "background": "inherit",
         "container": "container-fluid",
         "grid_layout": "three-column",
         "grid_gutter": 24,
         "padding_top": 52,
         "padding_bottom": 0,
-        "text_colour": "dark"
+        "text_colour": "inherit"
       }
     },
     "16611959936ca1502e": {
@@ -154,13 +154,13 @@
       ],
       "settings": {
         "anchor_id": "",
-        "background": "white",
+        "background": "inherit",
         "container": "container-fluid",
         "grid_layout": "two-column",
         "grid_gutter": 24,
         "padding_top": 52,
         "padding_bottom": 0,
-        "text_colour": "dark"
+        "text_colour": "inherit"
       }
     },
     "1661196025228eb79a": {
@@ -192,13 +192,13 @@
       ],
       "settings": {
         "anchor_id": "",
-        "background": "white",
+        "background": "inherit",
         "container": "container-fluid",
         "grid_layout": "three-column",
         "grid_gutter": 24,
         "padding_top": 52,
         "padding_bottom": 0,
-        "text_colour": "dark"
+        "text_colour": "inherit"
       }
     },
     "cf2b7ca3-307b-4972-95ef-b0994d7525b1": {
@@ -272,13 +272,13 @@
       ],
       "settings": {
         "anchor_id": "",
-        "background": "white",
+        "background": "inherit",
         "container": "container-fluid",
         "grid_layout": "three-column",
         "grid_gutter": 24,
         "padding_top": 52,
         "padding_bottom": 0,
-        "text_colour": "dark"
+        "text_colour": "inherit"
       }
     },
     "6929c9cc-944c-4645-b944-e482c070dd52": {
@@ -303,13 +303,13 @@
       ],
       "settings": {
         "anchor_id": "",
-        "background": "white",
+        "background": "inherit",
         "container": "container-fluid",
         "grid_layout": "two-column",
         "grid_gutter": 24,
         "padding_top": 52,
         "padding_bottom": 0,
-        "text_colour": "dark"
+        "text_colour": "inherit"
       }
     }
   }
