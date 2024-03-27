@@ -33,14 +33,14 @@
 
   case template.name
     when "product"
-      assign agency_theme_name = product.metafields.custom.agency_theme.value.name
+      assign agency_theme_name = product.metafields.custom.agency_theme.value.name | default: 'default'
     when "page"
-      assign agency_theme_name = page.metafields.custom.agency_theme.value.name
+      assign agency_theme_name = page.metafields.custom.agency_theme.value.name | default: 'default'
     else
       assign agency_theme_name = "default"
   endcase
 
-  assign theme_classes = theme_classes | append: ' agency-theme--' | append: agency_theme_name
+  assign theme_classes = theme_classes | append: ' agency-theme--' | append: agency_theme_name | downcase
 
 -%}
 
