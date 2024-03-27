@@ -31,6 +31,17 @@
 
   assign theme_classes = theme_classes | append: ' ' | append: request.page_type
 
+  case template.name
+    when "product"
+      assign agency_theme_name = product.metafields.custom.agency_theme.value.name
+    when "page"
+      assign agency_theme_name = page.metafields.custom.agency_theme.value.name
+    else
+      assign agency_theme_name = "default"
+  endcase
+
+  assign theme_classes = theme_classes | append: ' agency-theme--' | append: agency_theme_name
+
 -%}
 
 {{- theme_classes -}}
