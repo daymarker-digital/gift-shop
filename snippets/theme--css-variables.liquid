@@ -6,10 +6,8 @@
   case template.name
     when 'index'
       assign agency_theme = settings.agency_theme | default: 'default'
-      assign name = shop.metaobjects['agency_theme'][agency_theme].name
-
-      assign primary_colour = default_primary_colour
-      assign secondary_colour = default_secondary_colour
+      assign primary_colour = shop.metaobjects['agency_theme'][agency_theme].primary_colour | default: default_primary_colour
+      assign secondary_colour = shop.metaobjects['agency_theme'][agency_theme].secondary_colour | default: default_secondary_colour
     when 'product'
       assign agency_theme = product.metafields.custom.agency_theme.value
       assign primary_colour = agency_theme.primary_colour | default: default_primary_colour
@@ -20,9 +18,6 @@
   endcase
 
 -%}
-
-{% render 'debug-this', item: shop.metaobjects, message: 'shop.metaobjects' %}
-{% render 'debug-this', item: name, message: 'name updated' %}
 
 <style>
   :root {
