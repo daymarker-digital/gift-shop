@@ -60,7 +60,9 @@
 
   </head>
 
-  <body class="{% render 'theme--classes' %} testing">
+  <body class="{% render 'theme--classes' %} testing testing-shopify-cli {{ template }}">
+
+    {% comment %} <h2>{{ product.metafields.custom.agency_theme.value }} </h2> {% endcomment %}
 
     {% render 'burger' %}
     {% section 'announcements' %}

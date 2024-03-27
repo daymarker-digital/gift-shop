@@ -511,7 +511,7 @@
       "mi" : 1,
       "oA" : 0,
       "oAP" : "\/assets\/main.min.js",
-      "oF" : 0,
+      "oF" : 2,
       "sC" : 3,
       "tS" : 1
     },
@@ -1123,6 +1123,12 @@
       "oO" : 1,
       "oS" : 1
     },
+    "\/node_modules" : {
+      "ft" : 65536,
+      "oA" : 2,
+      "oAP" : "\/node_modules",
+      "oF" : 0
+    },
     "\/package-lock.json" : {
       "ft" : 524288,
       "oA" : 1,
@@ -1147,7 +1153,7 @@
       "oAP" : "\/README.html",
       "oF" : 0
     },
-    "\/READMe.md" : {
+    "\/README.md" : {
       "cB" : 0,
       "cS" : 0,
       "eF" : 1,
@@ -1157,7 +1163,7 @@
       "ft" : 4096,
       "hM" : 0,
       "oA" : 0,
-      "oAP" : "\/READMe.html",
+      "oAP" : "\/README.html",
       "oF" : 0,
       "oFM" : 0,
       "oS" : 0,
