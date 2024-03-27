@@ -7,12 +7,16 @@
 
   .simulation {
     &__graphic {
+      margin-top: 28px;
       display: block;
       width: 100%;
       max-width: 400px;
       img, svg {
         display: block;
         height: auto;
+      }
+      svg {
+        fill: var(--theme--secondary-colour);
       }
     }
   }
@@ -53,6 +57,8 @@
           }
         }
       }
+      background: var(--theme--primary-colour);
+      color: var(--theme--secondary-colour);
       font-size: 15px;
       width: 100%;
       max-width: 400px;
