@@ -66,13 +66,15 @@
 
   #{{ id }} {
 
-    {% if 'dark' == text_colour %}
-      color: var(--theme-colour--black);
-    {% elsif 'light' == text_colour %}
-      color: var(--theme-colour--white);
-    {% else %}
-      color: inherit;
-    {% endif %}
+    {% unless 'none' == text_colour %}
+      {% if 'dark' == text_colour %}
+        color: var(--theme-colour--black);
+      {% elsif 'light' == text_colour %}
+        color: var(--theme-colour--white);
+      {% else %}
+        color: inherit;
+      {% endif %}
+    {% endunless %}
 
     {%- if height_mobile != blank -%}
       height: {{ height_mobile }}px;
@@ -84,11 +86,13 @@
       background-position: {{ background_image_position_mobile }};
       background-size: {{ background_image_size }};
     {%- else -%}
-      {% if 'inherit' == background or 'none' == background %}
-        background: inherit;
-      {% else %}
-        background: var(--theme-colour--{{ background }});
-      {% endif %}
+      {% unless 'none' == background %}
+        {% if 'inherit' == background %}
+          background: inherit;
+        {% else %}
+          background: var(--theme-colour--{{ background }});
+        {% endif %}
+      {% endunless %}
     {%- endif -%}
 
     {%- if border_bottom -%}
