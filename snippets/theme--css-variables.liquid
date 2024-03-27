@@ -3,19 +3,23 @@
   assign default_primary_colour = '#ffffff'
   assign default_secondary_colour = '#111111'
 
-  if template.name == "product"
-    assign agency_theme = product.metafields.custom.agency_theme.value
-    assign primary_colour = agency_theme.primary_colour | default: default_primary_colour
-    assign secondary_colour = agency_theme.secondary_colour | default: default_secondary_colour
-  else
-    assign primary_colour = default_primary_colour
-    assign secondary_colour = default_secondary_colour
-  endif
+  case template.name
+    when 'index'
+      assign abc = settings.agency_theme | default: 'default'
+      assign test = shop.metaobjects
+    when 'product'
+      assign agency_theme = product.metafields.custom.agency_theme.value
+      assign primary_colour = agency_theme.primary_colour | default: default_primary_colour
+      assign secondary_colour = agency_theme.secondary_colour | default: default_secondary_colour
+    else
+      assign primary_colour = default_primary_colour
+      assign secondary_colour = default_secondary_colour
+  endcase
 
 -%}
 
-{% render 'debug-this', item: primary_colour %}
-{% render 'debug-this', item: secondary_colour %}
+{% render 'debug-this', item: abc %}
+{% render 'debug-this', item: test %}
 
 <style>
   :root {
