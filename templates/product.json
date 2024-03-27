@@ -7,11 +7,11 @@
       "type": "main-product",
       "settings": {
         "product_image_aspect_ratio_mobile": "3.25\/4",
-        "background": "white",
+        "background": "inherit",
         "container": "container-fluid",
         "padding_top": 0,
         "padding_bottom": 0,
-        "text_colour": "dark"
+        "text_colour": "inherit"
       }
     }
   }
