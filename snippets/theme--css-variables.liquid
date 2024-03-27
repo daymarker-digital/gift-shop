@@ -5,8 +5,11 @@
 
   case template.name
     when 'index'
-      assign abc = settings.agency_theme | default: 'default'
-      assign test = shop.metaobjects
+      assign agency_theme = settings.agency_theme | default: 'default'
+      assign test = shop.metaobjects['agency_them']['simulation'].name
+
+      assign primary_colour = default_primary_colour
+      assign secondary_colour = default_secondary_colour
     when 'product'
       assign agency_theme = product.metafields.custom.agency_theme.value
       assign primary_colour = agency_theme.primary_colour | default: default_primary_colour
@@ -18,8 +21,8 @@
 
 -%}
 
-{% render 'debug-this', item: abc %}
-{% render 'debug-this', item: test %}
+{% render 'debug-this', item: shop.metaobjects, message: 'shop.metaobjects' %}
+{% render 'debug-this', item: test, message: 'text' %}
 
 <style>
   :root {

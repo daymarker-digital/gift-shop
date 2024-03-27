@@ -32,12 +32,14 @@
   assign theme_classes = theme_classes | append: ' ' | append: request.page_type
 
   case template.name
+    when 'index'
+      assign agency_theme_name = settings.agency_theme | default: 'default'
     when "product"
       assign agency_theme_name = product.metafields.custom.agency_theme.value.name | default: 'default'
     when "page"
       assign agency_theme_name = page.metafields.custom.agency_theme.value.name | default: 'default'
     else
-      assign agency_theme_name = "default"
+      assign agency_theme_name = 'default'
   endcase
 
   assign theme_classes = theme_classes | append: ' agency-theme--' | append: agency_theme_name | downcase
