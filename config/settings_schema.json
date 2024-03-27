@@ -15,8 +15,14 @@
         "id": "agency_theme",
         "label": "Agency Theme",
         "options": [
-          { "value": "default", "label": "Default" },
-          { "value": "simulation", "label": "Simulation" }
+          {
+            "value": "default",
+            "label": "Default"
+          },
+          {
+            "value": "simulation",
+            "label": "Simulation"
+          }
         ],
         "default": "default"
       }

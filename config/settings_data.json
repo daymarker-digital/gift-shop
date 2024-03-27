@@ -1,5 +1,6 @@
 {
   "current": {
+    "agency_theme": "simulation",
     "sections": {
       "cookie-banner": {
         "type": "cookie-banner",
@@ -142,14 +143,12 @@
         "settings": {
           "enable": true,
           "homepage_only": true,
-          "background": "black",
           "carousel_autoplay": 3750,
           "carousel_animation_duration": 750,
           "carousel_direction": "ltr",
           "container": "container-fluid",
           "padding_top": 16,
-          "padding_bottom": 16,
-          "text_colour": "light"
+          "padding_bottom": 16
         }
       },
       "policy-refund": {
