@@ -1,12 +1,16 @@
 {%- liquid
 
-  assign primary_colour = '#ffffff'
-  assign secondary_colour = '#111111'
-
   if template.name == "product"
     assign agency_theme = product.metafields.custom.agency_theme.value
-    assign primary_colour = agency_theme.primary_colour
-    assign secondary_colour = agency_theme.secondary_colour
+    if agency_theme.primary_colour != blank
+      assign primary_colour = agency_theme.primary_colour
+    endif
+    if agency_theme.secondary_colour != blank
+      assign secondary_colour = agency_theme.secondary_colour
+    endif
+  else
+    assign primary_colour = '#ffffff'
+    assign secondary_colour = '#111111'
   endif
 
 -%}

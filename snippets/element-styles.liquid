@@ -39,7 +39,7 @@
 
   {%- liquid
 
-    assign background = background | default: 'none'
+    assign background = background | default: 'inherit'
     assign background_image = background_image | default: false
     assign background_image_active = false
     assign background_image_position_desktop = background_image_position_desktop | default: 'center center'
@@ -56,7 +56,7 @@
     assign padding_bottom = padding_bottom | default: 0
     assign padding_top = padding_top | default: 0
 
-    assign text_colour = text_colour | default: 'dark'
+    assign text_colour = text_colour | default: 'inherit'
 
     if background == 'image' and background_image
       assign background_image_active = true
@@ -66,10 +66,14 @@
 
   #{{ id }} {
 
+    {{ background }}
+
     {% if 'dark' == text_colour %}
       color: var(--theme-colour--black);
-    {% else %}
+    {% elsif 'light' == text_colour %}
       color: var(--theme-colour--white);
+    {% else %}
+      color: inherit;
     {% endif %}
 
     {%- if height_mobile != blank -%}
@@ -82,9 +86,11 @@
       background-position: {{ background_image_position_mobile }};
       background-size: {{ background_image_size }};
     {%- else -%}
-      {%- unless background == 'none' -%}
+      {% if 'inherit' == background or 'none' == background %}
+        background: inherit;
+      {% else %}
         background: var(--theme-colour--{{ background }});
-      {%- endunless -%}
+      {% endif %}
     {%- endif -%}
 
     {%- if border_bottom -%}

@@ -9,6 +9,7 @@
   assign aos_delay_increment = 250
 
   assign section_background_colour = section.settings.background
+  assign section_text_colour = section.settings.text_colour
   assign section_container = section.settings.container
 
   assign section_product_image_aspect_ratio_mobile = section.settings.product_image_aspect_ratio_mobile
@@ -38,11 +39,11 @@
 
   {%-
     render 'element-styles',
-      background: section.settings.background,
+      background: section_background_colour,
       id: section_id,
       padding_bottom: section.settings.padding_bottom,
       padding_top: section.settings.padding_top,
-      text_colour: section.settings.text_colour
+      text_colour: section_text_colour
   -%}
 
 {%- endstyle -%}
