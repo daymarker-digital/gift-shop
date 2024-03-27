@@ -79,6 +79,29 @@
     display: block;
   }
 
+  .agency-theme--simulation & {
+    &__input {
+      &:checked {
+        & + .radio__item {
+          background: var(--theme--secondary-colour);
+          .radio__title {
+            color: var(--theme--primary-colour);
+          }
+        }
+      }
+      &:not([disabled]) {
+        & + .radio__item {
+          &:hover {
+            background: var(--theme--secondary-colour);
+            .radio__title {
+              color: var(--theme--primary-colour);
+            }
+          }
+        }
+      }
+    }
+  }
+
   @include breakpoint(lg) {
 
     &__title {
