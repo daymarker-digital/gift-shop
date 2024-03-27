@@ -9,7 +9,7 @@
         "product_image_aspect_ratio_mobile": "3.25\/4",
         "background": "inherit",
         "container": "container-fluid",
-        "padding_top": 0,
+        "padding_top": 20,
         "padding_bottom": 0,
         "text_colour": "inherit"
       }
