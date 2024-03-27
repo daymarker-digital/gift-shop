@@ -3096,6 +3096,14 @@
       "oAP" : "\/snippets\/svg-very-polite-logo.liquid",
       "oF" : 0
     },
+    "\/snippets\/svg.icon.simulation.pdp-alt.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/snippets\/svg.icon.simulation.pdp-alt.liquid",
+      "oF" : 0
+    },
     "\/snippets\/svg.icon.simulation.pdp.liquid" : {
       "cB" : 0,
       "ft" : 8192,
