@@ -39,7 +39,7 @@
 
   {%- liquid
 
-    assign background = background | default: 'inherit'
+    assign background = background | default: 'none'
     assign background_image = background_image | default: false
     assign background_image_active = false
     assign background_image_position_desktop = background_image_position_desktop | default: 'center center'
@@ -56,7 +56,7 @@
     assign padding_bottom = padding_bottom | default: 0
     assign padding_top = padding_top | default: 0
 
-    assign text_colour = text_colour | default: 'inherit'
+    assign text_colour = text_colour | default: 'none'
 
     if background == 'image' and background_image
       assign background_image_active = true
