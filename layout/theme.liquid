@@ -57,16 +57,11 @@
     </script>
 
     {% render 'theme--additional-javascript' %}
+    {% render 'theme--css-variables' %}
 
   </head>
 
-  <body class="{% render 'theme--classes' %} testing testing-shopify-cli {{ template }}">
-
-    {% if template.name == "product" %}
-      <div style="display: none;">
-        <p>{{ product.metafields.custom.agency_theme.type }}</p>
-      </div>
-    {% endif %}
+  <body class="{% render 'theme--classes' %}">
 
     {% render 'burger' %}
     {% section 'announcements' %}

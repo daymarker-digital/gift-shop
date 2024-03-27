@@ -3136,6 +3136,14 @@
       "oAP" : "\/snippets\/theme--classes.liquid",
       "oF" : 0
     },
+    "\/snippets\/theme--css-variables.liquid" : {
+      "cB" : 0,
+      "ft" : 8192,
+      "hM" : 0,
+      "oA" : 0,
+      "oAP" : "\/snippets\/theme--css-variables.liquid",
+      "oF" : 0
+    },
     "\/snippets\/theme--google-site-tag.liquid" : {
       "cB" : 0,
       "ft" : 8192,

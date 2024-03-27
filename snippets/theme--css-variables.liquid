@@ -1,0 +1,12 @@
+{% if template.name == "product" %}
+  {% assign agency_theme = product.metafields.custom.agency_theme.value %}
+  {% assign primary_colour = agency_theme.primary_colour | default: '#ffffff' %}
+  {% assign secondary_colour = agency_theme.secondary_colour | default: '#111111' %}
+{% endif %}
+
+<style>
+  :root {
+    --theme--primary-colour: {{ primary_colour }};
+    --theme--secondary-colour: {{ secondary_colour }};
+  }
+</style>
