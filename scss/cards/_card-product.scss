@@ -10,6 +10,7 @@
   }
 
   &__content {
+    color: var(--theme--secondary-colour);
     gap: var(--theme-layout--gutter);
     padding: 10px 0;
     display: flex;
@@ -57,6 +58,7 @@
     font-weight: 400;
     text-align: left;
     width: auto;
+    color: inherit;
     &-link {
       color: inherit;
       text-align: inherit;
