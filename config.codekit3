@@ -7,7 +7,7 @@
       "uuidString" : "FE8C1B7F-EA9B-47F9-9B46-E9C2C8BF996D"
     }
   ],
-  "creatorBuild" : "34513",
+  "creatorBuild" : "34564",
   "files" : {
     "\/.editorconfig" : {
       "cB" : 0,
@@ -1122,12 +1122,6 @@
       "oF" : 0,
       "oO" : 1,
       "oS" : 1
-    },
-    "\/node_modules" : {
-      "ft" : 65536,
-      "oA" : 2,
-      "oAP" : "\/node_modules",
-      "oF" : 0
     },
     "\/package-lock.json" : {
       "ft" : 524288,
@@ -4174,9 +4168,6 @@
       "no-new-native-nonconstructor" : {
         "active" : 0
       },
-      "no-new-object" : {
-        "active" : 0
-      },
       "no-new-symbol" : {
         "active" : 1
       },
@@ -4188,6 +4179,9 @@
       },
       "no-obj-calls" : {
         "active" : 1
+      },
+      "no-object-constructor" : {
+        "active" : 0
       },
       "no-octal" : {
         "active" : 1
