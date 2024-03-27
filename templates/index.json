@@ -14,7 +14,7 @@
       "settings": {
         "image": "shopify:\/\/shop_images\/VPSpringClean--resized--opt.jpg",
         "anchor_id": "",
-        "background": "white",
+        "background": "inherit",
         "container": "container-fluid",
         "content_placement_horizontal": "center",
         "content_placement_vertical": "bottom",
@@ -25,7 +25,7 @@
         "image_height_desktop": "adapt",
         "padding_top": 0,
         "padding_bottom": 0,
-        "text_colour": "dark"
+        "text_colour": "inherit"
       }
     },
     "1661195827dff74e88": {
