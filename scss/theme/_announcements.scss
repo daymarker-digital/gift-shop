@@ -1,5 +1,8 @@
 .announcements {
 
+  background: var(--theme--primary-colour);
+  color: var(--theme--secondary-colour);
+
   &__button {
     &-close {
       position: absolute;
