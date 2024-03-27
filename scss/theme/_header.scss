@@ -17,8 +17,10 @@
   &__brand {
     display: inline-flex;
     flex-flow: column;
+    row-gap: 10px;
+    width: 170px;
     &-link {
-      height: 15px;
+      height: auto;
       width: auto;
       display: block;
       opacity: 1;
@@ -32,8 +34,13 @@
         color: inherit;
         opacity: 0.5;
       }
-      & + .header__brand-link {
-        margin-top: 5px;
+      &.gift-shop {
+        width: 100%;
+        height: auto;
+      }
+      &.very-polite {
+        width: 85%;
+        height: auto;
       }
     }
     .vp-logo {
@@ -61,9 +68,7 @@
   @include breakpoint(sm) {
 
     &__brand {
-      &-link {
-        height: 16px;
-      }
+      width: 185px;
     }
 
   }
@@ -72,17 +77,22 @@
 
     &__brand {
       flex-flow: row nowrap;
+      row-gap: 0;
+      column-gap: 14px;
+      width: auto;
+      align-items: center;
       &-link {
-        height: 17px;
-        & + .header__brand-link {
-          margin-top: 0px;
+        &.gift-shop,
+        &.very-polite {
+          width: auto;
         }
         &.gift-shop {
+          height: 17px;
           order: 2;
         }
         &.very-polite {
+          height: 14px;
           order: 1;
-          margin-right: 10px;
         }
       }
     }
@@ -93,7 +103,12 @@
 
     &__brand {
       &-link {
-        height: 20px;
+        &.gift-shop {
+          height: 20px;
+        }
+        &.very-polite {
+          height: 17px;
+        }
       }
     }
 
@@ -103,7 +118,12 @@
 
     &__brand {
       &-link {
-        height: 22px;
+        &.gift-shop {
+          height: 22px;
+        }
+        &.very-polite {
+          height: 19px;
+        }
       }
     }
 
@@ -113,7 +133,12 @@
 
     &__brand {
       &-link {
-        height: 24px;
+        &.gift-shop {
+          height: 24px;
+        }
+        &.very-polite {
+          height: 21px;
+        }
       }
     }
 
