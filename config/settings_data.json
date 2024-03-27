@@ -1,6 +1,6 @@
 {
   "current": {
-    "agency_theme": "simulation",
+    "agency_theme": "default",
     "sections": {
       "cookie-banner": {
         "type": "cookie-banner",
