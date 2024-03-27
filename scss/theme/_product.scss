@@ -57,11 +57,16 @@
           }
         }
       }
-      background: var(--theme--primary-colour);
-      color: var(--theme--secondary-colour);
+      background: var(--theme--secondary-colour);
+      color: var(--theme--primary-colour);
       font-size: 15px;
       width: 100%;
       max-width: 400px;
+      &:hover,
+      &:focus {
+        background: var(--theme-colour--yellow);
+        color: var(--theme-colour--black);
+      }
     }
     &-modal-trigger {
       top: var(--theme-layout--gutter);
