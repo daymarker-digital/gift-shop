@@ -4,6 +4,8 @@
 
 body {
 
+  background: var(--theme--primary-colour);
+  color: var(--theme--secondary-colour);
   font-family: var(--theme-font-family--mono-akkurat-mono-ll);
   font-weight: 400;
   display: flex;
