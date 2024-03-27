@@ -5,6 +5,18 @@
 
 .product {
 
+  .simulation {
+    &__graphic {
+      display: block;
+      width: 100%;
+      max-width: 400px;
+      img, svg {
+        display: block;
+        height: auto;
+      }
+    }
+  }
+
   [data-bs-toggle] {
     cursor: pointer;
   }

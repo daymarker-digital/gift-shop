@@ -8,6 +8,8 @@
   assign aos_delay = 250
   assign aos_delay_increment = 250
 
+  assign agency_theme = product.metafields.custom.agency_theme.value
+
   assign section_background_colour = section.settings.background
   assign section_text_colour = section.settings.text_colour
   assign section_container = section.settings.container
@@ -123,9 +125,11 @@
 
               </form>
 
-              <div style="display: none;">
-                {% render 'svg.icon.simulation.pdp' %}
-              </div>
+              {% if "Simulation" == agency_theme.name %}
+                <div class="simulation__graphic">
+                  {% render 'svg.icon.simulation.pdp' %}
+                </div>
+              {% endif %}
 
             </div>
           </div>
