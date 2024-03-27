@@ -55,7 +55,7 @@
   &__icon-stroke {
 
     transition: transform var(--theme-transition--duration);
-    background: var(--theme-colour--black);
+    background: var(--theme--secondary-colour);
     width: var(--theme-burger--width);
     height: var(--theme-border--width);
     border-radius: 0;

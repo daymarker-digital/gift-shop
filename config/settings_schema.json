@@ -8,6 +8,21 @@
     "theme_version": "4.0.0"
   },
   {
+    "name": "Front page",
+    "settings": [
+      {
+        "type": "select",
+        "id": "agency_theme",
+        "label": "Agency Theme",
+        "options": [
+          { "value": "default", "label": "Default" },
+          { "value": "simulation", "label": "Simulation" }
+        ],
+        "default": "default"
+      }
+    ]
+  },
+  {
     "name": "t:settings_schema.colors.name",
     "settings": [
       {
