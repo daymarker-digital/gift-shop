@@ -192,13 +192,13 @@
       ],
       "settings": {
         "anchor_id": "",
-        "background": "white",
+        "background": "inherit",
         "container": "container-fluid",
         "grid_layout": "three-column",
         "grid_gutter": 24,
         "padding_top": 52,
         "padding_bottom": 0,
-        "text_colour": "dark"
+        "text_colour": "inherit"
       }
     },
     "cf2b7ca3-307b-4972-95ef-b0994d7525b1": {
