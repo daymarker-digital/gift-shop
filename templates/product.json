@@ -10,7 +10,7 @@
         "background": "inherit",
         "container": "container-fluid",
         "padding_top": 20,
-        "padding_bottom": 0,
+        "padding_bottom": 76,
         "text_colour": "inherit"
       }
     }
