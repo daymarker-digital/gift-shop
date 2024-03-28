@@ -3,11 +3,13 @@
 .product-image-gallery-grid {
 
   @include breakpoint(lg) {
+
     display: grid;
     grid: auto / repeat(4, 1fr);
     gap: 12px;
+
     &__item {
-      grid-column: span 2;
+      grid-column: span 4;
       width: 100%;
       height: auto;
       img, svg {
@@ -15,10 +17,24 @@
         width: 100%;
         height: auto;
       }
-      &:nth-child(3n + 3) {
-        grid-column: span 4;
+    }
+
+    &.more-than-four {
+      .product-image-gallery-grid__item {
+        grid-column: span 2;
+        width: 100%;
+        height: auto;
+        img, svg {
+          display: block;
+          width: 100%;
+          height: auto;
+        }
+        &:nth-child(3n + 3) {
+          grid-column: span 4;
+        }
       }
     }
+
   }
 
 }
