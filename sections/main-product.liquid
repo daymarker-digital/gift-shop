@@ -19,6 +19,7 @@
   assign section_product_button_add_to_cart = 'black'
   assign section_product_description = product.description | default: ''
   assign section_product_images = product.images | default: false
+  assign section_product_images_size = product.images.size | default: 0
   assign section_product_modal_id = section_id | append: '--modal'
   assign section_product_shop_button_enabled = false
   assign section_product_tags = product.tags | default: false
@@ -66,7 +67,7 @@
               {% capture product_price_classes %}{{ section_name }}__price d-lg-none{% endcapture %}
               {% render 'product-price', classes: product_price_classes, product: product, show_symbol: true %}
 
-              {% if section_product_images.size > 0 %}
+              {% if section_product_images_size > 0 %}
 
                 <div class='{{ section_name }}__images d-lg-none'>
                   <button class='{{ section_name }}__button-modal-trigger button--open'
@@ -140,7 +141,7 @@
 
   {% render 'bs-container', state: 'closed', container: section_container %}
 
-  {% if section_product_images.size > 0 %}
+  {% if section_product_images_size > 0 %}
     {% render 'product-image-gallery-modal', modal_id: section_product_modal_id, product: product %}
   {% endif %}
 

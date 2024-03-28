@@ -26,9 +26,14 @@
 
     assign has_images = false
     assign product_images = product.images | default: false
+    assign product_images_size = product.images.size | default: 0
 
     if product_images.size > 0
       assign has_images = true
+    endif
+
+    if product_images_size > 4
+      assign classes = classes | append: " more-than-four"
     endif
 
   -%}
