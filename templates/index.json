@@ -3,16 +3,16 @@
     "16638658704a46d741",
     "1661195827dff74e88",
     "16611958947ef1ecd7",
+    "featured_image_MnGV6E",
     "16611959936ca1502e",
-    "1661196025228eb79a",
-    "cf2b7ca3-307b-4972-95ef-b0994d7525b1",
-    "6929c9cc-944c-4645-b944-e482c070dd52"
+    "6929c9cc-944c-4645-b944-e482c070dd52",
+    "featured_image_8RMD3g"
   ],
   "sections": {
     "16638658704a46d741": {
       "type": "featured-image",
       "settings": {
-        "image": "shopify:\/\/shop_images\/VPSpringClean--resized--opt.jpg",
+        "image": "shopify:\/\/shop_images\/VP_sim_PLP-03.png",
         "anchor_id": "",
         "background": "inherit",
         "container": "container-fluid",
@@ -34,33 +34,19 @@
         "52cc44ac-ba5f-4723-83c9-c4c2d09a93df": {
           "type": "product",
           "settings": {
-            "product": "natures™-boxy-crew"
+            "product": "i-survived"
           }
         },
         "f55b6b53-7f51-4c9b-a71f-5e967d2ad292": {
           "type": "product",
           "settings": {
-            "product": "voyager-tee-in-supernova"
-          }
-        },
-        "8e33acf9-4964-464e-9957-ce064038f657": {
-          "type": "product",
-          "settings": {
-            "product": "space-club-tee-in-supernova"
-          }
-        },
-        "b439fcdb-2b20-4e92-bcc6-749852735c97": {
-          "type": "product",
-          "settings": {
-            "product": "dont-ask-me-mug"
+            "product": "the-simulation-is-in-progress-hoodie-b"
           }
         }
       },
       "block_order": [
         "52cc44ac-ba5f-4723-83c9-c4c2d09a93df",
-        "f55b6b53-7f51-4c9b-a71f-5e967d2ad292",
-        "8e33acf9-4964-464e-9957-ce064038f657",
-        "b439fcdb-2b20-4e92-bcc6-749852735c97"
+        "f55b6b53-7f51-4c9b-a71f-5e967d2ad292"
       ],
       "settings": {
         "anchor_id": "",
@@ -79,37 +65,37 @@
         "e2b4871c-0a87-47fb-ac60-68c9ccba154f": {
           "type": "product",
           "settings": {
-            "product": "always-be-polite-socks-blue"
+            "product": "nothing-is-real-thats-ok-hoodie"
           }
         },
         "a7d78bff-38d9-4f34-8c2b-69ca82d411b7": {
           "type": "product",
           "settings": {
-            "product": "not-staff-hat"
+            "product": "in-progress-tee"
           }
         },
         "ff21cb99-9962-4b31-98e3-cc69fe71af93": {
           "type": "product",
           "settings": {
-            "product": "plant-ecology-club-crop"
+            "product": "half-life"
           }
         },
         "e42eaf75-526c-43a8-b873-201cc6243cd9": {
           "type": "product",
           "settings": {
-            "product": "plant-ecology-club-tee"
+            "product": "thats-ok-bag"
           }
         },
         "368a2221-5d87-4eec-a3cc-2873b59d2521": {
           "type": "product",
           "settings": {
-            "product": "natures™-crew"
+            "product": "the-render-long-sleeve"
           }
         },
         "2637f584-4aa5-4d94-8ceb-0d4386faa73e": {
           "type": "product",
           "settings": {
-            "product": "natures™-x-plant-ecology-club-tee"
+            "product": "i-survived-tee"
           }
         }
       },
@@ -132,19 +118,38 @@
         "text_colour": "inherit"
       }
     },
+    "featured_image_MnGV6E": {
+      "type": "featured-image",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/VP_sim_PLP-04.png",
+        "anchor_id": "",
+        "background": "inherit",
+        "container": "container-fluid",
+        "content_placement_horizontal": "center",
+        "content_placement_vertical": "center",
+        "content_width_desktop": 100,
+        "content_width_mobile": 100,
+        "content_stack_mobile": false,
+        "image_height_mobile": "adapt",
+        "image_height_desktop": "adapt",
+        "padding_top": 44,
+        "padding_bottom": 44,
+        "text_colour": "inherit"
+      }
+    },
     "16611959936ca1502e": {
       "type": "featured-products",
       "blocks": {
         "c56322a3-2fea-415b-b6f8-9887473b0e86": {
           "type": "product",
           "settings": {
-            "product": "natures™-x-fascinating-stuff-crew"
+            "product": "the-simulation-is-in-progress-hoodie"
           }
         },
         "c158dd33-2b11-4704-99d9-1138a8e3f0d9": {
           "type": "product",
           "settings": {
-            "product": "botanical-department-crew"
+            "product": "the-simulation_b"
           }
         }
       },
@@ -163,137 +168,19 @@
         "text_colour": "inherit"
       }
     },
-    "1661196025228eb79a": {
-      "type": "featured-products",
-      "blocks": {
-        "f428cbf2-e7d9-4225-b314-1c89627c8e52": {
-          "type": "product",
-          "settings": {
-            "product": "no-bad-vibes-coin"
-          }
-        },
-        "4dde4805-1f8f-47a0-845c-2f7ac2bda2f5": {
-          "type": "product",
-          "settings": {
-            "product": "staff-socks"
-          }
-        },
-        "8a3097ce-d248-4b6e-acf0-1f5e3b9f8034": {
-          "type": "product",
-          "settings": {
-            "product": "unofficial-astronaut-tee-in-supernova"
-          }
-        }
-      },
-      "block_order": [
-        "f428cbf2-e7d9-4225-b314-1c89627c8e52",
-        "4dde4805-1f8f-47a0-845c-2f7ac2bda2f5",
-        "8a3097ce-d248-4b6e-acf0-1f5e3b9f8034"
-      ],
-      "settings": {
-        "anchor_id": "",
-        "background": "inherit",
-        "container": "container-fluid",
-        "grid_layout": "three-column",
-        "grid_gutter": 24,
-        "padding_top": 52,
-        "padding_bottom": 0,
-        "text_colour": "inherit"
-      }
-    },
-    "cf2b7ca3-307b-4972-95ef-b0994d7525b1": {
-      "type": "featured-products",
-      "blocks": {
-        "ccc35486-aefe-4587-87b0-910e33958b3f": {
-          "type": "product",
-          "settings": {
-            "product": "botanical-department-hoodie"
-          }
-        },
-        "1fd53054-9b44-4a75-b3be-b10a4da97d0c": {
-          "type": "product",
-          "settings": {
-            "product": "vp-wool-hat"
-          }
-        },
-        "268fd6c6-5966-4602-8b4c-4e785000283c": {
-          "type": "product",
-          "settings": {
-            "product": "vpsa-challenger-shorts-in-cosmic-glow"
-          }
-        },
-        "6de41927-ee05-47b4-a58f-c16a1a73dc3b": {
-          "type": "product",
-          "settings": {
-            "product": "staff-tee"
-          }
-        },
-        "5d97ee46-08f4-4934-8a2d-60dc05ecc5da": {
-          "type": "product",
-          "settings": {
-            "product": "space-club-hoodie-in-supernova"
-          }
-        },
-        "2a3496b6-1ebd-4bcb-b2c9-912316b3dfc6": {
-          "type": "product",
-          "settings": {
-            "product": "complaints-beanie"
-          }
-        },
-        "69a4f0b4-9e6d-4e80-95d9-03b8f48f9044": {
-          "type": "product",
-          "settings": {
-            "product": "the-desk-vessel-all-in-one"
-          }
-        },
-        "e5a510c8-28ba-4510-81d0-016ddb53f0db": {
-          "type": "product",
-          "settings": {
-            "product": "space-club-tee-in-dark-matter"
-          }
-        },
-        "8557505f-4327-4b87-b590-18167fb4affb": {
-          "type": "product",
-          "settings": {
-            "product": "vpsa-discovery-shorts-in-supernova"
-          }
-        }
-      },
-      "block_order": [
-        "ccc35486-aefe-4587-87b0-910e33958b3f",
-        "1fd53054-9b44-4a75-b3be-b10a4da97d0c",
-        "268fd6c6-5966-4602-8b4c-4e785000283c",
-        "6de41927-ee05-47b4-a58f-c16a1a73dc3b",
-        "5d97ee46-08f4-4934-8a2d-60dc05ecc5da",
-        "2a3496b6-1ebd-4bcb-b2c9-912316b3dfc6",
-        "69a4f0b4-9e6d-4e80-95d9-03b8f48f9044",
-        "e5a510c8-28ba-4510-81d0-016ddb53f0db",
-        "8557505f-4327-4b87-b590-18167fb4affb"
-      ],
-      "settings": {
-        "anchor_id": "",
-        "background": "inherit",
-        "container": "container-fluid",
-        "grid_layout": "three-column",
-        "grid_gutter": 24,
-        "padding_top": 52,
-        "padding_bottom": 0,
-        "text_colour": "inherit"
-      }
-    },
     "6929c9cc-944c-4645-b944-e482c070dd52": {
       "type": "featured-products",
       "blocks": {
         "d28a020c-f1ac-4b0d-ba69-a2a3c7b8d766": {
           "type": "product",
           "settings": {
-            "product": "vpsa-hoodie-in-venus-dust"
+            "product": "the-sim_c"
           }
         },
         "7753479d-d968-41f9-b664-1ef475ffba89": {
           "type": "product",
           "settings": {
-            "product": "galactic-sweats-in-venus-dust"
+            "product": "the-simulation-hologram-hoodie"
           }
         }
       },
@@ -309,6 +196,25 @@
         "grid_gutter": 24,
         "padding_top": 52,
         "padding_bottom": 0,
+        "text_colour": "inherit"
+      }
+    },
+    "featured_image_8RMD3g": {
+      "type": "featured-image",
+      "settings": {
+        "image": "shopify:\/\/shop_images\/VP_sim_PLP-05.png",
+        "anchor_id": "",
+        "background": "inherit",
+        "container": "container-fluid",
+        "content_placement_horizontal": "center",
+        "content_placement_vertical": "center",
+        "content_width_desktop": 100,
+        "content_width_mobile": 100,
+        "content_stack_mobile": false,
+        "image_height_mobile": "adapt",
+        "image_height_desktop": "adapt",
+        "padding_top": 44,
+        "padding_bottom": 44,
         "text_colour": "inherit"
       }
     }
