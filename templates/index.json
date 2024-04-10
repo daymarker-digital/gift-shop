@@ -34,7 +34,7 @@
         "52cc44ac-ba5f-4723-83c9-c4c2d09a93df": {
           "type": "product",
           "settings": {
-            "product": "i-survived"
+            "product": "in-progress-tee"
           }
         },
         "f55b6b53-7f51-4c9b-a71f-5e967d2ad292": {
@@ -68,16 +68,16 @@
             "product": "nothing-is-real-thats-ok-hoodie"
           }
         },
-        "a7d78bff-38d9-4f34-8c2b-69ca82d411b7": {
-          "type": "product",
-          "settings": {
-            "product": "in-progress-tee"
-          }
-        },
         "ff21cb99-9962-4b31-98e3-cc69fe71af93": {
           "type": "product",
           "settings": {
             "product": "half-life"
+          }
+        },
+        "a7d78bff-38d9-4f34-8c2b-69ca82d411b7": {
+          "type": "product",
+          "settings": {
+            "product": "i-survived"
           }
         },
         "e42eaf75-526c-43a8-b873-201cc6243cd9": {
@@ -101,8 +101,8 @@
       },
       "block_order": [
         "e2b4871c-0a87-47fb-ac60-68c9ccba154f",
-        "a7d78bff-38d9-4f34-8c2b-69ca82d411b7",
         "ff21cb99-9962-4b31-98e3-cc69fe71af93",
+        "a7d78bff-38d9-4f34-8c2b-69ca82d411b7",
         "e42eaf75-526c-43a8-b873-201cc6243cd9",
         "368a2221-5d87-4eec-a3cc-2873b59d2521",
         "2637f584-4aa5-4d94-8ceb-0d4386faa73e"
