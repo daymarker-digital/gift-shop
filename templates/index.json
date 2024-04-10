@@ -74,10 +74,10 @@
             "product": "half-life"
           }
         },
-        "a7d78bff-38d9-4f34-8c2b-69ca82d411b7": {
+        "2637f584-4aa5-4d94-8ceb-0d4386faa73e": {
           "type": "product",
           "settings": {
-            "product": "i-survived"
+            "product": "i-survived-tee"
           }
         },
         "e42eaf75-526c-43a8-b873-201cc6243cd9": {
@@ -92,20 +92,27 @@
             "product": "the-render-long-sleeve"
           }
         },
-        "2637f584-4aa5-4d94-8ceb-0d4386faa73e": {
+        "a7d78bff-38d9-4f34-8c2b-69ca82d411b7": {
           "type": "product",
           "settings": {
-            "product": "i-survived-tee"
+            "product": "i-survived"
+          }
+        },
+        "product_qtqkRM": {
+          "type": "product",
+          "settings": {
+            "product": ""
           }
         }
       },
       "block_order": [
         "e2b4871c-0a87-47fb-ac60-68c9ccba154f",
         "ff21cb99-9962-4b31-98e3-cc69fe71af93",
-        "a7d78bff-38d9-4f34-8c2b-69ca82d411b7",
+        "2637f584-4aa5-4d94-8ceb-0d4386faa73e",
         "e42eaf75-526c-43a8-b873-201cc6243cd9",
         "368a2221-5d87-4eec-a3cc-2873b59d2521",
-        "2637f584-4aa5-4d94-8ceb-0d4386faa73e"
+        "a7d78bff-38d9-4f34-8c2b-69ca82d411b7",
+        "product_qtqkRM"
       ],
       "settings": {
         "anchor_id": "",
