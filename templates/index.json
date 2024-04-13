@@ -65,7 +65,7 @@
         "e2b4871c-0a87-47fb-ac60-68c9ccba154f": {
           "type": "product",
           "settings": {
-            "product": "nothing-is-real-thats-ok-hoodie"
+            "product": "the-sim_c"
           }
         },
         "ff21cb99-9962-4b31-98e3-cc69fe71af93": {
@@ -95,7 +95,7 @@
         "a7d78bff-38d9-4f34-8c2b-69ca82d411b7": {
           "type": "product",
           "settings": {
-            "product": "i-survived"
+            "product": "the-simulation-hologram-hoodie"
           }
         },
         "product_qtqkRM": {
@@ -147,28 +147,35 @@
     "16611959936ca1502e": {
       "type": "featured-products",
       "blocks": {
+        "c158dd33-2b11-4704-99d9-1138a8e3f0d9": {
+          "type": "product",
+          "settings": {
+            "product": "the-simulation_b"
+          }
+        },
         "c56322a3-2fea-415b-b6f8-9887473b0e86": {
           "type": "product",
           "settings": {
             "product": "the-simulation-is-in-progress-hoodie"
           }
         },
-        "c158dd33-2b11-4704-99d9-1138a8e3f0d9": {
+        "product_GUfHPW": {
           "type": "product",
           "settings": {
-            "product": "the-simulation_b"
+            "product": "nothing-is-real-thats-ok-hoodie"
           }
         }
       },
       "block_order": [
+        "c158dd33-2b11-4704-99d9-1138a8e3f0d9",
         "c56322a3-2fea-415b-b6f8-9887473b0e86",
-        "c158dd33-2b11-4704-99d9-1138a8e3f0d9"
+        "product_GUfHPW"
       ],
       "settings": {
         "anchor_id": "",
         "background": "inherit",
         "container": "container-fluid",
-        "grid_layout": "two-column",
+        "grid_layout": "three-column",
         "grid_gutter": 24,
         "padding_top": 52,
         "padding_bottom": 0,
@@ -177,24 +184,6 @@
     },
     "6929c9cc-944c-4645-b944-e482c070dd52": {
       "type": "featured-products",
-      "blocks": {
-        "d28a020c-f1ac-4b0d-ba69-a2a3c7b8d766": {
-          "type": "product",
-          "settings": {
-            "product": "the-sim_c"
-          }
-        },
-        "7753479d-d968-41f9-b664-1ef475ffba89": {
-          "type": "product",
-          "settings": {
-            "product": "the-simulation-hologram-hoodie"
-          }
-        }
-      },
-      "block_order": [
-        "d28a020c-f1ac-4b0d-ba69-a2a3c7b8d766",
-        "7753479d-d968-41f9-b664-1ef475ffba89"
-      ],
       "settings": {
         "anchor_id": "",
         "background": "inherit",
