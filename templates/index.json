@@ -34,7 +34,7 @@
         "52cc44ac-ba5f-4723-83c9-c4c2d09a93df": {
           "type": "product",
           "settings": {
-            "product": "in-progress-tee"
+            "product": "the-render-long-sleeve"
           }
         },
         "f55b6b53-7f51-4c9b-a71f-5e967d2ad292": {
@@ -62,22 +62,22 @@
     "16611958947ef1ecd7": {
       "type": "featured-products",
       "blocks": {
+        "368a2221-5d87-4eec-a3cc-2873b59d2521": {
+          "type": "product",
+          "settings": {
+            "product": "in-progress-tee"
+          }
+        },
         "e2b4871c-0a87-47fb-ac60-68c9ccba154f": {
           "type": "product",
           "settings": {
             "product": "the-sim_c"
           }
         },
-        "ff21cb99-9962-4b31-98e3-cc69fe71af93": {
+        "a7d78bff-38d9-4f34-8c2b-69ca82d411b7": {
           "type": "product",
           "settings": {
-            "product": "half-life"
-          }
-        },
-        "2637f584-4aa5-4d94-8ceb-0d4386faa73e": {
-          "type": "product",
-          "settings": {
-            "product": "i-survived-tee"
+            "product": "nothing-is-real-thats-ok-hoodie"
           }
         },
         "e42eaf75-526c-43a8-b873-201cc6243cd9": {
@@ -86,16 +86,16 @@
             "product": "thats-ok-bag"
           }
         },
-        "368a2221-5d87-4eec-a3cc-2873b59d2521": {
+        "2637f584-4aa5-4d94-8ceb-0d4386faa73e": {
           "type": "product",
           "settings": {
-            "product": "the-render-long-sleeve"
+            "product": "i-survived-tee"
           }
         },
-        "a7d78bff-38d9-4f34-8c2b-69ca82d411b7": {
+        "ff21cb99-9962-4b31-98e3-cc69fe71af93": {
           "type": "product",
           "settings": {
-            "product": "the-simulation-hologram-hoodie"
+            "product": "half-life"
           }
         },
         "product_qtqkRM": {
@@ -106,12 +106,12 @@
         }
       },
       "block_order": [
-        "e2b4871c-0a87-47fb-ac60-68c9ccba154f",
-        "ff21cb99-9962-4b31-98e3-cc69fe71af93",
-        "2637f584-4aa5-4d94-8ceb-0d4386faa73e",
-        "e42eaf75-526c-43a8-b873-201cc6243cd9",
         "368a2221-5d87-4eec-a3cc-2873b59d2521",
+        "e2b4871c-0a87-47fb-ac60-68c9ccba154f",
         "a7d78bff-38d9-4f34-8c2b-69ca82d411b7",
+        "e42eaf75-526c-43a8-b873-201cc6243cd9",
+        "2637f584-4aa5-4d94-8ceb-0d4386faa73e",
+        "ff21cb99-9962-4b31-98e3-cc69fe71af93",
         "product_qtqkRM"
       ],
       "settings": {
@@ -153,23 +153,23 @@
             "product": "the-simulation_b"
           }
         },
+        "product_GUfHPW": {
+          "type": "product",
+          "settings": {
+            "product": "the-simulation-hologram-hoodie"
+          }
+        },
         "c56322a3-2fea-415b-b6f8-9887473b0e86": {
           "type": "product",
           "settings": {
             "product": "the-simulation-is-in-progress-hoodie"
           }
-        },
-        "product_GUfHPW": {
-          "type": "product",
-          "settings": {
-            "product": "nothing-is-real-thats-ok-hoodie"
-          }
         }
       },
       "block_order": [
         "c158dd33-2b11-4704-99d9-1138a8e3f0d9",
-        "c56322a3-2fea-415b-b6f8-9887473b0e86",
-        "product_GUfHPW"
+        "product_GUfHPW",
+        "c56322a3-2fea-415b-b6f8-9887473b0e86"
       ],
       "settings": {
         "anchor_id": "",
