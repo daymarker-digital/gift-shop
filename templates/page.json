@@ -1,12 +1,1 @@
-{
-	"name": "Page",
-	"order": [
-    "main"
-  ],
-	"sections": {
-		"main": {
-			"type": "main-page",
-      "settings": {}
-		}
-	}
-}
+{"order":["main"],"sections":{"main":{"type":"main-page","settings":{}}}}
