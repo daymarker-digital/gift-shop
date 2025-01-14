@@ -1,9 +1,17 @@
-@use 'sass:map';
-@use '../utils/variables' as *;
-@use '../utils/mixins/breakpoint' as *;
+@use "sass:map";
+@use "../utils/variables" as *;
+@use "../utils/mixins/breakpoint" as *;
+
+$logo-height: (
+  "base": 32px,
+  "sm": 34px,
+  "md": 36px,
+  "lg": 32px,
+  "xl": 34px,
+  "xxl": 36px,
+);
 
 .header {
-
   $announcement-btn-close-size: 12px;
 
   &__main {
@@ -15,43 +23,27 @@
   }
 
   &__brand {
-    display: inline-flex;
-    flex-flow: column;
-    row-gap: 10px;
-    width: 170px;
-    &-link {
-      height: auto;
-      width: auto;
+    height: map.get($logo-height, "base");
+    margin-bottom: -6px;
+    position: relative;
+    a,
+    img,
+    svg {
       display: block;
-      opacity: 1;
-      img, svg {
-        display: block;
-        height: 100%;
-        width: auto;
-      }
-      &:focus,
-      &:hover {
-        color: inherit;
-        opacity: 0.5;
-      }
-      &.gift-shop {
-        width: 100%;
-        height: auto;
-      }
-      &.very-polite {
-        width: 85%;
-        height: auto;
-      }
+      height: 100%;
+      width: auto;
     }
-    .vp-logo {
-      fill: var(--theme--secondary-colour);
+    a {
+      color: inherit;
     }
-
+    svg {
+      fill: currentColor;
+    }
   }
 
   &__main {
-    @each $name, $value in map.get( $theme-layout-settings, 'breakpoints' ) {
-      @if $name == 'base' {
+    @each $name, $value in map.get($theme-layout-settings, "breakpoints") {
+      @if $name == "base" {
         height: var(--theme-header-height);
       } @else {
         @include breakpoint(#{$name}) {
@@ -66,82 +58,37 @@
   }
 
   @include breakpoint(sm) {
-
     &__brand {
-      width: 185px;
+      height: map.get($logo-height, "sm");
+      margin-bottom: -7px;
     }
-
   }
 
   @include breakpoint(md) {
-
     &__brand {
-      flex-flow: row nowrap;
-      row-gap: 0;
-      column-gap: 14px;
-      width: auto;
-      align-items: center;
-      &-link {
-        &.gift-shop,
-        &.very-polite {
-          width: auto;
-        }
-        &.gift-shop {
-          height: 17px;
-          order: 2;
-        }
-        &.very-polite {
-          height: 14px;
-          order: 1;
-        }
-      }
+      height: map.get($logo-height, "md");
+      margin-bottom: -8px;
     }
-
   }
 
   @include breakpoint(lg) {
-
     &__brand {
-      &-link {
-        &.gift-shop {
-          height: 20px;
-        }
-        &.very-polite {
-          height: 17px;
-        }
-      }
+      height: map.get($logo-height, "lg");
+      margin-bottom: -6px;
     }
-
   }
 
   @include breakpoint(xl) {
-
     &__brand {
-      &-link {
-        &.gift-shop {
-          height: 22px;
-        }
-        &.very-polite {
-          height: 19px;
-        }
-      }
+      height: map.get($logo-height, "xl");
+      margin-bottom: -7px;
     }
-
   }
 
   @include breakpoint(xxl) {
-
     &__brand {
-      &-link {
-        &.gift-shop {
-          height: 24px;
-        }
-        &.very-polite {
-          height: 21px;
-        }
-      }
+      height: map.get($logo-height, "xxl");
+      margin-bottom: -8px;
     }
-
   }
-
 }
