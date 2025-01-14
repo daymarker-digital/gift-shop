@@ -4,11 +4,11 @@
 
 $logo-height: (
   "base": 32px,
-  "sm": 34px,
-  "md": 36px,
-  "lg": 32px,
-  "xl": 34px,
-  "xxl": 36px,
+  "sm": 38px,
+  "md": 44px,
+  "lg": 38px,
+  "xl": 42px,
+  "xxl": 48px,
 );
 
 .header {
@@ -33,11 +33,15 @@ $logo-height: (
       height: 100%;
       width: auto;
     }
-    a {
-      color: inherit;
-    }
     svg {
       fill: currentColor;
+    }
+  }
+
+  &__brand-link {
+    color: inherit;
+    &:hover {
+      opacity: 0.8;
     }
   }
 
