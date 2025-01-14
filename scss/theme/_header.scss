@@ -33,15 +33,14 @@ $logo-height: (
       height: 100%;
       width: auto;
     }
+    a {
+      color: currentColor;
+      &:hover {
+        opacity: 0.666;
+      }
+    }
     svg {
       fill: currentColor;
-    }
-  }
-
-  &__brand-link {
-    color: inherit;
-    &:hover {
-      opacity: 0.8;
     }
   }
 
