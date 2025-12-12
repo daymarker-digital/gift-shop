@@ -203,7 +203,7 @@
   },
   "platform_customizations": {
     "custom_css": [
-      ":root {--theme--secondary-colour: #21653a;}"
+      ":root .agency-theme--simulation {--theme--secondary-colour: #21653a;}"
     ]
   }
 }
