@@ -11,7 +11,6 @@
   "order": [
     "16638658704a46d741",
     "1661195827dff74e88",
-    "16611958947ef1ecd7",
     "featured_image_8RMD3g"
   ],
   "sections": {
@@ -40,13 +39,13 @@
         "product_bE4QhP": {
           "type": "product",
           "settings": {
-            "product": "i-survived-tee"
+            "product": "demon-trap-holiday-green"
           }
         },
         "f55b6b53-7f51-4c9b-a71f-5e967d2ad292": {
           "type": "product",
           "settings": {
-            "product": "the-simulation-is-in-progress-hoodie-b"
+            "product": "demon-trap-red"
           }
         },
         "product_NQeNMp": {
@@ -68,51 +67,6 @@
         "grid_layout": "two-column",
         "grid_gutter": 24,
         "padding_top": 24,
-        "padding_bottom": 0,
-        "text_colour": "inherit"
-      }
-    },
-    "16611958947ef1ecd7": {
-      "type": "featured-products",
-      "blocks": {
-        "368a2221-5d87-4eec-a3cc-2873b59d2521": {
-          "type": "product",
-          "settings": {
-            "product": "in-progress-tee"
-          }
-        },
-        "e2b4871c-0a87-47fb-ac60-68c9ccba154f": {
-          "type": "product",
-          "settings": {
-            "product": "the-sim_c"
-          }
-        },
-        "ff21cb99-9962-4b31-98e3-cc69fe71af93": {
-          "type": "product",
-          "settings": {
-            "product": "half-life"
-          }
-        },
-        "product_qtqkRM": {
-          "type": "product",
-          "settings": {
-            "product": ""
-          }
-        }
-      },
-      "block_order": [
-        "368a2221-5d87-4eec-a3cc-2873b59d2521",
-        "e2b4871c-0a87-47fb-ac60-68c9ccba154f",
-        "ff21cb99-9962-4b31-98e3-cc69fe71af93",
-        "product_qtqkRM"
-      ],
-      "settings": {
-        "anchor_id": "",
-        "background": "inherit",
-        "container": "container-fluid",
-        "grid_layout": "three-column",
-        "grid_gutter": 24,
-        "padding_top": 52,
         "padding_bottom": 0,
         "text_colour": "inherit"
       }
