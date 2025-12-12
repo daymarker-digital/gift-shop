@@ -60,6 +60,9 @@
         "f55b6b53-7f51-4c9b-a71f-5e967d2ad292",
         "product_NQeNMp"
       ],
+      "custom_css": [
+        "body{color: red !important;}"
+      ],
       "settings": {
         "anchor_id": "",
         "background": "inherit",
