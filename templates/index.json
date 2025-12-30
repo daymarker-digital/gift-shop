@@ -11,7 +11,8 @@
   "order": [
     "16638658704a46d741",
     "1661195827dff74e88",
-    "featured_image_8RMD3g"
+    "featured_image_8RMD3g",
+    "featured_products_Ecz6U6"
   ],
   "sections": {
     "16638658704a46d741": {
@@ -61,7 +62,7 @@
         "product_NQeNMp"
       ],
       "custom_css": [
-        "body{color: red !important;}"
+        "body {color: red !important;}"
       ],
       "settings": {
         "anchor_id": "",
@@ -90,6 +91,45 @@
         "image_height_desktop": "adapt",
         "padding_top": 44,
         "padding_bottom": 44,
+        "text_colour": "inherit"
+      }
+    },
+    "featured_products_Ecz6U6": {
+      "type": "featured-products",
+      "blocks": {
+        "product_mNjHEE": {
+          "type": "product",
+          "settings": {
+            "product": "staff-tee"
+          }
+        },
+        "product_NCUTcA": {
+          "type": "product",
+          "settings": {
+            "product": "the-simulation-is-in-progress-hoodie-b"
+          }
+        },
+        "product_UazBYD": {
+          "type": "product",
+          "settings": {
+            "product": "i-survived-tee"
+          }
+        }
+      },
+      "block_order": [
+        "product_mNjHEE",
+        "product_NCUTcA",
+        "product_UazBYD"
+      ],
+      "name": "Featured Products",
+      "settings": {
+        "anchor_id": "",
+        "background": "inherit",
+        "container": "container-fluid",
+        "grid_layout": "three-column",
+        "grid_gutter": 20,
+        "padding_top": 36,
+        "padding_bottom": 36,
         "text_colour": "inherit"
       }
     }
