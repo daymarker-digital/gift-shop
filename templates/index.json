@@ -10,15 +10,13 @@
 {
   "order": [
     "16638658704a46d741",
-    "1661195827dff74e88",
-    "featured_image_8RMD3g",
-    "featured_products_Ecz6U6"
+    "1661195827dff74e88"
   ],
   "sections": {
     "16638658704a46d741": {
       "type": "featured-image",
       "settings": {
-        "image": "shopify://shop_images/DemonTrap-06.png",
+        "image": "shopify://shop_images/VP_mother_feature.png",
         "anchor_id": "",
         "background": "inherit",
         "container": "container-fluid",
@@ -37,16 +35,16 @@
     "1661195827dff74e88": {
       "type": "featured-products",
       "blocks": {
-        "product_bE4QhP": {
+        "product_Dbbqy3": {
           "type": "product",
           "settings": {
-            "product": "demon-trap-holiday-green"
+            "product": "mfers-day-vase-oatmeal"
           }
         },
-        "f55b6b53-7f51-4c9b-a71f-5e967d2ad292": {
+        "product_ekkfeh": {
           "type": "product",
           "settings": {
-            "product": "demon-trap-red"
+            "product": "mfers-day-vase-electric-lime"
           }
         },
         "product_NQeNMp": {
@@ -57,8 +55,8 @@
         }
       },
       "block_order": [
-        "product_bE4QhP",
-        "f55b6b53-7f51-4c9b-a71f-5e967d2ad292",
+        "product_Dbbqy3",
+        "product_ekkfeh",
         "product_NQeNMp"
       ],
       "custom_css": [
@@ -72,64 +70,6 @@
         "grid_gutter": 24,
         "padding_top": 24,
         "padding_bottom": 0,
-        "text_colour": "inherit"
-      }
-    },
-    "featured_image_8RMD3g": {
-      "type": "featured-image",
-      "settings": {
-        "image": "shopify://shop_images/DemonTrap-07.png",
-        "anchor_id": "",
-        "background": "inherit",
-        "container": "container-fluid",
-        "content_placement_horizontal": "center",
-        "content_placement_vertical": "center",
-        "content_width_desktop": 100,
-        "content_width_mobile": 100,
-        "content_stack_mobile": false,
-        "image_height_mobile": "adapt",
-        "image_height_desktop": "adapt",
-        "padding_top": 44,
-        "padding_bottom": 44,
-        "text_colour": "inherit"
-      }
-    },
-    "featured_products_Ecz6U6": {
-      "type": "featured-products",
-      "blocks": {
-        "product_mNjHEE": {
-          "type": "product",
-          "settings": {
-            "product": "staff-tee"
-          }
-        },
-        "product_NCUTcA": {
-          "type": "product",
-          "settings": {
-            "product": "the-simulation-is-in-progress-hoodie-b"
-          }
-        },
-        "product_UazBYD": {
-          "type": "product",
-          "settings": {
-            "product": "i-survived-tee"
-          }
-        }
-      },
-      "block_order": [
-        "product_mNjHEE",
-        "product_NCUTcA",
-        "product_UazBYD"
-      ],
-      "name": "Featured Products",
-      "settings": {
-        "anchor_id": "",
-        "background": "inherit",
-        "container": "container-fluid",
-        "grid_layout": "three-column",
-        "grid_gutter": 20,
-        "padding_top": 36,
-        "padding_bottom": 36,
         "text_colour": "inherit"
       }
     }
